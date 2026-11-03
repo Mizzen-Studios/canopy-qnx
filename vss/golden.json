@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "source": "host simulation golden fixture; hand-calculated, not QNX",
+  "vectors": [
+    {
+      "path": "Vehicle.Speed",
+      "can_id": 256,
+      "hex": "0000",
+      "value": "0.00",
+      "unit": "km/h"
+    },
+    {
+      "path": "Vehicle.Speed",
+      "can_id": 256,
+      "hex": "0100",
+      "value": "0.01",
+      "unit": "km/h"
+    },
+    {
+      "path": "Vehicle.Speed",
+      "can_id": 256,
+      "hex": "d204",
+      "value": "12.34",
+      "unit": "km/h"
+    },
+    {
+      "path": "Vehicle.Speed",
+      "can_id": 256,
+      "hex": "a861",
+      "value": "250.00",
+      "unit": "km/h"
+    },
+    {
+      "path": "Vehicle.Chassis.SteeringWheel.Angle",
+      "can_id": 257,
+      "hex": "0000",
+      "value": "0",
+      "unit": "degrees"
+    },
+    {
+      "path": "Vehicle.Chassis.SteeringWheel.Angle",
+      "can_id": 257,
+      "hex": "ff85",
+      "value": "-123",
+      "unit": "degrees"
+    },
+    {
+      "path": "Vehicle.Chassis.SteeringWheel.Angle",
+      "can_id": 257,
+      "hex": "fd30",
+      "value": "-720",
+      "unit": "degrees"
+    },
+    {
+      "path": "Vehicle.Chassis.SteeringWheel.Angle",
+      "can_id": 257,
+      "hex": "02d0",
+      "value": "720",
+      "unit": "degrees"
+    },
+    {
+      "path": "Vehicle.ADAS.ObstacleDetection.Front.Distance",
+      "can_id": 258,
+      "hex": "0000",
+      "value": "0.00",
+      "unit": "m"
+    },
+    {
+      "path": "Vehicle.ADAS.ObstacleDetection.Front.Distance",
+      "can_id": 258,
+      "hex": "0001",
+      "value": "0.01",
+      "unit": "m"
+    },
+    {
+      "path": "Vehicle.ADAS.ObstacleDetection.Front.Distance",
+      "can_id": 258,
+      "hex": "04d2",
+      "value": "12.34",
+      "unit": "m"
+    },
+    {
+      "path": "Vehicle.ADAS.ObstacleDetection.Front.Distance",
+      "can_id": 258,
+      "hex": "c350",
+      "value": "500.00",
+      "unit": "m"
+    }
+  ]
+}

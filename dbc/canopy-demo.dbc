@@ -1,0 +1,20 @@
+VERSION "CANopy project-owned simulation mapping v1; not an OEM network"
+
+NS_ :
+    CM_
+BS_:
+BU_: HostSim Canvss
+
+BO_ 256 CanopySpeed: 2 HostSim
+ SG_ VehicleSpeed : 0|16@1+ (0.01,0) [0|250] "km/h" Canvss
+
+BO_ 257 CanopySteering: 2 HostSim
+ SG_ SteeringWheelAngle : 7|16@0- (1,0) [-720|720] "degrees" Canvss
+
+BO_ 258 CanopyFrontObstacle: 2 HostSim
+ SG_ FrontObstacleDistance : 7|16@0+ (0.01,0) [0|500] "m" Canvss
+
+CM_ "Apache-2.0; project-owned demo. Standard classic data frames; exact DLC=2. Out-of-range raw values invalid; no unavailable sentinels. No heartbeat/CRC mapping here.";
+CM_ SG_ 256 VehicleSpeed "Vehicle.Speed; km/h, not m/s.";
+CM_ SG_ 257 SteeringWheelAngle "Vehicle.Chassis.SteeringWheel.Angle; positive left; negative right; integer degrees match pinned QPP VSS3 catalogue.";
+CM_ SG_ 258 FrontObstacleDistance "Vehicle.ADAS.ObstacleDetection.Front.Distance; overlay; metres.";
