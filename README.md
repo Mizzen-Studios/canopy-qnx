@@ -1,9 +1,10 @@
 # CANopy — host foundation for QNX® 8.0
 
-Private first milestone: SDK-independent reference models, **not a QNX implementation**.
-Intended direction: io-sock/SocketCAN plus a vehicle-level fail-stop model.
-No driver, guest boot, SLM restart, QPP connector, real-time scheduling, learned
-pilot, physical vehicle or certification is implemented or demonstrated here.
+Private SDK-independent host core, **not a QNX implementation**.
+Implemented host-side: deterministic director/replay, separate Linux SocketCAN
+actuator/safestop processes, DBC/VSS mapping, learned pilot and C export.
+No QNX driver/guest, SLM restart, running QPP connector, native real-time scheduling,
+physical vehicle or certification is implemented or demonstrated here.
 No first-of-kind, availability, restart-speed, benchmark or safety guarantee is made.
 
 Demo of fail-safe patterns; not an ISO 26262 / IEC 61508 claim.
@@ -28,13 +29,17 @@ replay contracts and artifact negative tests only.
 ## Offline replay dashboard
 
 Open docs/replay/index.html directly in a browser; no server, ports, network,
-fonts or dependencies. It includes the deterministic drop/seed-7 fixture from
-docs/replay/sample.jsonl. Play/pause, reset, scrub and change viewing speed.
-Use the local file picker to load JSONL from any of the six host scenarios:
+fonts or dependencies. It includes the deterministic hero/seed-7 fixture from
+docs/replay/run.jsonl. Play/pause, reset, scrub, event-jump, inspect and keyboard
+controls work offline. Record and export a validated host hero:
 
 ~~~sh
-python3 -m canopy_host.sim --scenario frozen --seed 7 > replay.jsonl
+./canopy record --script hero --seed 7 --host-sim --output run.jsonl
+./canopy replay run.jsonl --output replay.html
 ~~~
+
+The older single-fault sim JSONL is a different model schema, not a replay import.
+See [record/replay workflow](docs/replay/workflow.md) for provenance and validation.
 
 All A-E panels say HOST SIMULATION / NOT QNX. Missing sensor inputs, SSH, PIDs
 and driver stats remain explicitly unavailable. The timeline shows logical-time
@@ -66,9 +71,10 @@ See docs/dashboard-design.md and docs/replay/verification.md.
   Only ten fresh healthy cycles release the latch. Cycle ten still emits full
   SAFE_STOP for actuator synchronization; subsequent fresh cycles reduce brake
   by 10 percentage points per cycle. Pilot has no latch-clear API.
-- Objects are Python reference models in a single host process, not process
-  isolation. A real actuator needs an independently scheduled watchdog; no
-  host-process-death or actual driver-kill demonstration is claimed.
+- Pure model tests run in one process. The [live host runtime](docs/host-runtime.md)
+  separately schedules the actuator and sender on Linux vcan; exact owned-child
+  SIGSTOP/SIGKILL tests verify independent timeout behavior. This is not a QNX
+  driver-kill, microkernel isolation, scheduling guarantee or physical watchdog.
 
 ### Evidence map
 
@@ -78,7 +84,10 @@ See docs/dashboard-design.md and docs/replay/verification.md.
 | Actuator timeout and stop integration | canopy_host/safety.py:Actuator | boundary, delayed tick, corruption/freeze tests |
 | Latch, pilot veto, recovery | canopy_host/safety.py:Safestop | ten-cycle, faults, ramp tests |
 | Deterministic faults | canopy_host/sim.py | six scenarios; assert active before fault and stopped after |
-| Optional classic SocketCAN | canopy_host/socketcan.py | frame codec only; live transport untested |
+| Classic SocketCAN + independent processes | canopy_host/socketcan.py, runtime.py | seven actual Linux vcan fault scenarios; docs/host-runtime.md |
+| DBC/VSS signal mapping | canopy_host/vss.py | golden vectors and exhaustive host codec inputs |
+| Learned pilot + C export | canopy_host/pilot.py, ai/ | held-out synthetic data and C/Python parity; docs/pilot.md |
+| Hero director and offline record | canopy_host/director.py, record.py | deterministic bytes and Chromium interaction tests |
 | No-SDK hygiene | scripts/check-no-sdk.sh | staged/deleted blob, binary, path, symlink negative tests |
 
 ## Optional Linux vcan transport
@@ -88,10 +97,18 @@ SocketCAN(interface='vcan0') is a standard-library transport adapter for an
 interfaces or requires python-can. send/receive use classic standard CAN only;
 extended, RTR, error and invalid-length frames reject. Callers must schedule
 Actuator.advance from a monotonic clock even when receive returns None.
-No integrated live actuator runner is supplied in this milestone.
+The integrated live actuator fault runner is available:
 
-No vcan interface existed on the development host; no actual vcan round trip
-was tested. Byte pack/unpack tests are not live CAN evidence.
+~~~sh
+sudo ./scripts/setup-vcan.sh vcan0
+python3 -m canopy_host.runtime_runner --output /path/outside/repo/new-run
+~~~
+
+The development host now has can-utils and vcan0 UP. Three 100-frame host runs
+were byte-exact; seven live fault scenarios passed. These are HOST VCAN results,
+not QNX CAN acceptance. See [host setup](docs/host-vcan-setup.md),
+[fail-safe runtime](docs/host-runtime.md), [VSS mapping](docs/vss-mapping.md),
+[QPP integration boundary](docs/vss-qpp-integration.md) and [pilot](docs/pilot.md).
 
 ## Environment and unverified gates
 
