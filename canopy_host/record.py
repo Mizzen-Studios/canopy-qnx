@@ -68,8 +68,7 @@ def read_run(path):
 
 
 def encode(rows):
-    return ''.join(json.dumps(r, sort_keys=True, allow_nan=False) + '
-' for r in validate(list(rows)))
+    return ''.join(json.dumps(r, sort_keys=True, allow_nan=False) + '\n' for r in validate(list(rows)))
 
 
 def write_run(path, rows):
