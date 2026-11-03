@@ -1,0 +1,12 @@
+{
+  "source": "HOST VCAN live SocketCAN; simulated vehicle; NOT QNX",
+  "scenario": "sigstop",
+  "sender_pid": 2637094,
+  "actuator_pid": 2637093,
+  "watchdog_elapsed_ms": 100,
+  "fault_to_brake_ms": 101.080969,
+  "fault_to_zero_ms": 2414.904869,
+  "host_agent_max_gap_ms": 26.16223,
+  "rejected": 0,
+  "passed": true
+}
