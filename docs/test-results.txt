@@ -1,0 +1,34 @@
+2026-11-03 UTC — local clean clone at 6a9af8d
+Ubuntu 24.04 aarch64, Python 3.12.3
+Commands: python3 -m unittest discover -s tests -v; sh scripts/check-no-sdk.sh
+Host logical-time model tests only; no QNX/QEMU/vcan execution.
+
+test_clean_text (test_no_sdk.NoSDKTests.test_clean_text) ... ok
+test_paths_content_symlink (test_no_sdk.NoSDKTests.test_paths_content_symlink) ... ok
+test_staged_blob_after_delete (test_no_sdk.NoSDKTests.test_staged_blob_after_delete) ... ok
+test_unusual_filename (test_no_sdk.NoSDKTests.test_unusual_filename) ... ok
+test_clock_backwards (test_safety.ActuatorTests.test_clock_backwards) ... ok
+test_delayed_receive_cannot_hide_timeout (test_safety.ActuatorTests.test_delayed_receive_cannot_hide_timeout) ... ok
+test_frozen_bad_crc_and_out_of_order_never_refresh (test_safety.ActuatorTests.test_frozen_bad_crc_and_out_of_order_never_refresh) ... ok
+test_frozen_recovery_cannot_release (test_safety.ActuatorTests.test_frozen_recovery_cannot_release) ... ok
+test_recovery_requires_ten_safe_fresh_frames (test_safety.ActuatorTests.test_recovery_requires_ten_safe_fresh_frames) ... ok
+test_slow_recovery_is_not_consecutive (test_safety.ActuatorTests.test_slow_recovery_is_not_consecutive) ... ok
+test_timeout_exact_boundary (test_safety.ActuatorTests.test_timeout_exact_boundary) ... ok
+test_wrap (test_safety.ActuatorTests.test_wrap) ... ok
+test_each_fault_latches_and_pilot_cannot_clear (test_safety.LatchTests.test_each_fault_latches_and_pilot_cannot_clear) ... ok
+test_gap_and_duplicate_clock (test_safety.LatchTests.test_gap_and_duplicate_clock) ... ok
+test_ten_fresh_and_ramp (test_safety.LatchTests.test_ten_fresh_and_ramp) ... ok
+test_unhealthy_cycle_resets_streak (test_safety.LatchTests.test_unhealthy_cycle_resets_streak) ... ok
+test_crc_known_answer (test_safety.ProtocolTests.test_crc_known_answer) ... ok
+test_every_single_bit_corruption (test_safety.ProtocolTests.test_every_single_bit_corruption) ... ok
+test_invalid_fields (test_safety.ProtocolTests.test_invalid_fields) ... ok
+test_roundtrip_all_counters_and_states (test_safety.ProtocolTests.test_roundtrip_all_counters_and_states) ... ok
+test_all_faults_stop_vehicle (test_sim.SimulationTests.test_all_faults_stop_vehicle) ... ok
+test_determinism (test_sim.SimulationTests.test_determinism) ... ok
+test_socketcan_codec (test_sim.SimulationTests.test_socketcan_codec) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.788s
+
+OK
+PASS: staged blobs and worktree contain no recognized SDK/binary artifacts
