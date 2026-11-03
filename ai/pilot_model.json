@@ -1,0 +1,196 @@
+{
+  "actions": [
+    [
+      0,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      8,
+      -10
+    ],
+    [
+      8,
+      10
+    ]
+  ],
+  "features": [
+    "obstacle_cm",
+    "speed_cms",
+    "heading_error_mdeg"
+  ],
+  "metrics": {
+    "heldout": {
+      "accuracy": 0.9947916666666666,
+      "confusion": [
+        [
+          51,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          87,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          81,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          77,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          86
+        ]
+      ],
+      "correct": 382,
+      "total": 384
+    },
+    "train": {
+      "accuracy": 1.0,
+      "confusion": [
+        [
+          102,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          155,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          164,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          176,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          171
+        ]
+      ],
+      "correct": 768,
+      "total": 768
+    }
+  },
+  "nodes": [
+    {
+      "action": 3,
+      "feature": 0,
+      "left": 1,
+      "right": 4,
+      "threshold": 2999
+    },
+    {
+      "action": 1,
+      "feature": 0,
+      "left": 2,
+      "right": 3,
+      "threshold": 1195
+    },
+    {
+      "action": 0,
+      "feature": -1,
+      "left": -1,
+      "right": -1,
+      "threshold": 0
+    },
+    {
+      "action": 1,
+      "feature": -1,
+      "left": -1,
+      "right": -1,
+      "threshold": 0
+    },
+    {
+      "action": 3,
+      "feature": 2,
+      "left": 5,
+      "right": 6,
+      "threshold": -4986
+    },
+    {
+      "action": 3,
+      "feature": -1,
+      "left": -1,
+      "right": -1,
+      "threshold": 0
+    },
+    {
+      "action": 4,
+      "feature": 2,
+      "left": 7,
+      "right": 8,
+      "threshold": 4889
+    },
+    {
+      "action": 2,
+      "feature": -1,
+      "left": -1,
+      "right": -1,
+      "threshold": 0
+    },
+    {
+      "action": 4,
+      "feature": -1,
+      "left": -1,
+      "right": -1,
+      "threshold": 0
+    }
+  ],
+  "schema": 1,
+  "source": "HOST SIM synthetic kinematic demonstration; NOT QNX",
+  "training": {
+    "algorithm": "CART Gini; rational scores; deterministic ties",
+    "base_revision": "19ccc7b",
+    "dataset_sha256": "b7ffc5ac00676a4022915c475a26d5ff720d9bb699dc24c10df37e6257ddb5c7",
+    "max_depth": 5,
+    "min_leaf": 4,
+    "source_sha256": {
+      "ai/generate.py": "d95733820d51170233bfa37efd50bee692e1c5eb0a4b8476dc2db928f68cc4f2",
+      "ai/train.py": "5901eff826ecbfc19a44380c54f1c25e5af79b35751e619deaa99d7fb8ba2b46",
+      "canopy_host/pilot.py": "4c9ad63360a30f63303401417f625b61cd30a8b8f65f78c7522cb47ea0c5f21a",
+      "canopy_host/safety.py": "ac1bb2d235f60d70d7654cd7bbe0a04473e39733b0a063233f56f38fbd514dfe"
+    },
+    "split": "seeds 0..7 train; 100..103 heldout; whole traces"
+  }
+}
