@@ -16,8 +16,7 @@ def emit(stream, event, **values):
     record = dict(schema='canopy.host-runtime.v1', source=SOURCE,
                   monotonic_ns=time.monotonic_ns(), pid=os.getpid(), event=event,
                   **values)
-    stream.write(json.dumps(record, allow_nan=False, sort_keys=True) + '
-')
+    stream.write(json.dumps(record, allow_nan=False, sort_keys=True) + '\n')
     stream.flush()
 
 
@@ -29,6 +28,8 @@ def load_inputs(path, now_ns):
     """
     try:
         data = json.loads(Path(path).read_text())
+        if not isinstance(data, dict):
+            raise ValueError('snapshot must be object')
         stamp = data['monotonic_ns']
         if type(stamp) is not int or not 0 <= stamp <= now_ns:
             raise ValueError('invalid timestamp')
@@ -85,6 +86,7 @@ def sender(interface, duration, output, inputs, fault_file=None):
 
 def actuator(interface, duration, output, initial_speed=10.0):
     ecu = Actuator(initial_speed)
+    ecu.now_ms = time.monotonic_ns() // 1_000_000
     bus = SocketCAN(interface, timeout=0.002)
     end = time.monotonic() + duration
     try:
@@ -102,7 +104,10 @@ def actuator(interface, duration, output, initial_speed=10.0):
                 before = ecu.timeout
                 accepted = None
                 if frame is not None:
-                    accepted = ecu.receive(now_ms, *frame)
+                    if frame[0] == HEARTBEAT_ID:
+                        accepted = ecu.receive(now_ms, *frame)
+                    else:
+                        ecu.advance(now_ms)
                 else:
                     ecu.advance(now_ms)
                 if before != ecu.timeout:
