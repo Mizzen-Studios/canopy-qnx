@@ -95,13 +95,50 @@ was tested. Byte pack/unpack tests are not live CAN evidence.
 
 ## Environment and unverified gates
 
-Developed on Ubuntu 24.04 aarch64, Python 3.12.3. No /dev/kvm and no installed
-qemu-system-x86_64 were found. No QNX SDK/QSTI installed or used. Target intent
-is QNX SDP 8.0 x86_64; SDP build ID, QSTI/QEMU versions, qcc toolchain,
+Owner-approved platform: **the existing Ubuntu 24.04 ARM64 VM running an
+x86_64 QNX guest under QEMU TCG, explicitly without KVM**. An x86_64 KVM host
+is not a prerequisite. This supersedes the original plan's KVM-only preflight.
+Developed with Python 3.12.3. The current host QEMU is 8.2.2; doctor queries the
+installed binary rather than assuming its devices. No QNX SDK/QSTI installed
+or used. Target intent is QNX SDP 8.0 x86_64; SDP build ID, QSTI version, qcc toolchain,
 mods-can.so x86_64 loadability, kvaser_pci support, SLM, secpol and QPP APIs
 are **unverified**. No target API has execution evidence yet. This milestone
 does not satisfy the competition's runs-on-QNX gate. No QNX evaluation or
 performance result is published. See docs/test-results.txt for local commands.
+
+## Read-only host preflight
+
+~~~sh
+./canopy doctor          # human-readable diagnostics; expected exit 1 today
+./canopy doctor --json   # stable schema_version=1, same nonzero exit
+./canopy up              # explicit blocked result; no guest started
+~~~
+
+Doctor probes QEMU version and help for TCG, edu, edu.dma_mask, kvaser_pci and
+can-host-socketcan; x86_64 Linux user-emulator version and binfmt registration;
+ip/candump/cansend/cangen; existing vcan interfaces and optional module metadata.
+No /dev/kvm is fine. Binfmt is advisory because explicit qemu-x86_64-static
+invocation is possible; neither route is SDK execution evidence. Probes have a
+five-second timeout each. No modules/interfaces, packages or system settings are
+changed, and no guest starts. Help-advertised support is not device execution.
+
+For future external SDK setup, supply these environment variables:
+
+- QNX_HOST and QNX_TARGET: existing external SDK directories.
+- CANOPY_QNX_ENV: external nonempty qnxsdp-env.sh file (never sourced by doctor).
+- CANOPY_QSTI_IMAGE: external nonempty guest image (never opened or booted).
+
+Paths resolving inside this repository are rejected, including symlinks into it.
+Only presence/type is checked; no SDK files are read, downloaded or executed.
+An arbitrary nonempty file does **not** prove a valid QSTI/SDP version.
+
+JSON separates host_ready, qnx_prerequisites_ready, qnx_accepted and overall_ready.
+Host readiness includes configured vcan and can-utils for the planned CAN path;
+QEMU availability alone is not a ready CAN lab. At this milestone acceptance
+is always NOT RUN and overall_ready is always false, even with all external
+paths present. Exit 1 is intentional, not a crash; invalid CLI usage exits 2.
+The SDK-independent host tests and offline dashboard remain usable independently.
+Guest launch orchestration and target acceptance require the SDK follow-up.
 
 ## Repository hygiene and licence
 

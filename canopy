@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+"""Local CANopy host commands (standard library only)."""
+from canopy_host.doctor import main
+
+if __name__ == "__main__":
+    raise SystemExit(main())
