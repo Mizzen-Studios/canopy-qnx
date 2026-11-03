@@ -10,7 +10,8 @@ Demo of fail-safe patterns; not an ISO 26262 / IEC 61508 claim.
 
 ## Run on host
 
-Python 3.10+ and Git only; no pip packages, SDK, root or network needed:
+Python 3.10+, Git, and Node.js 18+ for JavaScript replay contract tests;
+no pip/npm packages, SDK, root or network needed:
 
 ~~~sh
 python3 -m unittest discover -s tests -v
@@ -21,8 +22,26 @@ python3 -m canopy_host.sim --scenario drop --seed 7
 Other scenarios: bad-crc, frozen, obstacle, stale, pilot. JSONL goes to stdout;
 each row explicitly identifies host deterministic simulation, NOT QNX. Time is
 logical integer milliseconds, never measured latency. Seed controls initial
-speed; same seed/scenario produces identical records. No dashboard was added;
-safety tests took priority. CI runs host models and artifact negative tests only.
+speed; same seed/scenario produces identical records. CI runs host models,
+replay contracts and artifact negative tests only.
+
+## Offline replay dashboard
+
+Open docs/replay/index.html directly in a browser; no server, ports, network,
+fonts or dependencies. It includes the deterministic drop/seed-7 fixture from
+docs/replay/sample.jsonl. Play/pause, reset, scrub and change viewing speed.
+Use the local file picker to load JSONL from any of the six host scenarios:
+
+~~~sh
+python3 -m canopy_host.sim --scenario frozen --seed 7 > replay.jsonl
+~~~
+
+All A-E panels say HOST SIMULATION / NOT QNX. Missing sensor inputs, SSH, PIDs
+and driver stats remain explicitly unavailable. The timeline shows logical-time
+watchdog states, not measured restart durations. Files must match the host sim
+record contract, have strictly increasing time, and stay below 2 MB / 10000 rows.
+Invalid files leave the previous replay intact. No data is uploaded.
+See docs/dashboard-design.md and docs/replay/verification.md.
 
 ## Two-layer model
 
