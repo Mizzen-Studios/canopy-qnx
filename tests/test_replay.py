@@ -47,4 +47,4 @@ assert.throws(()=>parseReplay(fixture+fixture));
 assert.throws(()=>parseReplay('x'.repeat(2000001)));
 console.log('Replay parser: valid fixture and malformed/source/type/order/size rejection pass');
 """
-        subprocess.run(['node', '-e', harness], check=True, cwd=ROOT)
+        subprocess.run(['node'], input=harness, text=True, check=True, cwd=ROOT)

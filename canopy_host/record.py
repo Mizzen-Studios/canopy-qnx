@@ -37,14 +37,15 @@ def validate(rows):
             h = r['heartbeat']
             valid &= (h['can_id'] == 512 and type(h['can_id']) is int and
                       type(h['delivered']) is bool and type(h['payload_hex']) is str and
-                      len(h['payload_hex']) == 8)
+                      len(h['payload_hex']) == 8 and
+                      all(c in '0123456789abcdefABCDEF' for c in h['payload_hex']))
             Heartbeat.decode(h['can_id'], bytes.fromhex(h['payload_hex']))
             current = (r['source'], r['schema'], r['scenario'], r['seed'])
             valid &= identity is None or identity == current
             if not valid:
                 raise ValueError('unsupported values')
             identity, last = current, r['time_ms']
-        except (KeyError, TypeError, ValueError, AttributeError, OverflowError) as error:
+        except (KeyError, TypeError, ValueError, AttributeError, OverflowError, IndexError) as error:
             raise ValueError(f'Invalid host record at line {index + 1}: {error}') from error
     return rows
 
