@@ -133,6 +133,12 @@ class ActuatorTests(unittest.TestCase):
             ecu.receive(i * 10, 0x200, Heartbeat(State.SAFE_STOP, 100, 7).encode())
         self.assertTrue(ecu.timeout)
 
+    def test_slow_recovery_is_not_consecutive(self):
+        ecu = Actuator()
+        for i in range(30):
+            ecu.receive(i * 100, 0x200, Heartbeat(State.SAFE_STOP, 100, i % 16).encode())
+        self.assertTrue(ecu.timeout)
+
     def test_clock_backwards(self):
         ecu = armed()
         with self.assertRaises(ValueError):

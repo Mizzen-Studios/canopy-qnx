@@ -15,8 +15,8 @@ class Inputs:
 class Safestop:
     """Only fresh sensor cycles release the latch; pilot has no clear API.
 
-    One cycle per increasing timestamp. Recovery begins on fresh cycle ten,
-    then reduces brake by ten percentage points per fresh cycle.
+    One cycle per increasing timestamp. The tenth healthy cycle releases
+    the latch but still emits SAFE_STOP; the next cycle starts ramped release.
     """
     def __init__(self):
         self.latched = True
@@ -75,6 +75,7 @@ class Actuator:
         self.timeout = True
         self.recovery_cycles = 0
         self.recovery_counter = None
+        self.recovery_ms = None
         self.now_ms = 0
         self.rejected = 0
 
@@ -106,6 +107,9 @@ class Actuator:
             self.rejected += 1
             return False
         if self.timeout:
+            if self.recovery_ms is not None and now_ms - self.recovery_ms > 20:
+                self.recovery_cycles = 0
+                self.recovery_counter = None
             previous = (self.recovery_counter if self.recovery_counter is not None
                         else self.counter)
             fresh = (previous is None or (packet.counter == (previous + 1) % 16
@@ -116,6 +120,7 @@ class Actuator:
                 self.rejected += 1
                 return False
             self.recovery_counter = packet.counter
+            self.recovery_ms = now_ms
             self.recovery_cycles += 1
             if self.recovery_cycles < 10:
                 return False  # candidate, not accepted; watchdog remains asserted
