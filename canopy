@@ -1,6 +1,59 @@
 #!/usr/bin/env python3
-"""Local CANopy host commands (standard library only)."""
-from canopy_host.doctor import main
+"""CANopy host commands. QNX launch remains guarded by doctor."""
+import argparse
+import sys
+from pathlib import Path
+from canopy_host.doctor import main as doctor
+from canopy_host.director import hero
+from canopy_host.record import encode, read_run, write_run
 
-if __name__ == "__main__":
+
+def main(argv=None):
+    argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0] in ('doctor', 'up'):
+        return doctor(argv)
+    parser = argparse.ArgumentParser(description=__doc__)
+    commands = parser.add_subparsers(dest='command', required=True)
+    for name in ('demo', 'record'):
+        p = commands.add_parser(name, help='Generate HOST SIMULATION, not live QNX')
+        p.add_argument('--script', choices=['hero'], default='hero')
+        p.add_argument('--seed', type=int, default=7)
+        p.add_argument('--seed7', dest='seed', action='store_const', const=7, help=argparse.SUPPRESS)
+        p.add_argument('--host-sim', action='store_true', required=True)
+        p.add_argument('--output', '-o', default='run.jsonl' if name == 'record' else None)
+    p = commands.add_parser('replay', help='Validate a host recording and export an offline dashboard')
+    p.add_argument('input')
+    p.add_argument('--output', '-o', help='Write self-contained HTML (must not exist)')
+    p = commands.add_parser('top', help='Show final recorded host state; not a live QNX TUI')
+    p.add_argument('--replay', required=True)
+    args = parser.parse_args(argv)
+    try:
+        if args.command in ('demo','record'):
+            rows = list(hero(args.seed))
+            if args.output:
+                write_run(args.output, rows)
+                print(f'HOST SIMULATION / NOT QNX: {len(rows)} records written to {args.output}', file=sys.stderr)
+            else:
+                sys.stdout.write(encode(rows))
+        else:
+            rows = read_run(args.input if args.command == 'replay' else args.replay)
+            if args.command == 'replay' and args.output:
+                import re
+                template = (Path(__file__).resolve().parent / 'docs/replay/index.html').read_text()
+                data = encode(rows).replace('<', '\u003c')
+                page = re.sub(r'(<script id="sample-data" type="application/json">).*?(</script>)',
+                              lambda m: m[1] + data + m[2], template, flags=re.S)
+                with open(args.output, 'x', encoding='utf-8') as stream:
+                    stream.write(page)
+            print(f'HOST SIMULATION / NOT QNX | {len(rows)} records | logical {rows[0]["time_ms"]}–{rows[-1]["time_ms"]} ms')
+            if args.command == 'top':
+                r = rows[-1]
+                print(f"speed={r['speed_mps']} m/s brake={r['brake']}% watchdog={r['watchdog']} latch={r['safestop']}")
+                print('QNX processes, PIDs, priorities, CPU, restart metrics: unavailable / not recorded')
+    except (OSError, ValueError) as error:
+        parser.error(str(error))
+    return 0
+
+
+if __name__ == '__main__':
     raise SystemExit(main())

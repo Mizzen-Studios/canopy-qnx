@@ -3,7 +3,7 @@ import json
 import re
 import subprocess
 import unittest
-from canopy_host.sim import simulate
+from canopy_host.director import hero
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / 'docs/replay/index.html'
@@ -11,8 +11,8 @@ PAGE = ROOT / 'docs/replay/index.html'
 
 class ReplayTests(unittest.TestCase):
     def test_fixture_matches_model_and_embedded_copy(self):
-        text = (ROOT / 'docs/replay/sample.jsonl').read_text()
-        self.assertEqual([json.loads(line) for line in text.splitlines()], simulate('drop', 7))
+        text = (ROOT / 'docs/replay/run.jsonl').read_text()
+        self.assertEqual([json.loads(line) for line in text.splitlines()], list(hero(7)))
         embedded = re.search(r'<script id="sample-data" type="application/json">(.*?)</script>', PAGE.read_text(), re.S)[1]
         self.assertEqual(embedded, text)
 
@@ -32,14 +32,14 @@ class ReplayTests(unittest.TestCase):
         harness = parser + """
 const assert = require('node:assert/strict');
 """
-        harness += 'const fixture = ' + json.dumps((ROOT / 'docs/replay/sample.jsonl').read_text()) + ';' + chr(10)
+        harness += 'const fixture = ' + json.dumps((ROOT / 'docs/replay/run.jsonl').read_text()) + ';' + chr(10)
         harness += """
-assert.equal(parseReplay(fixture).length, 401);
+assert.equal(parseReplay(fixture).length, 601);
 const first = JSON.parse(fixture.split(String.fromCharCode(10))[0]);
 for (const mutation of [
  {...first, source:'QNX live'}, {...first, speed_mps:-1},
  {...first, brake:101}, {...first, accepted:1}, {...first, time_ms:-1},
- {...first, scenario:'<script>'}, {...first, seed:0.5}
+ {...first, scenario:'<script>'}, {...first, seed:0.5}, {...first, events:['fake']}, {...first, sequence:3}, {...first, heartbeat:{can_id:512, payload_hex:'00000000',delivered:true}}
 ]) assert.throws(()=>parseReplay(JSON.stringify(mutation)));
 assert.throws(()=>parseReplay(''));
 assert.throws(()=>parseReplay('{broken'));
@@ -47,4 +47,4 @@ assert.throws(()=>parseReplay(fixture+fixture));
 assert.throws(()=>parseReplay('x'.repeat(2000001)));
 console.log('Replay parser: valid fixture and malformed/source/type/order/size rejection pass');
 """
-        subprocess.run(['node', '-e', harness], check=True, cwd=ROOT)
+        subprocess.run(['node'], input=harness, text=True, check=True, cwd=ROOT)

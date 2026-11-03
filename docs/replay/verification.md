@@ -1,21 +1,35 @@
-# Offline replay evidence
+# Offline host replay evidence
 
-2026-11-03 UTC. The built-in JSONL is generated directly by
-python3 -m canopy_host.sim --scenario drop --seed 7.
-Tests compare every fixture row with the current model and verify that the
-standalone HTML embeds exactly the same fixture. No fabricated measurements.
+2026-11-03 UTC. Host-only; no QNX or live CAN acceptance implied.
 
-Node.js executes the page's actual parseReplay function against the full valid
-fixture and rejects invalid source/type/range/order/JSON/size cases. Static
-checks verify the explicit simulation labels and no network dependency.
+* docs/replay/run.jsonl: 601 genuine Python host-model output records from
+  ./canopy demo --script hero --seed 7 --host-sim. Tests compare all rows with
+  the director and the exact embedded dashboard data. Byte-identical repeat.
+* 41 standard-library unittest cases pass, including three new director tests
+  and the page's actual JavaScript parser executed in Node. Invalid provenance,
+  CRC, types, ranges, order, JSON and oversize inputs are rejected. CLI tests
+  cover record, validate, self-contained export, top and overwrite refusal.
+* Installed Playwright + Chromium 1243 (arm64), direct file://, no server:
+  browser suite covers initial rendering, keyboard stepping/Home/End/Space/I,
+  play/pause, speed selection, scrubbing, event jumps, real file input,
+  invalid-file retention, sample reset and desktop/mobile width checks.
+  No JavaScript errors or HTTP requests observed. 1920×1080 desktop also checks
+  vertical fit. 390×844 mobile is intentionally scrollable.
+* Screenshots are generated to REPLAY_EVIDENCE_DIR outside the repository:
+  host-hero-1920.png and host-hero-mobile.png. Binary screenshots cannot be
+  committed under the existing binary-free SDK guard. Tests require an explicit
+  evidence directory to avoid leaving rejected binary artifacts in the tree.
+* scripts/check-no-sdk.sh and git diff --check pass.
 
-Headless Chromium file:// attempt was denied by snap AppArmor filesystem
-confinement (ERR_ACCESS_DENIED), so no direct local-file screenshot was produced.
-A data-URL headless Chromium DOM check passed (exit 0), avoiding any server
-or port: rendered initial speed 9.00, initial actuator watchdog stop and 351
-asserted-watchdog timeline slices. This proves initial rendering, not interaction.
-No screenshot or visual layout pass is claimed; 1920x1080 and responsive CSS
-are implemented but visual review remains unverified. File-picker interaction,
-playback controls and keyboard behavior have not had a browser interaction test.
+Reproduce browser verification without downloading dependencies:
 
-No QNX, live CAN, vcan, SSH or physical vehicle evidence is implied.
+    REPLAY_EVIDENCE_DIR=<workspace-scratch-outside-repo> \
+    NODE_PATH=<existing-node-modules> \
+    CHROMIUM_PATH=<existing-chromium-executable> \
+    node tests/test_replay_browser.cjs
+
+Earlier snap Chromium confinement limitations were bypassed using the already
+installed native Playwright Chromium. No installation, public listener or Pages
+publication was necessary. No ttyd shell, PIDs, restart timings, QNX QPP signals,
+SSH drops or target performance are fabricated. See workflow.md for genuine
+SDK/target blockers; non-SDK playback does not satisfy full C9/C10 acceptance.
