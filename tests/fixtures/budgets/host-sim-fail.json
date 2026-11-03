@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "source": "HOST SIM",
+  "target_evidence": "none",
+  "note": "Invented logical-time host fixture; NOT a QNX run or measurement.",
+  "deadline_samples_ms": [
+    31
+  ],
+  "restart_chain_ms": {
+    "death_to_spawn": 20,
+    "driver_up": 20,
+    "ifconfig": 20,
+    "canvss": 20,
+    "first_frame": 21
+  },
+  "overruns": 1,
+  "expected_candump": "(1.000000) vcan0 123#00010203\n(1.010000) vcan0 00000123#AABB\n",
+  "actual_candump": "can0 123#FF\n"
+}
