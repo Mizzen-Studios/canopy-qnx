@@ -45,6 +45,10 @@ class BudgetTests(unittest.TestCase):
                 self.assertEqual([r.status for r in check(self.b, dict(self.e, **{key:value})).results], ['fail'] * 4)
         self.assertTrue(check(self.b, dict(self.e, source='HOST VCAN')).passed)
 
+    def test_nonfinite_unused_metadata_fails_closed(self):
+        e = dict(self.e, metadata={'nested': [float('nan')]})
+        self.assertEqual([r.status for r in check(self.b, e).results], ['fail'] * 4)
+
     def test_invalid_observations(self):
         for value in [float('nan'), float('inf'), -float('inf'), -1, True, '1', None, 10**400]:
             e = copy.deepcopy(self.e); e['deadline_samples_ms'] = [value]
@@ -76,7 +80,7 @@ class BudgetTests(unittest.TestCase):
     def test_json_nonfinite_duplicate(self):
         with tempfile.TemporaryDirectory() as directory:
             p = Path(directory) / 'e.json'
-            for text in ['{"x":NaN}', '{"x":Infinity}', '{"x":1,"x":2}']:
+            for text in ['{"x":NaN}', '{"x":Infinity}', '{"x":1e999}', '{"x":1,"x":2}']:
                 p.write_text(text)
                 with self.assertRaises(EvidenceError):
                     load_evidence(p)

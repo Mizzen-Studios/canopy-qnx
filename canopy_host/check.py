@@ -142,6 +142,16 @@ class Report:
     def exit_code(self):
         return 0 if self.passed else 1
 
+def _validate_finite_tree(value):
+    if isinstance(value, float) and not math.isfinite(value):
+        raise EvidenceError('nonfinite value anywhere in evidence is forbidden')
+    if isinstance(value, dict):
+        for child in value.values():
+            _validate_finite_tree(child)
+    elif isinstance(value, (list, tuple)):
+        for child in value:
+            _validate_finite_tree(child)
+
 def load_evidence(path):
     def reject(value):
         raise EvidenceError(f'nonfinite JSON value: {value}')
@@ -153,7 +163,9 @@ def load_evidence(path):
             result[key] = value
         return result
     try:
-        return json.loads(Path(path).read_text(encoding='utf-8'), parse_constant=reject, object_pairs_hook=pairs)
+        result = json.loads(Path(path).read_text(encoding='utf-8'), parse_constant=reject, object_pairs_hook=pairs)
+        _validate_finite_tree(result)
+        return result
     except (ValueError, OSError) as exc:
         raise EvidenceError(str(exc)) from exc
 
@@ -173,6 +185,10 @@ def check(budgets, evidence):
     provenance_ok = (isinstance(evidence, dict) and source in ('HOST SIM', 'HOST VCAN')
                      and evidence.get('target_evidence') == 'none'
                      and type(evidence.get('version')) is int and evidence['version'] == 1)
+    try:
+        _validate_finite_tree(evidence)
+    except EvidenceError:
+        provenance_ok = False
     for i, code in enumerate(codes):
         try:
             if not provenance_ok:
