@@ -3,6 +3,7 @@ import argparse
 import json
 import math
 import os
+import signal
 import time
 from pathlib import Path
 from .protocol import HEARTBEAT_ID
@@ -43,14 +44,14 @@ def load_inputs(path, now_ns):
         return Inputs(speed_age_ms=31, obstacle_age_ms=31)
 
 
-def sender(interface, duration, output, inputs, fault_file=None):
+def sender(interface, duration, output, inputs, fault_file=None, rotate_bytes=None):
     stop = Safestop()
     bus = SocketCAN(interface, timeout=0.002)
-    end = time.monotonic() + duration
+    end = time.monotonic() + duration if duration is not None else float('inf')
     previous = None
     frozen = None
     try:
-        with open(output, 'w') as stream:
+        with runtime_log(output, rotate_bytes) as stream:
             emit(stream, 'ready', role='safestop-sender', interface=interface)
             while time.monotonic() < end:
                 begin = time.monotonic_ns()
@@ -84,13 +85,13 @@ def sender(interface, duration, output, inputs, fault_file=None):
         bus.close()
 
 
-def actuator(interface, duration, output, initial_speed=10.0):
+def actuator(interface, duration, output, initial_speed=10.0, rotate_bytes=None):
     ecu = Actuator(initial_speed)
     ecu.now_ms = time.monotonic_ns() // 1_000_000
     bus = SocketCAN(interface, timeout=0.002)
-    end = time.monotonic() + duration
+    end = time.monotonic() + duration if duration is not None else float('inf')
     try:
-        with open(output, 'w') as stream:
+        with runtime_log(output, rotate_bytes) as stream:
             emit(stream, 'ready', role='actuator-ecu', interface=interface,
                  vehicle_source='host simulated longitudinal model, 4 m/s^2 full brake')
             last_sample = 0
@@ -126,23 +127,47 @@ def actuator(interface, duration, output, initial_speed=10.0):
         bus.close()
 
 
+from contextlib import contextmanager
+
+@contextmanager
+def runtime_log(output, rotate_bytes):
+    if rotate_bytes:
+        from .session import RotatingLog
+        stream = RotatingLog(output, rotate_bytes)
+    else:
+        stream = open(output, 'w')
+    try:
+        yield stream
+    finally:
+        stream.close()
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('role', choices=['sender', 'actuator'])
     parser.add_argument('--interface', default='vcan0')
     parser.add_argument('--duration', type=float, default=8)
+    parser.add_argument('--long-running', action='store_true')
+    parser.add_argument('--rotate-bytes', type=int)
     parser.add_argument('--output', required=True)
     parser.add_argument('--inputs')
     parser.add_argument('--fault-file')
     args = parser.parse_args()
     if not math.isfinite(args.duration) or not 0 < args.duration <= 60:
         parser.error('duration must be finite in (0, 60] seconds')
+    if args.rotate_bytes is not None and args.rotate_bytes < 1024:
+        parser.error('rotation must be at least 1024 bytes')
+    if args.long_running:
+        args.duration = None
+    def terminate(*_):
+        raise SystemExit(0)
+    signal.signal(signal.SIGTERM, terminate)
     if args.role == 'sender':
         if not args.inputs:
             parser.error('sender requires --inputs')
-        sender(args.interface, args.duration, args.output, args.inputs, args.fault_file)
+        sender(args.interface, args.duration, args.output, args.inputs, args.fault_file, args.rotate_bytes)
     else:
-        actuator(args.interface, args.duration, args.output)
+        actuator(args.interface, args.duration, args.output, rotate_bytes=args.rotate_bytes)
 
 
 if __name__ == '__main__':
