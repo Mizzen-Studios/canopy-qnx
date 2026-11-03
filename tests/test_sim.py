@@ -12,6 +12,8 @@ class SimulationTests(unittest.TestCase):
             records = simulate(scenario)
             self.assertTrue(all(r['source'].startswith('host deterministic') for r in records))
             at = {r['time_ms']: r for r in records}
+            self.assertTrue(at[490]['accepted'], scenario)
+            self.assertFalse(at[490]['watchdog'], scenario)
             self.assertEqual(at[3400]['speed_mps'], 0, scenario)
             self.assertEqual(at[3400]['brake'], 100, scenario)
             self.assertTrue(at[3400]['hazards'], scenario)

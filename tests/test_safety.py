@@ -36,8 +36,9 @@ class LatchTests(unittest.TestCase):
         stop = Safestop()
         for i in range(9):
             self.assertEqual(stop.cycle(i * 10, Inputs()).state, State.SAFE_STOP)
-        self.assertEqual(stop.cycle(90, Inputs()).state, State.RECOVER)
-        self.assertEqual(stop.brake, 90)
+        self.assertEqual(stop.cycle(90, Inputs()).state, State.SAFE_STOP)
+        self.assertFalse(stop.latched)
+        self.assertEqual(stop.brake, 100)
         for i in range(10, 20):
             stop.cycle(i * 10, Inputs())
         self.assertEqual(stop.brake, 0)

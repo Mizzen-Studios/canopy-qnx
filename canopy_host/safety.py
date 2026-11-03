@@ -42,7 +42,9 @@ class Safestop:
             self.fresh_cycles += 1
             if self.fresh_cycles >= 10:
                 self.latched = False
-        if self.latched:
+        if not self.latched and self.fresh_cycles >= 10:
+            self.fresh_cycles += 1
+        if self.latched or (self.fresh_cycles == 11 and self.brake == 100):
             state = State.SAFE_STOP
         elif self.brake:
             state = State.RECOVER
