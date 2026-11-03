@@ -1,0 +1,14 @@
+# Apache-2.0. Project-owned extension for a VSS 3.0 base catalogue.
+# Merge into the base; not a standalone complete VSS tree.
+Vehicle.ADAS.ObstacleDetection.Front:
+  type: branch
+  description: CANopy front obstacle simulation measurements.
+
+Vehicle.ADAS.ObstacleDetection.Front.Distance:
+  type: sensor
+  datatype: float
+  unit: m
+  min: 0
+  max: 500
+  description: Distance to a detected obstacle ahead in metres in the CANopy demo.
+  comment: No obstacle or invalid input is absence of a fresh update, never a synthetic distance.
