@@ -41,10 +41,11 @@ controls work offline. Record and export a validated host hero:
 The older single-fault sim JSONL is a different model schema, not a replay import.
 See [record/replay workflow](docs/replay/workflow.md) for provenance and validation.
 
-All A-E panels say HOST SIMULATION / NOT QNX. Missing sensor inputs, SSH, PIDs
-and driver stats remain explicitly unavailable. The timeline shows logical-time
-watchdog states, not measured restart durations. Files must match the host sim
-record contract, have strictly increasing time, and stay below 2 MB / 10000 rows.
+A-E panels preserve the imported source: HOST SIMULATION or HOST VCAN, always
+NOT QNX. Guest SSH/PIDs/driver stats remain explicitly unavailable. The timeline
+shows logical or measured host watchdog states, never QNX restart duration.
+Files must match the separate strict simulation/live schema, have increasing
+time, and stay below 2 MB / 10000 rows.
 Invalid files leave the previous replay intact. No data is uploaded.
 See docs/dashboard-design.md and docs/replay/verification.md.
 
