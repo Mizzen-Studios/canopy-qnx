@@ -1,5 +1,7 @@
 # SDK host preparation — private evidence, 2026-11-04
 
+**Superseded checkpoint:** activation, installation and actual hello execution now verified. See [current result](sdk-install-result-20261104.md). Below preserves earlier preparation state.
+
 Owner reports an active perpetual non-commercial single-user SDP8 licence on this VM. Account/serial/credential values are not recorded here. Activation and entitlement have NOT been independently verified. Password file is absent; no login, licence-listing, activation or SDK installation has been attempted.
 
 ## Route decision
