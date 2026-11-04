@@ -1,0 +1,10 @@
+{
+  "hostTx": 100,
+  "qnxRx": 100,
+  "qnxRxByteExact": true,
+  "qnxTxReceived": 100,
+  "qnxTxByteExact": true,
+  "marker": true,
+  "routingOverride": "PIIX PIRQ A-D -> IRQ10; experimental QNX legacy board mapping correction",
+  "hostFrameIntervalSeconds": 0.03
+}
