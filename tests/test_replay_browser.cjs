@@ -28,6 +28,17 @@ const {pathToFileURL}=require('node:url');
   await page.locator('#file').setInputFiles({name:'invalid.jsonl',mimeType:'text/plain',buffer:Buffer.from('{}')});
   await page.waitForFunction(()=>document.querySelector('#message').textContent.includes('Previous replay retained'));
   assert.equal(await page.locator('#clock').textContent(),'1000 ms');
+  if(process.env.REPLAY_LIVE_FILE){
+   const live=process.env.REPLAY_LIVE_FILE;
+   await page.locator('#file').setInputFiles(live);
+   await page.waitForFunction(()=>document.querySelector('#message').textContent.includes('HOST VCAN live SocketCAN'));
+   assert.match(await page.locator('.truth').textContent(),/HOST VCAN/);
+   assert.match(await page.locator('.strip').first().textContent(),/Recorded Linux SocketCAN/);
+   const bad=fs.readFileSync(live,'utf8').trim().split('\n').map(x=>JSON.parse(x));bad[0].clock='logical-ms';
+   await page.locator('#file').setInputFiles({name:'bad-live.jsonl',mimeType:'text/plain',buffer:Buffer.from(bad.map(x=>JSON.stringify(x)).join('\n'))});
+   await page.waitForFunction(()=>document.querySelector('#message').textContent.includes('Previous replay retained'));
+   assert.match(await page.locator('.truth').textContent(),/HOST VCAN/);
+  }
   await page.locator('#sample').click();assert.equal(await page.locator('#clock').textContent(),'0 ms');
   await page.locator('#events button').filter({hasText:'590 ms watchdog-held'}).click();
   assert.equal(await page.locator('#watchdog').textContent(),'Held');

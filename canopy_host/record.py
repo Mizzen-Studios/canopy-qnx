@@ -17,6 +17,9 @@ def integer(value, minimum=0):
 def validate(rows):
     if not rows or len(rows) > MAX_ROWS:
         raise ValueError('Use 1–10000 host simulation records')
+    if isinstance(rows[0], dict) and rows[0].get('schema') == 'canopy.host-vcan-run.v1':
+        from .live_record import validate as live_validate
+        return live_validate(rows)
     last = -1
     identity = None
     for index, r in enumerate(rows):
