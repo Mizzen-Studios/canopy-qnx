@@ -10,6 +10,9 @@ from canopy_host.record import encode, read_run, write_run
 
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0] == 'check':
+        from canopy_host.check_cli import main as budget_check
+        return budget_check(argv[1:])
     if argv and argv[0] == 'host-session':
         from canopy_host.session import main as session
         return session(argv[1:])

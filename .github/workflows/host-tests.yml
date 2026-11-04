@@ -6,10 +6,10 @@ jobs:
   host:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Host unit and artifact negative tests (no QNX)
         run: python3 -m unittest discover -s tests -v
       - name: Exclude SDK and binary artifacts
         run: sh scripts/check-no-sdk.sh
-      - name: Honest job summary
-        run: echo 'Host deterministic tests only. No QNX, QEMU, hardware, or live vcan evidence.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Host simulated fixtures only — CP101–104 (NOT QNX)
+        run: ./canopy check tests/fixtures/budgets/host-sim-pass.json --github --summary "$GITHUB_STEP_SUMMARY"
