@@ -4,8 +4,8 @@ import re
 import subprocess
 import sys
 
-BAD_PART = re.compile(r'^(?:[.]sdk|sdk|qnxsdp.*|qnx[0-9]+|images)$', re.I)
-BAD_EXT = re.compile(r'[.](?:ifs|img|qcow2?|vmdk|iso|o|a|so(?:[.].*)?|dll|exe|zip|tar|tgz|gz|xz|bz2|7z|deb|rpm|bin)$', re.I)
+BAD_PART = re.compile(r'^(?:[.]sdk|sdk|qnxsdp.*|qnx[0-9]+|images|qnx-host|qnxsoftwarecenter.*|qsc|[.]qnx|[.]secrets)$', re.I)
+BAD_EXT = re.compile(r'[.](?:ifs|img|qcow2?|vmdk|iso|o|a|so(?:[.].*)?|dll|exe|zip|tar|tgz|gz|xz|bz2|7z|deb|rpm|bin|run)$', re.I)
 MARKERS = (b'QNX Software ' + b'Development Platform', b'QNX SDP ' + b'License',
            b'QNX_' + b'HOST=', b'QNX_' + b'TARGET=')
 
