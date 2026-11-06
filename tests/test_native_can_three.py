@@ -1,6 +1,9 @@
 import importlib.util
 from pathlib import Path
 import unittest
+import json
+import tempfile
+import sys
 
 spec = importlib.util.spec_from_file_location('native_three', Path(__file__).parents[1]/'tools/native_can_three.py')
 gate = importlib.util.module_from_spec(spec)
@@ -34,6 +37,25 @@ class NativeGateTests(unittest.TestCase):
         self.assertIn('CPUQuota=100%', script)
         self.assertIn('MemoryMax=1G', script)
         self.assertIn('nice -n 15', script)
+
+class OfflineEvidenceTests(unittest.TestCase):
+    def test_failed_summary_rejected(self):
+        sys.path.insert(0, str(Path(__file__).parents[1]/'tools'))
+        from verify_native_can_evidence import verify
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp)
+            (p/'summary.json').write_text(json.dumps({'pass':False, 'runs':[]}))
+            with self.assertRaises(ValueError):
+                verify(p)
+
+    def test_wrong_source_rejected(self):
+        sys.path.insert(0, str(Path(__file__).parents[1]/'tools'))
+        from verify_native_can_evidence import verify
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp)
+            (p/'summary.json').write_text(json.dumps({'pass':True, 'runs':[1,2,3], 'sourceGate':'SocketCAN'}))
+            with self.assertRaises(ValueError):
+                verify(p)
 
 if __name__ == '__main__':
     unittest.main()

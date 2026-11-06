@@ -1,0 +1,146 @@
+{
+  "qualifier": "observed in this QEMU run \u00b7 app budget, not a QNX benchmark",
+  "caps": {
+    "cpu.max": "100000 100000",
+    "memory.max": "1073741824",
+    "nice": 15
+  },
+  "runs": [
+    {
+      "run": 1,
+      "pass": true,
+      "hostCangenCommand": [
+        "cangen",
+        "vcan1",
+        "-n",
+        "100",
+        "-I",
+        "i",
+        "-L",
+        "8",
+        "-D",
+        "i",
+        "-g",
+        "30"
+      ],
+      "rxHostCount": 100,
+      "rxQnxCount": 100,
+      "txExpectedCount": 100,
+      "txHostCount": 100,
+      "orderedByteExact": true,
+      "nativeAPI": "libcan /dev/can0, NOT SocketCAN",
+      "qualifier": "observed in this QEMU run \u00b7 app budget, not a QNX benchmark",
+      "routingOverride": [
+        [
+          "outl 0xcf8 0x80000860",
+          "OK"
+        ],
+        [
+          "inl 0xcfc",
+          "OK 0xb0b0a0a"
+        ],
+        [
+          "outl 0xcfc 0x0a0a0a0a",
+          "OK"
+        ],
+        [
+          "inl 0xcfc",
+          "OK 0xa0a0a0a"
+        ]
+      ],
+      "settleSeconds": 0.3
+    },
+    {
+      "run": 2,
+      "pass": true,
+      "hostCangenCommand": [
+        "cangen",
+        "vcan1",
+        "-n",
+        "100",
+        "-I",
+        "i",
+        "-L",
+        "8",
+        "-D",
+        "i",
+        "-g",
+        "30"
+      ],
+      "rxHostCount": 100,
+      "rxQnxCount": 100,
+      "txExpectedCount": 100,
+      "txHostCount": 100,
+      "orderedByteExact": true,
+      "nativeAPI": "libcan /dev/can0, NOT SocketCAN",
+      "qualifier": "observed in this QEMU run \u00b7 app budget, not a QNX benchmark",
+      "routingOverride": [
+        [
+          "outl 0xcf8 0x80000860",
+          "OK"
+        ],
+        [
+          "inl 0xcfc",
+          "OK 0xb0b0a0a"
+        ],
+        [
+          "outl 0xcfc 0x0a0a0a0a",
+          "OK"
+        ],
+        [
+          "inl 0xcfc",
+          "OK 0xa0a0a0a"
+        ]
+      ],
+      "settleSeconds": 0.3
+    },
+    {
+      "run": 3,
+      "pass": true,
+      "hostCangenCommand": [
+        "cangen",
+        "vcan1",
+        "-n",
+        "100",
+        "-I",
+        "i",
+        "-L",
+        "8",
+        "-D",
+        "i",
+        "-g",
+        "30"
+      ],
+      "rxHostCount": 100,
+      "rxQnxCount": 100,
+      "txExpectedCount": 100,
+      "txHostCount": 100,
+      "orderedByteExact": true,
+      "nativeAPI": "libcan /dev/can0, NOT SocketCAN",
+      "qualifier": "observed in this QEMU run \u00b7 app budget, not a QNX benchmark",
+      "routingOverride": [
+        [
+          "outl 0xcf8 0x80000860",
+          "OK"
+        ],
+        [
+          "inl 0xcfc",
+          "OK 0xb0b0a0a"
+        ],
+        [
+          "outl 0xcfc 0x0a0a0a0a",
+          "OK"
+        ],
+        [
+          "inl 0xcfc",
+          "OK 0xa0a0a0a"
+        ]
+      ],
+      "settleSeconds": 0.3
+    }
+  ],
+  "pass": true,
+  "sourceGate": "libcan fallback acceptance ONLY; io-sock C2 NOT passed",
+  "imageSha256": "1b69809c8aa7216f12c278a601fe114bed40f0cd9116e54b9988dd5c1d1f5742",
+  "qemuVersion": "QEMU emulator version 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.18)"
+}
