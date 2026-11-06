@@ -9,6 +9,10 @@ No first-of-kind, availability, restart-speed, benchmark or safety guarantee is 
 
 Demo of fail-safe patterns; not an ISO 26262 / IEC 61508 claim.
 
+## Experimental native application
+
+[Bounded SocketCAN demo and build instructions](docs/socketcan-demo.md): original C source cross-built with SDP 8.0 and tested on real Linux vcan. This does not fix the io-sock module/board gate or establish on-QNX SocketCAN delivery. Existing native QEMU frame evidence uses the separate libcan fallback.
+
 ## Run on host
 
 Python 3.10+, Git, and Node.js 18+ for JavaScript replay contract tests;
