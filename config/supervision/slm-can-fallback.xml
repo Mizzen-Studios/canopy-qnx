@@ -1,0 +1,11 @@
+<!-- Original config; native parser/foreground invocation NOT yet validated.
+slm -n /dev/slm-canopy -R 5/min -s canopy-can slm-can-fallback.xml
+Rolling window/manual latch additionally requires a policy controller. -->
+<SLM:system xmlns:SLM="urn:canopy:slm">
+  <SLM:component name="canopy-can">
+    <SLM:command>/proc/boot/dev-can-linux</SLM:command>
+    <SLM:args>-b id=0,freq=500k</SLM:args>
+    <SLM:repair backoff="1">restart</SLM:repair>
+    <SLM:stop stop="signal" child="false" timeout="2000">SIGTERM</SLM:stop>
+  </SLM:component>
+</SLM:system>
