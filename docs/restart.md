@@ -22,6 +22,24 @@ not working SocketCAN. No QEMU started and no external image changed by this lan
   start: it is NOT exponential crash-loop backoff. HAM starts its own guardian;
   stop via hamctrl or ham_stop, never kill the manager casually.
 
+## SDK owner inventory update
+
+EDU's follow-up10 read-only inventory now confirms target x86_64 binaries at
+/home/qnx/qnx800/target/qnx/x86_64/usr/sbin/slm and
+/home/qnx/qnx800/target/qnx/x86_64/bin/slmctl. SLM direct NEEDED entries:
+libexpat.so.2, libsecpol.so.1, libqh.so.1, libc.so.6, libgcc_s.so.1.
+slmctl direct NEEDED: libc.so.6 and libgcc_s.so.1. Full transitive closure still
+belongs to the SDK image builder. HAM was not found by that inventory.
+No target execution/help output was included, so native behavior remains pending.
+EDU is staging a distinct external IFS; SLM native lease remains third.
+
+scripts/slm-target-smoke.sh is an original opt-in, fresh-image-only parser and
+node readiness probe. It refuses an existing control endpoint or CAN node,
+logs pidin and documented slmctl listall/active -v, and never kills a process.
+Its shell syntax/refusal paths are host-verified, not its QNX runtime.
+The control queries are from the QNX 8 slmctl reference, not inferred CLI syntax.
+The script's READY marker explicitly excludes restart, traffic and SSH proof.
+
 ## Original config and limit design
 
 config/supervision/slm-can-fallback.xml manages **only** canopy-can; no adoption,
