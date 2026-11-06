@@ -1,10 +1,11 @@
 # CANopy — host foundation for QNX® 8.0
 
-Private SDK-independent host core, **not a QNX implementation**.
+Private host core plus **experimental native diagnostics, not a completed QNX CANopy stack**.
 Implemented host-side: deterministic director/replay, separate Linux SocketCAN
 actuator/safestop processes, DBC/VSS mapping, learned pilot and C export.
-No QNX driver/guest, SLM restart, running QPP connector, native real-time scheduling,
-physical vehicle or certification is implemented or demonstrated here.
+An external QNX guest and separate native libcan fallback have observed byte-exact CAN traffic; the original SocketCAN demo cross-builds, but on-QNX SocketCAN delivery remains blocked.
+No accepted native CANopy driver/integration, SLM restart, running QPP connector, native real-time scheduling,
+physical vehicle or certification is demonstrated here.
 No first-of-kind, availability, restart-speed, benchmark or safety guarantee is made.
 
 Demo of fail-safe patterns; not an ISO 26262 / IEC 61508 claim.
