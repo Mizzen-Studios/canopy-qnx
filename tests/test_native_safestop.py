@@ -26,6 +26,7 @@ class Packet(C.Structure):
 class NativeSafestopTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        (ROOT / 'build').mkdir(exist_ok=True)
         cls.tmp = tempfile.TemporaryDirectory(dir=ROOT / 'build')
         cls.addClassCleanup(cls.tmp.cleanup)
         library = Path(cls.tmp.name) / 'safestop.so'
