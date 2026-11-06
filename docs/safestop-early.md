@@ -88,3 +88,13 @@ fallback is **not working SocketCAN**. Required target evidence remains: real
 native heartbeat delivery into the host ECU; stale/obstacle/pilot veto and
 safestop pause/kill; bad CRC/frozen counter; ten fresh-cycle resume; and driver
 failure/restart with independent network continuity. Until then C6 is pending.
+
+## SDK compile-only follow-through (6 November 2026)
+
+The exclusive SDK build owner compiled this original core with SDP8 x86_64 qcc strict warnings enabled and recorded SAFESTOP_CROSS_COMPILE_PASS. Parent checked source hashes against the merged checkout:
+
+- safestop.c SHA256 `2fecad504b11b7ca61a7318eea5e922753866cc67c7785a5396c48002c6ca2c3`
+- safestop.h SHA256 `b4ff29a9722862a82ae9a61de65d8b7b3715a4ce55283ebbf09facf093c74e85`
+- external object SHA256 `c282165ab84e69f17b388941862669497211886f42e44047b7422c0b2f32a22f`
+
+Only hashes and this statement are committed. The object and all SDK material remain external. This removes the compile-only uncertainty; it establishes no QNX runtime, timer-pulse/FIFO scheduling, CAN transport, watchdog timing or full C6 acceptance. No performance evaluation is implied.
