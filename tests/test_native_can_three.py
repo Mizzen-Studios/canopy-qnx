@@ -16,7 +16,9 @@ class NativeGateTests(unittest.TestCase):
     def test_reject_count_order_payload_and_constant(self):
         for rows in ([], self.frames[:-1], self.frames + self.frames[:1],
                      self.frames[::-1], [(0, 'ff'*8)]+self.frames[1:],
-                     [(0, '00'*8)]*100):
+                     [(0, '00'*8)]*100,
+                     [(0x800+i, data) for i, data in self.frames],
+                     [(i, data[:-2]) for i, data in self.frames]):
             with self.subTest(rows=len(rows)), self.assertRaises(ValueError):
                 gate.require_exact(self.frames, rows)
 

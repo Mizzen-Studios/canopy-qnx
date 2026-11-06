@@ -29,6 +29,8 @@ def parse_qnx(text):
 def require_exact(expected, actual):
     if len(expected) != 100 or len(actual) != 100 or expected != actual:
         raise ValueError(f'count/order/bytes mismatch: expected={len(expected)} actual={len(actual)}')
+    if any(not 0 <= cid <= 0x7ff or len(data) != 16 for cid, data in actual):
+        raise ValueError('expected standard IDs and exactly eight bytes')
     if len({x[0] for x in actual}) != 100 or len({x[1] for x in actual}) != 100:
         raise ValueError('IDs and payloads must each vary across all 100 frames')
 
@@ -84,6 +86,7 @@ def run_once(image, output, number):
                 if not data:
                     raise RuntimeError('QEMU exited before marker')
                 serial.extend(data)
+                base.with_suffix('.serial.txt').write_bytes(serial)
             if marker in bytes(serial[start:]).replace(b'\r', b'').split(b'\n'):
                 return bytes(serial[start:]).decode(errors='strict')
             if r.poll() is not None:
@@ -150,6 +153,11 @@ def run_once(image, output, number):
         for cid, payload in expected:
             command(f'/proc/boot/cansend -u0,tx0 -m0x{cid:x},0,0x{payload} || exit 1')
             command('sleep 0.03')
+            deadline = time.monotonic() + .10
+            while time.monotonic() < deadline:
+                if sel.select(.01):
+                    serial.extend(os.read(r.stdout.fileno(), 65536))
+                drain()
         command('C2_SCRIPT')
         command('sh /tmp/c2-tx.sh; C2_RC=$?; echo C2_TX_RC=$C2_RC; echo C2_TX_END')
         tx_text = until(b'C2_TX_END', timeout=60)
