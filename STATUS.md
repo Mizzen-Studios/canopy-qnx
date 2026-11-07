@@ -10,8 +10,24 @@
 
 EarlyC6 host-vcan fault tests, C/Python parity and source-bound SDP x86 compile-only evidence remain recorded in [safestop](docs/safestop-early.md). Native timer-pulse/FIFO/CAN runtime acceptance is not claimed.
 
+## Follow-up 11: post-restart traffic and native preparation
+
+Three additional managed-process kills now each have 100 RX + 100 TX ordered
+ID/DLC/payload exact against independent host capture. Main io-sock PID163853
+stayed unchanged. [Receipt](docs/acceptance/slm-traffic-20261107/receipt.json)
+and all three frame arrays are preserved; offline corruption tests reject bad
+bytes/order/count/PID/cap receipts. Evidence2b9be8c; verifiera093d13.
+These are **observed in this QEMU run · app budget, not a QNX benchmark**.
+
+Authenticated SSH continuity is still NOT PASS: the actual attempt failed
+before authentication because the IFS lacked sshd-session. Installed SDK
+helpers were located; an external image rebuild is active. Native guest was
+stopped/reaped. Sole SDK build guest uses CPU100%,1GiB,nice15,1vCPU/512MiB;
+no concurrent native guest. C6 native FIFO/timer source is prepared, with
+real qcc rebuild pending after a strict-C API-visibility correction.
+
 ## Still unverified
 
-Full SocketCAN C2/C3 requires matching x86_64 module/board ABI. Post-restart byte-exact CAN traffic, authenticated same-session SSH continuity, identity-safe production supervision, rolling-window/manual-latch limits, least privilege and robust failure injection are not established by the restart smoke. Main PID snapshots do not prove uninterrupted SSH. No full C3 policy acceptance is claimed.
+Full SocketCAN C2/C3 requires matching x86_64 module/board ABI. Authenticated same-session SSH continuity, identity-safe production supervision, rolling-window/manual-latch limits, least privilege and robust failure injection are not established by the restart smoke. Main PID snapshots do not prove uninterrupted SSH. No full C3 policy acceptance is claimed.
 
-All native guests stopped/reaped; lease free. Both repos private. SDK/licenses/headers/libs/images/binaries/QSC/secrets remain external. No publication, contacts, paid resources or upstream PRs.
+Native guests stopped/reaped; the parent currently owns the serialized SDK build lane. Both repos private. SDK/licenses/headers/libs/images/binaries/QSC/secrets remain external. No publication, contacts, paid resources or upstream PRs.

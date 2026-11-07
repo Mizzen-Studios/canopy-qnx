@@ -3,6 +3,10 @@
 #ifndef __QNXNTO__
 #error This adapter requires the QNX target; host tests compile only portable sources
 #endif
+/* QNX extension declarations are hidden by strict ISO C without this. */
+#ifndef _QNX_SOURCE
+#define _QNX_SOURCE 1
+#endif
 #include "native_inputs.h"
 #include <devctl.h>
 #include <sys/can_dcmd.h>
