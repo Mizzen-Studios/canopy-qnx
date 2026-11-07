@@ -4,7 +4,7 @@ Council conditional acceptance at79912ef; native features FROZEN. [Private proof
 
 Private [claim-to-receipt review](REVIEW.md): historical source/build gaps remain UNVERIFIED.
 
-Actual [desktop/mobile Chromium validation](docs/acceptance/browser-20261107/NOTES.md): missing/corrupt/mixed → UNKNOWN; recorded native labels remain separate from simulation. Host suite **126 passed / 8 skipped**. No fresh native acceptance.
+Actual [desktop/mobile Chromium validation](docs/acceptance/browser-20261107/NOTES.md): missing/corrupt/mixed → UNKNOWN; recorded native labels remain separate from simulation. That browser milestone records host suite **126 passed / 8 skipped** at its own pinned revision; later host receipts are chronological, not new native acceptance.
 
 Private evidence workbench for a bounded **native QNX libcan + SLM experiment**.
 The recorded journey is: positively identified CAN PID killed → new CAN PID →

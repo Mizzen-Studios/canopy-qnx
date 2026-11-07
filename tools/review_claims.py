@@ -149,7 +149,7 @@ def generate():
             any(key in b['pointer'] for key in ('source_commit', '/source', 'baseline'))] or None
         group['image_sha256'] = [b for b in declared if 'image' in b['pointer'].lower()] or None
         group['binary_sha256'] = [b for b in declared if 'output_sha256' in b['pointer']] or None
-    paths = ['README.md', 'STATUS.md', 'docs/workbench/index.html', 'docs/replay/index.html']
+    paths = ['README.md', 'STATUS.md', 'docs/workbench/index.html', 'docs/replay/index.html', 'docs/private-demo.md', 'docs/proof-capture/SCRIPT.md']
     occurrences = []
     for rel in paths:
         for line, text, section in units(ROOT / rel):

@@ -1,0 +1,579 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "scope": "Offline structural lint + explicit REVIEW mapping; not a universal semantic claim verifier",
+  "acceptance": "Council CONDITIONAL scoped evidence; native features FROZEN; outsider human learning and second independent SDK UNVERIFIED",
+  "capture": "DRY ONLY; separate Olly OK required for recording/audio",
+  "boundaries": [
+    "existing licensed SDK reused, not fresh install",
+    "sshd internal cause UNVERIFIED, no full-platform health",
+    "C6FAIL/STOPPED, SocketCANUNVERIFIED",
+    "no safety/timing/availability claims"
+  ],
+  "surfaces": [
+    {
+      "path": "README.md",
+      "sha256": "b68b5075d563e0b6508e3d451a1dccbabc42950b6bcfd64757dcf57b5f92f2f4",
+      "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "6de5e7b42572475c899ec0af12b30fb23d5dd8f9f968b761d6f08bba9d544c9a",
+      "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "c981f89705dafa280381f49d445688090e8fa9ec29868abb0d6348ff16a685c7",
+      "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
+    },
+    {
+      "path": "docs/private-demo.md",
+      "sha256": "7d51124b572da79b3ec4241573b1849bbdfc04994d11b387e80da5241bc850f4",
+      "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
+    },
+    {
+      "path": "docs/proof-capture/SCRIPT.md",
+      "sha256": "adcd2360b3b3c48fa28f457dc97ad4ddfd6bf855fd0b11dbfbae3c6d2aa890ef",
+      "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
+    },
+    {
+      "path": "docs/workbench/index.html",
+      "sha256": "5282e9f446f35a2b48679c26a349deeed533f7cbc756e39bfb2f803df1c57408",
+      "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
+    },
+    {
+      "path": "docs/replay/index.html",
+      "sha256": "e003d6f78ab2517d936567979a8d200d6a209a9a4152db73ee7a305561f14c7b",
+      "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
+    }
+  ],
+  "local_links": [
+    {
+      "source": "README.md",
+      "target": "docs/proof-capture/SCRIPT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/browser-20261107/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/capabilities.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/slm-continuity-20261107/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/safestop-focused-failure-20261107/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/slm-continuity-20261107/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/workbench/index.html",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "tools/incident_workbench.py",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/incident-workbench.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/replay/index.html",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/socketcan-demo.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/replay/workflow.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/host-runtime.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/host-vcan-setup.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/host-runtime.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/vss-mapping.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/vss-qpp-integration.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/pilot.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/capabilities.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "REVIEW.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/browser-20261107/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/capabilities.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/native-can-20261106/summary.json",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/slm-20261107/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/slm-20261107/serial.txt",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/slm-20261107/controller.py",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/safestop-early.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/slm-traffic-20261107/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/slm-continuity-20261107/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/safestop-build-20261107/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "REVIEW.md",
+      "target": "docs/review-claims.json",
+      "exists": true
+    },
+    {
+      "source": "REVIEW.md",
+      "target": "docs/private-demo.md",
+      "exists": true
+    },
+    {
+      "source": "docs/private-demo.md",
+      "target": "proof-capture/SCRIPT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/private-demo.md",
+      "target": "proof-capture/pack.json",
+      "exists": true
+    },
+    {
+      "source": "docs/private-demo.md",
+      "target": "proof-capture/report.json",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/traffic1.json",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/traffic2.json",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/traffic3.json",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "recorded-manifest.json",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../../config/supervision/slm-can-fallback.xml",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/safestop-failure-20261107/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/safestop-focused-failure-20261107/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/controller.py",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/main-irq-before.txt",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/network-before.txt",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/network-configured.txt",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/serial.txt",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/ssh-debug.txt",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/ssh-diag.txt",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/ssh-server.txt",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/ssh-stream.txt",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/startup.txt",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/traffic1.json",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/traffic2.json",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../acceptance/slm-continuity-20261107/traffic3.json",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../../tools/native_can_three.py",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../../tools/verify_slm_continuity.py",
+      "exists": true
+    },
+    {
+      "source": "docs/workbench/index.html",
+      "target": "../../tools/verify_slm_traffic_evidence.py",
+      "exists": true
+    },
+    {
+      "source": "docs/replay/index.html",
+      "target": "../capabilities.md",
+      "exists": true
+    }
+  ],
+  "dry_pack": {
+    "kind": "private-proof-capture-DRY-PACK",
+    "status": "PASS",
+    "errors": [],
+    "frozen_commit": "79912ef4ab2a738263d1ea22d42210d722182f35",
+    "narration_words": 190,
+    "planned_seconds": 155,
+    "duration_verified": "editorial plan only; no rehearsal/recorded duration",
+    "recording_performed": false,
+    "audio_performed": false,
+    "publication_performed": false,
+    "claim_mapping_review": "explicit human-authored mapping to REVIEW; hashes check presence/identity, not semantic truth",
+    "lines": [
+      {
+        "id": "L01",
+        "words": 23,
+        "start": 0,
+        "end": 20,
+        "claim": "Read-only static workbench presents recorded native libcan/SLM evidence, not live telemetry or safety.",
+        "frame": "README, REVIEW and docs/workbench/index.html; planned local file view only, not live capture",
+        "label": "host-only",
+        "assets": [
+          {
+            "path": "docs/workbench/index.html",
+            "sha256": "5282e9f446f35a2b48679c26a349deeed533f7cbc756e39bfb2f803df1c57408"
+          },
+          {
+            "path": "docs/workbench/recorded-manifest.json",
+            "sha256": "36f4c42e48866ba3871b9254a72b1f2d2348b9cb5fc183c72c2da34ee7dc0efa"
+          }
+        ]
+      },
+      {
+        "id": "L02",
+        "words": 38,
+        "start": 20,
+        "end": 55,
+        "claim": "Three recorded positively identified managed CAN PID kills/restarts with100RX/100TX ordered exact bytes per post-restart trial.",
+        "frame": "Recorded workbench incident phases; slm-continuity-20261107/receipt.json and serial; planned local file view only, not live capture",
+        "label": "recorded native QEMU observation",
+        "assets": [
+          {
+            "path": "docs/acceptance/slm-continuity-20261107/receipt.json",
+            "sha256": "9df1cab467af2785af8461d133e7b2845fc05a5cf8175f00717eb32e1478df56"
+          },
+          {
+            "path": "docs/acceptance/slm-continuity-20261107/serial.txt",
+            "sha256": "a1fa4f0fd2ac5473507b5ba273f063aea9998a2d28a97df4beb856d5e96a0d88"
+          },
+          {
+            "path": "docs/acceptance/slm-continuity-20261107/traffic1.json",
+            "sha256": "18f41a42d9deb3f2355747d9f3c598f862d963092f14bf755522427b117b9b21"
+          },
+          {
+            "path": "docs/acceptance/slm-continuity-20261107/traffic2.json",
+            "sha256": "bfa758c2253d7414ded2a7d049dd342e9bf0fb617dbe6b9e465c4aecd397cfea"
+          },
+          {
+            "path": "docs/acceptance/slm-continuity-20261107/traffic3.json",
+            "sha256": "aff53bc86bb0c8bb553d7ee38b4f67e00d666e9ec28be83787869ec93fb70c70"
+          }
+        ]
+      },
+      {
+        "id": "L03",
+        "words": 32,
+        "start": 55,
+        "end": 85,
+        "claim": "Same authenticated SSH stream and unchanged main io-sock PID during bounded historical observation only.",
+        "frame": "Same receipt, client/server SSH logs and captured main io-sock PID; planned local file view only, not live capture",
+        "label": "recorded native QEMU observation",
+        "assets": [
+          {
+            "path": "docs/acceptance/slm-continuity-20261107/receipt.json",
+            "sha256": "9df1cab467af2785af8461d133e7b2845fc05a5cf8175f00717eb32e1478df56"
+          },
+          {
+            "path": "docs/acceptance/slm-continuity-20261107/ssh-stream.txt",
+            "sha256": "4d378ab4eacc905a2a309ceb02b66f134faaa05a1c161990c6af77bc3e65c681"
+          },
+          {
+            "path": "docs/acceptance/slm-continuity-20261107/ssh-debug.txt",
+            "sha256": "7d8f7672b526229cd0019b00518d2ee5a366115c89c7ff04d196ef37f39e0304"
+          },
+          {
+            "path": "docs/acceptance/slm-continuity-20261107/ssh-server.txt",
+            "sha256": "dbfa92dfdc29f4631cfdf8c7ebc6771ce6a9141ddef276b0b5cc8eeb60962ff5"
+          }
+        ]
+      },
+      {
+        "id": "L04",
+        "words": 32,
+        "start": 85,
+        "end": 115,
+        "claim": "Missing/corrupt/mixed evidence yields UNKNOWN; saved desktop/mobile browser checks are host-only.",
+        "frame": "UNKNOWN fixtures from unknown-review-20261107/ and browser-20261107/NOTES.md; labels at desktop/mobile; planned local file view only, not live capture",
+        "label": "host-only",
+        "assets": [
+          {
+            "path": "docs/acceptance/unknown-review-20261107/missing.html",
+            "sha256": "1748ab4b2831df42b9fad86641319637cf97f1d937bc033b7cd7fbd5d3df55c7"
+          },
+          {
+            "path": "docs/acceptance/unknown-review-20261107/corrupt.html",
+            "sha256": "d0dd2e1deeb0217482b3fe68d7595e4885e67986802c7eea916e04ffe56867e0"
+          },
+          {
+            "path": "docs/acceptance/unknown-review-20261107/mixed.html",
+            "sha256": "d0dd2e1deeb0217482b3fe68d7595e4885e67986802c7eea916e04ffe56867e0"
+          },
+          {
+            "path": "docs/acceptance/browser-20261107/receipt.json",
+            "sha256": "8d6392815e0c3855d2efefd4a1cf0eda7f564a50d03bd254ca08e5489d6901c5"
+          }
+        ]
+      },
+      {
+        "id": "L05",
+        "words": 20,
+        "start": 115,
+        "end": 135,
+        "claim": "Separate replay is HOST SIMULATION; no QNX proof transfers.",
+        "frame": "Separate docs/replay/index.html with HOST SIMULATION label; no live animation needed; planned local file view only, not live capture",
+        "label": "host-only",
+        "assets": [
+          {
+            "path": "docs/replay/index.html",
+            "sha256": "e003d6f78ab2517d936567979a8d200d6a209a9a4152db73ee7a305561f14c7b"
+          },
+          {
+            "path": "docs/replay/run.jsonl",
+            "sha256": "10433ce54c9aa1dedf22e0a5cdb9df0b0a583c15c7af388afb4aae445aabede9"
+          }
+        ]
+      },
+      {
+        "id": "L06",
+        "words": 45,
+        "start": 135,
+        "end": 155,
+        "claim": "Historical driver source/binary binding incomplete; SocketCAN UNVERIFIED and C6FAIL/STOPPED; no safety/timing/availability acceptance.",
+        "frame": "REVIEW binding gaps and capability ledger; STOPPED/UNVERIFIED labels; planned local file view only, not live capture",
+        "label": "UNVERIFIED boundaries",
+        "assets": [
+          {
+            "path": "docs/capabilities.json",
+            "sha256": "d3cbf3e8325320858e9cf4c1eb33d474a5ee635a01d3977c0928c2270b8da1a8"
+          },
+          {
+            "path": "docs/acceptance/safestop-focused-failure-20261107/receipt.json",
+            "sha256": "adf790f90acabfbfbaaf2620037ced5f0a4c3aab401148d0f5eaaffbf75f70f0"
+          }
+        ]
+      }
+    ]
+  },
+  "negative_checks": {
+    "unbound_claim": {
+      "rejected": true,
+      "errors": [
+        "L01: unbound claim/frame"
+      ]
+    },
+    "missing_asset": {
+      "rejected": true,
+      "errors": [
+        "L01: missing/unsafe asset docs/INTENTIONAL-MISSING-ASSET"
+      ]
+    },
+    "changed_digest": {
+      "rejected": true,
+      "errors": [
+        "L01: changed frozen asset docs/workbench/index.html"
+      ]
+    }
+  },
+  "chronological_host_receipts": [
+    {
+      "receipt": "docs/acceptance/browser-20261107/receipt.json",
+      "sha256": "8d6392815e0c3855d2efefd4a1cf0eda7f564a50d03bd254ca08e5489d6901c5",
+      "tested_commit": "25ca8cf919e81fa62669f2cb8f813fa2cab536df",
+      "archival_commit": "41674dce9974406c0df2b7961fbce6609f9b2623",
+      "counts": {
+        "command": "python3 -m unittest discover -s tests -v",
+        "total": 134,
+        "passed": 126,
+        "skipped": 8,
+        "log_sha256": "686f6f591d81b2a3f6bb6b28a0db961cc13805187651bf960e31d67a1a535853"
+      },
+      "scope": "historical host suite at its own revision; never native proof or automatically current count"
+    },
+    {
+      "receipt": "docs/acceptance/private-demo-20261107/receipt.json",
+      "sha256": "e499242162cceba547edb0beada53701c7ed2088f7d96410f8009d0591c49e3b",
+      "tested_commit": "2366b96f8e7039dfd9368a50448881dfad90bf82",
+      "archival_commit": "79912ef4ab2a738263d1ea22d42210d722182f35",
+      "counts": {
+        "tests_total": 137,
+        "passed": 129,
+        "skipped": 8
+      },
+      "scope": "historical host suite at its own revision; never native proof or automatically current count"
+    },
+    {
+      "receipt": "docs/acceptance/private-review-20261107/receipt.json",
+      "sha256": "84cb976d9d422394fbf1f663d66c7f6a3b2d986a9c780405af683ab7bc9432bb",
+      "tested_commit": "e8a2ec7ad7164e26cb0b8a412bea03c71f5be5b0",
+      "archival_commit": "45fc09219ba0bbb8fda8338c50b9c21e61ad4642",
+      "counts": {
+        "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v",
+        "exit": 0,
+        "total": 137,
+        "passed": 129,
+        "skipped": 8,
+        "log": "host-tests.log",
+        "sha256": "dca4988cd7b7c0b8a08f35b3535e3d792177ca829451bf2a304b7e811e2f0a2d"
+      },
+      "scope": "historical host suite at its own revision; never native proof or automatically current count"
+    }
+  ],
+  "chronology_order": "receipt paths; inspect tested commits, not monotonic pass-count progress"
+}

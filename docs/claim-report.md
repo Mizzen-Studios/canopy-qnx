@@ -1,0 +1,12 @@
+# Claim review and chronological evidence report
+
+Council acceptance: **CONDITIONAL scoped evidence**, frozen native baseline79912ef4ab2a738263d1ea22d42210d722182f35. Current task adds offline onboarding/capture readiness only. No native capability promotion or image/driver-source identity repair.
+
+- Authority: [REVIEW](../REVIEW.md), [occurrence mappings](review-claims.json), [structural claim/link report](claim-lint.json). README, STATUS, both site pages, demo pointer and every dry script line are inventoried. Each dry narration line has an explicit reviewed claim, frozen asset hashes and planned frame. A hash/link checker is not a semantic truth oracle; broader interpretations remain UNVERIFIED.
+- Host chronology: browser source25ca8cf →126passed/8skipped; private review tested e8a2ec7 →129passed/8skipped; old demo tested2366b96 →129passed/8skipped. Exact paths and counts retained in docs/acceptance/browser-20261107/receipt.json, private-review-20261107/receipt.json, private-demo-20261107/receipt.json. Those are not counts for a fresh native run or this changing worktree. No test count increased for this task. New verification will name its actual committed revision.
+- Narration correction: prior draft text estimated210words, but its pinned receipt counted179. Current dry script is190whitespace-delimited words/155planned seconds, including conditional-gate wording. No measured/rehearsed duration claimed.
+- Native kill/recovery/SSH remains historical libcan evidence. Source commit/driver binary binding gaps stay UNVERIFIED. Missing/corrupt/mixed UNKNOWN is host-side rejection, not live availability. Simulation never becomes native proof.
+- No SDK installation, second SDK, independent human learning, native SocketCAN, native safety, full-platform health or timing/availability claim. C6FAIL/STOPPED. No optional heartbeat or sshd root-cause investigation.
+- Readiness: frozen text/HTML/log assets available locally; the dry validator rejects missing assets, changed hashes and blank claims. No screenshot/audio/video needed for the dry pack. Capturing audio or video is BLOCKED pending separate Olly OK; upload/publication not authorized.
+
+Run `python3 tools/proof_capture.py`, `python3 tools/review_claims.py`, `python3 tools/claim_lint.py`, and the existing SDK guard. Claim lint enumerates local evidence links; external URLs and fragment anchor semantics are explicitly not validated. Native feature scope remains frozen; await next gate.

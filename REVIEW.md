@@ -26,3 +26,7 @@ Scope: CANopy only, reviewed tip `61d11d1d3b316ec31f3e770c1ecbee50977d6924`. No 
 Host-only full suite: **137 total / 129 passed / 8 skipped** (three new review-coverage regressions; optional live integrations skipped). Exact-source rerun receipt and logs: `docs/acceptance/private-review-20261107/`. Offline raw CAN/SLM/SSH verification, ledger, deterministic site reconciliation, appendix and SDK guard pass; no native runtime executed.
 
 Private editorial draft: [shot list and narration](docs/private-demo.md), planned below three minutes. No recording/upload or new runtime claim.
+
+## Council gate and dry readiness — 17:08 UTC
+
+Council CONDITIONAL acceptance covers scoped evidence at79912ef4ab2a738263d1ea22d42210d722182f35; native features are FROZEN. Initial offline-review statements above describe their dated revision, not a claim that later private dry preparation never happened. Current dry pack: docs/proof-capture/SCRIPT.md and report.json, exact190words/155planned seconds; no recording/audio without separate Olly OK. Historical179word draft and126/8 browser versus129/8 later host counts keep their original receipts. No repinning, native rerun, full-platform health, safety/timing/availability promotion or new unit-test-count objective. Human learning and second independent SDK remain UNVERIFIED.
