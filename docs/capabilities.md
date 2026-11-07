@@ -16,3 +16,4 @@ Canonical declarations: docs/capabilities.json. Generated view; ledger checks ar
 | socketcan | native | runtime | UNVERIFIED | Blocked matching x86_64 module/board ABI; not an accepted C2/C3 stack | [source](../docs/socketcan-demo.md) |
 | c6 | native | runtime | FAIL | STOPPED:850 native TX attempts versus1 host heartbeat; root cause undetermined, no accepted functional scenarios | [source](../docs/acceptance/safestop-focused-failure-20261107/receipt.json) |
 | incident-viewer | host | recorded-evidence-view | PASS | Local read-only generation-time view of pinned recorded QNX evidence; missing/corrupt/mixed/repinned evidence UNKNOWN; historical driver identity UNPROVEN | [source](../docs/acceptance/workbench-20261107.json) |
+| host-regression | host | framework | PASS | Source-bound full host suites: reviewed baseline125pass8skip; corrected viewer126pass8skip. No fresh native or browser acceptance. | [source](../docs/acceptance/host-review-20261107/receipt.json) |
