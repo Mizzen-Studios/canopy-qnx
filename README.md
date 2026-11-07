@@ -1,5 +1,7 @@
 # CANopy — recorded fault-containment incident workbench
 
+Council conditional acceptance at79912ef; native features FROZEN. [Private proof-capture DRY PACK](docs/proof-capture/SCRIPT.md): no recording/audio without separate Olly OK.
+
 Private [claim-to-receipt review](REVIEW.md): historical source/build gaps remain UNVERIFIED.
 
 Actual [desktop/mobile Chromium validation](docs/acceptance/browser-20261107/NOTES.md): missing/corrupt/mixed → UNKNOWN; recorded native labels remain separate from simulation. Host suite **126 passed / 8 skipped**. No fresh native acceptance.
