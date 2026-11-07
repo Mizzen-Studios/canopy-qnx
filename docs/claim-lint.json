@@ -18,17 +18,17 @@
     },
     {
       "path": "STATUS.md",
-      "sha256": "e944ec99428bee1be81096665c630744cc10abe664437e37f76fd54a8313a7ae",
+      "sha256": "fc9090a4265e137ecdf1362169a9b4345fcdddbb68246a47b7c69771c78500a1",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "REVIEW.md",
-      "sha256": "8c43bf2d124f24f51c9d37c15b1e6d4704008a153db19c5d41ac6597e32205db",
+      "sha256": "8c65d7b717417fda409f1b60221152c943663b427348f3f399fe72605dc03d8d",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "docs/private-demo.md",
-      "sha256": "914ba9cb97b0d7888af3389bdce76cb2b0d711b2e29ab5795735ff5f35faea7a",
+      "sha256": "ac912b107d3a7fc8f2fb03cf0a4df56e23d69383edc21aade9310340163b7045",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {

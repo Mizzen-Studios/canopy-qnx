@@ -155,5 +155,7 @@
   ],
   "prior_frozen_commit": "79912ef4ab2a738263d1ea22d42210d722182f35",
   "recorded": false,
-  "gate": "CONDITIONAL: owner receipt-inspected, not re-run, 2026-11-07 20:03 UTC"
+  "gate": "CONDITIONAL: owner receipt-inspected, not re-run, 2026-11-07 20:03 UTC",
+  "packet_source_commit": "22ffcaca1269ec0402099fc06b4876a4e8d51748",
+  "packet_binding_scope": "Current packaging source; historical frozen asset and native receipt bindings unchanged."
 }

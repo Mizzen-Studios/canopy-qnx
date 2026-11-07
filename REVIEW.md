@@ -40,6 +40,11 @@ Council CONDITIONAL acceptance covers scoped evidence at79912ef4ab2a738263d1ea22
 
 The dry pack is a preserved lightweight checklist, not the current priority or next blocker. Videos come only at the end after product/route/bootstrap completion, final feature freeze, final verification of completed revisions and independent gate; separate Olly OK remains required for recording/audio. No script polishing or capture performed. [Current gate order](docs/readiness-gate.md). Historical claims/pins and native freeze unchanged.
 
-## Current private packet binding
+## Preserved completion asset binding — 20:03 UTC
 
-REVIEW appendix and lightweight demo asset binding: 88b1bcf5fcc1f97da03321d35b03e89c85090227, the exact conditionally accepted completion tip. recorded: false. The historical workbench frame is read at that commit with git show, not passed off as the newly clarified page. Native manifest, source/build/image gaps and failures remain unchanged. No native rerun, new safety/timing/availability claim, video or audio.
+Historical lightweight demo asset binding: 88b1bcf5fcc1f97da03321d35b03e89c85090227, the exact conditionally accepted completion tip. Current REVIEW appendix source is recorded in the residual packaging section below. recorded: false. The historical workbench frame is read at that commit with git show, not passed off as the newly clarified page. Native manifest, source/build/image gaps and failures remain unchanged. No native rerun, new safety/timing/availability claim, video or audio.
+
+
+## Residual packaging source — 21:05 UTC
+
+Current packaging/review source: 22ffcaca1269ec0402099fc06b4876a4e8d51748 (owner remote-verified at 21:05 UTC). Conditional native-completion acceptance remains at 88b1bcf5fcc1f97da03321d35b03e89c85090227, receipt-inspected, not re-run. No CANopy native rerun. Historical native labels mean observed in this QEMU run, not benchmarks. recorded:false. C6 FAIL / STOPPED; SocketCAN UNVERIFIED. No capture, audio, publication, deployment, submission or outside contact. Historical frozen assets and source/build/image pins remain unchanged; packet_source_commit is separate from frozen_commit.
