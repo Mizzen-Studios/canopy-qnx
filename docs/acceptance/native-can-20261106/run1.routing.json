@@ -1,0 +1,18 @@
+[
+  [
+    "outl 0xcf8 0x80000860",
+    "OK"
+  ],
+  [
+    "inl 0xcfc",
+    "OK 0xb0b0a0a"
+  ],
+  [
+    "outl 0xcfc 0x0a0a0a0a",
+    "OK"
+  ],
+  [
+    "inl 0xcfc",
+    "OK 0xa0a0a0a"
+  ]
+]

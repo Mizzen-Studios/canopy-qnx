@@ -1,0 +1,44 @@
+{
+  "run": 2,
+  "pass": true,
+  "hostCangenCommand": [
+    "cangen",
+    "vcan1",
+    "-n",
+    "100",
+    "-I",
+    "i",
+    "-L",
+    "8",
+    "-D",
+    "i",
+    "-g",
+    "30"
+  ],
+  "rxHostCount": 100,
+  "rxQnxCount": 100,
+  "txExpectedCount": 100,
+  "txHostCount": 100,
+  "orderedByteExact": true,
+  "nativeAPI": "libcan /dev/can0, NOT SocketCAN",
+  "qualifier": "observed in this QEMU run \u00b7 app budget, not a QNX benchmark",
+  "routingOverride": [
+    [
+      "outl 0xcf8 0x80000860",
+      "OK"
+    ],
+    [
+      "inl 0xcfc",
+      "OK 0xb0b0a0a"
+    ],
+    [
+      "outl 0xcfc 0x0a0a0a0a",
+      "OK"
+    ],
+    [
+      "inl 0xcfc",
+      "OK 0xa0a0a0a"
+    ]
+  ],
+  "settleSeconds": 0.3
+}
