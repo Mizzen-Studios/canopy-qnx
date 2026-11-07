@@ -60,9 +60,9 @@
       "domain": "host",
       "level": "framework",
       "status": "PASS",
-      "claim": "Source-bound full host suites: reviewed baseline125pass8skip; corrected viewer126pass8skip. No fresh native or browser acceptance.",
-      "evidence": "docs/acceptance/host-review-20261107/receipt.json",
-      "evidence_sha256": "d69f28a9b817efebbb7aeee271d9f935eb13aee719da13def3a3be2fa85a59d8"
+      "claim": "Source-bound current full Python host suite:126 passed/8 skipped. Browser rendering is separately recorded; no fresh native acceptance.",
+      "evidence": "docs/acceptance/browser-20261107/receipt.json",
+      "evidence_sha256": "8d6392815e0c3855d2efefd4a1cf0eda7f564a50d03bd254ca08e5489d6901c5"
     },
     {
       "id": "incident-browser",
