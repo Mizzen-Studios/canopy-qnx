@@ -1,5 +1,7 @@
 # CANopy — recorded fault-containment incident workbench
 
+Actual [desktop/mobile Chromium validation](docs/acceptance/browser-20261107/NOTES.md): missing/corrupt/mixed → UNKNOWN; recorded native labels remain separate from simulation. Host suite **126 passed / 8 skipped**. No fresh native acceptance.
+
 Private evidence workbench for a bounded **native QNX libcan + SLM experiment**.
 The recorded journey is: positively identified CAN PID killed → new CAN PID →
 100 RX + 100 TX ordered byte-exact post-restart traffic, while the **same

@@ -1,0 +1,17 @@
+CANopy · Recorded incident workbench
+
+RECORDED QNX EXPERIMENT · 2026-11-07 · libcan fallback
+
+Permanent scope: saved QNX-on-QEMU experiment, not host simulation and not a fresh native run. This host-only viewer never starts a guest or executes the saved controller.
+
+C6: FAIL / stopped. SocketCAN: BLOCKED / unverified. No continuous CAN availability, physical safety, certification, restart-latency or benchmark claim.
+
+Static snapshot: PASS describes verification at generation only. Re-run the offline verifier after evidence changes; this HTML does not monitor files or provide live integrity attestation.
+
+UNKNOWN — bounded evidence not accepted
+corrupt/mixed evidence: docs/acceptance/slm-continuity-20261107/traffic2.json
+Bounded recovery
+Stop interpreting this capture as PASS. Preserve the failing copy and exact error; do not edit or repin hashes to silence it.
+Compare the named file with the exact private repository revision and pinned manifest. Restore the complete matching capture into a separate clean checkout, not individual files from another run.
+Run python3 tools/incident_workbench.py --verify-only there. Exit 0 accepts only the bounded recording; exit 2 remains UNKNOWN. If the matching capture is unavailable, stop here and retain UNKNOWN.
+Only after verification, regenerate that checkout with python3 tools/incident_workbench.py. This does not run QNX or repair C6. Static PASS remains generation-time only.

@@ -1,5 +1,7 @@
 # Status — 7 November 2026
 
+Actual [desktop/mobile Chromium validation](docs/acceptance/browser-20261107/NOTES.md): missing/corrupt/mixed → UNKNOWN; recorded native labels remain separate from simulation. Host suite **126 passed / 8 skipped**. No fresh native acceptance.
+
 ## Current direction — council approval, 7 November 2026
 
 Canonical [capability ledger](docs/capabilities.md) separates host simulation,

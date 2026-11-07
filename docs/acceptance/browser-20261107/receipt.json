@@ -1,0 +1,173 @@
+{
+  "kind": "actual-local-chromium-render",
+  "browser": "156.0.8078.79",
+  "source": "25ca8cf919e81fa62669f2cb8f813fa2cab536df",
+  "scope": "Host browser only; no fresh native run; static generation-time evidence",
+  "results": [
+    {
+      "variant": "recorded",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "input": "docs/workbench/index.html",
+      "sha256": "5282e9f446f35a2b48679c26a349deeed533f7cbc756e39bfb2f803df1c57408",
+      "headings": [
+        "PASS \u2014 bounded recorded evidence only",
+        "Causal phases (not a shared-clock timeline)",
+        "Provenance and limits"
+      ],
+      "sections": 3,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "missing",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "input": "docs/acceptance/unknown-review-20261107/missing.html",
+      "sha256": "1748ab4b2831df42b9fad86641319637cf97f1d937bc033b7cd7fbd5d3df55c7",
+      "headings": [
+        "UNKNOWN \u2014 bounded evidence not accepted"
+      ],
+      "sections": 0,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "corrupt",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "input": "docs/acceptance/unknown-review-20261107/corrupt.html",
+      "sha256": "d0dd2e1deeb0217482b3fe68d7595e4885e67986802c7eea916e04ffe56867e0",
+      "headings": [
+        "UNKNOWN \u2014 bounded evidence not accepted"
+      ],
+      "sections": 0,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "mixed",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "input": "docs/acceptance/unknown-review-20261107/mixed.html",
+      "sha256": "d0dd2e1deeb0217482b3fe68d7595e4885e67986802c7eea916e04ffe56867e0",
+      "headings": [
+        "UNKNOWN \u2014 bounded evidence not accepted"
+      ],
+      "sections": 0,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "recorded",
+      "viewport": {
+        "width": 520,
+        "height": 900
+      },
+      "input": "docs/workbench/index.html",
+      "sha256": "5282e9f446f35a2b48679c26a349deeed533f7cbc756e39bfb2f803df1c57408",
+      "headings": [
+        "PASS \u2014 bounded recorded evidence only",
+        "Causal phases (not a shared-clock timeline)",
+        "Provenance and limits"
+      ],
+      "sections": 3,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "missing",
+      "viewport": {
+        "width": 520,
+        "height": 900
+      },
+      "input": "docs/acceptance/unknown-review-20261107/missing.html",
+      "sha256": "1748ab4b2831df42b9fad86641319637cf97f1d937bc033b7cd7fbd5d3df55c7",
+      "headings": [
+        "UNKNOWN \u2014 bounded evidence not accepted"
+      ],
+      "sections": 0,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "corrupt",
+      "viewport": {
+        "width": 520,
+        "height": 900
+      },
+      "input": "docs/acceptance/unknown-review-20261107/corrupt.html",
+      "sha256": "d0dd2e1deeb0217482b3fe68d7595e4885e67986802c7eea916e04ffe56867e0",
+      "headings": [
+        "UNKNOWN \u2014 bounded evidence not accepted"
+      ],
+      "sections": 0,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "variant": "mixed",
+      "viewport": {
+        "width": 520,
+        "height": 900
+      },
+      "input": "docs/acceptance/unknown-review-20261107/mixed.html",
+      "sha256": "d0dd2e1deeb0217482b3fe68d7595e4885e67986802c7eea916e04ffe56867e0",
+      "headings": [
+        "UNKNOWN \u2014 bounded evidence not accepted"
+      ],
+      "sections": 0,
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "host_tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "total": 134,
+    "passed": 126,
+    "skipped": 8,
+    "log_sha256": "686f6f591d81b2a3f6bb6b28a0db961cc13805187651bf960e31d67a1a535853"
+  },
+  "screenshots": [
+    {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/qnx-swap-20261107/browser-screenshots/corrupt-1280.png",
+      "sha256": "5a9f23e838054d3111e3b7a3fe8998f1d2831b750d2de82e57cbc93547bfc3c8"
+    },
+    {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/qnx-swap-20261107/browser-screenshots/corrupt-520.png",
+      "sha256": "9d28ebff7e01b44229a3f2f551d90f0a4bf21c5d63260936fc6809dab1028ca8"
+    },
+    {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/qnx-swap-20261107/browser-screenshots/missing-1280.png",
+      "sha256": "b7a9b9faceb0e84e9acc9796151ea8288fb611953f47c9521fdb53a4b8885194"
+    },
+    {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/qnx-swap-20261107/browser-screenshots/missing-520.png",
+      "sha256": "c2a4c9a03da458219b4bf7a33a7299f608e2e68b443104b09e8bfef492563176"
+    },
+    {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/qnx-swap-20261107/browser-screenshots/mixed-1280.png",
+      "sha256": "5a9f23e838054d3111e3b7a3fe8998f1d2831b750d2de82e57cbc93547bfc3c8"
+    },
+    {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/qnx-swap-20261107/browser-screenshots/mixed-520.png",
+      "sha256": "9d28ebff7e01b44229a3f2f551d90f0a4bf21c5d63260936fc6809dab1028ca8"
+    },
+    {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/qnx-swap-20261107/browser-screenshots/recorded-1280.png",
+      "sha256": "fff4cd69377c4c25076aaf9a63a7ae8e6a360db0ffb55203c387050c1fa9ba4c"
+    },
+    {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/qnx-swap-20261107/browser-screenshots/recorded-520.png",
+      "sha256": "6b682c333c7c9ef3381c7f1caf22c4f1f6ced801806c11d4791ac6e4b5941d19"
+    }
+  ]
+}
