@@ -2,12 +2,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
 <title>CANopy recorded incident workbench</title><style>
-body{background:#101820;color:#e6edf3;font:17px/1.6 system-ui,sans-serif;max-width:1050px;margin:auto;padding:32px}h1,h2{line-height:1.2}a{color:#7dd3fc}section{border-left:4px solid #70d6b2;padding:4px 20px;margin:24px 0;background:#17252e}.warning{border:1px solid #d5a45f;padding:16px;color:#ffe1ae}.tag{color:#70d6b2;font-weight:bold}code{overflow-wrap:anywhere;font-size:13px}li{margin:14px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}
+body{overflow-wrap:anywhere;background:#101820;color:#e6edf3;font:17px/1.6 system-ui,sans-serif;max-width:1050px;margin:auto;padding:32px}h1,h2{line-height:1.2}a{color:#7dd3fc}section{border-left:4px solid #70d6b2;padding:4px 20px;margin:24px 0;background:#17252e}.warning{border:1px solid #d5a45f;padding:16px;color:#ffe1ae}.tag{color:#70d6b2;font-weight:bold}code{overflow-wrap:anywhere;font-size:13px}li{margin:14px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}
 </style></head><body><h1>CANopy · Recorded incident workbench</h1>
 <p class="tag">RECORDED QNX EXPERIMENT · 2026-11-07 · libcan fallback</p>
 <p>Permanent scope: saved QNX-on-QEMU experiment, not host simulation and not a fresh native run. This host-only viewer never starts a guest or executes the saved controller.</p>
 <p class="warning">C6: FAIL / stopped. SocketCAN: BLOCKED / unverified. No continuous CAN availability, physical safety, certification, restart-latency or benchmark claim.</p>
 <p>Static snapshot: PASS describes verification at generation only. Re-run the offline verifier after evidence changes; this HTML does not monitor files or provide live integrity attestation.</p>
+<section aria-label="First-minute summary"><h2>In one minute: what survived?</h2>
+<p><strong>Environment:</strong> a saved 7 November QNX 8-on-QEMU lab capture using the native libcan fallback, not SocketCAN. This page is a host-only offline viewer, not a live experiment.</p>
+<p><strong>Killed process:</strong> the SLM-managed dev-can-linux CAN driver was killed with SIGKILL in three recorded phases; SLM started a replacement PID each time.</p>
+<p><strong>Observed survivor:</strong> the main io-sock PID stayed unchanged in recorded snapshots, and the same authenticated SSH connection continued emitting counters. After each restart, 100 RX and 100 TX frames matched ordered byte-for-byte checks. This does not establish uninterrupted CAN traffic during the kill.</p>
+<p><strong>Not observed/proven:</strong> continuous availability, measured restart latency, physical safety, production isolation, historical driver/source build identity, independently rehashed image, or a new native rerun. C6 FAIL / STOPPED; SocketCAN UNVERIFIED. Missing, corrupt or mixed evidence means UNKNOWN, not PASS.</p></section>
 <h2>PASS — bounded recorded evidence only</h2>
 <p>Same authenticated SSH connection: client PID 126654; one publickey authentication, saved counters 0–96. Main io-sock PID 163853 unchanged in recorded snapshots.</p>
 <h2>Causal phases (not a shared-clock timeline)</h2>

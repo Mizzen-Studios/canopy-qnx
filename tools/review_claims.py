@@ -9,7 +9,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / 'docs/review-claims.json'
-BASE = '61d11d1d3b316ec31f3e770c1ecbee50977d6924'
+BASE = '88b1bcf5fcc1f97da03321d35b03e89c85090227'
 
 
 def digest(path):

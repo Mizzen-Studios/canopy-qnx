@@ -2,10 +2,11 @@
   "kind": "private-proof-capture-DRY-PACK",
   "status": "PASS",
   "errors": [],
-  "frozen_commit": "79912ef4ab2a738263d1ea22d42210d722182f35",
+  "frozen_commit": "88b1bcf5fcc1f97da03321d35b03e89c85090227",
   "narration_words": 190,
   "planned_seconds": 155,
   "duration_verified": "editorial plan only; no rehearsal/recorded duration",
+  "recorded": false,
   "recording_performed": false,
   "audio_performed": false,
   "publication_performed": false,
@@ -17,12 +18,13 @@
       "start": 0,
       "end": 20,
       "claim": "Read-only static workbench presents recorded native libcan/SLM evidence, not live telemetry or safety.",
-      "frame": "Local sanitized file view: docs/workbench/index.html, docs/workbench/recorded-manifest.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
+      "frame": "Historical frame only: git show 88b1bcf5fcc1f97da03321d35b03e89c85090227:docs/workbench/index.html. Not the newly edited workbench page. Local sanitized file view: docs/workbench/index.html, docs/workbench/recorded-manifest.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
       "label": "host-only",
       "assets": [
         {
           "path": "docs/workbench/index.html",
-          "sha256": "5282e9f446f35a2b48679c26a349deeed533f7cbc756e39bfb2f803df1c57408"
+          "sha256": "5282e9f446f35a2b48679c26a349deeed533f7cbc756e39bfb2f803df1c57408",
+          "view": "git-show-at-accepted-tip"
         },
         {
           "path": "docs/workbench/recorded-manifest.json",

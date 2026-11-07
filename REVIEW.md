@@ -1,6 +1,11 @@
 # Private capability review — 7 November 2026
 
-Scope: CANopy only, reviewed tip `61d11d1d3b316ec31f3e770c1ecbee50977d6924`. No QEMU, SDK, guest, live network/CAN runtime, deployment or demo preparation performed. No codelab exists in this repository.
+## Current completion gate — 20:03 UTC
+
+Owner independent completion gate: **CONDITIONAL, receipt-inspected, not re-run**, at accepted tip 88b1bcf5fcc1f97da03321d35b03e89c85090227. This packaging follow-up does not rerun native evidence or broaden acceptance. Existing licensed SDK reuse and owner-lab paths only; no fresh install, second SDK, human learner or platform-health validation. CANopy native evidence was not rerun. sshd internal cause UNVERIFIED; C6 FAIL / STOPPED; SocketCAN UNVERIFIED. Everything private.
+
+
+Historical initial scope: CANopy only, reviewed tip `61d11d1d3b316ec31f3e770c1ecbee50977d6924`. No QEMU, SDK, guest, live network/CAN runtime, deployment or demo preparation performed. No codelab exists in this repository.
 
 **[Detailed claim-by-claim appendix](docs/review-claims.json)** covers every nonempty README/STATUS paragraph and visible block of both current site pages (including controls/labels). Each occurrence maps to exact receipt/raw-artifact paths and SHA-256, declared tested commits, and recorded binary/image hashes. `null` means absent, never inferred from the receipt-import commit. Historical evidence and failures are unchanged. Regenerate/check with `python3 tools/review_claims.py --write` / `python3 tools/review_claims.py`.
 
@@ -29,8 +34,12 @@ Private editorial draft: [shot list and narration](docs/private-demo.md), planne
 
 ## Council gate and dry readiness — 17:08 UTC
 
-Council CONDITIONAL acceptance covers scoped evidence at79912ef4ab2a738263d1ea22d42210d722182f35; native features are FROZEN. Initial offline-review statements above describe their dated revision, not a claim that later private dry preparation never happened. Current dry pack: docs/proof-capture/SCRIPT.md and report.json, exact190words/155planned seconds; no recording/audio without separate Olly OK. Historical179word draft and126/8 browser versus129/8 later host counts keep their original receipts. No repinning, native rerun, full-platform health, safety/timing/availability promotion or new unit-test-count objective. Human learning and second independent SDK remain UNVERIFIED.
+Council CONDITIONAL acceptance covers scoped evidence at79912ef4ab2a738263d1ea22d42210d722182f35; native features are FROZEN. Initial offline-review statements above describe their dated revision, not a claim that later private dry preparation never happened. Historical 17:08 dry pack: docs/proof-capture/SCRIPT.md and report.json, exact190words/155planned seconds; no recording/audio without separate Olly OK. Historical179word draft and126/8 browser versus129/8 later host counts keep their original receipts. No repinning, native rerun, full-platform health, safety/timing/availability promotion or new unit-test-count objective. Human learning and second independent SDK remain UNVERIFIED.
 
 ## Timing supersession — 17:28 UTC
 
 The dry pack is a preserved lightweight checklist, not the current priority or next blocker. Videos come only at the end after product/route/bootstrap completion, final feature freeze, final verification of completed revisions and independent gate; separate Olly OK remains required for recording/audio. No script polishing or capture performed. [Current gate order](docs/readiness-gate.md). Historical claims/pins and native freeze unchanged.
+
+## Current private packet binding
+
+REVIEW appendix and lightweight demo asset binding: 88b1bcf5fcc1f97da03321d35b03e89c85090227, the exact conditionally accepted completion tip. recorded: false. The historical workbench frame is read at that commit with git show, not passed off as the newly clarified page. Native manifest, source/build/image gaps and failures remain unchanged. No native rerun, new safety/timing/availability claim, video or audio.

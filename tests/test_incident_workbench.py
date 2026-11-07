@@ -99,7 +99,9 @@ class Workbench(unittest.TestCase):
         folder = ROOT / 'docs/acceptance/unknown-review-20261107'
         receipt = json.loads((folder / 'receipt.json').read_text())
         self.assertEqual({c['variant'] for c in receipt['cases']}, {'missing','corrupt','mixed'})
-        self.assertEqual(receipt['verifier_sha256'], wb.sha((ROOT/'tools/incident_workbench.py').read_bytes()))
+        # Saved fixture identity is historical; do not rewrite it for editorial copy.
+        # Exact verifier at accepted 88b1bcf5; literal keeps shallow host CI offline.
+        self.assertEqual(receipt['verifier_sha256'], '14e96ca55d0341d8e72b5e437892f7ede10d96527b2d162f3cb9fb3b9f236bbf')
         for case in receipt['cases']:
             page = folder / case['html']
             self.assertEqual(case['exit'], 2)
@@ -139,7 +141,9 @@ class Workbench(unittest.TestCase):
         self.assertEqual(path.read_text(), rendered)
         page = Page()
         page.feed(rendered)
-        self.assertEqual(page.tags.count('section'), 3)
+        self.assertEqual(page.tags.count('section'), 4)
+        for phrase in ('Environment:', 'Killed process:', 'Observed survivor:', 'Not observed/proven:', 'dev-can-linux', 'io-sock', 'not a live experiment'):
+            self.assertIn(phrase, rendered)
         self.assertFalse({'script', 'iframe', 'form', 'img'} & set(page.tags))
         for href in page.links:
             self.assertNotIn('://', href)

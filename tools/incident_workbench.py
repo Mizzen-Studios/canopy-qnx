@@ -95,7 +95,12 @@ def render(result, output, root=ROOT):
                  '<li>Only after verification, regenerate that checkout with <code>python3 tools/incident_workbench.py</code>. This does not run QNX or repair C6. Static PASS remains generation-time only.</li></ol>']
     else:
         receipt = result['receipt']
-        body += ['<h2>PASS — bounded recorded evidence only</h2>',
+        body += ['<section aria-label="First-minute summary"><h2>In one minute: what survived?</h2>',
+                 '<p><strong>Environment:</strong> a saved 7 November QNX 8-on-QEMU lab capture using the native libcan fallback, not SocketCAN. This page is a host-only offline viewer, not a live experiment.</p>',
+                 '<p><strong>Killed process:</strong> the SLM-managed dev-can-linux CAN driver was killed with SIGKILL in three recorded phases; SLM started a replacement PID each time.</p>',
+                 '<p><strong>Observed survivor:</strong> the main io-sock PID stayed unchanged in recorded snapshots, and the same authenticated SSH connection continued emitting counters. After each restart, 100 RX and 100 TX frames matched ordered byte-for-byte checks. This does not establish uninterrupted CAN traffic during the kill.</p>',
+                 '<p><strong>Not observed/proven:</strong> continuous availability, measured restart latency, physical safety, production isolation, historical driver/source build identity, independently rehashed image, or a new native rerun. C6 FAIL / STOPPED; SocketCAN UNVERIFIED. Missing, corrupt or mixed evidence means UNKNOWN, not PASS.</p></section>',
+                 '<h2>PASS — bounded recorded evidence only</h2>',
                  '<p>Same authenticated SSH connection: client PID %s; one publickey authentication, '
                  'saved counters 0–96. Main io-sock PID %s unchanged in recorded snapshots.</p>'
                  % (esc(receipt['ssh']['client_pid']), esc(receipt['main_io_sock_pid'])),
@@ -132,7 +137,7 @@ def render(result, output, root=ROOT):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
 <title>CANopy recorded incident workbench</title><style>
-body{background:#101820;color:#e6edf3;font:17px/1.6 system-ui,sans-serif;max-width:1050px;margin:auto;padding:32px}h1,h2{line-height:1.2}a{color:#7dd3fc}section{border-left:4px solid #70d6b2;padding:4px 20px;margin:24px 0;background:#17252e}.warning{border:1px solid #d5a45f;padding:16px;color:#ffe1ae}.tag{color:#70d6b2;font-weight:bold}code{overflow-wrap:anywhere;font-size:13px}li{margin:14px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}
+body{overflow-wrap:anywhere;background:#101820;color:#e6edf3;font:17px/1.6 system-ui,sans-serif;max-width:1050px;margin:auto;padding:32px}h1,h2{line-height:1.2}a{color:#7dd3fc}section{border-left:4px solid #70d6b2;padding:4px 20px;margin:24px 0;background:#17252e}.warning{border:1px solid #d5a45f;padding:16px;color:#ffe1ae}.tag{color:#70d6b2;font-weight:bold}code{overflow-wrap:anywhere;font-size:13px}li{margin:14px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}
 </style></head><body>''' + '\n'.join(body) + '</body></html>\n'
 
 

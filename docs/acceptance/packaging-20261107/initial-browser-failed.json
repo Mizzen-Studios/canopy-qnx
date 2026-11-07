@@ -1,0 +1,66 @@
+{
+  "scope": "private local bytes intercepted in Playwright; no server or outbound network; no video/audio/screenshots; no human timed-comprehension validation; initial snap file navigation ERR_ACCESS_DENIED preserved as this note",
+  "recorded": false,
+  "rows": [
+    {
+      "repo": "canopy-qnx",
+      "file": "docs/workbench/index.html",
+      "width": 1280,
+      "checks": {
+        "no_horizontal_overflow": true,
+        "no_remote_requests": true,
+        "no_page_errors": true,
+        "four_named_answers": true
+      },
+      "summary_words": 135,
+      "summary": "In one minute: what survived?\n\nEnvironment: a saved 7 November QNX 8-on-QEMU lab capture using the native libcan fallback, not SocketCAN. This page is a host-only offline viewer, not a live experiment.\n\nKilled process: the SLM-managed dev-can-linux CAN driver was killed with SIGKILL in three recorded phases; SLM started a replacement PID each time.\n\nObserved survivor: the main io-sock PID stayed unchanged in recorded snapshots, and the same authenticated SSH connection continued emitting counters. After each restart, 100 RX and 100 TX frames matched ordered byte-for-byte checks. This does not establish uninterrupted CAN traffic during the kill.\n\nNot observed/proven: continuous availability, measured restart latency, physical safety, production isolation, historical driver/source build identity, independently rehashed image, or a new native rerun. C6 FAIL / STOPPED; SocketCAN UNVERIFIED. Missing, corrupt or mixed evidence means UNKNOWN, not PASS.",
+      "errors": [],
+      "requests": []
+    },
+    {
+      "repo": "canopy-qnx",
+      "file": "docs/workbench/index.html",
+      "width": 768,
+      "checks": {
+        "no_horizontal_overflow": true,
+        "no_remote_requests": true,
+        "no_page_errors": true,
+        "four_named_answers": true
+      },
+      "summary_words": 135,
+      "summary": "In one minute: what survived?\n\nEnvironment: a saved 7 November QNX 8-on-QEMU lab capture using the native libcan fallback, not SocketCAN. This page is a host-only offline viewer, not a live experiment.\n\nKilled process: the SLM-managed dev-can-linux CAN driver was killed with SIGKILL in three recorded phases; SLM started a replacement PID each time.\n\nObserved survivor: the main io-sock PID stayed unchanged in recorded snapshots, and the same authenticated SSH connection continued emitting counters. After each restart, 100 RX and 100 TX frames matched ordered byte-for-byte checks. This does not establish uninterrupted CAN traffic during the kill.\n\nNot observed/proven: continuous availability, measured restart latency, physical safety, production isolation, historical driver/source build identity, independently rehashed image, or a new native rerun. C6 FAIL / STOPPED; SocketCAN UNVERIFIED. Missing, corrupt or mixed evidence means UNKNOWN, not PASS.",
+      "errors": [],
+      "requests": []
+    },
+    {
+      "repo": "canopy-qnx",
+      "file": "docs/workbench/index.html",
+      "width": 520,
+      "checks": {
+        "no_horizontal_overflow": true,
+        "no_remote_requests": true,
+        "no_page_errors": true,
+        "four_named_answers": true
+      },
+      "summary_words": 135,
+      "summary": "In one minute: what survived?\n\nEnvironment: a saved 7 November QNX 8-on-QEMU lab capture using the native libcan fallback, not SocketCAN. This page is a host-only offline viewer, not a live experiment.\n\nKilled process: the SLM-managed dev-can-linux CAN driver was killed with SIGKILL in three recorded phases; SLM started a replacement PID each time.\n\nObserved survivor: the main io-sock PID stayed unchanged in recorded snapshots, and the same authenticated SSH connection continued emitting counters. After each restart, 100 RX and 100 TX frames matched ordered byte-for-byte checks. This does not establish uninterrupted CAN traffic during the kill.\n\nNot observed/proven: continuous availability, measured restart latency, physical safety, production isolation, historical driver/source build identity, independently rehashed image, or a new native rerun. C6 FAIL / STOPPED; SocketCAN UNVERIFIED. Missing, corrupt or mixed evidence means UNKNOWN, not PASS.",
+      "errors": [],
+      "requests": []
+    },
+    {
+      "repo": "canopy-qnx",
+      "file": "docs/workbench/index.html",
+      "width": 360,
+      "checks": {
+        "no_horizontal_overflow": false,
+        "no_remote_requests": true,
+        "no_page_errors": true,
+        "four_named_answers": true
+      },
+      "summary_words": 135,
+      "summary": "In one minute: what survived?\n\nEnvironment: a saved 7 November QNX 8-on-QEMU lab capture using the native libcan fallback, not SocketCAN. This page is a host-only offline viewer, not a live experiment.\n\nKilled process: the SLM-managed dev-can-linux CAN driver was killed with SIGKILL in three recorded phases; SLM started a replacement PID each time.\n\nObserved survivor: the main io-sock PID stayed unchanged in recorded snapshots, and the same authenticated SSH connection continued emitting counters. After each restart, 100 RX and 100 TX frames matched ordered byte-for-byte checks. This does not establish uninterrupted CAN traffic during the kill.\n\nNot observed/proven: continuous availability, measured restart latency, physical safety, production isolation, historical driver/source build identity, independently rehashed image, or a new native rerun. C6 FAIL / STOPPED; SocketCAN UNVERIFIED. Missing, corrupt or mixed evidence means UNKNOWN, not PASS.",
+      "errors": [],
+      "requests": []
+    }
+  ]
+}

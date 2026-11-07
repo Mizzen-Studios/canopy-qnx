@@ -23,22 +23,22 @@
     },
     {
       "path": "REVIEW.md",
-      "sha256": "339f937630f90300c1277c61b105c8426c1dc2b849f6b537b807b685149be32e",
+      "sha256": "8c43bf2d124f24f51c9d37c15b1e6d4704008a153db19c5d41ac6597e32205db",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "docs/private-demo.md",
-      "sha256": "7d51124b572da79b3ec4241573b1849bbdfc04994d11b387e80da5241bc850f4",
+      "sha256": "914ba9cb97b0d7888af3389bdce76cb2b0d711b2e29ab5795735ff5f35faea7a",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "docs/proof-capture/SCRIPT.md",
-      "sha256": "ed4c32510e6fea573acc64d8e26128ae01ffa636a50e5fd26b97b3221c78d75b",
+      "sha256": "6a40bcafca07c69c72370790d0a08c5ddd23e7c4317c3624d1ba72a671c49133",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "docs/workbench/index.html",
-      "sha256": "5282e9f446f35a2b48679c26a349deeed533f7cbc756e39bfb2f803df1c57408",
+      "sha256": "e127c319c983f9c6d824cc3e7464a73b04d2e4820212103180eed321c89bf19a",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -368,10 +368,11 @@
     "kind": "private-proof-capture-DRY-PACK",
     "status": "PASS",
     "errors": [],
-    "frozen_commit": "79912ef4ab2a738263d1ea22d42210d722182f35",
+    "frozen_commit": "88b1bcf5fcc1f97da03321d35b03e89c85090227",
     "narration_words": 190,
     "planned_seconds": 155,
     "duration_verified": "editorial plan only; no rehearsal/recorded duration",
+    "recorded": false,
     "recording_performed": false,
     "audio_performed": false,
     "publication_performed": false,
@@ -383,12 +384,13 @@
         "start": 0,
         "end": 20,
         "claim": "Read-only static workbench presents recorded native libcan/SLM evidence, not live telemetry or safety.",
-        "frame": "Local sanitized file view: docs/workbench/index.html, docs/workbench/recorded-manifest.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
+        "frame": "Historical frame only: git show 88b1bcf5fcc1f97da03321d35b03e89c85090227:docs/workbench/index.html. Not the newly edited workbench page. Local sanitized file view: docs/workbench/index.html, docs/workbench/recorded-manifest.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
         "label": "host-only",
         "assets": [
           {
             "path": "docs/workbench/index.html",
-            "sha256": "5282e9f446f35a2b48679c26a349deeed533f7cbc756e39bfb2f803df1c57408"
+            "sha256": "5282e9f446f35a2b48679c26a349deeed533f7cbc756e39bfb2f803df1c57408",
+            "view": "git-show-at-accepted-tip"
           },
           {
             "path": "docs/workbench/recorded-manifest.json",
