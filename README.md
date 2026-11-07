@@ -1,6 +1,6 @@
 # CANopy — recorded fault-containment incident workbench
 
-Council conditional acceptance at79912ef; native features FROZEN. [Private proof-capture DRY PACK](docs/proof-capture/SCRIPT.md): no recording/audio without separate Olly OK.
+Council conditional acceptance at79912ef; native features FROZEN. Current priority is [product/evidence consistency and the completed-version gate](docs/readiness-gate.md). Videos come last, after final freeze, final verification and independent gate; recording/audio still needs separate Olly OK. The existing dry checklist is parked, not the next blocker.
 
 Private [claim-to-receipt review](REVIEW.md): historical source/build gaps remain UNVERIFIED.
 

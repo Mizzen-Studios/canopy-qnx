@@ -13,17 +13,17 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "b68b5075d563e0b6508e3d451a1dccbabc42950b6bcfd64757dcf57b5f92f2f4",
+      "sha256": "903ab68f66645bab7b2e529cba34f545c2dda3917cfc653b2fc2542d6127c3c9",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "STATUS.md",
-      "sha256": "6de5e7b42572475c899ec0af12b30fb23d5dd8f9f968b761d6f08bba9d544c9a",
+      "sha256": "e944ec99428bee1be81096665c630744cc10abe664437e37f76fd54a8313a7ae",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "REVIEW.md",
-      "sha256": "c981f89705dafa280381f49d445688090e8fa9ec29868abb0d6348ff16a685c7",
+      "sha256": "339f937630f90300c1277c61b105c8426c1dc2b849f6b537b807b685149be32e",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -50,7 +50,7 @@
   "local_links": [
     {
       "source": "README.md",
-      "target": "docs/proof-capture/SCRIPT.md",
+      "target": "docs/readiness-gate.md",
       "exists": true
     },
     {
@@ -150,6 +150,11 @@
     },
     {
       "source": "STATUS.md",
+      "target": "docs/readiness-gate.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
       "target": "REVIEW.md",
       "exists": true
     },
@@ -211,6 +216,11 @@
     {
       "source": "REVIEW.md",
       "target": "docs/private-demo.md",
+      "exists": true
+    },
+    {
+      "source": "REVIEW.md",
+      "target": "docs/readiness-gate.md",
       "exists": true
     },
     {

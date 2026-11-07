@@ -1,5 +1,11 @@
 # Status — 7 November 2026
 
+## Current priority — 17:28 UTC timing correction
+
+Finish supported onboarding and product/evidence consistency, then verify completed revisions and return for independent gate. Videos are deferred to the end after final freeze+finalverification+independentgate and separate Olly OK; capture is not the next blocker. Existing dry checklist parked without script polishing. Native scope remains frozen; C6STOPPED. [Gate order](docs/readiness-gate.md).
+
+## Preserved scoped evidence chronology
+
 Private [claim-to-receipt review](REVIEW.md): this is historical evidence, not a fresh native run.
 
 Actual [desktop/mobile Chromium validation](docs/acceptance/browser-20261107/NOTES.md): missing/corrupt/mixed → UNKNOWN; recorded native labels remain separate from simulation. Host suite **126 passed / 8 skipped**. No fresh native acceptance.

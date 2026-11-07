@@ -30,3 +30,7 @@ Private editorial draft: [shot list and narration](docs/private-demo.md), planne
 ## Council gate and dry readiness — 17:08 UTC
 
 Council CONDITIONAL acceptance covers scoped evidence at79912ef4ab2a738263d1ea22d42210d722182f35; native features are FROZEN. Initial offline-review statements above describe their dated revision, not a claim that later private dry preparation never happened. Current dry pack: docs/proof-capture/SCRIPT.md and report.json, exact190words/155planned seconds; no recording/audio without separate Olly OK. Historical179word draft and126/8 browser versus129/8 later host counts keep their original receipts. No repinning, native rerun, full-platform health, safety/timing/availability promotion or new unit-test-count objective. Human learning and second independent SDK remain UNVERIFIED.
+
+## Timing supersession — 17:28 UTC
+
+The dry pack is a preserved lightweight checklist, not the current priority or next blocker. Videos come only at the end after product/route/bootstrap completion, final feature freeze, final verification of completed revisions and independent gate; separate Olly OK remains required for recording/audio. No script polishing or capture performed. [Current gate order](docs/readiness-gate.md). Historical claims/pins and native freeze unchanged.
