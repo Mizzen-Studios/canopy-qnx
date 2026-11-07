@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "scope": "host-only offline recorded evidence viewer; not native acceptance",
+  "commands": [
+    {
+      "command": "python3 -m unittest discover -s tests -p test_incident_workbench.py -v",
+      "passed": 6
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -p \"test_slm*evidence.py\" -v",
+      "passed": 4
+    },
+    {
+      "command": "python3 tools/incident_workbench.py --verify-only",
+      "exit": 0
+    },
+    {
+      "command": "sh scripts/check-no-sdk.sh",
+      "exit": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0
+    }
+  ],
+  "ui": "Generated HTML inspected by HTMLParser: 3 restart sections, all local evidence links resolve, deterministic regeneration, no scripts/forms/iframes/images, scoped labels and escaping checked; no browser claim.",
+  "caveats": [
+    "Static generation-time integrity snapshot, not live file monitoring. Re-run verifier after changes.",
+    "Historical driver build/source identity remains unproven; saved controller exact hash only.",
+    "C6 FAIL/stopped; SocketCAN BLOCKED/unverified.",
+    "No native/QEMU execution or retries performed."
+  ]
+}

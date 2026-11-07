@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>CANopy recorded incident workbench</title><style>
+body{background:#101820;color:#e6edf3;font:17px/1.6 system-ui,sans-serif;max-width:1050px;margin:auto;padding:32px}h1,h2{line-height:1.2}a{color:#7dd3fc}section{border-left:4px solid #70d6b2;padding:4px 20px;margin:24px 0;background:#17252e}.warning{border:1px solid #d5a45f;padding:16px;color:#ffe1ae}.tag{color:#70d6b2;font-weight:bold}code{overflow-wrap:anywhere;font-size:13px}li{margin:14px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}
+</style></head><body><h1>CANopy · Recorded incident workbench</h1>
+<p class="tag">RECORDED QNX EXPERIMENT · 2026-11-07 · libcan fallback</p>
+<p>Permanent scope: saved QNX-on-QEMU experiment, not host simulation and not a fresh native run. This host-only viewer never starts a guest or executes the saved controller.</p>
+<p class="warning">C6: FAIL / stopped. SocketCAN: BLOCKED / unverified. No continuous CAN availability, physical safety, certification, restart-latency or benchmark claim.</p>
+<p>Static snapshot: PASS describes verification at generation only. Re-run the offline verifier after evidence changes; this HTML does not monitor files or provide live integrity attestation.</p>
+<h2>PASS — bounded recorded evidence only</h2>
+<p>Same authenticated SSH connection: client PID 126654; one publickey authentication, saved counters 0–96. Main io-sock PID 163853 unchanged in recorded snapshots.</p>
+<h2>Causal phases (not a shared-clock timeline)</h2>
+<p>Each phase: PID check → kill → fixed 3 s settle → new PID/device snapshot → 100 RX + 100 TX ordered byte-exact checks → later tick on SAME SSH connection. Observation windows include 3 s settle; they are NOT restart latency. Native serial CAN TS milliseconds and host monotonic SSH seconds are separate clock domains; no clock alignment inferred. SSH counter brackets include traffic, not just recovery.</p>
+<section><h3>Restart 1: CAN PID 626715 → 778263</h3>
+<p>100 RX / 100 TX · ordered byte-exact · main io-sock unchanged. Observation window including fixed 3 s settle: 3.4039861070050392 s.</p>
+<p>Host monotonic SSH counters 3 → 34 (215439.397221755 → 215473.747891529 s); same client PID 126654.</p>
+<a href="../acceptance/slm-continuity-20261107/traffic1.json">Exact four traffic arrays</a>
+</section>
+<section><h3>Restart 2: CAN PID 778263 → 2764823</h3>
+<p>100 RX / 100 TX · ordered byte-exact · main io-sock unchanged. Observation window including fixed 3 s settle: 3.3778775630053133 s.</p>
+<p>Host monotonic SSH counters 34 → 65 (215473.747891529 → 215507.915996419 s); same client PID 126654.</p>
+<a href="../acceptance/slm-continuity-20261107/traffic2.json">Exact four traffic arrays</a>
+</section>
+<section><h3>Restart 3: CAN PID 2764823 → 4743191</h3>
+<p>100 RX / 100 TX · ordered byte-exact · main io-sock unchanged. Observation window including fixed 3 s settle: 3.431113300001016 s.</p>
+<p>Host monotonic SSH counters 65 → 96 (215507.915996419 → 215541.785299229 s); same client PID 126654.</p>
+<a href="../acceptance/slm-continuity-20261107/traffic3.json">Exact four traffic arrays</a>
+</section>
+<h2>Provenance and limits</h2>
+<p>Exact saved controller source is hashed below; it imports native_can_three. Current verifier/helper source hashes bind this offline review only, not historical execution. Historical driver build identity/source binding: UNPROVEN. The image SHA256 in the receipt is a recorded assertion only: no SDK/image/binary is bundled or independently rehashed here. No historical source hashes are invented. SLM XML is current reference source, not proven historical image content.</p>
+<p>SSH client/debug, server authentication in serial, controller, startup, routing diagnostics, traffic and receipt are pinned together. Causal ordering comes from the saved controller and serial phases. C6 failure receipts are pinned context, not repaired or retried. The pin protects against accidental corruption/mixing, not an attacker able to edit this verifier.</p>
+<p><a href="recorded-manifest.json">Exact SHA256 evidence manifest</a> · pinned manifest SHA256 <code>36f4c42e48866ba3871b9254a72b1f2d2348b9cb5fc183c72c2da34ee7dc0efa</code></p>
+<ul>
+<li><a href="../../config/supervision/slm-can-fallback.xml">config/supervision/slm-can-fallback.xml</a> <code>ea3cbb4cb0e6a340c6e52000695245a1515df13692a0e0d0cc44e4cc30511696</code></li>
+<li><a href="../acceptance/safestop-failure-20261107/receipt.json">docs/acceptance/safestop-failure-20261107/receipt.json</a> <code>1d542ffa19fa5fe52279cd9004493d4d3ac97a10786d4f58ffa81319d417d2c4</code></li>
+<li><a href="../acceptance/safestop-focused-failure-20261107/receipt.json">docs/acceptance/safestop-focused-failure-20261107/receipt.json</a> <code>adf790f90acabfbfbaaf2620037ced5f0a4c3aab401148d0f5eaaffbf75f70f0</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/controller.py">docs/acceptance/slm-continuity-20261107/controller.py</a> <code>acc1a56d3b4f5d62fad8a4064985ae44940c5f1bdcb202a60bb53d6d34f5ef41</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/main-irq-before.txt">docs/acceptance/slm-continuity-20261107/main-irq-before.txt</a> <code>f3ebf5f4261442c8ee1b42d2efb069b2ef31302a2bd7c3228c15f3d060c1753c</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/network-before.txt">docs/acceptance/slm-continuity-20261107/network-before.txt</a> <code>30afcb54dbfec7764c335b64faba645de8b4ddf37f762c8a0c44a02b3d0f1eae</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/network-configured.txt">docs/acceptance/slm-continuity-20261107/network-configured.txt</a> <code>9c918de7fcc71de9d42785c8dc2d6a54845776c45bfdcb4d5d5dffb45a19cb31</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/receipt.json">docs/acceptance/slm-continuity-20261107/receipt.json</a> <code>9df1cab467af2785af8461d133e7b2845fc05a5cf8175f00717eb32e1478df56</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/serial.txt">docs/acceptance/slm-continuity-20261107/serial.txt</a> <code>a1fa4f0fd2ac5473507b5ba273f063aea9998a2d28a97df4beb856d5e96a0d88</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/ssh-debug.txt">docs/acceptance/slm-continuity-20261107/ssh-debug.txt</a> <code>7d8f7672b526229cd0019b00518d2ee5a366115c89c7ff04d196ef37f39e0304</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/ssh-diag.txt">docs/acceptance/slm-continuity-20261107/ssh-diag.txt</a> <code>93cd3af685feb95b556278cd5625aa2a89dfcdcf06cd6b2a9b906c13c5d210ab</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/ssh-server.txt">docs/acceptance/slm-continuity-20261107/ssh-server.txt</a> <code>dbfa92dfdc29f4631cfdf8c7ebc6771ce6a9141ddef276b0b5cc8eeb60962ff5</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/ssh-stream.txt">docs/acceptance/slm-continuity-20261107/ssh-stream.txt</a> <code>4d378ab4eacc905a2a309ceb02b66f134faaa05a1c161990c6af77bc3e65c681</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/startup.txt">docs/acceptance/slm-continuity-20261107/startup.txt</a> <code>711767828e5efbff091d205d2857d71535efb7c1e3b15cd117b1e76bd6aaa539</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/traffic1.json">docs/acceptance/slm-continuity-20261107/traffic1.json</a> <code>18f41a42d9deb3f2355747d9f3c598f862d963092f14bf755522427b117b9b21</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/traffic2.json">docs/acceptance/slm-continuity-20261107/traffic2.json</a> <code>bfa758c2253d7414ded2a7d049dd342e9bf0fb617dbe6b9e465c4aecd397cfea</code></li>
+<li><a href="../acceptance/slm-continuity-20261107/traffic3.json">docs/acceptance/slm-continuity-20261107/traffic3.json</a> <code>aff53bc86bb0c8bb553d7ee38b4f67e00d666e9ec28be83787869ec93fb70c70</code></li>
+<li><a href="../../tools/native_can_three.py">tools/native_can_three.py</a> <code>b972a2b6a41438308cbfd4cdcf043368a3ab0e06e6f57cb47d052f4bb9c8ef7c</code></li>
+<li><a href="../../tools/verify_slm_continuity.py">tools/verify_slm_continuity.py</a> <code>a3d7090bbe90d74afd8fe8ac53ea874e76e8a573ef25829b2b4855dbf5e01ade</code></li>
+<li><a href="../../tools/verify_slm_traffic_evidence.py">tools/verify_slm_traffic_evidence.py</a> <code>ce21d6bb8f218de058c82e6f47e96ddd210f9c5beeedd53dc6fab4af04913469</code></li>
+</ul></body></html>
