@@ -87,7 +87,12 @@ def render(result, output, root=ROOT):
             '<p>Static snapshot: PASS describes verification at generation only. Re-run the offline verifier '
             'after evidence changes; this HTML does not monitor files or provide live integrity attestation.</p>']
     if result['status'] != 'PASS':
-        body += ['<h2>UNKNOWN — bounded evidence not accepted</h2><pre>' + esc(result['error']) + '</pre>']
+        body += ['<h2>UNKNOWN — bounded evidence not accepted</h2><pre>' + esc(result['error']) + '</pre>',
+                 '<h3>Bounded recovery</h3><ol>'
+                 '<li>Stop interpreting this capture as PASS. Preserve the failing copy and exact error; do not edit or repin hashes to silence it.</li>'
+                 '<li>Compare the named file with the exact private repository revision and pinned manifest. Restore the complete matching capture into a separate clean checkout, not individual files from another run.</li>'
+                 '<li>Run <code>python3 tools/incident_workbench.py --verify-only</code> there. Exit 0 accepts only the bounded recording; exit 2 remains UNKNOWN. If the matching capture is unavailable, stop here and retain UNKNOWN.</li>'
+                 '<li>Only after verification, regenerate that checkout with <code>python3 tools/incident_workbench.py</code>. This does not run QNX or repair C6. Static PASS remains generation-time only.</li></ol>']
     else:
         receipt = result['receipt']
         body += ['<h2>PASS — bounded recorded evidence only</h2>',

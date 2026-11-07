@@ -95,6 +95,20 @@ class Workbench(unittest.TestCase):
             with self.assertRaises(ValueError):
                 wb.verify(root)
 
+    def test_saved_unknown_review_fixtures(self):
+        folder = ROOT / 'docs/acceptance/unknown-review-20261107'
+        receipt = json.loads((folder / 'receipt.json').read_text())
+        self.assertEqual({c['variant'] for c in receipt['cases']}, {'missing','corrupt','mixed'})
+        self.assertEqual(receipt['verifier_sha256'], wb.sha((ROOT/'tools/incident_workbench.py').read_bytes()))
+        for case in receipt['cases']:
+            page = folder / case['html']
+            self.assertEqual(case['exit'], 2)
+            self.assertIn('UNKNOWN', case['outcome'])
+            self.assertEqual(case['html_sha256'], wb.sha(page.read_bytes()))
+            self.assertIn('<h2>UNKNOWN', page.read_text())
+            self.assertNotIn('<h2>PASS', page.read_text())
+            self.assertIn('Bounded recovery', page.read_text())
+
     def test_output_confinement(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
@@ -111,6 +125,8 @@ class Workbench(unittest.TestCase):
         page = wb.render(result, ROOT / 'docs/workbench/index.html')
         self.assertNotIn(payload, page)
         self.assertIn('&lt;script&gt;', page)
+        for phrase in ('Bounded recovery', 'do not edit or repin', 'separate clean checkout', '--verify-only', 'retain UNKNOWN', 'generation-time only'):
+            self.assertIn(phrase, page)
         result = copy.deepcopy(wb.verify())
         result['receipt']['restarts'][0]['killed_pid'] = payload
         page = wb.render(result, ROOT / 'docs/workbench/index.html')

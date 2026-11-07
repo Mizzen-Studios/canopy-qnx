@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>CANopy recorded incident workbench</title><style>
+body{background:#101820;color:#e6edf3;font:17px/1.6 system-ui,sans-serif;max-width:1050px;margin:auto;padding:32px}h1,h2{line-height:1.2}a{color:#7dd3fc}section{border-left:4px solid #70d6b2;padding:4px 20px;margin:24px 0;background:#17252e}.warning{border:1px solid #d5a45f;padding:16px;color:#ffe1ae}.tag{color:#70d6b2;font-weight:bold}code{overflow-wrap:anywhere;font-size:13px}li{margin:14px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}
+</style></head><body><h1>CANopy · Recorded incident workbench</h1>
+<p class="tag">RECORDED QNX EXPERIMENT · 2026-11-07 · libcan fallback</p>
+<p>Permanent scope: saved QNX-on-QEMU experiment, not host simulation and not a fresh native run. This host-only viewer never starts a guest or executes the saved controller.</p>
+<p class="warning">C6: FAIL / stopped. SocketCAN: BLOCKED / unverified. No continuous CAN availability, physical safety, certification, restart-latency or benchmark claim.</p>
+<p>Static snapshot: PASS describes verification at generation only. Re-run the offline verifier after evidence changes; this HTML does not monitor files or provide live integrity attestation.</p>
+<h2>UNKNOWN — bounded evidence not accepted</h2><pre>corrupt/mixed evidence: docs/acceptance/slm-continuity-20261107/traffic2.json</pre>
+<h3>Bounded recovery</h3><ol><li>Stop interpreting this capture as PASS. Preserve the failing copy and exact error; do not edit or repin hashes to silence it.</li><li>Compare the named file with the exact private repository revision and pinned manifest. Restore the complete matching capture into a separate clean checkout, not individual files from another run.</li><li>Run <code>python3 tools/incident_workbench.py --verify-only</code> there. Exit 0 accepts only the bounded recording; exit 2 remains UNKNOWN. If the matching capture is unavailable, stop here and retain UNKNOWN.</li><li>Only after verification, regenerate that checkout with <code>python3 tools/incident_workbench.py</code>. This does not run QNX or repair C6. Static PASS remains generation-time only.</li></ol></body></html>

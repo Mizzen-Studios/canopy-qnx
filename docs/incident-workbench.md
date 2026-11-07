@@ -43,3 +43,9 @@ there is no continuous-availability or exact recovery-latency claim.
   availability, latency or QNX benchmark claim. Nothing published/deployed.
 
 The canonical [capability ledger](capabilities.md) is the declaration source.
+
+## UNKNOWN recovery and disposable review copies
+
+UNKNOWN now explains a bounded recovery: preserve the failing copy/error; never repin to silence it; restore the complete matching capture into a separate clean checkout; run the offline verifier. If exact matching evidence is unavailable, retain UNKNOWN. Only a verified recording can be regenerated; no guest is started and C6 is not repaired. Static PASS is generation-time only.
+
+Generate private review fixtures with `python3 tools/unknown_review_fixtures.py`. It mutates only temporary capture copies, then saves [missing](acceptance/unknown-review-20261107/missing.html), [corrupt](acceptance/unknown-review-20261107/corrupt.html) and [mixed](acceptance/unknown-review-20261107/mixed.html) UNKNOWN HTML outside docs/workbench/index.html. The [receipt](acceptance/unknown-review-20261107/receipt.json) records each command, input mutation, outcome and page digest. These deliberately rejected host fixtures are not native runs or authoritative PASS artifacts. No deployment or browser-review claim.

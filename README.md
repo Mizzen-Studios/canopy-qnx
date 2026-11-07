@@ -190,7 +190,7 @@ are ignored only in the worktree; tracked bytecode still fails. This heuristic
 is not proof of provenance, an arbitrary SDK detector, or a substitute for review.
 Keep SDK installations outside the repository. CI requires no SDK access.
 
-Prior art we learned from: Deniz-Eren/dev-can-linux (GPL-2.0, libcan ports incl. kvaser_pci), stappdev/qnxCAN1000, NikhilGogu/qnx-ctucanfd (libcan CAN FD driver for ctucan_pci with supervised restart). CANopy differs by targeting io-sock/SocketCAN and by the vehicle-level fail-safe.
+Prior art we learned from: Deniz-Eren/dev-can-linux (GPL-2.0, libcan ports incl. kvaser_pci), stappdev/qnxCAN1000, NikhilGogu/qnx-ctucanfd (libcan CAN FD driver for ctucan_pci with supervised restart). The current private CANopy slice is an evidence-bound recorded libcan/SLM incident workbench. SocketCAN remains blocked/unverified; the historical vehicle fail-safe lane is C6 FAIL/stopped, not current positioning or a validated capability.
 
 That credit describes design intent, not implemented target support. This
 milestone was written from the supplied plan without copying rival source.
