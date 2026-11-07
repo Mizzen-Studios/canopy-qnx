@@ -1,0 +1,30 @@
+{
+  "kind": "council-onboarding-host-only",
+  "tested_commit": "640f8d3506cd0488d30cb8bf05f9f4c3a53ab208",
+  "worktree_before_test": "clean",
+  "scope": "host-only checks and dry-pack structure, no new native acceptance; native feature freeze",
+  "host_tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "total": 137,
+    "passed": 129,
+    "skipped": 8,
+    "log": "host.log",
+    "sha256": "fa8e60730a940d852034cd1c6d164ae7ed23ab037ec3b6b9627f4e8a2c4d4ff3"
+  },
+  "unit_test_count_change": 0,
+  "dry_pack": {
+    "frozen_commit": "79912ef4ab2a738263d1ea22d42210d722182f35",
+    "words": 190,
+    "planned_seconds": 155,
+    "status": "PASS"
+  },
+  "capture_authorization": "NOT_GRANTED: separate Olly OK required",
+  "capture_performed": false,
+  "audio_performed": false,
+  "new_native_execution": false,
+  "C6": "FAIL/STOPPED",
+  "SocketCAN": "UNVERIFIED",
+  "conditional_acceptance": "scoped evidence only; human learning and second SDK unvalidated",
+  "legal_onboarding": "recorded historical native evidence only; no target build portability claim"
+}
