@@ -1,0 +1,37 @@
+{
+  "caps": {
+    "cpu.max": "100000 100000",
+    "memory.max": "1073741824",
+    "nice": 15
+  },
+  "qemu_pid": 114968,
+  "image_sha256": "aae3310d80ea7190e4a03a5849d0d53770996164825cbc616eb3e22e7d1a0205",
+  "label": "observed in this QEMU run; app budget, not QNX benchmark",
+  "restarts": [
+    {
+      "run": 1,
+      "killed_pid": 278546,
+      "new_pid": 323602,
+      "main_pid_unchanged": true,
+      "observed_seconds_including_fixed_3s_settle": 3.386307692999253
+    },
+    {
+      "run": 2,
+      "killed_pid": 323602,
+      "new_pid": 434194,
+      "main_pid_unchanged": true,
+      "observed_seconds_including_fixed_3s_settle": 3.3167523750162218
+    },
+    {
+      "run": 3,
+      "killed_pid": 434194,
+      "new_pid": 520210,
+      "main_pid_unchanged": true,
+      "observed_seconds_including_fixed_3s_settle": 3.442934858991066
+    }
+  ],
+  "success": true,
+  "ssh_authenticated_continuity": "UNVERIFIED",
+  "main_io_sock_pid": 163853,
+  "guest_stopped_reaped": true
+}

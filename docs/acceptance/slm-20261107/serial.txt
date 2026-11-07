@@ -1,0 +1,197 @@
+
+non UEFI or UEFI+CSM boot
+ACPI table not found (0x4746434d)
+System behaves poorly without PCID support.
+overriding mask for controller 2, vector_base 0
+---> Starting slogger2
+---> Starting PCI Services
+---> Starting fsevmgr
+# ---> Starting devb
+---> Mounting file systems
+Path=0 - Intel 82371SB
+ target=0 lun=0     Direct-Access(0) -          QEMU HARDDISK    Rev: 2.5+
+Path=1 - Intel 82371SB
+ target=0 lun=0            CD-ROM(5) - QEMU     QEMU DVD-ROM     Rev: 2.5+
+---> Mounting file systems
+---> Starting Networking
+---> Starting sshd
+Memory fault (core dumped)
+---> Starting misc
+CANOPY_SLM_IMAGE_READY
+pidiStartup complete
+n ar; echo BASE_DONE
+     pid Arguments
+QNX noname 8.0.0 2026/06/05-16:26:03EDT x86pc x86_64
+       1 procnto-smp-instr -mr -d 0777 -u 0777
+   16387 slogger2
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg
+   49157 devc-ser8250 -e
+   57351 ksh ksh
+   61446 fsevmgr
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low
+  131081 random -s /data/var/random/rnd-seed
+  143370 pipe
+  155659 devc-pty
+  159756 dumper -d /data/var/dumper -M 1000 -D cores
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks
+  245774 qconn
+  249871 mqueue
+  258064 pidin ar
+BASE_DONE
+# /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml > /tmp/slm.log 2>&1 & sleep 3; cat /tmp/slm.log; /proc/boot/slmctl -n /dev/slm-canopy 'listall -v'; pidin ar; echo SLM_START_DONE
+[1] 270338
+canopy-can  /proc/boot/dev-can-linux  ACTIVE    INITIALIZED  278546
+     pid Arguments
+       1 procnto-smp-instr -mr -d 0777 -u 0777
+   16387 slogger2
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg
+   49157 devc-ser8250 -e
+   57351 ksh ksh
+   61446 fsevmgr
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low
+  131081 random -s /data/var/random/rnd-seed
+  143370 pipe
+  155659 devc-pty
+  159756 dumper -d /data/var/dumper -M 1000 -D cores
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks
+  245774 qconn
+  249871 mqueue
+  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml
+  278546 dev-can-linux -b id=0,freq=500k
+  299024 pidin ar
+SLM_START_DONE
+[1] + Done                 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -
+# pidin ar; echo ID_CHECK
+     pid Arguments
+       1 procnto-smp-instr -mr -d 0777 -u 0777
+   16387 slogger2
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg
+   49157 devc-ser8250 -e
+   57351 ksh ksh
+   61446 fsevmgr
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low
+  131081 random -s /data/var/random/rnd-seed
+  143370 pipe
+  155659 devc-pty
+  159756 dumper -d /data/var/dumper -M 1000 -D cores
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks
+  245774 qconn
+  249871 mqueue
+  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml
+  278546 dev-can-linux -b id=0,freq=500k
+  307216 pidin ar
+ID_CHECK
+# kill -9 278546; sleep 3; /proc/boot/slmctl -n /dev/slm-canopy 'active -v'; pidin ar; ls /dev/can0/rx0; echo RESTART_DONE
+canopy-can  /proc/boot/dev-can-linux  ACTIVE    INITIALIZED  323602
+     pid Arguments
+       1 procnto-smp-instr -mr -d 0777 -u 0777
+   16387 slogger2
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg
+   49157 devc-ser8250 -e
+   57351 ksh ksh
+   61446 fsevmgr
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low
+  131081 random -s /data/var/random/rnd-seed
+  143370 pipe
+  155659 devc-pty
+  159756 dumper -d /data/var/dumper -M 1000 -D cores
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks
+  245774 qconn
+  249871 mqueue
+  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml
+  323602 dev-can-linux -b id=0,freq=500k
+  401424 pidin ar
+/dev/can0/rx0
+RESTART_DONE
+# pidin ar; echo ID_CHECK
+     pid Arguments
+       1 procnto-smp-instr -mr -d 0777 -u 0777
+   16387 slogger2
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg
+   49157 devc-ser8250 -e
+   57351 ksh ksh
+   61446 fsevmgr
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low
+  131081 random -s /data/var/random/rnd-seed
+  143370 pipe
+  155659 devc-pty
+  159756 dumper -d /data/var/dumper -M 1000 -D cores
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks
+  245774 qconn
+  249871 mqueue
+  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml
+  323602 dev-can-linux -b id=0,freq=500k
+  417808 pidin ar
+ID_CHECK
+# kill -9 323602; sleep 3; /proc/boot/slmctl -n /dev/slm-canopy 'active -v'; pidin ar; ls /dev/can0/rx0; echo RESTART_DONE
+canopy-can  /proc/boot/dev-can-linux  ACTIVE    INITIALIZED  434194
+     pid Arguments
+       1 procnto-smp-instr -mr -d 0777 -u 0777
+   16387 slogger2
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg
+   49157 devc-ser8250 -e
+   57351 ksh ksh
+   61446 fsevmgr
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low
+  131081 random -s /data/var/random/rnd-seed
+  143370 pipe
+  155659 devc-pty
+  159756 dumper -d /data/var/dumper -M 1000 -D cores
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks
+  245774 qconn
+  249871 mqueue
+  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml
+  434194 dev-can-linux -b id=0,freq=500k
+  446480 pidin ar
+/dev/can0/rx0
+RESTART_DONE
+# pidin ar; echo ID_CHECK
+     pid Arguments
+       1 procnto-smp-instr -mr -d 0777 -u 0777
+   16387 slogger2
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg
+   49157 devc-ser8250 -e
+   57351 ksh ksh
+   61446 fsevmgr
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low
+  131081 random -s /data/var/random/rnd-seed
+  143370 pipe
+  155659 devc-pty
+  159756 dumper -d /data/var/dumper -M 1000 -D cores
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks
+  245774 qconn
+  249871 mqueue
+  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml
+  434194 dev-can-linux -b id=0,freq=500k
+  462864 pidin ar
+ID_CHECK
+# kill -9 434194; sleep 3; /proc/boot/slmctl -n /dev/slm-canopy 'active -v'; pidin ar; ls /dev/can0/rx0; echo RESTART_DONE
+canopy-can  /proc/boot/dev-can-linux  ACTIVE    INITIALIZED  520210
+     pid Arguments
+       1 procnto-smp-instr -mr -d 0777 -u 0777
+   16387 slogger2
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg
+   49157 devc-ser8250 -e
+   57351 ksh ksh
+   61446 fsevmgr
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low
+  131081 random -s /data/var/random/rnd-seed
+  143370 pipe
+  155659 devc-pty
+  159756 dumper -d /data/var/dumper -M 1000 -D cores
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks
+  245774 qconn
+  249871 mqueue
+  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml
+  520210 dev-can-linux -b id=0,freq=500k
+  532496 pidin ar
+/dev/can0/rx0
+RESTART_DONE
