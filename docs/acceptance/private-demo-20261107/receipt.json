@@ -1,0 +1,21 @@
+{
+  "tested_commit": "2366b96f8e7039dfd9368a50448881dfad90bf82",
+  "worktree_before_test": "clean",
+  "command": "python3 -m unittest discover -s tests -v",
+  "exit_code": 0,
+  "tests_total": 137,
+  "passed": 129,
+  "skipped": 8,
+  "host_log_sha256": "1226e49090565b824aab229409fd60ad466e8b69aedb19606a09f29ddb4277fe",
+  "draft_path": "docs/private-demo.md",
+  "draft_sha256": "45a4e66dfafde8520acd23eeb5c8a94f45ee227ffb20511689736ca37297c2c6",
+  "narration_word_count": 179,
+  "planned_end": "2:35",
+  "duration_scope": "editorial allocation, not measured delivery or target timing",
+  "recorded": false,
+  "uploaded": false,
+  "published": false,
+  "scope": "host-only; no new QEMU acceptance; native/failure receipts separate",
+  "C6": "STOPPED",
+  "SocketCAN": "UNVERIFIED"
+}
