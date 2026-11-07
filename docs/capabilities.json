@@ -50,9 +50,10 @@
       "id": "incident-viewer",
       "domain": "host",
       "level": "recorded-evidence-view",
-      "status": "UNVERIFIED",
-      "claim": "Read-only viewer implementation in progress; does not rerun QNX",
-      "evidence": "tools/verify_slm_continuity.py"
+      "status": "PASS",
+      "claim": "Local read-only generation-time view of pinned recorded QNX evidence; missing/corrupt/mixed/repinned evidence UNKNOWN; historical driver identity UNPROVEN",
+      "evidence": "docs/acceptance/workbench-20261107.json",
+      "evidence_sha256": "1b74b7e413c6e85b8f1b3245e5ac5cb7a198d94d5134649dad28795a96376968"
     }
   ]
 }

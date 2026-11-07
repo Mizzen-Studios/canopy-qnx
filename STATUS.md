@@ -6,8 +6,9 @@ Canonical [capability ledger](docs/capabilities.md) separates host simulation,
 recorded native libcan/SLM PASS, SocketCAN UNVERIFIED and C6 FAIL/stopped.
 Recorded incident receipts are the hero; no native vehicle-safety positioning.
 C6 remains STOPPED: no automatic retries, heartbeat work or renamed safety lane.
-The priority is a read-only evidence-bound incident viewer; implementation is
-not yet accepted. Historical receipts below remain preserved, not fresh runs.
+Read-only evidence-bound incident viewer implemented at f3b4fb0; parent verifier
+and six corruption/HTML tests PASS. This is generation-time recorded evidence,
+not fresh QNX execution or historical driver source attestation. Historical receipts below remain preserved, not fresh runs.
 
 
 **PASS: three fresh native libcan byte-exact runs and three native SLM managed-process restarts.**

@@ -22,7 +22,8 @@ libcan receipts are not SocketCAN acceptance. QPP remains unverified.
 ## Separate evidence journeys
 
 - Recorded native incident: [SLM/SSH receipt](docs/acceptance/slm-continuity-20261107/receipt.json),
-  [validator](tools/verify_slm_continuity.py). Viewer work is read-only and separate.
+  [read-only workbench](docs/workbench/index.html),
+  [strict viewer verifier](tools/incident_workbench.py). See [workflow and limits](docs/incident-workbench.md).
 - Host simulation: [offline replay](docs/replay/index.html), deterministic
   director, Linux vcan actuator models, DBC/VSS mapping and pilot/C export.
   These never become QNX proof and are not the product's safety claim.
