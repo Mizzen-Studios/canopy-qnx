@@ -37,15 +37,15 @@ network/banner failures and an unbounded remote-shell PATH mistake are NOT
 counted as acceptance. The final bounded stream uses /proc/boot/sleep.
 
 C6 strict actual qcc compile/link PASS ([receipt](docs/acceptance/safestop-build-20261107/receipt.json));
-native FIFO/pulse/actuator runtime scenarios are now being exercised, NOT yet
-accepted. SDK guest stopped/reaped first. Native controller alone owns the lease
-and uses CPU100%,1GiB,nice15,1vCPU/512MiB.
+native FIFO/pulse/actuator runtime attempt FAILED; lane stopped after the focused
+attempt below. SDK/native guests stopped/reaped. Effective caps remained
+CPU100%,1GiB,nice15,1vCPU/512MiB.
 
 ## Still unverified
 
 Full SocketCAN C2/C3 requires matching x86_64 module/board ABI. Identity-safe production supervision, rolling-window/manual-latch limits, least privilege and robust failure injection are not established by the restart smoke. The separate authenticated stream above—not PID snapshots—proves the bounded SSH observation. No full C3 policy acceptance is claimed.
 
-The parent currently owns the serialized native C6 lane; previous SDK and C3 guests are stopped/reaped. Both repos private. SDK/licenses/headers/libs/images/binaries/QSC/secrets remain external. No publication, contacts, paid resources or upstream PRs.
+C6 lane stopped; SDK, C3 and C6 guests stopped/reaped; lease free. Both repos private. SDK/licenses/headers/libs/images/binaries/QSC/secrets remain external. No publication, contacts, paid resources or upstream PRs.
 
 ## C6 failure recovery
 
