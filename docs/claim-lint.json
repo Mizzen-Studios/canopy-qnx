@@ -33,7 +33,7 @@
     },
     {
       "path": "docs/proof-capture/SCRIPT.md",
-      "sha256": "adcd2360b3b3c48fa28f457dc97ad4ddfd6bf855fd0b11dbfbae3c6d2aa890ef",
+      "sha256": "ed4c32510e6fea573acc64d8e26128ae01ffa636a50e5fd26b97b3221c78d75b",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -373,7 +373,7 @@
         "start": 0,
         "end": 20,
         "claim": "Read-only static workbench presents recorded native libcan/SLM evidence, not live telemetry or safety.",
-        "frame": "README, REVIEW and docs/workbench/index.html; planned local file view only, not live capture",
+        "frame": "Local sanitized file view: docs/workbench/index.html, docs/workbench/recorded-manifest.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
         "label": "host-only",
         "assets": [
           {
@@ -392,7 +392,7 @@
         "start": 20,
         "end": 55,
         "claim": "Three recorded positively identified managed CAN PID kills/restarts with100RX/100TX ordered exact bytes per post-restart trial.",
-        "frame": "Recorded workbench incident phases; slm-continuity-20261107/receipt.json and serial; planned local file view only, not live capture",
+        "frame": "Local sanitized file view: docs/acceptance/slm-continuity-20261107/receipt.json, docs/acceptance/slm-continuity-20261107/serial.txt, docs/acceptance/slm-continuity-20261107/traffic1.json, docs/acceptance/slm-continuity-20261107/traffic2.json, docs/acceptance/slm-continuity-20261107/traffic3.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
         "label": "recorded native QEMU observation",
         "assets": [
           {
@@ -423,7 +423,7 @@
         "start": 55,
         "end": 85,
         "claim": "Same authenticated SSH stream and unchanged main io-sock PID during bounded historical observation only.",
-        "frame": "Same receipt, client/server SSH logs and captured main io-sock PID; planned local file view only, not live capture",
+        "frame": "Local sanitized file view: docs/acceptance/slm-continuity-20261107/receipt.json, docs/acceptance/slm-continuity-20261107/ssh-stream.txt, docs/acceptance/slm-continuity-20261107/ssh-debug.txt, docs/acceptance/slm-continuity-20261107/ssh-server.txt. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
         "label": "recorded native QEMU observation",
         "assets": [
           {
@@ -450,7 +450,7 @@
         "start": 85,
         "end": 115,
         "claim": "Missing/corrupt/mixed evidence yields UNKNOWN; saved desktop/mobile browser checks are host-only.",
-        "frame": "UNKNOWN fixtures from unknown-review-20261107/ and browser-20261107/NOTES.md; labels at desktop/mobile; planned local file view only, not live capture",
+        "frame": "Local sanitized file view: docs/acceptance/unknown-review-20261107/missing.html, docs/acceptance/unknown-review-20261107/corrupt.html, docs/acceptance/unknown-review-20261107/mixed.html, docs/acceptance/browser-20261107/receipt.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
         "label": "host-only",
         "assets": [
           {
@@ -477,7 +477,7 @@
         "start": 115,
         "end": 135,
         "claim": "Separate replay is HOST SIMULATION; no QNX proof transfers.",
-        "frame": "Separate docs/replay/index.html with HOST SIMULATION label; no live animation needed; planned local file view only, not live capture",
+        "frame": "Local sanitized file view: docs/replay/index.html, docs/replay/run.jsonl. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
         "label": "host-only",
         "assets": [
           {
@@ -496,7 +496,7 @@
         "start": 135,
         "end": 155,
         "claim": "Historical driver source/binary binding incomplete; SocketCAN UNVERIFIED and C6FAIL/STOPPED; no safety/timing/availability acceptance.",
-        "frame": "REVIEW binding gaps and capability ledger; STOPPED/UNVERIFIED labels; planned local file view only, not live capture",
+        "frame": "Local sanitized file view: docs/capabilities.json, docs/acceptance/safestop-focused-failure-20261107/receipt.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
         "label": "UNVERIFIED boundaries",
         "assets": [
           {
@@ -536,7 +536,6 @@
       "receipt": "docs/acceptance/browser-20261107/receipt.json",
       "sha256": "8d6392815e0c3855d2efefd4a1cf0eda7f564a50d03bd254ca08e5489d6901c5",
       "tested_commit": "25ca8cf919e81fa62669f2cb8f813fa2cab536df",
-      "archival_commit": "41674dce9974406c0df2b7961fbce6609f9b2623",
       "counts": {
         "command": "python3 -m unittest discover -s tests -v",
         "total": 134,
@@ -550,7 +549,6 @@
       "receipt": "docs/acceptance/private-demo-20261107/receipt.json",
       "sha256": "e499242162cceba547edb0beada53701c7ed2088f7d96410f8009d0591c49e3b",
       "tested_commit": "2366b96f8e7039dfd9368a50448881dfad90bf82",
-      "archival_commit": "79912ef4ab2a738263d1ea22d42210d722182f35",
       "counts": {
         "tests_total": 137,
         "passed": 129,
@@ -562,7 +560,6 @@
       "receipt": "docs/acceptance/private-review-20261107/receipt.json",
       "sha256": "84cb976d9d422394fbf1f663d66c7f6a3b2d986a9c780405af683ab7bc9432bb",
       "tested_commit": "e8a2ec7ad7164e26cb0b8a412bea03c71f5be5b0",
-      "archival_commit": "45fc09219ba0bbb8fda8338c50b9c21e61ad4642",
       "counts": {
         "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v",
         "exit": 0,

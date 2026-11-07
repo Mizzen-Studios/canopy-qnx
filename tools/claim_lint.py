@@ -45,8 +45,8 @@ def build():
   if isinstance(host,dict) and any(k in host for k in ['total','passed','tests_total']):counts=host
   elif 'tests_total' in d and 'passed' in d:counts={k:d[k] for k in ['tests_total','passed','skipped'] if k in d}
   else:continue
-  rel=str(p.relative_to(ROOT));archived=subprocess.check_output(['git','log','--diff-filter=A','--format=%H','--',rel],cwd=ROOT,text=True).splitlines()
-  chronology.append({'receipt':rel,'sha256':sha(p),'tested_commit':d.get('tested_commit',d.get('source_commit',d.get('source'))),'archival_commit':archived[-1] if archived else None,'counts':counts,'scope':'historical host suite at its own revision; never native proof or automatically current count'})
+  rel=str(p.relative_to(ROOT))
+  chronology.append({'receipt':rel,'sha256':sha(p),'tested_commit':d.get('tested_commit',d.get('source_commit',d.get('source'))),'counts':counts,'scope':'historical host suite at its own revision; never native proof or automatically current count'})
  return {'status':'FAIL' if errors else 'PASS','errors':errors,'scope':'Offline structural lint + explicit REVIEW mapping; not a universal semantic claim verifier','acceptance':'Council CONDITIONAL scoped evidence; native features FROZEN; outsider human learning and second independent SDK UNVERIFIED','capture':'DRY ONLY; separate Olly OK required for recording/audio','boundaries':['existing licensed SDK reused, not fresh install','sshd internal cause UNVERIFIED, no full-platform health','C6FAIL/STOPPED, SocketCANUNVERIFIED','no safety/timing/availability claims'],'surfaces':surfaces,'local_links':checked,'dry_pack':capture,'negative_checks':negative,'chronological_host_receipts':chronology,'chronology_order':'receipt paths; inspect tested commits, not monotonic pass-count progress'}
 def main():
  p=argparse.ArgumentParser();p.add_argument('--write',action='store_true');a=p.parse_args();d=build();out=ROOT/'docs/claim-lint.json'
