@@ -5,7 +5,7 @@ from tools.native_safestop_host import stimulus
 class NativeStimulusTests(unittest.TestCase):
     def test_faults_use_existing_ids_and_close(self):
         for scenario in ('healthy','stale','obstacle','pilot','malformed'):
-            with self.subTest(scenario=scenario), patch('tools.native_safestop_host.SocketCAN') as bus,                     patch('tools.native_safestop_host.time.monotonic',side_effect=[0,0,2.5,4.5,8]),                     patch('tools.native_safestop_host.time.sleep'):
+            with self.subTest(scenario=scenario), patch('tools.native_safestop_host.SocketCAN') as bus,                     patch('tools.native_safestop_host.time.monotonic',side_effect=[0,0,2.5,5.5,8]),                     patch('tools.native_safestop_host.time.sleep'):
                 stimulus('test-only',8,scenario)
                 frames = [c.args for c in bus.return_value.send.call_args_list]
                 self.assertTrue(all(f[0] in (0x100,0x102) for f in frames))
