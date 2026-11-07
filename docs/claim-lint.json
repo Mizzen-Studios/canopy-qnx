@@ -588,6 +588,17 @@
       "scope": "historical host suite at its own revision; never native proof or automatically current count"
     },
     {
+      "receipt": "docs/acceptance/packaging-20261107/receipt.json",
+      "sha256": "add4e26856472cbeaa8a02e3eff7756bc9b3efaeb47ac27191ab0949918bfa3d",
+      "tested_commit": "9c0e415a49a6382007e26f85880adc7e3209089b",
+      "counts": {
+        "tests_total": 137,
+        "passed": 129,
+        "skipped": 8
+      },
+      "scope": "historical host suite at its own revision; never native proof or automatically current count"
+    },
+    {
       "receipt": "docs/acceptance/private-demo-20261107/receipt.json",
       "sha256": "e499242162cceba547edb0beada53701c7ed2088f7d96410f8009d0591c49e3b",
       "tested_commit": "2366b96f8e7039dfd9368a50448881dfad90bf82",

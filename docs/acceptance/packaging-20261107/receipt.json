@@ -1,0 +1,31 @@
+{
+  "scope": "private packaging only; clean committed host checks, no native rerun",
+  "accepted_completion_tip": "88b1bcf5fcc1f97da03321d35b03e89c85090227",
+  "acceptance": "CONDITIONAL: owner receipt-inspected, not re-run at 20:03 UTC",
+  "tested_commit": "9c0e415a49a6382007e26f85880adc7e3209089b",
+  "tests_total": 137,
+  "passed": 129,
+  "skipped": 8,
+  "exit_code": 0,
+  "clean_before": true,
+  "clean_after": true,
+  "host_log_sha256": "04a7e4cfc651f41ee4121f2874c9ab08a0bce038d0e16bd7e9b2662e4e6b01c0",
+  "browser_receipt_sha256": "48aeb79f21c2535146f7d549ec104d1eae83105ef0d65502f648f02ed01bb253",
+  "browser": "1280/768/520/360 local DOM/layout; EDU canonical navigation; CAN four named answers; not human comprehension validation",
+  "recorded": false,
+  "audio_capture": false,
+  "publication": false,
+  "native_rerun": false,
+  "native_feature_change": false,
+  "qemu_none": true,
+  "lease_free": true,
+  "C6": "FAIL/STOPPED",
+  "SocketCAN": "UNVERIFIED",
+  "boundaries": [
+    "existing licensed SDK reuse and owner-lab paths only",
+    "no fresh install, second SDK or human learner validation",
+    "sshd internal cause UNVERIFIED; no platform-health claim",
+    "CANopy historical native evidence not rerun",
+    "no safety/timing/availability claim"
+  ]
+}
