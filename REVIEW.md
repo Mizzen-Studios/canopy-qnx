@@ -24,3 +24,5 @@ Scope: CANopy only, reviewed tip `61d11d1d3b316ec31f3e770c1ecbee50977d6924`. No 
 ## This review validation
 
 Host-only full suite: **137 total / 129 passed / 8 skipped** (three new review-coverage regressions; optional live integrations skipped). Exact-source rerun receipt and logs: `docs/acceptance/private-review-20261107/`. Offline raw CAN/SLM/SSH verification, ledger, deterministic site reconciliation, appendix and SDK guard pass; no native runtime executed.
+
+Private editorial draft: [shot list and narration](docs/private-demo.md), planned below three minutes. No recording/upload or new runtime claim.
