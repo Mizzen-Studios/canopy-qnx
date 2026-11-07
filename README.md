@@ -1,5 +1,7 @@
 # CANopy — recorded fault-containment incident workbench
 
+Private [claim-to-receipt review](REVIEW.md): historical source/build gaps remain UNVERIFIED.
+
 Actual [desktop/mobile Chromium validation](docs/acceptance/browser-20261107/NOTES.md): missing/corrupt/mixed → UNKNOWN; recorded native labels remain separate from simulation. Host suite **126 passed / 8 skipped**. No fresh native acceptance.
 
 Private evidence workbench for a bounded **native QNX libcan + SLM experiment**.
@@ -128,7 +130,7 @@ sudo ./scripts/setup-vcan.sh vcan0
 python3 -m canopy_host.runtime_runner --output /path/outside/repo/new-run
 ~~~
 
-The development host now has can-utils and vcan0 UP. Three 100-frame host runs
+The dated host setup records can-utils and vcan0 UP (not current readiness). Three 100-frame host runs
 were byte-exact; seven live fault scenarios passed. These are HOST VCAN results,
 not QNX CAN acceptance. See [host setup](docs/host-vcan-setup.md),
 [fail-safe runtime](docs/host-runtime.md), [VSS mapping](docs/vss-mapping.md),
@@ -139,7 +141,7 @@ not QNX CAN acceptance. See [host setup](docs/host-vcan-setup.md),
 Owner-approved platform: **the existing Ubuntu 24.04 ARM64 VM running an
 x86_64 QNX guest under QEMU TCG, explicitly without KVM**. An x86_64 KVM host
 is not a prerequisite. This supersedes the original plan's KVM-only preflight.
-Developed with Python 3.12.3. The current host QEMU is 8.2.2; doctor queries the
+Developed with Python 3.12.3. The recorded host QEMU was 8.2.2; doctor queries the
 installed binary rather than assuming its devices. Licensed SDP8 is installed in
 an external private x86 Linux guest; actual qcc builds and native QNX libcan/SLM
 experiments are recorded. QSTI provenance, SocketCAN module/board ABI, secpol

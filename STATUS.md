@@ -1,5 +1,7 @@
 # Status — 7 November 2026
 
+Private [claim-to-receipt review](REVIEW.md): this is historical evidence, not a fresh native run.
+
 Actual [desktop/mobile Chromium validation](docs/acceptance/browser-20261107/NOTES.md): missing/corrupt/mixed → UNKNOWN; recorded native labels remain separate from simulation. Host suite **126 passed / 8 skipped**. No fresh native acceptance.
 
 ## Current direction — council approval, 7 November 2026
@@ -13,7 +15,7 @@ and six corruption/HTML tests PASS. This is generation-time recorded evidence,
 not fresh QNX execution or historical driver source attestation. Historical receipts below remain preserved, not fresh runs.
 
 
-**PASS: three fresh native libcan byte-exact runs and three native SLM managed-process restarts.**
+**Historical capture PASS (not rerun in this review): three native libcan byte-exact runs and three native SLM managed-process restarts.**
 
 - CAN runs1–3:100/100RX and100/100TX each, ordered ID/DLC/eight-byte exact with independently captured host traffic. Preserved in [native CAN evidence](docs/acceptance/native-can-20261106/summary.json); parent offline recheckPASS. This is the libcan fallback, NOT an accepted io-sock SocketCAN ABI/C2 gate.
 - Fresh dedicated SLM image parsed the original config and started the managed libcan CAN service. Exact observed PIDs were checked before each kill:278546→323602→434194→520210. All three restarted and /dev/can0/rx0 was present afterward. Mainio-sock PID163853 stayed unchanged in each before/after snapshot.
@@ -62,7 +64,7 @@ C6 lane stopped; SDK, C3 and C6 guests stopped/reaped; lease free. Both repos pr
 
 ## C6 failure recovery
 
-**Runtime gate UNVERIFIED / last execution FAIL:**850 native TX attempts versus one host0x200 heartbeat; all SAFE_STOP, no fresh sensors. Evidence:docs/acceptance/safestop-failure-20261107. **observed in this QEMU run · app budget, not a QNX benchmark**. Guest stopped/reaped; one focused fix attempt next.
+**Runtime gate UNVERIFIED / last execution FAIL:**850 native TX attempts versus one host0x200 heartbeat; all SAFE_STOP, no fresh sensors. Evidence:docs/acceptance/safestop-failure-20261107. **observed in this QEMU run · app budget, not a QNX benchmark**. Guest stopped/reaped; at this historical checkpoint one focused fix attempt was next (completed below; now STOPPED).
 
 ## Focused C6 attempt closed — 11:06 UTC
 
