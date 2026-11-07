@@ -1,0 +1,33 @@
+{
+  "scope": "Actual host-only full-suite executions, not native acceptance or browser review",
+  "environment": "Ubuntu ARM64; Python standard-library unittest; optional live integrations skipped",
+  "runs": [
+    {
+      "source_commit": "0c65197bcbcef5380b6b0f1742bd825a01a506af",
+      "source_tree": "762b04ce7ce9fd976a19eb1cd4bfef6ae06d5f7d",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v",
+      "exit": 0,
+      "total": 133,
+      "passed": 125,
+      "skipped": 8,
+      "failed": 0,
+      "log": "reviewed-baseline.log",
+      "log_sha256": "91b735a7a779503b2bb7d2bfe5ffc45db21303eccb036752a685df2ce50f8ae9"
+    },
+    {
+      "source_commit": "f09f69d01f381624b8e383366ef338c707a46a5b",
+      "source_tree": "857fc6ce69699bba9569fe56788dc2d56ddcec03",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v",
+      "exit": 0,
+      "total": 134,
+      "passed": 126,
+      "skipped": 8,
+      "failed": 0,
+      "log": "current.log",
+      "log_sha256": "d29d790792f4286efcd8dacf3538aa40e91357a89fc96ac34996de871cdd1723"
+    }
+  ],
+  "baseline_checkout": "Detached clean worktree at exact reviewed revision; git status empty after tests",
+  "current_checkout": "Exact committed code f09f69d; test-generated acceptance outputs only, no modified source during execution",
+  "c6": "FAIL/stopped; no native or SDK guest started by these host runs"
+}

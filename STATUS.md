@@ -65,3 +65,11 @@ C6 lane stopped; SDK, C3 and C6 guests stopped/reaped; lease free. Both repos pr
 ## Focused C6 attempt closed — 11:06 UTC
 
 **BLOCKED / runtime UNVERIFIED.** Fresh100RX+100TX exact baseline passed; raising all observed10r/20r CAN helpers24r did not fix850 native TX attempts versus1 host heartbeat. Root cause remains undetermined in persistent libcan RX/TX, not an accepted scheduler fix. Evidence:docs/acceptance/safestop-focused-failure-20261107. **observed in this QEMU run · app budget, not a QNX benchmark**. Guest stopped/reaped, lease free. C6 lane STOPPED per one-attempt rule; no automatic retry. E2 host/docs polish selected; no E2 snapshot runtime PASS. Experimental XML archived with failure evidence, not production-installed.
+
+## Conditional private-validation corrections — 7 November 2026
+
+Recorded viewer scope unchanged; no feature breadth or native rerun. Stale SocketCAN/vehicle-safety positioning corrected. UNKNOWN now gives bounded recovery without repinning or guest execution; static PASS is generation-time only.
+
+Disposable missing/corrupt/mixed UNKNOWN pages and command/input/outcome/digest receipt: docs/acceptance/unknown-review-20261107/. Separate from authoritative docs/workbench/index.html; host-only rejection fixtures, not browser review.
+
+Actual source-bound host full-suite logs and pinned receipt: docs/acceptance/host-review-20261107/receipt.json. Reviewed 0c65197 rerun: 133 total / 125 PASS / 8 SKIP. Current f09f69d: 134 total / 126 PASS / 8 SKIP, including saved UNKNOWN fixture regression. These counts are host checks, never fresh native acceptance. C6 remains FAIL/stopped.
