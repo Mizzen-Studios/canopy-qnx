@@ -1,0 +1,41 @@
+# pidin -p 372752 sched; command -v slay; echo QUEUE_THREAD_DIAG
+     pid tid name                         prio STATE          cpu ExtSched            
+  372752   1 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752   2 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752   3 proc/boot/dev-can-linux      254i INTR             0                     
+  372752   4 proc/boot/dev-can-linux       44r CONDVAR          0                     
+  372752   5 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752   6 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752   7 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752   8 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752   9 proc/boot/dev-can-linux       20r RECEIVE          0                     
+  372752  10 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752  11 proc/boot/dev-can-linux       44r RECEIVE          0                     
+  372752  12 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752  13 proc/boot/dev-can-linux       20r RECEIVE          0                     
+  372752  14 proc/boot/dev-can-linux       10r RECEIVE          0                     
+  372752  15 proc/boot/dev-can-linux       10r RECEIVE          0                     
+  372752  16 proc/boot/dev-can-linux       20r CONDVAR          0                     
+  372752  17 proc/boot/dev-can-linux       20r RECEIVE          0                     
+/system/bin/slay
+QUEUE_THREAD_DIAG
+# /system/bin/slay -m pid -P24r -T 14 372752; /system/bin/slay -m pid -P24r -T 15 372752; pidin -p 372752 sched; echo QUEUE_THREAD_ADJUSTED
+     pid tid name                         prio STATE          cpu ExtSched            
+  372752   1 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752   2 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752   3 proc/boot/dev-can-linux      254i INTR             0                     
+  372752   4 proc/boot/dev-can-linux       44r CONDVAR          0                     
+  372752   5 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752   6 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752   7 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752   8 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752   9 proc/boot/dev-can-linux       20r RECEIVE          0                     
+  372752  10 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752  11 proc/boot/dev-can-linux       44r RECEIVE          0                     
+  372752  12 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752  13 proc/boot/dev-can-linux       20r RECEIVE          0                     
+  372752  14 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752  15 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372752  16 proc/boot/dev-can-linux       20r CONDVAR          0                     
+  372752  17 proc/boot/dev-can-linux       20r RECEIVE          0                     
+QUEUE_THREAD_ADJUSTED

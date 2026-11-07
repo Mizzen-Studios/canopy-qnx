@@ -1,0 +1,33 @@
+# pidin -p 163853 irqs; echo MAIN_IRQ_OBSERVED
+     pid tid name                                                                 
+  163853   1 system/bin/io-sock           
+  163853   2 system/bin/io-sock           
+  163853   3 system/bin/io-sock           
+  163853   4 system/bin/io-sock           
+  163853   5 system/bin/io-sock           
+  163853   6 system/bin/io-sock           
+  163853   7 system/bin/io-sock           
+  163853   8 system/bin/io-sock           
+  163853   9 system/bin/io-sock           
+  163853  10 system/bin/io-sock           
+  163853  11 system/bin/io-sock           
+  163853  12 system/bin/io-sock           
+  163853  13 system/bin/io-sock           
+  163853  14 system/bin/io-sock           
+  163853  15 system/bin/io-sock           
+  163853  16 system/bin/io-sock           
+  163853  17 system/bin/io-sock           
+  163853  18 system/bin/io-sock           
+  163853  19 system/bin/io-sock           
+  163853  20 system/bin/io-sock           
+  163853  21 system/bin/io-sock           
+  163853  23 system/bin/io-sock           
+  163853  24 system/bin/io-sock           
+  163853  25 system/bin/io-sock           
+  163853  26 system/bin/io-sock           
+  163853  27 system/bin/io-sock           
+  163853  28 system/bin/io-sock           
+		1            0xa    0 -N--- =NONE 
+  163853  29 system/bin/io-sock           
+  163853  30 system/bin/io-sock           
+MAIN_IRQ_OBSERVED

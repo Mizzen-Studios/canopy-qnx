@@ -1,0 +1,29 @@
+# /proc/boot/sleep 0.5; pidin ar; pidin -p $C6 threads; pidin -p $C6 sched; cat /dev/shmem/c6.log | head -2; echo C6_SCHED
+     pid Arguments
+       1 procnto-smp-instr -mr -d 0777 -u 0777 
+   16387 slogger2 
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg 
+   49157 devc-ser8250 -e 
+   57351 ksh ksh 
+   61446 fsevmgr 
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low 
+  131081 random -s /data/var/random/rnd-seed 
+  143370 pipe 
+  155659 devc-pty 
+  159756 dumper -d /data/var/dumper -M 1000 -D cores 
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci 
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks 
+  245774 qconn 
+  249871 mqueue 
+  352274 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /dev/shmem/slm-can-safestop.xml 
+  372752 dev-can-linux -b id=0,freq=500k 
+  438274 /bin/sh 
+  450579 /proc/boot/safestop-qnx 850 none 
+  462868 pidin ar 
+     pid tid name                         thread name          STATE          Blocked                     
+  450579   1 proc/boot/safestop-qnx       1                    REPLY          1                           
+     pid tid name                         prio STATE          cpu ExtSched            
+  450579   1 proc/boot/safestop-qnx        20f REPLY            0                     
+C6_FIFO policy=1 priority=20 pid=450579 transport=libcan-not-SocketCAN
+C6_READY timer=CLOCK_MONOTONIC interval_ns=10000000 rx=/dev/can0/rx0 exclusive-required
+C6_SCHED

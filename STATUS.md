@@ -46,3 +46,7 @@ and uses CPU100%,1GiB,nice15,1vCPU/512MiB.
 Full SocketCAN C2/C3 requires matching x86_64 module/board ABI. Identity-safe production supervision, rolling-window/manual-latch limits, least privilege and robust failure injection are not established by the restart smoke. The separate authenticated stream above—not PID snapshots—proves the bounded SSH observation. No full C3 policy acceptance is claimed.
 
 The parent currently owns the serialized native C6 lane; previous SDK and C3 guests are stopped/reaped. Both repos private. SDK/licenses/headers/libs/images/binaries/QSC/secrets remain external. No publication, contacts, paid resources or upstream PRs.
+
+## C6 failure recovery
+
+**Runtime gate UNVERIFIED / last execution FAIL:**850 native TX attempts versus one host0x200 heartbeat; all SAFE_STOP, no fresh sensors. Evidence:docs/acceptance/safestop-failure-20261107. **observed in this QEMU run · app budget, not a QNX benchmark**. Guest stopped/reaped; one focused fix attempt next.
