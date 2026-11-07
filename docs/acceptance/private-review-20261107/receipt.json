@@ -1,0 +1,91 @@
+{
+  "scope": "Private offline review only. No QEMU/SDK/guest/live CAN or network runtime; no publication/deployment; C6 STOPPED.",
+  "source_commit": "e8a2ec7ad7164e26cb0b8a412bea03c71f5be5b0",
+  "source_tree": "2b36273135246089a2e29e9446578d3cc45b8648",
+  "worktree": "Committed implementation unchanged during verification; untracked text acceptance logs only. Final receipt commit adds evidence only.",
+  "host_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v",
+    "exit": 0,
+    "total": 137,
+    "passed": 129,
+    "skipped": 8,
+    "log": "host-tests.log",
+    "sha256": "dca4988cd7b7c0b8a08f35b3535e3d792177ca829451bf2a304b7e811e2f0a2d"
+  },
+  "offline_gates": {
+    "exit": 0,
+    "log": "offline-gates.log",
+    "sha256": "e6d01f80a2cc16e89137d53bd697d31220c91058e5a786666a0c186a81e4c41d",
+    "commands": [
+      "python3 tools/verify_native_can_evidence.py docs/acceptance/native-can-20261106",
+      "python3 tools/verify_slm_traffic_evidence.py docs/acceptance/slm-traffic-20261107",
+      "python3 tools/verify_slm_continuity.py docs/acceptance/slm-continuity-20261107",
+      "python3 tools/capability_ledger.py",
+      "python3 tools/incident_workbench.py --verify-only",
+      "python3 tools/incident_workbench.py",
+      "python3 tools/review_claims.py",
+      "sh scripts/check-no-sdk.sh",
+      "git diff --check",
+      "git diff --exit-code -- docs/workbench/index.html"
+    ]
+  },
+  "raw_failure_recheck": {
+    "safestop-failure-20261107": {
+      "native_ticks": 850,
+      "host_frames": 1,
+      "last_native_tick": 849,
+      "native_log_sha256": "5f7d0d6847453fc9a7d6cfb1930b51f857dd62f23ba3b721e99942fc0f92ac63",
+      "host_frames_sha256": "cdf70ecd72b8694e279299c67eb79d1d803160a07128bb20ef1c5dad5474656f",
+      "status": "FAIL / STOPPED; no retry"
+    },
+    "safestop-focused-failure-20261107": {
+      "native_ticks": 850,
+      "host_frames": 1,
+      "last_native_tick": 849,
+      "native_log_sha256": "0c3651863c2e8318cc9263c28ea07ce2c5227bcc9319dc7407de733243e57620",
+      "host_frames_sha256": "cdf70ecd72b8694e279299c67eb79d1d803160a07128bb20ef1c5dad5474656f",
+      "status": "FAIL / STOPPED; no retry"
+    }
+  },
+  "raw_host_jsonl_record_counts": {
+    "bad-crc": {
+      "actuator.jsonl": 315,
+      "sender.jsonl": 310
+    },
+    "frozen": {
+      "actuator.jsonl": 307,
+      "sender.jsonl": 302
+    },
+    "kill": {
+      "actuator.jsonl": 165,
+      "sender.jsonl": 21
+    },
+    "obstacle": {
+      "actuator.jsonl": 311,
+      "sender.jsonl": 306
+    },
+    "pilot": {
+      "actuator.jsonl": 309,
+      "sender.jsonl": 305
+    },
+    "sigstop": {
+      "actuator.jsonl": 166,
+      "sender.jsonl": 21
+    },
+    "stale": {
+      "actuator.jsonl": 314,
+      "sender.jsonl": 309
+    }
+  },
+  "mapping": {
+    "path": "docs/review-claims.json",
+    "sha256": "33b362a75b8080626a2e86b609aa8635eaa4124b751fe9603f42a31e646a4c7e",
+    "occurrences": 148,
+    "artifacts": 183,
+    "families": 16
+  },
+  "site_reconciliation": "Existing renderer rerun; byte-identical docs/workbench/index.html. Historical browser input hashes preserved. Replay parser/director regressions in full suite; no browser or native rerun.",
+  "historical_target_source_commit": null,
+  "historical_driver_binary_sha256": null,
+  "external_image_rehashed": false
+}
