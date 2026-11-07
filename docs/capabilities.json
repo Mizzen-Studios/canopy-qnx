@@ -1,0 +1,58 @@
+{
+  "schema": "qnx-capabilities.v1",
+  "project": "CANopy fault-containment incident workbench",
+  "boundary": "Recorded native libcan + SLM experiment, not native vehicle safety. C6 FAIL/stopped; no automatic retries or new heartbeat work. SocketCAN blocked. No continuous CAN availability, physical-safety, certification, latency or QNX benchmark claim.",
+  "rows": [
+    {
+      "id": "host-model",
+      "domain": "host",
+      "level": "simulation",
+      "status": "PASS",
+      "claim": "Host deterministic simulation and Linux vcan only; never QNX",
+      "evidence": "docs/host-runtime.md"
+    },
+    {
+      "id": "native-libcan",
+      "domain": "native",
+      "level": "reference-run",
+      "status": "PASS",
+      "claim": "Three ordered byte-exact100RX/100TX runs; libcan fallback, not SocketCAN",
+      "evidence": "docs/acceptance/native-can-20261106/summary.json",
+      "evidence_sha256": "6175b7a28102a60ee17168f70bdec090c07b5a5f3bae4c5fda2f5a80e01d28f7"
+    },
+    {
+      "id": "slm-ssh",
+      "domain": "native",
+      "level": "recorded-run",
+      "status": "PASS",
+      "claim": "Three exact CAN PID kills/restarts, post-restart100RX/100TX exact, same authenticated SSH connection; causal phases only",
+      "evidence": "docs/acceptance/slm-continuity-20261107/receipt.json",
+      "evidence_sha256": "9df1cab467af2785af8461d133e7b2845fc05a5cf8175f00717eb32e1478df56"
+    },
+    {
+      "id": "socketcan",
+      "domain": "native",
+      "level": "runtime",
+      "status": "UNVERIFIED",
+      "claim": "Blocked matching x86_64 module/board ABI; not an accepted C2/C3 stack",
+      "evidence": "docs/socketcan-demo.md"
+    },
+    {
+      "id": "c6",
+      "domain": "native",
+      "level": "runtime",
+      "status": "FAIL",
+      "claim": "STOPPED:850 native TX attempts versus1 host heartbeat; root cause undetermined, no accepted functional scenarios",
+      "evidence": "docs/acceptance/safestop-focused-failure-20261107/receipt.json",
+      "evidence_sha256": "adf790f90acabfbfbaaf2620037ced5f0a4c3aab401148d0f5eaaffbf75f70f0"
+    },
+    {
+      "id": "incident-viewer",
+      "domain": "host",
+      "level": "recorded-evidence-view",
+      "status": "UNVERIFIED",
+      "claim": "Read-only viewer implementation in progress; does not rerun QNX",
+      "evidence": "tools/verify_slm_continuity.py"
+    }
+  ]
+}

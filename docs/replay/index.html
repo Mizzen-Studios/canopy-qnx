@@ -9,6 +9,7 @@
 @media(max-width:850px){.scrub{gap:8px;flex-wrap:wrap}.scrub input{min-width:80px}output{min-width:0;font-size:16px;overflow-wrap:anywhere} .source,.truth,.sub{overflow-wrap:anywhere}header>div{min-width:0}}
 </style>
 <main><header><h1>CANopy<span>Offline replay instrument</span></h1><div><div class="truth">HOST SIMULATION / NOT QNX</div><div class="sub">Recording time. No live connections. No measured latency.</div></div></header>
+<p class="sub">Separate journey: historical HOST model, not recorded native incident workbench. See <a href="../capabilities.md">capability ledger</a>. Native C6 FAIL / STOPPED; SocketCAN blocked/unverified.</p>
 <div class="controls"><button id="play" type="button">Play</button><button id="reset" type="button">Reset</button><label>Replay speed <select id="rate"><option value="0.25">0.25×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label><button id="sample" type="button">Load simulated sample</button><label class="file">Open host JSONL <input id="file" type="file" accept=".jsonl,.txt,application/json"></label></div>
 <div id="message" role="status">Built-in recorded hero • seed 7 • canopy_host.director</div>
 <div class="scrub"><label for="seek">Recording time</label><input id="seek" type="range" min="0" max="400" value="0"><output id="clock" for="seek">0 ms</output></div>

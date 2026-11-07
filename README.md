@@ -1,18 +1,33 @@
-# CANopy — host foundation for QNX® 8.0
+# CANopy — recorded fault-containment incident workbench
 
-Private host core plus **experimental native diagnostics, not a completed QNX CANopy stack**.
-Implemented host-side: deterministic director/replay, separate Linux SocketCAN
-actuator/safestop processes, DBC/VSS mapping, learned pilot and C export.
-An external QNX guest and separate native libcan fallback have observed byte-exact CAN traffic; the original SocketCAN demo cross-builds, but on-QNX SocketCAN delivery remains blocked.
-No accepted native CANopy driver/integration, SLM restart, running QPP connector, native real-time scheduling,
-physical vehicle or certification is demonstrated here.
-No first-of-kind, availability, restart-speed, benchmark or safety guarantee is made.
+Private evidence workbench for a bounded **native QNX libcan + SLM experiment**.
+The recorded journey is: positively identified CAN PID killed → new CAN PID →
+100 RX + 100 TX ordered byte-exact post-restart traffic, while the **same
+authenticated SSH connection** continued and main io-sock PID stayed unchanged.
+See the canonical [capability ledger](docs/capabilities.md) and
+[raw run receipt](docs/acceptance/slm-continuity-20261107/receipt.json).
 
-Demo of fail-safe patterns; not an ISO 26262 / IEC 61508 claim.
+**observed in this QEMU run · app budget, not a QNX benchmark**.
+The recorded windows include a fixed3-second settle; they are not restart latency.
+No continuous CAN availability, physical-safety, certification, QNX benchmark,
+production isolation or clock-aligned causal timing claim is made.
 
-## Experimental native application
+**Native C6 FAIL / STOPPED.** Its FIFO20/timer-pulse execution did not establish
+functional acceptance:850 TX attempts versus one captured heartbeat.
+[Failure evidence](docs/acceptance/safestop-focused-failure-20261107/README.md)
+is retained. No retry or new heartbeat/safety work is authorized.
+**SocketCAN remains BLOCKED / UNVERIFIED** on matching module/board ABI;
+libcan receipts are not SocketCAN acceptance. QPP remains unverified.
 
-[Bounded SocketCAN demo and build instructions](docs/socketcan-demo.md): original C source cross-built with SDP 8.0 and tested on real Linux vcan. This does not fix the io-sock module/board gate or establish on-QNX SocketCAN delivery. Existing native QEMU frame evidence uses the separate libcan fallback.
+## Separate evidence journeys
+
+- Recorded native incident: [SLM/SSH receipt](docs/acceptance/slm-continuity-20261107/receipt.json),
+  [validator](tools/verify_slm_continuity.py). Viewer work is read-only and separate.
+- Host simulation: [offline replay](docs/replay/index.html), deterministic
+  director, Linux vcan actuator models, DBC/VSS mapping and pilot/C export.
+  These never become QNX proof and are not the product's safety claim.
+- [Experimental SocketCAN demo](docs/socketcan-demo.md): cross-build and host
+  Linux tests only; does not resolve the native ABI gate.
 
 ## Run on host
 
@@ -54,7 +69,7 @@ time, and stay below 2 MB / 10000 rows.
 Invalid files leave the previous replay intact. No data is uploaded.
 See docs/dashboard-design.md and docs/replay/verification.md.
 
-## Two-layer model
+## Historical host-only two-layer model (not native safety)
 
 - Classic CAN ID 0x200, four bytes: state, brake percentage, low-nibble
   alive counter (upper nibble must be zero), CRC. CRC-8/SAE-J1850
@@ -122,12 +137,12 @@ Owner-approved platform: **the existing Ubuntu 24.04 ARM64 VM running an
 x86_64 QNX guest under QEMU TCG, explicitly without KVM**. An x86_64 KVM host
 is not a prerequisite. This supersedes the original plan's KVM-only preflight.
 Developed with Python 3.12.3. The current host QEMU is 8.2.2; doctor queries the
-installed binary rather than assuming its devices. No QNX SDK/QSTI installed
-or used. Target intent is QNX SDP 8.0 x86_64; SDP build ID, QSTI version, qcc toolchain,
-mods-can.so x86_64 loadability, kvaser_pci support, SLM, secpol and QPP APIs
-are **unverified**. No target API has execution evidence yet. This milestone
-does not satisfy the competition's runs-on-QNX gate. No QNX evaluation or
-performance result is published. See docs/test-results.txt for local commands.
+installed binary rather than assuming its devices. Licensed SDP8 is installed in
+an external private x86 Linux guest; actual qcc builds and native QNX libcan/SLM
+experiments are recorded. QSTI provenance, SocketCAN module/board ABI, secpol
+and QPP runtime remain unverified. No SDK, licence, binary or image is distributed.
+The [capability ledger](docs/capabilities.md), not host doctor output, records
+observed capability scope. No QNX evaluation/performance result is published.
 
 ## Read-only host preflight
 
@@ -157,11 +172,11 @@ An arbitrary nonempty file does **not** prove a valid QSTI/SDP version.
 
 JSON separates host_ready, qnx_prerequisites_ready, qnx_accepted and overall_ready.
 Host readiness includes configured vcan and can-utils for the planned CAN path;
-QEMU availability alone is not a ready CAN lab. At this milestone acceptance
+QEMU availability alone is not a ready CAN lab. For this legacy host doctor, live acceptance
 is always NOT RUN and overall_ready is always false, even with all external
 paths present. Exit 1 is intentional, not a crash; invalid CLI usage exits 2.
 The SDK-independent host tests and offline dashboard remain usable independently.
-Guest launch orchestration and target acceptance require the SDK follow-up.
+This doctor does not consume historical native receipts or launch target acceptance.
 
 ## Repository hygiene and licence
 

@@ -1,5 +1,15 @@
 # Status — 7 November 2026
 
+## Current direction — council approval, 7 November 2026
+
+Canonical [capability ledger](docs/capabilities.md) separates host simulation,
+recorded native libcan/SLM PASS, SocketCAN UNVERIFIED and C6 FAIL/stopped.
+Recorded incident receipts are the hero; no native vehicle-safety positioning.
+C6 remains STOPPED: no automatic retries, heartbeat work or renamed safety lane.
+The priority is a read-only evidence-bound incident viewer; implementation is
+not yet accepted. Historical receipts below remain preserved, not fresh runs.
+
+
 **PASS: three fresh native libcan byte-exact runs and three native SLM managed-process restarts.**
 
 - CAN runs1–3:100/100RX and100/100TX each, ordered ID/DLC/eight-byte exact with independently captured host traffic. Preserved in [native CAN evidence](docs/acceptance/native-can-20261106/summary.json); parent offline recheckPASS. This is the libcan fallback, NOT an accepted io-sock SocketCAN ABI/C2 gate.
