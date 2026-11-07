@@ -1,0 +1,35 @@
+
+# cat > /tmp/qnx11-sshd.conf <<'SSHC'
+
+> Port 22
+
+> ListenAddress 0.0.0.0
+
+> HostKey /tmp/qnx11-host
+
+> PidFile /tmp/qnx11-sshd.pid
+
+> PermitRootLogin prohibit-password
+
+> PasswordAuthentication no
+
+> KbdInteractiveAuthentication no
+
+> PubkeyAuthentication yes
+
+> AuthorizedKeysFile /data/home/root/.ssh/authorized_keys
+
+> UsePAM no
+
+> StrictModes yes
+
+> LogLevel VERBOSE
+
+> SSHC
+
+# /system/bin/sshd -D -e -f /tmp/qnx11-sshd.conf > /tmp/qnx11-sshd.log 2>&1 & SSHD=$!; sleep 2; cat /tmp/qnx11-sshd.log; echo SSH_SERVER_READY
+
+[1] 475138
+Server listening on 0.0.0.0 port 22.
+
+SSH_SERVER_READY

@@ -1,0 +1,30 @@
+# ifconfig vtnet0 inet 10.0.2.15 netmask 255.255.255.0 up; ifconfig vtnet0; netstat -rn; echo NET_CONFIGURED
+
+vtnet0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+	options=80028<VLAN_MTU,JUMBO_MTU,LINKSTATE>
+	ether 52:54:00:12:34:56
+	inet6 fe80::5054:ff:fe12:3456%vtnet0 prefixlen 64 scopeid 0x5
+	inet6 fec0::a331:ad4b:7d0c:1d17 prefixlen 64 autoconf
+	inet 10.0.2.15 netmask 0xffffff00 broadcast 10.0.2.255
+	media: Ethernet autoselect (10Gbase-T <full-duplex>)
+	status: active
+	nd6 options=1<PERFORMNUD>
+Routing tables
+
+Internet:
+Destination        Gateway            Flags         Netif Expire
+10.0.2.0/24        link#5             U            vtnet0
+10.0.2.15          link#5             UHS             lo0
+127.0.0.1          link#2             UH              lo0
+
+Internet6:
+Destination                       Gateway                       Flags         Netif Expire
+default                           fe80::2%vtnet0                UG           vtnet0
+::1                               link#2                        UHS             lo0
+fe80::%lo0/64                     link#2                        U               lo0
+fe80::1%lo0                       link#2                        UHS             lo0
+fe80::%vtnet0/64                  link#5                        U            vtnet0
+fe80::5054:ff:fe12:3456%vtnet0    link#5                        UHS             lo0
+fec0::/64                         link#5                        U            vtnet0
+fec0::a331:ad4b:7d0c:1d17         link#5                        UHS             lo0
+NET_CONFIGURED

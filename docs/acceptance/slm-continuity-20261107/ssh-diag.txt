@@ -1,0 +1,6 @@
+# command -v sshd; command -v ssh-keygen; grep '^root:' /etc/passwd; echo SSH_DIAG
+
+/system/bin/sshd
+/system/bin/ssh-keygen
+root:x:0:0:root:/data/home/root:/bin/sh
+SSH_DIAG

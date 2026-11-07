@@ -1,0 +1,515 @@
+{
+  "caps": {
+    "cpu.max": "100000 100000",
+    "memory.max": "1073741824",
+    "nice": 15
+  },
+  "qemu_pid": 126649,
+  "image_sha256": "84fc4eda34654854333cf71320b375f2eedae405a3849475623c179443f616f1",
+  "label": "observed in this QEMU run; app budget, not QNX benchmark",
+  "restarts": [
+    {
+      "run": 1,
+      "killed_pid": 626715,
+      "new_pid": 778263,
+      "main_pid_unchanged": true,
+      "observed_seconds_including_fixed_3s_settle": 3.4039861070050392,
+      "traffic": {
+        "rx_host": 100,
+        "rx_qnx": 100,
+        "tx_expected": 100,
+        "tx_host": 100,
+        "ordered_byte_exact": true
+      },
+      "ssh": {
+        "same_client_pid": 126654,
+        "counter_before": 3,
+        "counter_after": 34
+      }
+    },
+    {
+      "run": 2,
+      "killed_pid": 778263,
+      "new_pid": 2764823,
+      "main_pid_unchanged": true,
+      "observed_seconds_including_fixed_3s_settle": 3.3778775630053133,
+      "traffic": {
+        "rx_host": 100,
+        "rx_qnx": 100,
+        "tx_expected": 100,
+        "tx_host": 100,
+        "ordered_byte_exact": true
+      },
+      "ssh": {
+        "same_client_pid": 126654,
+        "counter_before": 34,
+        "counter_after": 65
+      }
+    },
+    {
+      "run": 3,
+      "killed_pid": 2764823,
+      "new_pid": 4743191,
+      "main_pid_unchanged": true,
+      "observed_seconds_including_fixed_3s_settle": 3.431113300001016,
+      "traffic": {
+        "rx_host": 100,
+        "rx_qnx": 100,
+        "tx_expected": 100,
+        "tx_host": 100,
+        "ordered_byte_exact": true
+      },
+      "ssh": {
+        "same_client_pid": 126654,
+        "counter_before": 65,
+        "counter_after": 96
+      }
+    }
+  ],
+  "success": true,
+  "ssh_authenticated_continuity": "PASS",
+  "pci_devices": [
+    {
+      "slot": 1,
+      "id": 1879081094,
+      "irq": 0
+    },
+    {
+      "slot": 2,
+      "id": 286331444,
+      "irq": 0
+    },
+    {
+      "slot": 3,
+      "id": 268442356,
+      "irq": 267
+    },
+    {
+      "slot": 4,
+      "id": 2214990056,
+      "irq": 267
+    },
+    {
+      "slot": 5,
+      "id": 300421684,
+      "irq": 266
+    },
+    {
+      "slot": 6,
+      "id": 4294967295,
+      "irq": 4294967295
+    },
+    {
+      "slot": 7,
+      "id": 4294967295,
+      "irq": 4294967295
+    }
+  ],
+  "routing": {
+    "original": 185272842,
+    "updated": 168430090,
+    "pirq_index": 3,
+    "irq": 10,
+    "only_kvaser_route_changed": false,
+    "network_route_corrected_to_observed_main_irq": 10,
+    "observed_main_pid": 163853
+  },
+  "main_io_sock_pid": 163853,
+  "ssh": {
+    "client_pid": 126654,
+    "loopback_port": 43357,
+    "before_counter": 0,
+    "single_process_single_connection": true,
+    "ticks": [
+      {
+        "counter": 0,
+        "host_monotonic": 215435.702605794
+      },
+      {
+        "counter": 1,
+        "host_monotonic": 215437.087737887
+      },
+      {
+        "counter": 2,
+        "host_monotonic": 215438.344396276
+      },
+      {
+        "counter": 3,
+        "host_monotonic": 215439.397221755
+      },
+      {
+        "counter": 4,
+        "host_monotonic": 215440.514584949
+      },
+      {
+        "counter": 5,
+        "host_monotonic": 215441.569823529
+      },
+      {
+        "counter": 6,
+        "host_monotonic": 215442.625325872
+      },
+      {
+        "counter": 7,
+        "host_monotonic": 215443.676035293
+      },
+      {
+        "counter": 8,
+        "host_monotonic": 215444.72507578
+      },
+      {
+        "counter": 9,
+        "host_monotonic": 215445.775806521
+      },
+      {
+        "counter": 10,
+        "host_monotonic": 215446.828919483
+      },
+      {
+        "counter": 11,
+        "host_monotonic": 215447.882216087
+      },
+      {
+        "counter": 12,
+        "host_monotonic": 215448.958897011
+      },
+      {
+        "counter": 13,
+        "host_monotonic": 215450.012279815
+      },
+      {
+        "counter": 14,
+        "host_monotonic": 215451.210730665
+      },
+      {
+        "counter": 15,
+        "host_monotonic": 215452.367322196
+      },
+      {
+        "counter": 16,
+        "host_monotonic": 215453.417861815
+      },
+      {
+        "counter": 17,
+        "host_monotonic": 215454.471580623
+      },
+      {
+        "counter": 18,
+        "host_monotonic": 215455.523885578
+      },
+      {
+        "counter": 19,
+        "host_monotonic": 215456.596767029
+      },
+      {
+        "counter": 20,
+        "host_monotonic": 215457.66833547
+      },
+      {
+        "counter": 21,
+        "host_monotonic": 215458.721806475
+      },
+      {
+        "counter": 22,
+        "host_monotonic": 215459.897406288
+      },
+      {
+        "counter": 23,
+        "host_monotonic": 215461.049152057
+      },
+      {
+        "counter": 24,
+        "host_monotonic": 215462.213987619
+      },
+      {
+        "counter": 25,
+        "host_monotonic": 215463.367412602
+      },
+      {
+        "counter": 26,
+        "host_monotonic": 215464.492683303
+      },
+      {
+        "counter": 27,
+        "host_monotonic": 215465.656278614
+      },
+      {
+        "counter": 28,
+        "host_monotonic": 215466.840044298
+      },
+      {
+        "counter": 29,
+        "host_monotonic": 215467.956734086
+      },
+      {
+        "counter": 30,
+        "host_monotonic": 215469.102392202
+      },
+      {
+        "counter": 31,
+        "host_monotonic": 215470.248844646
+      },
+      {
+        "counter": 32,
+        "host_monotonic": 215471.3266611
+      },
+      {
+        "counter": 33,
+        "host_monotonic": 215472.544606957
+      },
+      {
+        "counter": 34,
+        "host_monotonic": 215473.747891529
+      },
+      {
+        "counter": 35,
+        "host_monotonic": 215474.807230024
+      },
+      {
+        "counter": 36,
+        "host_monotonic": 215475.856845556
+      },
+      {
+        "counter": 37,
+        "host_monotonic": 215476.906516729
+      },
+      {
+        "counter": 38,
+        "host_monotonic": 215477.95951977
+      },
+      {
+        "counter": 39,
+        "host_monotonic": 215479.021933092
+      },
+      {
+        "counter": 40,
+        "host_monotonic": 215480.076301105
+      },
+      {
+        "counter": 41,
+        "host_monotonic": 215481.126973846
+      },
+      {
+        "counter": 42,
+        "host_monotonic": 215482.261230705
+      },
+      {
+        "counter": 43,
+        "host_monotonic": 215483.34506953
+      },
+      {
+        "counter": 44,
+        "host_monotonic": 215484.397614688
+      },
+      {
+        "counter": 45,
+        "host_monotonic": 215485.449403638
+      },
+      {
+        "counter": 46,
+        "host_monotonic": 215486.501113268
+      },
+      {
+        "counter": 47,
+        "host_monotonic": 215487.556713692
+      },
+      {
+        "counter": 48,
+        "host_monotonic": 215488.614280972
+      },
+      {
+        "counter": 49,
+        "host_monotonic": 215489.673053303
+      },
+      {
+        "counter": 50,
+        "host_monotonic": 215490.756150883
+      },
+      {
+        "counter": 51,
+        "host_monotonic": 215491.822509998
+      },
+      {
+        "counter": 52,
+        "host_monotonic": 215492.88254726
+      },
+      {
+        "counter": 53,
+        "host_monotonic": 215494.108660348
+      },
+      {
+        "counter": 54,
+        "host_monotonic": 215495.235794265
+      },
+      {
+        "counter": 55,
+        "host_monotonic": 215496.329080452
+      },
+      {
+        "counter": 56,
+        "host_monotonic": 215497.678323917
+      },
+      {
+        "counter": 57,
+        "host_monotonic": 215498.800319551
+      },
+      {
+        "counter": 58,
+        "host_monotonic": 215499.90784654
+      },
+      {
+        "counter": 59,
+        "host_monotonic": 215501.108419128
+      },
+      {
+        "counter": 60,
+        "host_monotonic": 215502.254349168
+      },
+      {
+        "counter": 61,
+        "host_monotonic": 215503.378124376
+      },
+      {
+        "counter": 62,
+        "host_monotonic": 215504.533980621
+      },
+      {
+        "counter": 63,
+        "host_monotonic": 215505.694087262
+      },
+      {
+        "counter": 64,
+        "host_monotonic": 215506.805410244
+      },
+      {
+        "counter": 65,
+        "host_monotonic": 215507.915996419
+      },
+      {
+        "counter": 66,
+        "host_monotonic": 215508.985079719
+      },
+      {
+        "counter": 67,
+        "host_monotonic": 215510.036487186
+      },
+      {
+        "counter": 68,
+        "host_monotonic": 215511.085709395
+      },
+      {
+        "counter": 69,
+        "host_monotonic": 215512.137431145
+      },
+      {
+        "counter": 70,
+        "host_monotonic": 215513.187749604
+      },
+      {
+        "counter": 71,
+        "host_monotonic": 215514.241555532
+      },
+      {
+        "counter": 72,
+        "host_monotonic": 215515.292022911
+      },
+      {
+        "counter": 73,
+        "host_monotonic": 215516.346973649
+      },
+      {
+        "counter": 74,
+        "host_monotonic": 215517.447130455
+      },
+      {
+        "counter": 75,
+        "host_monotonic": 215518.514960864
+      },
+      {
+        "counter": 76,
+        "host_monotonic": 215519.604079215
+      },
+      {
+        "counter": 77,
+        "host_monotonic": 215520.653537826
+      },
+      {
+        "counter": 78,
+        "host_monotonic": 215521.70215463
+      },
+      {
+        "counter": 79,
+        "host_monotonic": 215522.752164246
+      },
+      {
+        "counter": 80,
+        "host_monotonic": 215523.802951908
+      },
+      {
+        "counter": 81,
+        "host_monotonic": 215524.852686161
+      },
+      {
+        "counter": 82,
+        "host_monotonic": 215525.904111469
+      },
+      {
+        "counter": 83,
+        "host_monotonic": 215526.95589686
+      },
+      {
+        "counter": 84,
+        "host_monotonic": 215528.087689418
+      },
+      {
+        "counter": 85,
+        "host_monotonic": 215529.236515762
+      },
+      {
+        "counter": 86,
+        "host_monotonic": 215530.335192635
+      },
+      {
+        "counter": 87,
+        "host_monotonic": 215531.511031811
+      },
+      {
+        "counter": 88,
+        "host_monotonic": 215532.711703521
+      },
+      {
+        "counter": 89,
+        "host_monotonic": 215533.822187776
+      },
+      {
+        "counter": 90,
+        "host_monotonic": 215534.937675233
+      },
+      {
+        "counter": 91,
+        "host_monotonic": 215536.148286788
+      },
+      {
+        "counter": 92,
+        "host_monotonic": 215537.285952556
+      },
+      {
+        "counter": 93,
+        "host_monotonic": 215538.406962742
+      },
+      {
+        "counter": 94,
+        "host_monotonic": 215539.584875136
+      },
+      {
+        "counter": 95,
+        "host_monotonic": 215540.719139555
+      },
+      {
+        "counter": 96,
+        "host_monotonic": 215541.785299229
+      }
+    ]
+  },
+  "guest_stopped_reaped": true
+}
