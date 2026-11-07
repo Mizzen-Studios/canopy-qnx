@@ -556,6 +556,21 @@
       "scope": "historical host suite at its own revision; never native proof or automatically current count"
     },
     {
+      "receipt": "docs/acceptance/final-consistency-20261107/receipt.json",
+      "sha256": "41a05f1ff5859fe758f5e6970ee24399e0ec45eae71f45a963341be85d64a031",
+      "tested_commit": "244bf29611095386ee518206612abdceca7f1768",
+      "counts": {
+        "total": 137,
+        "passed": 129,
+        "skipped": 8,
+        "exit_code": 0,
+        "command": "python3 -m unittest discover -s tests -v",
+        "log": "host.log",
+        "sha256": "4b5cad147ef21f6d5dd7ef8e9c116e3bd78072000fa58d20611199c42f078ef1"
+      },
+      "scope": "historical host suite at its own revision; never native proof or automatically current count"
+    },
+    {
       "receipt": "docs/acceptance/onboarding-20261107/receipt.json",
       "sha256": "5e3e264df90ce753c8a4d39c3f4d42738f77b3104bab0fb5476450939dfb7b57",
       "tested_commit": "640f8d3506cd0488d30cb8bf05f9f4c3a53ab208",

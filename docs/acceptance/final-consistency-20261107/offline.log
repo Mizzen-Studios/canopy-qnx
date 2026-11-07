@@ -1,0 +1,26 @@
+$ python3 tools/verify_native_can_evidence.py docs/acceptance/native-can-20261106
+PASS: three recorded libcan runs byte-exact; offline recheck only
+
+$ python3 tools/verify_slm_traffic_evidence.py docs/acceptance/slm-traffic-20261107
+PASS: offline three-restart RX100/TX100 byte-exact libcan evidence; NOT a fresh run or SSH/SocketCAN acceptance
+
+$ python3 tools/verify_slm_continuity.py docs/acceptance/slm-continuity-20261107
+{
+  "scope": "offline saved native libcan/SSH evidence only; not SocketCAN or full production policy",
+  "restarts": 3,
+  "ssh_client_pid": 126654,
+  "ssh_ticks": 97,
+  "observed_max_tick_gap_seconds": 1.3851320929825306
+}
+
+$ python3 tools/incident_workbench.py --verify-only
+PASS: bounded recorded evidence only
+
+$ python3 tools/review_claims.py
+PASS: exhaustive text occurrence mapping; absent bindings remain UNVERIFIED
+
+$ python3 tools/claim_lint.py
+{"status": "PASS", "errors": [], "surfaces": 7, "links": 63, "host_receipts": 4}
+
+$ sh scripts/check-no-sdk.sh
+PASS: staged blobs and worktree contain no recognized SDK/binary artifacts

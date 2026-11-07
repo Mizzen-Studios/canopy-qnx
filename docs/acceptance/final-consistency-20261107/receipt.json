@@ -1,0 +1,77 @@
+{
+  "tested_commit": "244bf29611095386ee518206612abdceca7f1768",
+  "scope": "host-only final consistency verification; saved native evidence rechecked offline only",
+  "host_tests": {
+    "total": 137,
+    "passed": 129,
+    "skipped": 8,
+    "exit_code": 0,
+    "command": "python3 -m unittest discover -s tests -v",
+    "log": "host.log",
+    "sha256": "4b5cad147ef21f6d5dd7ef8e9c116e3bd78072000fa58d20611199c42f078ef1"
+  },
+  "offline_checks": [
+    {
+      "argv": [
+        "python3",
+        "tools/verify_native_can_evidence.py",
+        "docs/acceptance/native-can-20261106"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "tools/verify_slm_traffic_evidence.py",
+        "docs/acceptance/slm-traffic-20261107"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "tools/verify_slm_continuity.py",
+        "docs/acceptance/slm-continuity-20261107"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "tools/incident_workbench.py",
+        "--verify-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "tools/review_claims.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "tools/claim_lint.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "sh",
+        "scripts/check-no-sdk.sh"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "offline_log_sha256": "4b503cbd59b0bf3665f135621c3a53ae577545ed726776a4f25c5d3faa55bf66",
+  "native_feature_change": false,
+  "native_rerun": false,
+  "video_recording": false,
+  "audio_capture": false,
+  "video_priority": "deferred until product completion, final freeze+verification and independent gate; separateOllyOK",
+  "independent_gate": "await owner review of completed versions",
+  "C6": "FAIL/STOPPED",
+  "SocketCAN": "UNVERIFIED"
+}
