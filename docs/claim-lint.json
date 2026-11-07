@@ -623,6 +623,17 @@
         "sha256": "dca4988cd7b7c0b8a08f35b3535e3d792177ca829451bf2a304b7e811e2f0a2d"
       },
       "scope": "historical host suite at its own revision; never native proof or automatically current count"
+    },
+    {
+      "receipt": "docs/acceptance/residual-packet-20261107/receipt.json",
+      "sha256": "0c4a5acd6941ba83ebc005ac5c59b3c5bb8039753a913812538a9128f03482b2",
+      "tested_commit": "2a8b2a9c2837ccf3f2f30f6659a20d1ea29aea18",
+      "counts": {
+        "tests_total": 137,
+        "passed": 129,
+        "skipped": 8
+      },
+      "scope": "historical host suite at its own revision; never native proof or automatically current count"
     }
   ],
   "chronology_order": "receipt paths; inspect tested commits, not monotonic pass-count progress"

@@ -1,0 +1,21 @@
+{
+  "scope": "private packet metadata, clean-clone host-only verification; no native rerun",
+  "packet_source_commit": "22ffcaca1269ec0402099fc06b4876a4e8d51748",
+  "tested_commit": "2a8b2a9c2837ccf3f2f30f6659a20d1ea29aea18",
+  "acceptance": "CONDITIONAL, original owner receipt-inspected not rerun at 88b1bcf5fcc1f97da03321d35b03e89c85090227",
+  "tests_total": 137,
+  "passed": 129,
+  "skipped": 8,
+  "host_log_sha256": "676fd0ab2d09d6051a43055347231dc95cc4e77b754b3900bf0c9cd193990bad",
+  "clean_before": true,
+  "clean_after": true,
+  "exit_code": 0,
+  "recorded": false,
+  "audio_capture": false,
+  "native_rerun": false,
+  "native_feature_change": false,
+  "historical_native_pins_unchanged": true,
+  "C6": "FAIL/STOPPED",
+  "SocketCAN": "UNVERIFIED",
+  "observation_label": "observed in this QEMU run; historical receipts, not benchmarks"
+}
