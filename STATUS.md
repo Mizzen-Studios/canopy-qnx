@@ -19,15 +19,30 @@ and all three frame arrays are preserved; offline corruption tests reject bad
 bytes/order/count/PID/cap receipts. Evidence2b9be8c; verifiera093d13.
 These are **observed in this QEMU run · app budget, not a QNX benchmark**.
 
-Authenticated SSH continuity is still NOT PASS: the actual attempt failed
-before authentication because the IFS lacked sshd-session. Installed SDK
-helpers were located; an external image rebuild is active. Native guest was
-stopped/reaped. Sole SDK build guest uses CPU100%,1GiB,nice15,1vCPU/512MiB;
-no concurrent native guest. C6 native FIFO/timer source is prepared, with
-real qcc rebuild pending after a strict-C API-visibility correction.
+**C3 requested libcan close-out PASS:** a further three kills each passed
+100 RX +100 TX exact AND the same authenticated SSH connection kept streaming.
+[Receipt](docs/acceptance/slm-continuity-20261107/receipt.json), client/server
+authentication logs, raw serial, controller and all six frame arrays are saved;
+evidence568ea6a. CAN PIDs626715→778263→2764823→4743191; main io-sock163853
+unchanged; same host SSH client126654, contiguous counters0..96. Largest
+observed tick gap1.385132s. Windows3.403986/3.377878/3.431113s include a fixed
+3s settle, NOT pure restart latency. **Observed in this QEMU run · app budget,
+not a QNX benchmark.**
+
+Prerequisites actually discovered: missing SSH session/auth helpers were staged
+from the installed SDK externally; main io-sock was attached to IRQ10 despite
+PCI reporting11. Before the kills, virtio PIRQ-C and Kvaser PIRQ-D were routed
+to the observed IRQ10; virtio used vectors=0, and IPv4 was configured. Earlier
+network/banner failures and an unbounded remote-shell PATH mistake are NOT
+counted as acceptance. The final bounded stream uses /proc/boot/sleep.
+
+C6 strict actual qcc compile/link PASS ([receipt](docs/acceptance/safestop-build-20261107/receipt.json));
+native FIFO/pulse/actuator runtime scenarios are now being exercised, NOT yet
+accepted. SDK guest stopped/reaped first. Native controller alone owns the lease
+and uses CPU100%,1GiB,nice15,1vCPU/512MiB.
 
 ## Still unverified
 
-Full SocketCAN C2/C3 requires matching x86_64 module/board ABI. Authenticated same-session SSH continuity, identity-safe production supervision, rolling-window/manual-latch limits, least privilege and robust failure injection are not established by the restart smoke. Main PID snapshots do not prove uninterrupted SSH. No full C3 policy acceptance is claimed.
+Full SocketCAN C2/C3 requires matching x86_64 module/board ABI. Identity-safe production supervision, rolling-window/manual-latch limits, least privilege and robust failure injection are not established by the restart smoke. The separate authenticated stream above—not PID snapshots—proves the bounded SSH observation. No full C3 policy acceptance is claimed.
 
-Native guests stopped/reaped; the parent currently owns the serialized SDK build lane. Both repos private. SDK/licenses/headers/libs/images/binaries/QSC/secrets remain external. No publication, contacts, paid resources or upstream PRs.
+The parent currently owns the serialized native C6 lane; previous SDK and C3 guests are stopped/reaped. Both repos private. SDK/licenses/headers/libs/images/binaries/QSC/secrets remain external. No publication, contacts, paid resources or upstream PRs.
