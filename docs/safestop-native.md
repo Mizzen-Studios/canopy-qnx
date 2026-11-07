@@ -1,7 +1,8 @@
 # C6 original native source — runtime PENDING
 
-Original QNX source is now prepared, not cross-compiled or executed in this
-change. Only parent owns SDK/guest execution. No Linux sender is presented as
+Original QNX source now passes actual SDP8 x86-64 qcc compile/link with strict
+C11 warnings and -lm. [Source-bound compile receipt](acceptance/safestop-build-20261107/receipt.json).
+It has NOT yet passed native runtime acceptance. Only parent owns SDK/guest execution. No Linux sender is presented as
 native. Matching mods-can/io-sock ABI remains blocked. This explicitly uses
 **dev-can-linux v1.12 raw devctl/libcan fallback**, not working SocketCAN.
 Demo patterns only, no functional-safety certification or physical actuator.
@@ -42,8 +43,11 @@ queue.c and timer.c under external source checkout. Native struct can_msg,
 CAN_DEVCTL_RX_FRAME_RAW_NOBLOCK / TX_FRAME_RAW come from sys/can_dcmd.h;
 commands.h wrappers themselves use devctl and need no -lcan library. Our
 app invokes public devctl directly, without embedding GPL inline wrappers.
-No SDK header was accessible on host under /home/ubuntu/qnx-host: parent
-must confirm declarations against installed SDP header before compile.
+The parent compiled against the installed SDK externally; no SDK header is
+redistributed. _QNX_SOURCE exposes QNX extensions under -std=c11; -lm resolves
+the actual QNX math linkage. Original-source command:
+
+    qcc -Vgcc_ntox86_64 -std=c11 -O2 -Wall -Wextra -Werror -Isafety native/safestop_qnx.c safety/native_inputs.c safety/safestop.c -o safestop-qnx -lm
 
 IMPORTANT fallback-specific quirk: netif_rx discards CAN_RTR_FLAG, then sets
 is_remote_frame=1 for non-echo DATA. Rejecting that field as conventional RTR
@@ -77,7 +81,9 @@ Host, with actual parent-mapped interface (not assumed SocketCAN inside QNX):
     python3 -m tools.native_safestop_host stimulus --interface vcan1 --duration 8 --scenario stale
 
 Run separately/concurrently using owned processes. Scenarios healthy,stale,
-obstacle,pilot,malformed inject only existing IDs; faults t2..4s, then restore.
+obstacle,pilot,malformed inject only existing IDs; faults t2..5s, then restore.
+The three-second interval permits the simulated vehicle to reach zero before
+restoration. --events appends timestamps at actual stale injection/restore actions.
 Wire faults: guest 800 bad-crc or 800 frozen (first200 pulses healthy).
 Pause/kill: parent sends kill -STOP/-CONT or kill -KILL to recorded C6_PID
 after observed DRIVE and verifies host ECU <=100ms deadline assertion.

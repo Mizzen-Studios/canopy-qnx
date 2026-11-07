@@ -1,0 +1,12 @@
+   1049       1  3196 /bin/bash /usr/local/sbin/host-queue
+   2038    2030  2152 grep -E mkifs|qcc|host-queue
+               total        used        free      shared  buff/cache   available
+Mem:             457         130         184           0         163         326
+Swap:           1023          75         948
+               total        used        free      shared  buff/cache   available
+Mem:             457         129         183           0         164         327
+Swap:           1023          75         948
+SSH_HELPER_STAGED sshd-session
+SSH_HELPER_STAGED sshd-auth
+C6_QCC_BUILD_PASS
+dc8a5b660548e6857d11363218fd49000529b0b5de505c60f3ae7327870cdead  /mnt/host/canopy-native11/safestop-qnx

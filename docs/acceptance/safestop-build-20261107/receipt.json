@@ -1,0 +1,14 @@
+{
+  "status": "PASS actual qcc compilation/link only; native runtime pending",
+  "command": "qcc -Vgcc_ntox86_64 -std=c11 -O2 -Wall -Wextra -Werror -Isafety native/safestop_qnx.c safety/native_inputs.c safety/safestop.c -o safestop-qnx -lm",
+  "source_sha256": {
+    "native/safestop_qnx.c": "ae205362614fb98af2e62e2f6fc09ca927946102a87f977373d3e7974af29708",
+    "safety/native_inputs.c": "4ef80b86c422861ebcbd19fcc7fc236f396c632ac1122d68c19f635b9d990601",
+    "safety/native_inputs.h": "70a31a04ed5aa44340ce88f29df25b406e04075ed71ec12317fbf279da350ff8",
+    "safety/safestop.c": "2fecad504b11b7ca61a7318eea5e922753866cc67c7785a5396c48002c6ca2c3",
+    "safety/safestop.h": "b4ff29a9722862a82ae9a61de65d8b7b3715a4ce55283ebbf09facf093c74e85"
+  },
+  "output_sha256": "dc8a5b660548e6857d11363218fd49000529b0b5de505c60f3ae7327870cdead",
+  "sdk_job": "1794043878115272690",
+  "scope": "external SDK only; no binary included"
+}
