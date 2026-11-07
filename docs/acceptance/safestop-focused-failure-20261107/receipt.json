@@ -1,0 +1,93 @@
+{
+  "caps": {
+    "cpu.max": "100000 100000",
+    "memory.max": "1073741824",
+    "nice": 15
+  },
+  "qemu_pid": 132456,
+  "image_sha256": "84fc4eda34654854333cf71320b375f2eedae405a3849475623c179443f616f1",
+  "label": "observed in this QEMU run; app budget, not QNX benchmark",
+  "restarts": [],
+  "success": false,
+  "ssh_authenticated_continuity": "UNVERIFIED",
+  "pci_devices": [
+    {
+      "slot": 1,
+      "id": 1879081094,
+      "irq": 0
+    },
+    {
+      "slot": 2,
+      "id": 286331444,
+      "irq": 0
+    },
+    {
+      "slot": 3,
+      "id": 268442356,
+      "irq": 267
+    },
+    {
+      "slot": 4,
+      "id": 2214990056,
+      "irq": 267
+    },
+    {
+      "slot": 5,
+      "id": 300421684,
+      "irq": 266
+    },
+    {
+      "slot": 6,
+      "id": 4294967295,
+      "irq": 4294967295
+    },
+    {
+      "slot": 7,
+      "id": 4294967295,
+      "irq": 4294967295
+    }
+  ],
+  "routing": {
+    "original": 185272842,
+    "updated": 168430090,
+    "pirq_index": 3,
+    "irq": 10,
+    "only_kvaser_route_changed": false,
+    "main_route_to_previously_observed_irq10": true
+  },
+  "pirq_after_driver_start": 168430090,
+  "pirq_final": 168430090,
+  "preflight_traffic": {
+    "rx_host": 100,
+    "rx_qnx": 100,
+    "tx_expected": 100,
+    "tx_host": 100,
+    "ordered_byte_exact": true
+  },
+  "scenarios": [],
+  "source_sha256": {
+    "native/safestop_qnx.c": "ae205362614fb98af2e62e2f6fc09ca927946102a87f977373d3e7974af29708",
+    "safety/native_inputs.c": "4ef80b86c422861ebcbd19fcc7fc236f396c632ac1122d68c19f635b9d990601",
+    "safety/safestop.c": "2fecad504b11b7ca61a7318eea5e922753866cc67c7785a5396c48002c6ca2c3",
+    "config/supervision/slm-can-safestop.xml": "ad96a6b5d96dfe43f57b6c884624a8945c0f8d4de9d9c44fc527e92c64db8434"
+  },
+  "experimental_helper_priority_adjustments": [
+    {
+      "scenario": "healthy-none",
+      "can_pid": 372755,
+      "tids": [
+        "10",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "priority": "24r",
+      "mechanism": "documented slay debug scheduling; not production configuration"
+    }
+  ],
+  "error": "native/host heartbeat mismatch",
+  "guest_stopped_reaped": true
+}

@@ -1,0 +1,2 @@
+{"scenario": "healthy-none", "event": "native-start", "monotonic_ns": 220011100715378, "pid": 2306064}
+{"scenario": "healthy-none", "event": "native-pulse-proof", "monotonic_ns": 220011101288983, "pid": 2306064, "policy": "SCHED_FIFO", "priority": 20, "mechanism": "CLOCK_MONOTONIC/MsgReceivePulse", "interval_ns": 10000000}

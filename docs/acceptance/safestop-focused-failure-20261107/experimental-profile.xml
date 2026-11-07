@@ -1,0 +1,11 @@
+<!-- Original C6 demo profile. CAN IRQ service must outrank FIFO20 consumer.
+Parser/runtime acceptance must be observed; no production isolation claim. -->
+<SLM:system xmlns:SLM="urn:canopy:slm">
+  <SLM:component name="canopy-can">
+    <SLM:command>/proc/boot/dev-can-linux</SLM:command>
+    <SLM:args>-b id=0,freq=500k</SLM:args>
+    <SLM:priority>24r</SLM:priority>
+    <SLM:repair backoff="1">restart</SLM:repair>
+    <SLM:stop stop="signal" child="false" timeout="2000">SIGTERM</SLM:stop>
+  </SLM:component>
+</SLM:system>

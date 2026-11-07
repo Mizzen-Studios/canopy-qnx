@@ -1,0 +1,43 @@
+# pidin -p 372755 sched; command -v slay; echo QUEUE_THREAD_DIAG
+     pid tid name                         prio STATE          cpu ExtSched            
+  372755   1 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755   2 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755   3 proc/boot/dev-can-linux      254i INTR             0                     
+  372755   4 proc/boot/dev-can-linux       44r CONDVAR          0                     
+  372755   5 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755   6 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755   7 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755   8 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755   9 proc/boot/dev-can-linux       44r RECEIVE          0                     
+  372755  10 proc/boot/dev-can-linux       20r RECEIVE          0                     
+  372755  11 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755  12 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755  13 proc/boot/dev-can-linux       10r RECEIVE          0                     
+  372755  14 proc/boot/dev-can-linux       10r RECEIVE          0                     
+  372755  15 proc/boot/dev-can-linux       10r RECEIVE          0                     
+  372755  16 proc/boot/dev-can-linux       20r RECEIVE          0                     
+  372755  17 proc/boot/dev-can-linux       10r RECEIVE          0                     
+  372755  18 proc/boot/dev-can-linux       20r CONDVAR          0                     
+/system/bin/slay
+QUEUE_THREAD_DIAG
+# /system/bin/slay -m pid -P24r -T 10 372755; /system/bin/slay -m pid -P24r -T 13 372755; /system/bin/slay -m pid -P24r -T 14 372755; /system/bin/slay -m pid -P24r -T 15 372755; /system/bin/slay -m pid -P24r -T 16 372755; /system/bin/slay -m pid -P24r -T 17 372755; /system/bin/slay -m pid -P24r -T 18 372755; pidin -p 372755 sched; echo QUEUE_THREAD_ADJUSTED
+     pid tid name                         prio STATE          cpu ExtSched            
+  372755   1 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755   2 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755   3 proc/boot/dev-can-linux      254i INTR             0                     
+  372755   4 proc/boot/dev-can-linux       44r CONDVAR          0                     
+  372755   5 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755   6 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755   7 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755   8 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755   9 proc/boot/dev-can-linux       44r RECEIVE          0                     
+  372755  10 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755  11 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755  12 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755  13 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755  14 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755  15 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755  16 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755  17 proc/boot/dev-can-linux       24r RECEIVE          0                     
+  372755  18 proc/boot/dev-can-linux       24r CONDVAR          0                     
+QUEUE_THREAD_ADJUSTED

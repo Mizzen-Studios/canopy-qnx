@@ -50,3 +50,7 @@ The parent currently owns the serialized native C6 lane; previous SDK and C3 gue
 ## C6 failure recovery
 
 **Runtime gate UNVERIFIED / last execution FAIL:**850 native TX attempts versus one host0x200 heartbeat; all SAFE_STOP, no fresh sensors. Evidence:docs/acceptance/safestop-failure-20261107. **observed in this QEMU run · app budget, not a QNX benchmark**. Guest stopped/reaped; one focused fix attempt next.
+
+## Focused C6 attempt closed — 11:06 UTC
+
+**BLOCKED / runtime UNVERIFIED.** Fresh100RX+100TX exact baseline passed; raising all observed10r/20r CAN helpers24r did not fix850 native TX attempts versus1 host heartbeat. Root cause remains undetermined in persistent libcan RX/TX, not an accepted scheduler fix. Evidence:docs/acceptance/safestop-focused-failure-20261107. **observed in this QEMU run · app budget, not a QNX benchmark**. Guest stopped/reaped, lease free. C6 lane STOPPED per one-attempt rule; no automatic retry. E2 host/docs polish selected; no E2 snapshot runtime PASS. Experimental XML archived with failure evidence, not production-installed.
