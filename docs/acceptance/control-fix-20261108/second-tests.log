@@ -1,0 +1,64 @@
+✔ HOST functional end to end (15.858579ms)
+✔ reject schema (2.747504ms)
+✔ reject stale (3.030026ms)
+✔ reject future (3.293269ms)
+✔ reject missing (3.46143ms)
+✔ reject traversal (1.811215ms)
+✔ reject absolute (2.149979ms)
+✔ reject backslash (2.29426ms)
+✔ reject duplicateArtifact (2.548102ms)
+✔ reject mixed (2.975226ms)
+✔ reject sequence (2.742864ms)
+✔ reject time (2.453141ms)
+✔ reject duplicateId (3.172987ms)
+✔ reject pid (1.971137ms)
+✔ reject binding (2.523862ms)
+✔ reject corruptArtifact (1.496413ms)
+✔ reject subjectDigest (1.989018ms)
+✔ reject evidence (1.676535ms)
+✔ reject selfObserver (1.706655ms)
+✔ reject trafficCount (2.005818ms)
+✔ reject generation (1.769376ms)
+✔ reject extraField (1.594374ms)
+✔ reject eventLimit (80.09266ms)
+✔ reject ssh (2.514222ms)
+✔ missing control remains UNKNOWN (2.551583ms)
+✔ digest mismatch remains UNKNOWN (1.983537ms)
+✔ unordered traffic remains UNKNOWN (2.014537ms)
+✔ not independent remains UNKNOWN (2.062179ms)
+✔ no interruption remains UNKNOWN (2.172059ms)
+✖ same domain remains UNKNOWN (3.089027ms)
+✔ raw corrupt, duplicate keys, oversized, deep nesting (4.637481ms)
+✔ local CLI refuses symlink, nonregular, absent and URL paths (199.822466ms)
+✔ limits and provenance edge cases (20.824062ms)
+✔ multiple kills produce UNKNOWN query scope (1.817936ms)
+✔ artificial missing traffic/control remains UNKNOWN (16.00142ms)
+✔ artificial missing sequence rejected (3.055227ms)
+✔ artificial slog2 missing snapshot rejected (1.622654ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 36
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 498.634315
+
+✖ failing tests:
+
+test at tests/incident_pack/core.test.js:7:544
+✖ same domain remains UNKNOWN (3.089027ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'UNKNOWN' !== 'VALID'
+  
+      at TestContext.<anonymous> (/home/ubuntu/.openclaw/workspace/apps/canopy-qnx/tests/incident_pack/core.test.js:7:647)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'UNKNOWN',
+    expected: 'VALID',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

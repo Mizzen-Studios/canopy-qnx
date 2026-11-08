@@ -1,0 +1,130 @@
+✖ HOST functional end to end (18.961486ms)
+✔ reject schema (2.739344ms)
+✔ reject stale (2.940345ms)
+✔ reject future (2.354901ms)
+✔ reject missing (3.212588ms)
+✔ reject traversal (2.225499ms)
+✔ reject absolute (2.138619ms)
+✔ reject backslash (2.200899ms)
+✔ reject duplicateArtifact (1.997257ms)
+✔ reject mixed (2.528182ms)
+✔ reject sequence (2.154819ms)
+✔ reject time (2.30742ms)
+✔ reject duplicateId (2.591742ms)
+✔ reject pid (1.971977ms)
+✔ reject binding (2.235619ms)
+✔ reject corruptArtifact (1.641455ms)
+✔ reject subjectDigest (2.064178ms)
+✔ reject evidence (1.689734ms)
+✔ reject selfObserver (2.068498ms)
+✔ reject trafficCount (1.654255ms)
+✔ reject generation (1.801216ms)
+✔ reject extraField (1.757576ms)
+✔ reject eventLimit (81.373271ms)
+✔ reject ssh (2.531182ms)
+✖ missing control remains UNKNOWN (2.862705ms)
+✔ digest mismatch remains UNKNOWN (3.162227ms)
+✔ unordered traffic remains UNKNOWN (2.150899ms)
+✔ not independent remains UNKNOWN (2.184179ms)
+✔ no interruption remains UNKNOWN (2.118139ms)
+✖ same domain remains UNKNOWN (2.3085ms)
+✔ raw corrupt, duplicate keys, oversized, deep nesting (4.310077ms)
+✔ local CLI refuses symlink, nonregular, absent and URL paths (200.421272ms)
+✔ limits and provenance edge cases (20.934423ms)
+✖ multiple kills produce UNKNOWN query scope (2.196019ms)
+✖ artificial missing traffic/control remains UNKNOWN (13.315236ms)
+✔ artificial missing sequence rejected (3.146987ms)
+✔ artificial slog2 missing snapshot rejected (1.873657ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 32
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 500.620536
+
+✖ failing tests:
+
+test at tests/incident_pack/core.test.js:4:1
+✖ HOST functional end to end (18.961486ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'e0',
+      'e6',
+  +   'e8',
+  +   'e12'
+    ]
+  
+      at TestContext.<anonymous> (/home/ubuntu/.openclaw/workspace/apps/canopy-qnx/tests/incident_pack/core.test.js:4:194)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'e0', 'e6', 'e8', 'e12' ],
+    expected: [ 'e0', 'e6' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/incident_pack/core.test.js:7:502
+✖ missing control remains UNKNOWN (2.862705ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'UNKNOWN' !== 'VALID'
+  
+      at TestContext.<anonymous> (/home/ubuntu/.openclaw/workspace/apps/canopy-qnx/tests/incident_pack/core.test.js:7:605)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'UNKNOWN',
+    expected: 'VALID',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/incident_pack/core.test.js:7:502
+✖ same domain remains UNKNOWN (2.3085ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'UNKNOWN' !== 'VALID'
+  
+      at TestContext.<anonymous> (/home/ubuntu/.openclaw/workspace/apps/canopy-qnx/tests/incident_pack/core.test.js:7:605)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'UNKNOWN',
+    expected: 'VALID',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/incident_pack/core.test.js:12:1
+✖ multiple kills produce UNKNOWN query scope (2.196019ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'UNKNOWN' !== 'VALID'
+  
+      at TestContext.<anonymous> (/home/ubuntu/.openclaw/workspace/apps/canopy-qnx/tests/incident_pack/core.test.js:12:175)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'UNKNOWN',
+    expected: 'VALID',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/incident_pack/native.test.js:4:1
+✖ artificial missing traffic/control remains UNKNOWN (13.315236ms)
+  Error: incompatible schema
+      at adapt (/home/ubuntu/.openclaw/workspace/apps/canopy-qnx/tools/incident_pack/native.js:58:82)
+      at async /home/ubuntu/.openclaw/workspace/apps/canopy-qnx/tests/incident_pack/native.test.js:4:89
+      at async fixture (/home/ubuntu/.openclaw/workspace/apps/canopy-qnx/tests/incident_pack/native.test.js:3:906)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)

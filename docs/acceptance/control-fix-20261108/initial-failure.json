@@ -1,0 +1,338 @@
+{
+  "reproduction": "unrelated control uses surviving service identity",
+  "result": {
+    "status": "VALID",
+    "pack": {
+      "schema": "canopy.incident/1",
+      "collector": {
+        "id": "host-fixture",
+        "version": "1",
+        "mechanism": "synthetic"
+      },
+      "run": {
+        "id": "host-1794158628152",
+        "environment": "HOST_SIMULATION",
+        "capturedAt": "2026-11-08T17:23:48.152Z",
+        "expiresAt": "2026-11-09T17:23:48.152Z"
+      },
+      "bindings": {
+        "source": "source.txt",
+        "binary": "binary.txt",
+        "image": "image.txt",
+        "disk": "disk.txt"
+      },
+      "artifacts": [
+        {
+          "path": "source.txt",
+          "role": "source",
+          "runId": "host-1794158628152",
+          "text": "HOST_SIMULATION source descriptor; no native binary/image/disk included.",
+          "sha256": "483df64c077af2c71c139e136f1d77a7fe53af17c29d612ade1666e36f1d7a5d",
+          "subjectSha256": "483df64c077af2c71c139e136f1d77a7fe53af17c29d612ade1666e36f1d7a5d"
+        },
+        {
+          "path": "binary.txt",
+          "role": "binary",
+          "runId": "host-1794158628152",
+          "text": "HOST_SIMULATION binary descriptor; no native binary/image/disk included.",
+          "sha256": "2b32106f6a82b809dbe79d807418cae4463a4db4aa38c3bf63f5f36269580ead",
+          "subjectSha256": "2b32106f6a82b809dbe79d807418cae4463a4db4aa38c3bf63f5f36269580ead"
+        },
+        {
+          "path": "image.txt",
+          "role": "image",
+          "runId": "host-1794158628152",
+          "text": "HOST_SIMULATION image descriptor; no native binary/image/disk included.",
+          "sha256": "a2bcd9c03f11afa224dfa27a6c98d446ebccd4ba8e4207a8def448fc826ea3d4",
+          "subjectSha256": "a2bcd9c03f11afa224dfa27a6c98d446ebccd4ba8e4207a8def448fc826ea3d4"
+        },
+        {
+          "path": "disk.txt",
+          "role": "disk",
+          "runId": "host-1794158628152",
+          "text": "HOST_SIMULATION disk descriptor; no native binary/image/disk included.",
+          "sha256": "54c699c040594063f4416f21e84c2f032fc68438ad84f05aea32799a1db2de72",
+          "subjectSha256": "54c699c040594063f4416f21e84c2f032fc68438ad84f05aea32799a1db2de72"
+        },
+        {
+          "path": "observation.txt",
+          "role": "observation",
+          "runId": "host-1794158628152",
+          "text": "HOST_SIMULATION synthetic observations; not measured native behavior.",
+          "sha256": "1ccca17b11823bf72c115047e0b9354bcd3843580373dc199c67cf5cd7f66054",
+          "subjectSha256": "1ccca17b11823bf72c115047e0b9354bcd3843580373dc199c67cf5cd7f66054"
+        }
+      ],
+      "events": [
+        {
+          "id": "e0",
+          "seq": 0,
+          "at": 0,
+          "runId": "host-1794158628152",
+          "kind": "process",
+          "process": {
+            "name": "service",
+            "pid": 200,
+            "generation": "service-1",
+            "domain": "service"
+          },
+          "observer": {
+            "name": "synthetic-observer",
+            "generation": "observer-1",
+            "independent": true
+          },
+          "evidence": [
+            {
+              "path": "observation.txt",
+              "line": 1
+            }
+          ],
+          "data": {
+            "state": "observed"
+          }
+        },
+        {
+          "id": "e1",
+          "seq": 1,
+          "at": 100,
+          "runId": "host-1794158628152",
+          "kind": "kill",
+          "process": {
+            "name": "can-worker",
+            "pid": 101,
+            "generation": "driver-1",
+            "domain": "driver"
+          },
+          "observer": {
+            "name": "synthetic-observer",
+            "generation": "observer-1",
+            "independent": true
+          },
+          "evidence": [
+            {
+              "path": "observation.txt",
+              "line": 1
+            }
+          ],
+          "data": {
+            "signal": "SIGKILL"
+          }
+        },
+        {
+          "id": "e2",
+          "seq": 2,
+          "at": 200,
+          "runId": "host-1794158628152",
+          "kind": "interruption",
+          "process": {
+            "name": "can-worker",
+            "pid": 101,
+            "generation": "driver-1",
+            "domain": "driver"
+          },
+          "observer": {
+            "name": "synthetic-observer",
+            "generation": "observer-1",
+            "independent": true
+          },
+          "evidence": [
+            {
+              "path": "observation.txt",
+              "line": 1
+            }
+          ],
+          "data": {
+            "state": "observed"
+          }
+        },
+        {
+          "id": "e3",
+          "seq": 3,
+          "at": 300,
+          "runId": "host-1794158628152",
+          "kind": "recovery",
+          "process": {
+            "name": "can-worker",
+            "pid": 102,
+            "generation": "driver-2",
+            "domain": "driver"
+          },
+          "observer": {
+            "name": "synthetic-observer",
+            "generation": "observer-1",
+            "independent": true
+          },
+          "evidence": [
+            {
+              "path": "observation.txt",
+              "line": 1
+            }
+          ],
+          "data": {
+            "state": "observed"
+          }
+        },
+        {
+          "id": "e4",
+          "seq": 4,
+          "at": 400,
+          "runId": "host-1794158628152",
+          "kind": "traffic",
+          "process": {
+            "name": "can-worker",
+            "pid": 102,
+            "generation": "driver-2",
+            "domain": "driver"
+          },
+          "observer": {
+            "name": "synthetic-observer",
+            "generation": "observer-1",
+            "independent": true
+          },
+          "evidence": [
+            {
+              "path": "observation.txt",
+              "line": 1
+            }
+          ],
+          "data": {
+            "direction": "RX",
+            "count": 100,
+            "bytes": 100,
+            "expectedSha256": "305e414544964dadb4b12360190fccd3f8088e0a56bae5f215a3788e98811258",
+            "observedSha256": "305e414544964dadb4b12360190fccd3f8088e0a56bae5f215a3788e98811258",
+            "ordered": true
+          }
+        },
+        {
+          "id": "e5",
+          "seq": 5,
+          "at": 500,
+          "runId": "host-1794158628152",
+          "kind": "traffic",
+          "process": {
+            "name": "can-worker",
+            "pid": 102,
+            "generation": "driver-2",
+            "domain": "driver"
+          },
+          "observer": {
+            "name": "synthetic-observer",
+            "generation": "observer-1",
+            "independent": true
+          },
+          "evidence": [
+            {
+              "path": "observation.txt",
+              "line": 1
+            }
+          ],
+          "data": {
+            "direction": "TX",
+            "count": 100,
+            "bytes": 100,
+            "expectedSha256": "f606e8b7b5426107a296d4112f28a4de749e2fe693d09200a89e9376fda13c9f",
+            "observedSha256": "f606e8b7b5426107a296d4112f28a4de749e2fe693d09200a89e9376fda13c9f",
+            "ordered": true
+          }
+        },
+        {
+          "id": "e6",
+          "seq": 6,
+          "at": 600,
+          "runId": "host-1794158628152",
+          "kind": "process",
+          "process": {
+            "name": "service",
+            "pid": 200,
+            "generation": "service-1",
+            "domain": "service"
+          },
+          "observer": {
+            "name": "synthetic-observer",
+            "generation": "observer-1",
+            "independent": true
+          },
+          "evidence": [
+            {
+              "path": "observation.txt",
+              "line": 1
+            }
+          ],
+          "data": {
+            "state": "observed"
+          }
+        },
+        {
+          "id": "e7",
+          "seq": 7,
+          "at": 700,
+          "runId": "host-1794158628152",
+          "kind": "control",
+          "process": {
+            "name": "service",
+            "pid": 200,
+            "generation": "service-1",
+            "domain": "service"
+          },
+          "observer": {
+            "name": "synthetic-observer",
+            "generation": "observer-1",
+            "independent": true
+          },
+          "evidence": [
+            {
+              "path": "observation.txt",
+              "line": 1
+            }
+          ],
+          "data": {
+            "mode": "in_process",
+            "outcome": "cofailure_observed"
+          }
+        }
+      ],
+      "seal": "de7c149e645d5a29f112dbdebebca7cd06cffccab245a1236421b6109d99903a"
+    },
+    "issues": [],
+    "answers": {
+      "killed": {
+        "status": "OBSERVED",
+        "text": "SIGKILL: can-worker, PID 101, generation driver-1.",
+        "evidence": [
+          "e1"
+        ]
+      },
+      "recovery": {
+        "status": "OBSERVED",
+        "text": "Interruption and replacement recovery observed, followed by ordered byte-digest-matched 100 RX and 100 TX. Not continuous availability.",
+        "evidence": [
+          "e1",
+          "e2",
+          "e3",
+          "e4",
+          "e5"
+        ]
+      },
+      "survivors": {
+        "status": "OBSERVED",
+        "text": "Before/after snapshots: service generation service-1. Between-snapshot continuity unknown.",
+        "evidence": [
+          "e0",
+          "e6"
+        ]
+      },
+      "isolation": {
+        "status": "OBSERVED",
+        "text": "Bounded separate-domain outcome contrasts with explicit in-process cofailure control; not adversarial isolation proof.",
+        "evidence": [
+          "e0",
+          "e6",
+          "e4",
+          "e5",
+          "e7"
+        ]
+      }
+    }
+  }
+}

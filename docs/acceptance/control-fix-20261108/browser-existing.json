@@ -1,0 +1,78 @@
+{
+  "environment": "HOST_BROWSER_ONLY",
+  "capture": "none",
+  "receipts": [
+    {
+      "width": 1280,
+      "height": 900,
+      "status": "PASS",
+      "checks": [
+        "keyboard sample",
+        "four queries",
+        "evidence expansion",
+        "export download",
+        "reset",
+        "BYO file import",
+        "corrupt UNKNOWN",
+        "no overflow",
+        "reload clears",
+        "no JS errors",
+        "no external requests"
+      ]
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "status": "PASS",
+      "checks": [
+        "keyboard sample",
+        "four queries",
+        "evidence expansion",
+        "export download",
+        "reset",
+        "BYO file import",
+        "corrupt UNKNOWN",
+        "no overflow",
+        "reload clears",
+        "no JS errors",
+        "no external requests"
+      ]
+    },
+    {
+      "width": 520,
+      "height": 900,
+      "status": "PASS",
+      "checks": [
+        "keyboard sample",
+        "four queries",
+        "evidence expansion",
+        "export download",
+        "reset",
+        "BYO file import",
+        "corrupt UNKNOWN",
+        "no overflow",
+        "reload clears",
+        "no JS errors",
+        "no external requests"
+      ]
+    },
+    {
+      "width": 360,
+      "height": 900,
+      "status": "PASS",
+      "checks": [
+        "keyboard sample",
+        "four queries",
+        "evidence expansion",
+        "export download",
+        "reset",
+        "BYO file import",
+        "corrupt UNKNOWN",
+        "no overflow",
+        "reload clears",
+        "no JS errors",
+        "no external requests"
+      ]
+    }
+  ]
+}
