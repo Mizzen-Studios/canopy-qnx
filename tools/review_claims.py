@@ -19,6 +19,8 @@ def digest(path):
 # Family references are supporting material, NOT blanket acceptance of a paragraph.
 # Per-occurrence labels below keep absent historical binding UNVERIFIED.
 SPECS = {
+ 'new-desk': ('host-only', ['docs/incident-pack-receipts/*', 'docs/incident-pack.md', 'tools/incident_pack/*.js', 'web/incident-pack/*', 'tests/incident_pack/*'], 'Reusable import/query/export host and browser behavior only; HOST fixtures synthetic. Origin declarations and cooperative binding are not attestation.'),
+ 'prereq': ('observed in this QEMU run', ['docs/acceptance/prereq-20261108/*'], 'Exact source/ELF/IFS/disk in receipt.json. Slog2 and control probes only, not managed libcan acceptance. Path enforcement BLOCKED; redacted logs preserve original hashes separately.'),
  'libcan': ('observed in this QEMU run', ['docs/acceptance/native-can-20261106/*'], 'Historical source commit and driver binary hash absent; recorded image assertion only.'),
  'slm': ('observed in this QEMU run', ['docs/acceptance/slm-20261107/*'], 'PID snapshots only; SSH UNVERIFIED; historical source/driver binary binding absent.'),
  'traffic': ('observed in this QEMU run', ['docs/acceptance/slm-traffic-20261107/*'], 'Post-restart traffic only; SSH UNVERIFIED; historical source/driver binary binding absent.'),
@@ -42,6 +44,8 @@ def families(text, section, path):
     t = (text + ' ' + section).lower()
     found = set()
     rules = {
+      'new-desk': ['incident desk', 'incident pack', 'incident-pack', 'byo', 'cooperative', 'collector declaration'],
+      'prereq': ['prereq-20261108', 'slog2', 'ability control', 'co-located', 'attach/connect'],
       'libcan': ['native-can-', 'three native libcan', 'three ordered', '100-frame'],
       'slm': ['slm-20261107', '278546', 'managed-process restarts'],
       'traffic': ['slm-traffic-', 'follow-up 11', 'three additional'],
@@ -149,7 +153,7 @@ def generate():
             any(key in b['pointer'] for key in ('source_commit', '/source', 'baseline'))] or None
         group['image_sha256'] = [b for b in declared if 'image' in b['pointer'].lower()] or None
         group['binary_sha256'] = [b for b in declared if 'output_sha256' in b['pointer']] or None
-    paths = ['README.md', 'STATUS.md', 'docs/workbench/index.html', 'docs/replay/index.html', 'docs/private-demo.md', 'docs/proof-capture/SCRIPT.md']
+    paths = ['docs/incident-pack.md', 'web/incident-pack/index.html', 'README.md', 'STATUS.md', 'docs/workbench/index.html', 'docs/replay/index.html', 'docs/private-demo.md', 'docs/proof-capture/SCRIPT.md']
     occurrences = []
     for rel in paths:
         for line, text, section in units(ROOT / rel):
