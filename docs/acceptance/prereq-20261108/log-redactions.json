@@ -1,0 +1,12 @@
+{
+  "reason": "Conservative redistribution guard rejects SDK environment assignment markers; no guard exception added. Raw originals and original receipt bindings preserved; committed projections explicitly redacted, not fresh raw receipts.",
+  "files": [
+    {
+      "path": "sdk-build-final.log",
+      "original_sha256": "171193b486e033a0b17a52a8dedf1fd9e2a199f604c99a65917f01188732584d",
+      "committed_redacted_sha256": "cbd9cc1d3933fb1c7238f344f2e93834b8a747e25129bc0bae9d315a19d52b08",
+      "change": "SDK environment assignment lines only; other log bytes unchanged",
+      "original_external": ".openclaw/tmp/prereq-sdk-raw-preserved/canopy-qnx/sdk-build-final.log"
+    }
+  ]
+}

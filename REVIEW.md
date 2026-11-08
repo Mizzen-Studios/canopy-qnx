@@ -1,5 +1,18 @@
 # Private capability review — 7 November 2026
 
+## Current upgrade — 8 November 2026, integration in progress
+
+Olly approved the substantive [upgrade package](docs/upgrade-acceptance-20261108.md); the earlier feature-freeze statements below are preserved history, not the current instruction. Previous independent acceptance remains conditional and does not transfer to these new features.
+
+[Fresh prerequisite receipts](docs/acceptance/prereq-20261108/NOTES.md): same-ELF IO ability deny/allow in separate runs, bounded structured slog2 capture and actual co-located observer death/separate recorder survival were observed in the bound QEMU run. **Pathname policy BLOCKED**: installed tools alone do not establish attach/connect enforcement or loaded policy identities. Ability control is not /dev path policy or least-privilege proof.
+
+The [BYO incident desk](docs/incident-pack.md) imports, validates and queries new bounded packs locally. Current functional fixtures are HOST_SIMULATION; reusable on-QNX collector integration and fresh managed libcan traffic proof are underway. Imported origin labels remain collector declarations, not attestation. Historical viewer and native evidence are separate. SSH verdict is unsupported in the new v1 importer.
+
+C6/native safety STOPPED; SocketCAN UNVERIFIED. No heartbeat, actuation, recording, publication or deployment. recorded:false. Videos remain deferred until all features and final verification, with the separate recording gate preserved. sshd internal cause UNVERIFIED; no platform-health, safety, timing or continuous-availability claim.
+
+## Preserved prior review and milestone history
+
+
 ## Current completion gate — 20:03 UTC
 
 Owner independent completion gate: **CONDITIONAL, receipt-inspected, not re-run**, at accepted tip 88b1bcf5fcc1f97da03321d35b03e89c85090227. This packaging follow-up does not rerun native evidence or broaden acceptance. Existing licensed SDK reuse and owner-lab paths only; no fresh install, second SDK, human learner or platform-health validation. CANopy native evidence was not rerun. sshd internal cause UNVERIFIED; C6 FAIL / STOPPED; SocketCAN UNVERIFIED. Everything private.
