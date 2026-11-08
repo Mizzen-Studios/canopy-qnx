@@ -15,7 +15,7 @@ qpath=out/"qtest.sock"
 if qpath.exists():raise RuntimeError("existing qtest socket; inspect owner")
 args += ["-qtest","unix:"+str(qpath)+",server=on,wait=off","-object","can-host-socketcan,id=hostcan0,if="+a.interface+",canbus=canbus0"]
 capture=socket.socket(socket.PF_CAN,socket.SOCK_RAW,socket.CAN_RAW);capture.bind((a.interface,));capture.setblocking(False);frames=[]
-r=subprocess.Popen(args,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.STDOUT);sel=selectors.DefaultSelector();sel.register(r.stdout,selectors.EVENT_READ);serial=bytearray();report={"caps":caps,"qemu_pid":r.pid,"image_sha256":hashlib.sha256(image.read_bytes()).hexdigest(),"label":"observed in this QEMU run; app budget, not QNX benchmark","run_id":"native-"+uuid.uuid4().hex,"captured_at":time.time(),"disk_sha256":hashlib.sha256(a.disk.read_bytes()).hexdigest(),"restarts":[],"success":False,"ssh_authenticated_continuity":"UNVERIFIED"}
+r=subprocess.Popen(args,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.STDOUT);sel=selectors.DefaultSelector();sel.register(r.stdout,selectors.EVENT_READ);serial=bytearray();report={"caps":caps,"qemu_pid":r.pid,"collector_sha256":hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),"qemu_command":args,"image_sha256":hashlib.sha256(image.read_bytes()).hexdigest(),"label":"observed in this QEMU run; app budget, not QNX benchmark","run_id":"native-"+uuid.uuid4().hex,"captured_at":time.time(),"disk_sha256":hashlib.sha256(a.disk.read_bytes()).hexdigest(),"restarts":[],"success":False,"ssh_authenticated_continuity":"UNVERIFIED"}
 def drain():
  while True:
   try:raw=capture.recv(16)
@@ -101,5 +101,5 @@ finally:
  r.terminate()
  try:r.wait(10)
  except subprocess.TimeoutExpired:r.kill();r.wait()
- capture.close();qpath.unlink(missing_ok=True);report["guest_stopped_reaped"]=True;(out/"receipt.json").write_text(json.dumps(report,indent=2)+chr(10));(out/"serial.txt").write_bytes(serial);print(json.dumps(report),flush=True)
+ capture.close();qpath.unlink(missing_ok=True);report["guest_stopped_reaped"]=True;report["raw_sha256"]=hashlib.sha256(serial).hexdigest();(out/"receipt.json").write_text(json.dumps(report,indent=2)+chr(10));(out/"serial.txt").write_bytes(serial);print(json.dumps(report),flush=True)
 sys.exit(0 if report["success"] else 1)
