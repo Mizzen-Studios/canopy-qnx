@@ -44,8 +44,8 @@ REVIEW boundary: host-only
 
 ## L06 — 135–155 seconds · UNVERIFIED boundaries
 Claim: Historical driver source/binary binding incomplete; SocketCAN UNVERIFIED and C6FAIL/STOPPED; no safety/timing/availability acceptance.
-Planned frame: Local sanitized file view: docs/capabilities.json, docs/acceptance/safestop-focused-failure-20261107/receipt.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.
+Planned frame: Historical accepted-tip capabilities, read with git show 88b1bcf5fcc1f97da03321d35b03e89c85090227:docs/capabilities.json; not the upgraded current product. Local sanitized file view: docs/capabilities.json, docs/acceptance/safestop-focused-failure-20261107/receipt.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.
 Narration: Historical driver source and binary identity are not fully bound. SocketCAN remains unverified. The C6 attempt failed and is stopped. No safety, timing, continuous availability or certification claim follows. Council acceptance is conditional; native feature scope is frozen. Recording and audio need separate Olly approval.
-Frozen files: docs/capabilities.json SHA256 d3cbf3e8325320858e9cf4c1eb33d474a5ee635a01d3977c0928c2270b8da1a8 [current file equals accepted tip], docs/acceptance/safestop-focused-failure-20261107/receipt.json SHA256 adf790f90acabfbfbaaf2620037ced5f0a4c3aab401148d0f5eaaffbf75f70f0 [current file equals accepted tip]
+Frozen files: docs/capabilities.json SHA256 d3cbf3e8325320858e9cf4c1eb33d474a5ee635a01d3977c0928c2270b8da1a8 [git-show-at-accepted-tip], docs/acceptance/safestop-focused-failure-20261107/receipt.json SHA256 adf790f90acabfbfbaaf2620037ced5f0a4c3aab401148d0f5eaaffbf75f70f0 [current file equals accepted tip]
 REVIEW boundary: UNVERIFIED
 

@@ -1,7 +1,7 @@
 {
   "schema": "qnx-capabilities.v1",
-  "project": "CANopy fault-containment incident workbench",
-  "boundary": "Recorded native libcan + SLM experiment, not native vehicle safety. C6 FAIL/stopped; no automatic retries or new heartbeat work. SocketCAN blocked. No continuous CAN availability, physical-safety, certification, latency or QNX benchmark claim.",
+  "project": "CANopy reusable bounded QNX incident recorder and workbench",
+  "boundary": "Nov8 approved bounded executable upgrades; historical rows retain their original receipts. HOST interface checks and native observations are distinct; new independent council gate pending. New native recorder capture is separate from historical SSH record; SSH continuity unsupported for new packs. Cooperative integrity is not attestation. C6/native safety STOPPED; SocketCAN UNVERIFIED; no safety/timing/availability/platform-health claims.",
   "rows": [
     {
       "id": "host-model",
@@ -72,6 +72,22 @@
       "claim": "Actual Chromium desktop1280/mobile520: recorded page separately labelled; missing/corrupt/mixed UNKNOWN with no accepted timeline. No fresh native acceptance.",
       "evidence": "docs/acceptance/browser-20261107/receipt.json",
       "evidence_sha256": "8d6392815e0c3855d2efefd4a1cf0eda7f564a50d03bd254ca08e5489d6901c5"
+    },
+    {
+      "id": "byo-incident-desk",
+      "domain": "host",
+      "level": "workflow",
+      "status": "PASS",
+      "claim": "Local bounded pack import/query/evidence/export with explicit origin and UNKNOWN rejection. Collector declarations and hashes are cooperative integrity, not attestation.",
+      "evidence": "docs/incident-pack-receipts/browser.json"
+    },
+    {
+      "id": "reusable-native-recorder",
+      "domain": "native",
+      "level": "recorded-run",
+      "status": "PASS",
+      "claim": "New parameterized recorder captured SLM driver kill/restart and independent ordered byte-exact100RX100TX; bounded slog2 plus actual co-located death control. No SSH continuity or continuous CAN guarantee.",
+      "evidence": "docs/acceptance/native-recorder-20261108/receipt.json"
     }
   ]
 }

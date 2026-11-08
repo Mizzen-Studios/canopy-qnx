@@ -13,17 +13,17 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "7af2b2b8570d50236086bb69e3ee7140dbec32b41f6a7cf209961ecb7fdefec1",
+      "sha256": "6eb1333217454d3aa348e6e4905f4ee3825ec52d023ede018d6e0c7b1522aa4b",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "STATUS.md",
-      "sha256": "68289f2561b8dc8cf0b027df61a04bf366a9efdc57818280a2df32f16f49f177",
+      "sha256": "8b08910888fb4cdbd285aaab4463bb536b58f12b8c333961bc8e0b4edf2f3d8b",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "REVIEW.md",
-      "sha256": "5b82add6867e3d81e4d5063dfa61448efaa7357ac2f9789484d605517328377d",
+      "sha256": "af62e65752c46932f875b3959fa2c23e2a650d9986449b1a911e4dc787f6744c",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -33,12 +33,12 @@
     },
     {
       "path": "docs/proof-capture/SCRIPT.md",
-      "sha256": "6a40bcafca07c69c72370790d0a08c5ddd23e7c4317c3624d1ba72a671c49133",
+      "sha256": "49eff51085a150c32e1092691de1bde7f08c2f234d04a180135ce53181e6e03a",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "docs/incident-pack.md",
-      "sha256": "3747dc9f5c03b62a53b3ce6ba92a6ab4693f42627da6d7e13b27e2cf40f2b415",
+      "sha256": "12224e707bc07580ff243cd86b4be63f011e3bc97bdbd282627eea1372364022",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -60,7 +60,22 @@
   "local_links": [
     {
       "source": "README.md",
-      "target": "docs/readiness-gate.md",
+      "target": "docs/native-recorder.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "web/incident-pack/index.html",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/incident-pack.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/native-recorder-20261108/NOTES.md",
       "exists": true
     },
     {
@@ -185,6 +200,16 @@
     },
     {
       "source": "STATUS.md",
+      "target": "docs/native-recorder.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/native-recorder-20261108/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
       "target": "docs/readiness-gate.md",
       "exists": true
     },
@@ -260,6 +285,16 @@
     },
     {
       "source": "REVIEW.md",
+      "target": "docs/native-recorder.md",
+      "exists": true
+    },
+    {
+      "source": "REVIEW.md",
+      "target": "docs/acceptance/native-recorder-20261108/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "REVIEW.md",
       "target": "docs/review-claims.json",
       "exists": true
     },
@@ -301,6 +336,11 @@
     {
       "source": "docs/incident-pack.md",
       "target": "../tools/incident_pack/fixture.js",
+      "exists": true
+    },
+    {
+      "source": "docs/incident-pack.md",
+      "target": "native-recorder.md",
       "exists": true
     },
     {
@@ -608,12 +648,13 @@
         "start": 135,
         "end": 155,
         "claim": "Historical driver source/binary binding incomplete; SocketCAN UNVERIFIED and C6FAIL/STOPPED; no safety/timing/availability acceptance.",
-        "frame": "Local sanitized file view: docs/capabilities.json, docs/acceptance/safestop-focused-failure-20261107/receipt.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
+        "frame": "Historical accepted-tip capabilities, read with git show 88b1bcf5fcc1f97da03321d35b03e89c85090227:docs/capabilities.json; not the upgraded current product. Local sanitized file view: docs/capabilities.json, docs/acceptance/safestop-focused-failure-20261107/receipt.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
         "label": "UNVERIFIED boundaries",
         "assets": [
           {
             "path": "docs/capabilities.json",
-            "sha256": "d3cbf3e8325320858e9cf4c1eb33d474a5ee635a01d3977c0928c2270b8da1a8"
+            "sha256": "d3cbf3e8325320858e9cf4c1eb33d474a5ee635a01d3977c0928c2270b8da1a8",
+            "view": "git-show-at-accepted-tip"
           },
           {
             "path": "docs/acceptance/safestop-focused-failure-20261107/receipt.json",

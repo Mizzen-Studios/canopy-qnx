@@ -1,13 +1,21 @@
-# CANopy — recorded fault-containment incident workbench
+# CANopy — reusable QNX incident recorder and workbench
 
-Council conditional acceptance at79912ef; native features FROZEN. Current priority is [product/evidence consistency and the completed-version gate](docs/readiness-gate.md). Videos come last, after final freeze, final verification and independent gate; recording/audio still needs separate Olly OK. The existing dry checklist is parked, not the next blocker.
+## Capture → import → query → inspect evidence
+
+Use the [native recorder](docs/native-recorder.md) for a NEW bounded QNX SLM/libcan incident, then open the [local incident desk](web/incident-pack/index.html) to import that exact pack, query interruption/recovery and inspect evidence. [Pack contract and CLI](docs/incident-pack.md). No server, upload or browser command execution. Missing/corrupt/mixed/stale/incompatible packs fail closed to UNKNOWN.
+
+[Fresh native receipt](docs/acceptance/native-recorder-20261108/NOTES.md): actual supervised driver kill/restart and independent ordered byte-exact100RX100TX, bounded structured slog2 and a co-located observer death/separate-recorder control. New packs have NO authenticated SSH-continuity proof; that exists only in the separate historical record below. Origin labels and hash bindings are collector-declared cooperative integrity, not attestation. The current independent host review is being closed before final council inspection.
+
+Olly approved these upgrades on8Nov; earlier feature-freeze gates are historical. New council acceptance pending. C6/native safety STOPPED; SocketCAN UNVERIFIED. recorded:false; no media now, no publication/deployment. Videos only after all features and final verification plus the separate recording gate.
+
+## Historical recorded experiment — separate from new capture
 
 Private [claim-to-receipt review](REVIEW.md): historical source/build gaps remain UNVERIFIED.
 
 Actual [desktop/mobile Chromium validation](docs/acceptance/browser-20261107/NOTES.md): missing/corrupt/mixed → UNKNOWN; recorded native labels remain separate from simulation. That browser milestone records host suite **126 passed / 8 skipped** at its own pinned revision; later host receipts are chronological, not new native acceptance.
 
 Private evidence workbench for a bounded **native QNX libcan + SLM experiment**.
-The recorded journey is: positively identified CAN PID killed → new CAN PID →
+The historical recorded journey is: positively identified CAN PID killed → new CAN PID →
 100 RX + 100 TX ordered byte-exact post-restart traffic, while the **same
 authenticated SSH connection** continued and main io-sock PID stayed unchanged.
 See the canonical [capability ledger](docs/capabilities.md) and

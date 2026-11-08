@@ -1,8 +1,8 @@
 # Capability ledger
 
-CANopy fault-containment incident workbench
+CANopy reusable bounded QNX incident recorder and workbench
 
-Recorded native libcan + SLM experiment, not native vehicle safety. C6 FAIL/stopped; no automatic retries or new heartbeat work. SocketCAN blocked. No continuous CAN availability, physical-safety, certification, latency or QNX benchmark claim.
+Nov8 approved bounded executable upgrades; historical rows retain their original receipts. HOST interface checks and native observations are distinct; new independent council gate pending. New native recorder capture is separate from historical SSH record; SSH continuity unsupported for new packs. Cooperative integrity is not attestation. C6/native safety STOPPED; SocketCAN UNVERIFIED; no safety/timing/availability/platform-health claims.
 
 Canonical declarations: docs/capabilities.json. Generated view; ledger checks are not runtime acceptance.
 
@@ -18,3 +18,5 @@ Canonical declarations: docs/capabilities.json. Generated view; ledger checks ar
 | incident-viewer | host | recorded-evidence-view | PASS | Local read-only generation-time view of pinned recorded QNX evidence; missing/corrupt/mixed/repinned evidence UNKNOWN; historical driver identity UNPROVEN | [source](../docs/acceptance/workbench-20261107.json) |
 | host-regression | host | framework | PASS | Source-bound current full Python host suite:126 passed/8 skipped. Browser rendering is separately recorded; no fresh native acceptance. | [source](../docs/acceptance/browser-20261107/receipt.json) |
 | incident-browser | host | browser-render | PASS | Actual Chromium desktop1280/mobile520: recorded page separately labelled; missing/corrupt/mixed UNKNOWN with no accepted timeline. No fresh native acceptance. | [source](../docs/acceptance/browser-20261107/receipt.json) |
+| byo-incident-desk | host | workflow | PASS | Local bounded pack import/query/evidence/export with explicit origin and UNKNOWN rejection. Collector declarations and hashes are cooperative integrity, not attestation. | [source](../docs/incident-pack-receipts/browser.json) |
+| reusable-native-recorder | native | recorded-run | PASS | New parameterized recorder captured SLM driver kill/restart and independent ordered byte-exact100RX100TX; bounded slog2 plus actual co-located death control. No SSH continuity or continuous CAN guarantee. | [source](../docs/acceptance/native-recorder-20261108/receipt.json) |
