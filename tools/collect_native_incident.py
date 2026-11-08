@@ -92,7 +92,7 @@ try:
   assert "/dev/can0/rx0" in text and "No such file" not in text
   report["restarts"].append({"run":number,"killed_pid":current,"new_pid":new,"main_pid_unchanged":True,"observed_seconds_including_fixed_3s_settle":time.monotonic()-start});current=new;print("NATIVE_SLM_RESTART_PASS "+str(number),flush=True)
   report["restarts"][-1]["traffic"]=traffic(number)
- control=command("/proc/boot/prereq_containment; echo CONTROL_RC=$?; /proc/boot/slog2info -b canopy_incident -f -S -t; echo NATIVE_CAPTURE_DONE","NATIVE_CAPTURE_DONE")
+ control=command("/proc/boot/prereq_containment; echo CONTROL_RC=$?; /proc/boot/ability_lesson deny; echo ABILITY_DENY_RC=$?; /proc/boot/ability_lesson allow; echo ABILITY_ALLOW_RC=$?; /proc/boot/slog2info -b canopy_incident -f -S -t; echo NATIVE_CAPTURE_DONE","NATIVE_CAPTURE_DONE")
  (out/"control-slog.txt").write_text(control)
  report["success"]=True
 except Exception as error:
