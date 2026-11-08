@@ -18,12 +18,12 @@
     },
     {
       "path": "STATUS.md",
-      "sha256": "8b08910888fb4cdbd285aaab4463bb536b58f12b8c333961bc8e0b4edf2f3d8b",
+      "sha256": "64f0e2afe75dc1d94c1438991991b824faa9971abad928d155b385c342a1f2c6",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "REVIEW.md",
-      "sha256": "af62e65752c46932f875b3959fa2c23e2a650d9986449b1a911e4dc787f6744c",
+      "sha256": "7ab5f538b8d24695fcf628b0a6d2799baf7b6fc2e1706fe6bdf8b3d4f0b4cb55",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -38,7 +38,7 @@
     },
     {
       "path": "docs/incident-pack.md",
-      "sha256": "12224e707bc07580ff243cd86b4be63f011e3bc97bdbd282627eea1372364022",
+      "sha256": "18f89ff1096987a7ae623a1f6f67e874ad42b9176af4cdf27b2074522c8e49d4",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -210,6 +210,11 @@
     },
     {
       "source": "STATUS.md",
+      "target": "docs/acceptance/control-fix-20261108/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
       "target": "docs/readiness-gate.md",
       "exists": true
     },
@@ -295,6 +300,11 @@
     },
     {
       "source": "REVIEW.md",
+      "target": "docs/acceptance/control-fix-20261108/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "REVIEW.md",
       "target": "docs/review-claims.json",
       "exists": true
     },
@@ -346,6 +356,11 @@
     {
       "source": "docs/incident-pack.md",
       "target": "incident-workbench.md",
+      "exists": true
+    },
+    {
+      "source": "docs/incident-pack.md",
+      "target": "acceptance/control-fix-20261108/NOTES.md",
       "exists": true
     },
     {

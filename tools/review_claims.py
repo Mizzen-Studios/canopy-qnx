@@ -9,7 +9,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / 'docs/review-claims.json'
-BASE = '22ffcaca1269ec0402099fc06b4876a4e8d51748'
+BASE = '32a4ae17b8401e30590437a68f86f403f802c315'
 
 
 def digest(path):
@@ -19,8 +19,8 @@ def digest(path):
 # Family references are supporting material, NOT blanket acceptance of a paragraph.
 # Per-occurrence labels below keep absent historical binding UNVERIFIED.
 SPECS = {
- 'new-native-recorder': ('observed in this QEMU run', ['docs/acceptance/native-recorder-20261108/*', 'native/incident_recorder.c', 'tools/collect_native_incident.py'], 'Fresh capture source d913faffb3ebd83d11f65c44c50437154b3450ec with original ELF/IFS/disk and collector bindings in incident.json/receipt.json; no SSH continuity, adversarial isolation or continuous CAN guarantee.'),
- 'new-desk': ('host-only', ['docs/incident-pack-receipts/*', 'docs/incident-pack.md', 'tools/incident_pack/*.js', 'web/incident-pack/*', 'tests/incident_pack/*'], 'Reusable import/query/export host and browser behavior only; HOST fixtures synthetic. Origin declarations and cooperative binding are not attestation.'),
+ 'new-native-recorder': ('observed in this QEMU run', ['docs/acceptance/native-recorder-20261108/*', 'docs/acceptance/control-fix-20261108/*', 'native/incident_recorder.c', 'tools/collect_native_incident.py'], 'Fresh capture source d913faffb3ebd83d11f65c44c50437154b3450ec with original ELF/IFS/disk and collector bindings in incident.json/receipt.json; no SSH continuity, adversarial isolation or continuous CAN guarantee.'),
+ 'new-desk': ('host-only', ['docs/incident-pack-receipts/*', 'docs/acceptance/control-fix-20261108/*', 'docs/incident-pack.md', 'tools/incident_pack/*.js', 'web/incident-pack/*', 'tests/incident_pack/*'], 'Schema v2 control binding and new derived native pack: control-fix-20261108; historical v1 remains unchanged and now UNKNOWN. Reusable import/query/export host and browser behavior only; HOST fixtures synthetic. Origin declarations and cooperative binding are not attestation.'),
  'prereq': ('observed in this QEMU run', ['docs/acceptance/prereq-20261108/*'], 'Exact source/ELF/IFS/disk in receipt.json. Slog2 and control probes only, not managed libcan acceptance. Path enforcement BLOCKED; redacted logs preserve original hashes separately.'),
  'libcan': ('observed in this QEMU run', ['docs/acceptance/native-can-20261106/*'], 'Historical source commit and driver binary hash absent; recorded image assertion only.'),
  'slm': ('observed in this QEMU run', ['docs/acceptance/slm-20261107/*'], 'PID snapshots only; SSH UNVERIFIED; historical source/driver binary binding absent.'),
