@@ -43,7 +43,7 @@
     },
     {
       "path": "web/incident-pack/index.html",
-      "sha256": "06dfb716bc3acce6a2743795bb77ce5ad33bac3adeacfd7a4d70529246a0ddcc",
+      "sha256": "8cbb63fad54c41b0be5e3d08afafcc1843b91609bfb3b12cb4083683a14384bf",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -771,7 +771,7 @@
     },
     {
       "receipt": "docs/acceptance/native-first-20261108/receipt.json",
-      "sha256": "501cfba6e0e77b00c96b436c49336b4f883a8c556d0f6bd8798460049f394b89",
+      "sha256": "0a2b0b84c04698a21de66df37f7c4050ca79d44e1d50efde6012e596af1047ed",
       "tested_commit": "0db776d22c57afe4e82aaa24becc6026dc105b0d",
       "counts": {
         "total": 138,

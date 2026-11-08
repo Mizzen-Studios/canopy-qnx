@@ -7,3 +7,5 @@ Actual local Chromium: native-first browser at1280/360; secondary original HOST 
 HOST suite138total/130pass/8skip and Node63/63PASS. Expected import origin is explicit. Known HOST/native collector contradictions or HOST descriptor relabels reject UNKNOWN; an entirely forged producer can still forge cooperative declarations. Missing/corrupt/mixed/stale/v1 inputs fail closed. Original raw pins/failures and historical SSH evidence unchanged.
 
 £0, private, recorded:false, C6STOPPED, SocketCANUNVERIFIED. No native QEMU/SDK, recording, deployment, upload or contact for this host-only milestone.
+
+Independent read-only recheck at0db776d: Node63/63, bound original asset and actual Chromium1280/360 PASS, no blocking finding. focused.log preserves runner permission failure; invoking through bash succeeded. Minor footer/reload copy inconsistency corrected in following host-only commit; no native executable change or rerun.

@@ -76,7 +76,11 @@
   "evidence": {
     "docs/acceptance/native-first-20261108/browser-runner.sh": "8c6c1cb8f91051a50e6624b5d5e5bdc4d50a1f0909597b4270b658941776e1d8",
     "docs/acceptance/native-first-20261108/browser.log": "c6db2a61ee566e9a1d4bcedb1b59ea2724db31cd31d5a8fad3e64a96993ed354",
+    "docs/acceptance/native-first-20261108/footer-browser.log": "bc3fd63f7d03957396fbd3cd22de8eccd8c4dc5bf66c6c18e5ade21141f14842",
     "docs/acceptance/native-first-20261108/host.log": "51cd5ed4ec2f3954d0ed90d395b240fe36d4a73bec2093d27cdb2bde35832ac0",
+    "docs/acceptance/native-first-20261108/independent-initial-runner.log": "c54fcb93465e68a4b96277c1134de36089cb688d5fb4a9f2a023d8d671c7e491",
+    "docs/acceptance/native-first-20261108/independent-review.txt": "9b4b1e11954890c15ce48da8d9f125f0d7e172d4e5f03afcea2136be574225a3",
+    "docs/acceptance/native-first-20261108/independent.log": "d0be6f6c253fbddd0c13947e639967a588f16d2d5ea06a22c902a017f791c93b",
     "docs/acceptance/native-first-20261108/initial-contract.log": "ee94a5ec43d933e763133b386542be10fee6eadd5d0c19b44d3a34f549b2465a",
     "docs/acceptance/native-first-20261108/node.log": "7eef3383e908b6909add73399838e5c1f63965ea5948d11779d3be69c06a8c65"
   },
@@ -93,5 +97,19 @@
     "C6 STOPPED",
     "SocketCAN UNVERIFIED",
     "no current-tip native acceptance inferred from host CI"
-  ]
+  ],
+  "independent_review": {
+    "tested_implementation": "0db776d22c57afe4e82aaa24becc6026dc105b0d",
+    "result": "PASS; one minor reload-footer copy issue corrected subsequently",
+    "report": "docs/acceptance/native-first-20261108/independent-review.txt",
+    "native_rerun": false
+  },
+  "host_followup": {
+    "scope": "Minor reload-footer wording corrected after independent review; actual1280/360 browser PASS with wording assertion; no native rerun",
+    "source_hashes": {
+      "web/incident-pack/index.html": "8cbb63fad54c41b0be5e3d08afafcc1843b91609bfb3b12cb4083683a14384bf",
+      "tests/incident_pack/native-first-browser.cjs": "123879c447666d804f421ac2059be197b6f90ed8323f8d11554bd3f5c7b0c1a1"
+    },
+    "browser_log": "docs/acceptance/native-first-20261108/footer-browser.log"
+  }
 }

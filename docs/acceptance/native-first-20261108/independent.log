@@ -1,0 +1,135 @@
+✔ HOST functional end to end (19.78097ms)
+✔ reject schema (4.554039ms)
+✔ reject stale (55.802801ms)
+✔ reject future (5.074724ms)
+✔ reject missing (2.906785ms)
+✔ reject traversal (1.953296ms)
+✔ reject absolute (2.32786ms)
+✔ reject backslash (2.850704ms)
+✔ reject duplicateArtifact (5.096124ms)
+✔ reject mixed (8.09571ms)
+✔ reject sequence (3.842353ms)
+✔ reject time (2.075657ms)
+✔ reject duplicateId (63.761429ms)
+✔ reject pid (2.078418ms)
+✔ reject binding (2.609703ms)
+✔ reject corruptArtifact (1.649414ms)
+✔ reject subjectDigest (1.733575ms)
+✔ reject evidence (2.658702ms)
+✔ reject selfObserver (1.832136ms)
+✔ reject trafficCount (3.070466ms)
+✔ reject generation (1.795255ms)
+✔ reject extraField (1.794015ms)
+✔ reject eventLimit (209.438245ms)
+✔ reject ssh (2.548902ms)
+✔ missing control remains UNKNOWN (2.577622ms)
+✔ digest mismatch remains UNKNOWN (3.186068ms)
+✔ unordered traffic remains UNKNOWN (2.059978ms)
+✔ not independent remains UNKNOWN (2.219579ms)
+✔ no interruption remains UNKNOWN (1.962817ms)
+✔ same domain remains UNKNOWN (1.937577ms)
+✔ raw corrupt, duplicate keys, oversized, deep nesting (3.765433ms)
+✔ local CLI refuses symlink, nonregular, absent and URL paths (255.2588ms)
+✔ limits and provenance edge cases (20.057613ms)
+✔ multiple kills produce UNKNOWN query scope (1.861256ms)
+✔ structured cofailure rejects legacy (1.941937ms)
+✔ structured cofailure rejects unrelatedSurvivor (1.823376ms)
+✔ structured cofailure rejects missingMembers (1.896977ms)
+✔ structured cofailure rejects ambiguousMembers (1.806495ms)
+✔ structured cofailure rejects wrongPid (1.792215ms)
+✔ structured cofailure rejects wrongGeneration (1.799175ms)
+✔ structured cofailure rejects wrongTrigger (1.797495ms)
+✔ structured cofailure rejects wrongTermination (2.4199ms)
+✔ structured cofailure rejects unrelatedMemberBefore (1.918376ms)
+✔ structured cofailure rejects survivingMember (1.926296ms)
+✔ structured cofailure rejects noSeparateSurvivor (1.860856ms)
+✔ structured cofailure rejects missingTermination (1.932017ms)
+✔ CLI unrelated surviving control never yields isolation (76.896103ms)
+✔ ambiguous shared member observation bindings rejected (2.198339ms)
+✔ complete unrelated surviving control identity cannot become cofailure (2.126418ms)
+✔ known synthetic collector relabelled native fails UNKNOWN (3.967034ms)
+✔ native collector cannot masquerade as HOST fixture (1.644094ms)
+✔ HOST descriptors cannot become native by changing collector labels (1.597534ms)
+✔ recorded UI asset exactly preserves accepted native pack (42.808809ms)
+✔ artificial missing traffic/control remains UNKNOWN (76.55378ms)
+✔ artificial missing sequence rejected (2.35106ms)
+✔ artificial slog2 missing snapshot rejected (1.830255ms)
+✔ actual preserved native capture re-adapts exactly to v2 with bound cofailure (25.239817ms)
+✔ modified-copy actual capture missingMember cannot infer isolation (73.712836ms)
+✔ modified-copy actual capture wrongPid cannot infer isolation (15.837737ms)
+✔ modified-copy actual capture noCofailure cannot infer isolation (11.771461ms)
+✔ modified-copy actual capture noSurvivor cannot infer isolation (76.362938ms)
+✔ modified-copy actual capture ambiguous cannot infer isolation (13.125153ms)
+✔ unknown native source topology cannot manufacture co-located identities (9.077278ms)
+ℹ tests 63
+ℹ suites 0
+ℹ pass 63
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1059.511731
+PASS: recorded example exactly bound to original v2 pack
+{
+  "scope": "HOST_BROWSER_ONLY against original recorded QNX pack; native_rerun:false; council browser journeys were unrun, not these tests",
+  "rows": [
+    {
+      "width": 1280,
+      "height": 900,
+      "result": "PASS",
+      "positive": [
+        "cold recorded native",
+        "four bounded queries",
+        "control and full raw evidence",
+        "source binding separate from current tip",
+        "exact export and native reimport",
+        "reset",
+        "keyboard reload"
+      ],
+      "negative": [
+        "missing",
+        "corrupt",
+        "mixed",
+        "stale",
+        "v1",
+        "wrong-origin",
+        "unrelated-control",
+        "malformed",
+        "HOST in native import",
+        "synthetic relabel"
+      ],
+      "externalRequests": [],
+      "errors": [],
+      "media": "none"
+    },
+    {
+      "width": 360,
+      "height": 900,
+      "result": "PASS",
+      "positive": [
+        "cold recorded native",
+        "four bounded queries",
+        "control and full raw evidence",
+        "source binding separate from current tip",
+        "exact export and native reimport",
+        "reset",
+        "keyboard reload"
+      ],
+      "negative": [
+        "missing",
+        "corrupt",
+        "mixed",
+        "stale",
+        "v1",
+        "wrong-origin",
+        "unrelated-control",
+        "malformed",
+        "HOST in native import",
+        "synthetic relabel"
+      ],
+      "externalRequests": [],
+      "errors": [],
+      "media": "none"
+    }
+  ]
+}

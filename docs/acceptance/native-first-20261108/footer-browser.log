@@ -1,0 +1,63 @@
+{
+  "scope": "HOST_BROWSER_ONLY against original recorded QNX pack; native_rerun:false; council browser journeys were unrun, not these tests",
+  "rows": [
+    {
+      "width": 1280,
+      "height": 900,
+      "result": "PASS",
+      "positive": [
+        "cold recorded native",
+        "four bounded queries",
+        "control and full raw evidence",
+        "source binding separate from current tip",
+        "exact export and native reimport",
+        "reset",
+        "keyboard reload"
+      ],
+      "negative": [
+        "missing",
+        "corrupt",
+        "mixed",
+        "stale",
+        "v1",
+        "wrong-origin",
+        "unrelated-control",
+        "malformed",
+        "HOST in native import",
+        "synthetic relabel"
+      ],
+      "externalRequests": [],
+      "errors": [],
+      "media": "none"
+    },
+    {
+      "width": 360,
+      "height": 900,
+      "result": "PASS",
+      "positive": [
+        "cold recorded native",
+        "four bounded queries",
+        "control and full raw evidence",
+        "source binding separate from current tip",
+        "exact export and native reimport",
+        "reset",
+        "keyboard reload"
+      ],
+      "negative": [
+        "missing",
+        "corrupt",
+        "mixed",
+        "stale",
+        "v1",
+        "wrong-origin",
+        "unrelated-control",
+        "malformed",
+        "HOST in native import",
+        "synthetic relabel"
+      ],
+      "externalRequests": [],
+      "errors": [],
+      "media": "none"
+    }
+  ]
+}
