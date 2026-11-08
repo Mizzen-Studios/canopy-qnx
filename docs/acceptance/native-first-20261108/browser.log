@@ -1,0 +1,172 @@
+{
+  "scope": "HOST_BROWSER_ONLY against original recorded QNX pack; native_rerun:false; council browser journeys were unrun, not these tests",
+  "rows": [
+    {
+      "width": 1280,
+      "height": 900,
+      "result": "PASS",
+      "positive": [
+        "cold recorded native",
+        "four bounded queries",
+        "control and full raw evidence",
+        "source binding separate from current tip",
+        "exact export and native reimport",
+        "reset",
+        "keyboard reload"
+      ],
+      "negative": [
+        "missing",
+        "corrupt",
+        "mixed",
+        "stale",
+        "v1",
+        "wrong-origin",
+        "unrelated-control",
+        "malformed",
+        "HOST in native import",
+        "synthetic relabel"
+      ],
+      "externalRequests": [],
+      "errors": [],
+      "media": "none"
+    },
+    {
+      "width": 360,
+      "height": 900,
+      "result": "PASS",
+      "positive": [
+        "cold recorded native",
+        "four bounded queries",
+        "control and full raw evidence",
+        "source binding separate from current tip",
+        "exact export and native reimport",
+        "reset",
+        "keyboard reload"
+      ],
+      "negative": [
+        "missing",
+        "corrupt",
+        "mixed",
+        "stale",
+        "v1",
+        "wrong-origin",
+        "unrelated-control",
+        "malformed",
+        "HOST in native import",
+        "synthetic relabel"
+      ],
+      "externalRequests": [],
+      "errors": [],
+      "media": "none"
+    }
+  ]
+}
+{
+  "environment": "HOST_BROWSER_ONLY",
+  "capture": "none",
+  "receipts": [
+    {
+      "width": 1280,
+      "height": 900,
+      "status": "PASS",
+      "checks": [
+        "keyboard sample",
+        "four queries",
+        "evidence expansion",
+        "export download",
+        "reset",
+        "BYO file import",
+        "corrupt UNKNOWN",
+        "no overflow",
+        "reload opens explicitly recorded native example",
+        "no JS errors",
+        "no external requests"
+      ]
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "status": "PASS",
+      "checks": [
+        "keyboard sample",
+        "four queries",
+        "evidence expansion",
+        "export download",
+        "reset",
+        "BYO file import",
+        "corrupt UNKNOWN",
+        "no overflow",
+        "reload opens explicitly recorded native example",
+        "no JS errors",
+        "no external requests"
+      ]
+    },
+    {
+      "width": 520,
+      "height": 900,
+      "status": "PASS",
+      "checks": [
+        "keyboard sample",
+        "four queries",
+        "evidence expansion",
+        "export download",
+        "reset",
+        "BYO file import",
+        "corrupt UNKNOWN",
+        "no overflow",
+        "reload opens explicitly recorded native example",
+        "no JS errors",
+        "no external requests"
+      ]
+    },
+    {
+      "width": 360,
+      "height": 900,
+      "status": "PASS",
+      "checks": [
+        "keyboard sample",
+        "four queries",
+        "evidence expansion",
+        "export download",
+        "reset",
+        "BYO file import",
+        "corrupt UNKNOWN",
+        "no overflow",
+        "reload opens explicitly recorded native example",
+        "no JS errors",
+        "no external requests"
+      ]
+    }
+  ]
+}
+{
+  "capture": "none",
+  "rows": [
+    {
+      "width": 1280,
+      "height": 900,
+      "status": "PASS",
+      "checks": [
+        "actual native v2 four queries",
+        "control evidence expansion",
+        "surviving unrelated control UNKNOWN",
+        "missing control isolation UNKNOWN",
+        "v1 rejected UNKNOWN",
+        "no overflow/errors/external requests"
+      ]
+    },
+    {
+      "width": 360,
+      "height": 900,
+      "status": "PASS",
+      "checks": [
+        "actual native v2 four queries",
+        "control evidence expansion",
+        "surviving unrelated control UNKNOWN",
+        "missing control isolation UNKNOWN",
+        "v1 rejected UNKNOWN",
+        "no overflow/errors/external requests"
+      ]
+    }
+  ]
+}

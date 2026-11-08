@@ -9,7 +9,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / 'docs/review-claims.json'
-BASE = '32a4ae17b8401e30590437a68f86f403f802c315'
+BASE = '0db776d'
 
 
 def digest(path):
@@ -20,7 +20,7 @@ def digest(path):
 # Per-occurrence labels below keep absent historical binding UNVERIFIED.
 SPECS = {
  'new-native-recorder': ('observed in this QEMU run', ['docs/acceptance/native-recorder-20261108/*', 'docs/acceptance/control-fix-20261108/*', 'native/incident_recorder.c', 'tools/collect_native_incident.py'], 'Fresh capture source d913faffb3ebd83d11f65c44c50437154b3450ec with original ELF/IFS/disk and collector bindings in incident.json/receipt.json; no SSH continuity, adversarial isolation or continuous CAN guarantee.'),
- 'new-desk': ('host-only', ['docs/incident-pack-receipts/*', 'docs/acceptance/control-fix-20261108/*', 'docs/incident-pack.md', 'tools/incident_pack/*.js', 'web/incident-pack/*', 'tests/incident_pack/*'], 'Schema v2 control binding and new derived native pack: control-fix-20261108; historical v1 remains unchanged and now UNKNOWN. Reusable import/query/export host and browser behavior only; HOST fixtures synthetic. Origin declarations and cooperative binding are not attestation.'),
+ 'new-desk': ('host-only', ['docs/acceptance/native-first-20261108/*', 'docs/incident-pack-receipts/*', 'docs/acceptance/control-fix-20261108/*', 'docs/incident-pack.md', 'tools/incident_pack/*.js', 'web/incident-pack/*', 'tests/incident_pack/*'], 'Schema v2 control binding and new derived native pack: control-fix-20261108; historical v1 remains unchanged and now UNKNOWN. Reusable import/query/export host and browser behavior only; HOST fixtures synthetic. Origin declarations and cooperative binding are not attestation.'),
  'prereq': ('observed in this QEMU run', ['docs/acceptance/prereq-20261108/*'], 'Exact source/ELF/IFS/disk in receipt.json. Slog2 and control probes only, not managed libcan acceptance. Path enforcement BLOCKED; redacted logs preserve original hashes separately.'),
  'libcan': ('observed in this QEMU run', ['docs/acceptance/native-can-20261106/*'], 'Historical source commit and driver binary hash absent; recorded image assertion only.'),
  'slm': ('observed in this QEMU run', ['docs/acceptance/slm-20261107/*'], 'PID snapshots only; SSH UNVERIFIED; historical source/driver binary binding absent.'),
@@ -35,7 +35,7 @@ SPECS = {
  'pilot': ('host-only', ['tests/test_pilot.py', 'ai/pilot_model.json', 'ai/pilot_model.h', 'ai/modelcard.md', 'canopy_host/pilot.py'], 'Synthetic held-out host model and host C parity only; target inference/QPP UNVERIFIED; host binary hash absent.'),
  'doctor': ('host-only', ['tests/test_doctor.py', 'canopy_host/doctor.py', 'tests/test_session.py', 'canopy'], 'Mocked/probe contract tests do not prove current host readiness, SDK validity or target acceptance.'),
  'guard': ('host-only', ['scripts/check-no-sdk.sh', 'scripts/check_no_sdk.py', 'tests/test_no_sdk.py', '.github/workflows/host-tests.yml', 'LICENSE'], 'Heuristic guard, not provenance certification; no runtime binaries/images applicable. Originality/legal provenance not independently attested.'),
- 'host-suite': ('host-only', ['docs/acceptance/final-upgrade-20261108/*', 'docs/acceptance/host-review-20261107/*', 'docs/acceptance/browser-20261107/receipt.json', 'docs/acceptance/browser-20261107/host-tests.log', 'docs/test-results.txt'], 'Exact declared historical commits only; current review execution in docs/acceptance/private-review-20261107/. No target acceptance.'),
+ 'host-suite': ('host-only', ['docs/acceptance/native-first-20261108/*', 'docs/acceptance/final-upgrade-20261108/*', 'docs/acceptance/host-review-20261107/*', 'docs/acceptance/browser-20261107/receipt.json', 'docs/acceptance/browser-20261107/host-tests.log', 'docs/test-results.txt'], 'Exact declared historical commits only; current review execution in docs/acceptance/private-review-20261107/. No target acceptance.'),
  'blocked': ('UNVERIFIED', ['docs/socketcan-demo.md', 'docs/socketcan-x86-gate-20261104.md', 'docs/vss-qpp-integration.md', 'docs/capabilities.json', 'docs/acceptance/safestop-focused-failure-20261107/receipt.json'], 'No matching native SocketCAN ABI/QPP/QSTI/full C3/safety acceptance. Documentation is a boundary, not a receipt.'),
  'scope': ('UNVERIFIED', ['docs/capabilities.json', 'docs/incident-workbench.md', 'REVIEW.md'], 'Context, instructions or negative scope, not affirmative tested capability. No receipt establishes broader availability/safety/timing or historical source identity.')
 }

@@ -770,6 +770,17 @@
       "scope": "historical host suite at its own revision; never native proof or automatically current count"
     },
     {
+      "receipt": "docs/acceptance/native-first-20261108/receipt.json",
+      "sha256": "501cfba6e0e77b00c96b436c49336b4f883a8c556d0f6bd8798460049f394b89",
+      "tested_commit": "0db776d22c57afe4e82aaa24becc6026dc105b0d",
+      "counts": {
+        "total": 138,
+        "passed": 130,
+        "skipped": 8
+      },
+      "scope": "historical host suite at its own revision; never native proof or automatically current count"
+    },
+    {
       "receipt": "docs/acceptance/onboarding-20261107/receipt.json",
       "sha256": "5e3e264df90ce753c8a4d39c3f4d42738f77b3104bab0fb5476450939dfb7b57",
       "tested_commit": "640f8d3506cd0488d30cb8bf05f9f4c3a53ab208",

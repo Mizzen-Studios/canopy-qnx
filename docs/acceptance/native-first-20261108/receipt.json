@@ -1,0 +1,97 @@
+{
+  "schema": "canopy.native-first-host/1",
+  "tested_commit": "0db776d22c57afe4e82aaa24becc6026dc105b0d",
+  "native_rerun": false,
+  "native_rerun_reason": "Only importer/UI/host fixtures/tests/docs changed. Native recorder, collector, builder and original source-bound raw capture unchanged. Reusing recorded native observations, never transferring their native PASS to current source.",
+  "host_tests": {
+    "total": 138,
+    "passed": 130,
+    "skipped": 8
+  },
+  "node_tests": {
+    "total": 63,
+    "passed": 63
+  },
+  "browser": {
+    "scope": "actual HOST Chromium on preserved recorded QNX v2 pack",
+    "viewports": [
+      1280,
+      360
+    ],
+    "secondary_widths": [
+      1280,
+      768,
+      520,
+      360
+    ],
+    "positive": [
+      "cold recorded native pack",
+      "four bounded queries",
+      "raw/control/source bindings",
+      "exact export/native reimport",
+      "reset",
+      "keyboard/reload"
+    ],
+    "negative": [
+      "missing",
+      "corrupt",
+      "mixed",
+      "stale",
+      "v1",
+      "wrong origin",
+      "unrelated control",
+      "malformed",
+      "HOST import in native mode",
+      "known synthetic relabel"
+    ],
+    "media": "none",
+    "outbound_requests": 0
+  },
+  "council_browser": {
+    "result": "BLOCKED BEFORE EXECUTION, as reported by council",
+    "not_parent_findings": true,
+    "machine_diagnosis_attempted": false
+  },
+  "recorded": false,
+  "original_pack": {
+    "path": "docs/acceptance/control-fix-20261108/incident.json",
+    "sha256": "ced63c778d105bfa7a4a736e5d195fd6dcb65740201a7599d95edb8e9a47da93",
+    "native_source_commit": "d913faffb3ebd83d11f65c44c50437154b3450ec",
+    "capture_environment_label": "FRESH_QNX at original capture, presented as RECORDED example, raw bytes unchanged"
+  },
+  "sources": {
+    "web/incident-pack/index.html": "06dfb716bc3acce6a2743795bb77ce5ad33bac3adeacfd7a4d70529246a0ddcc",
+    "web/incident-pack/app.js": "30c0294b7778a412b2fc5623e5a71fe32a60b93cfdbcd61e57889f203588a4a8",
+    "web/incident-pack/recorded-example.js": "ce0e27a36a1b42d54672556133a242384ec87ed3cbde2ac3bba8c7164fa71b8e",
+    "tools/incident_pack/core.js": "cc5103770158943d4d0a0d9c2b95ce47545b076d03523e568d58a172abacb531",
+    "tools/incident_pack/recorded_example.js": "116676c0b653a2e2a4fd0c935b9b679b15d098e411c2bced0be84aa107a067c6",
+    "tests/incident_pack/native-first-browser.cjs": "ab14dbe1af83cce127feb0f42eb0ce6364a66107360eef482fbb938afadbc061",
+    "tests/incident_pack/browser.cjs": "9134c24d6d84c7caf266044b18b13529921aceb33f4720eebce2477a0a4ce33b",
+    "tests/incident_pack/core.test.js": "8d17d715cb7f1a8f41371c6dd43f4eb667194f4eef95da7788755b14fc37984a",
+    "docs/acceptance/control-fix-20261108/incident.json": "ced63c778d105bfa7a4a736e5d195fd6dcb65740201a7599d95edb8e9a47da93",
+    "native/incident_recorder.c": "e02a767b082d75501480591e50e89aa78ae64d0e2c81719aec16b4b9b4d4be71",
+    "tools/collect_native_incident.py": "99e8b785fa85e20cfd7650e2e869c401bf14bca3997a1bf470c4fa7a3ad1ccaf",
+    "tools/build_native_recorder.sh": "32b1c1964e12f9e358c9c9611c8c1c1dd728a1a55907c7c7a6570f2f8457ea36"
+  },
+  "evidence": {
+    "docs/acceptance/native-first-20261108/browser-runner.sh": "8c6c1cb8f91051a50e6624b5d5e5bdc4d50a1f0909597b4270b658941776e1d8",
+    "docs/acceptance/native-first-20261108/browser.log": "c6db2a61ee566e9a1d4bcedb1b59ea2724db31cd31d5a8fad3e64a96993ed354",
+    "docs/acceptance/native-first-20261108/host.log": "51cd5ed4ec2f3954d0ed90d395b240fe36d4a73bec2093d27cdb2bde35832ac0",
+    "docs/acceptance/native-first-20261108/initial-contract.log": "ee94a5ec43d933e763133b386542be10fee6eadd5d0c19b44d3a34f549b2465a",
+    "docs/acceptance/native-first-20261108/node.log": "7eef3383e908b6909add73399838e5c1f63965ea5948d11779d3be69c06a8c65"
+  },
+  "commands": [
+    "node --test tests/incident_pack/*.test.js",
+    "python3 -m unittest discover -s tests -v",
+    "bounded browser-runner.sh: cd /target/apps/canopy-qnx && node tests/incident_pack/native-first-browser.cjs && node tests/incident_pack/browser.cjs && node tests/incident_pack/control-browser.cjs"
+  ],
+  "boundaries": [
+    "cooperative integrity NOT attestation",
+    "survivor before/after not continuity",
+    "process-wide cofailure only, no per-thread timing",
+    "no SSH continuity on new recorder packs",
+    "C6 STOPPED",
+    "SocketCAN UNVERIFIED",
+    "no current-tip native acceptance inferred from host CI"
+  ]
+}
