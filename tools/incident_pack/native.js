@@ -48,13 +48,32 @@ async function adapt(dir,receiptFile){
    }
   }
   if(snapshots.length>1)add('process',survivor,{state:'observed'},snapshots.at(-1).i);
-  const ctl=lines.findIndex(l=>/^NEGATIVE_CONTROL signal=9 eof=[1-9][0-9]* colocated_post_kill=0$/.test(l));
-  const before=lines.map((l,i)=>({i,m:/^SEPARATE_RECORDER before_kill pid=(\d+) target=(\d+)$/.exec(l)})).find(x=>x.m);
-  if(ctl>=0&&before&&lines.some(l=>/^RECORDER captured=COLOCATED_READY$/.test(l))&&lines.some(l=>l==='SEPARATE_RECORDER after_kill=2 pid='+before.m[1]))add('control',proc('combined',Number(before.m[2]),runId+'-combined','combined'),{mode:'in_process',outcome:'cofailure_observed'},ctl);
+  // Known collector topology: worker main joins its observer thread; no TID invented.
+  const before=lines.map((l,i)=>({i,m:/^SEPARATE_RECORDER before_kill pid=(\d+) target=(\d+)$/.exec(l)})).filter(x=>x.m);
+  if(before.length===1){
+   const b=before[0],target=Number(b.m[2]),parent=Number(b.m[1]);
+   const samples=[0,1,2].map(n=>lines.findIndex(l=>l==='RECORDER captured=COLOCATED sample='+n+' pid='+target));
+   const ready=lines.indexOf('RECORDER captured=COLOCATED_READY');
+   const ctl=lines.findIndex((l,i)=>i>b.i&&/^NEGATIVE_CONTROL signal=9 eof=[1-9][0-9]* colocated_post_kill=0$/.test(l));
+   const after=[0,1,2].map(n=>lines.findIndex((l,i)=>i>ctl&&l==='SEPARATE_RECORDER after_kill='+n+' pid='+parent));
+   if(target!==parent&&samples.every((v,i)=>v>=0&&(i===0||v>samples[i-1]))&&ready>samples[2]&&b.i>ready&&ctl>b.i&&after.every((v,i)=>v>ctl&&(i===0||v>after[i-1]))){
+    const combined=proc('prereq-worker',target,runId+'-control-child','control-child'),separate=proc('prereq-recorder',parent,runId+'-control-parent','control-parent');
+    const emit=(kind,p,data,line)=>{add(kind,p,data,line);return events.at(-1).id;};
+    const mainBefore=emit('process',combined,{state:'observed'},ready);
+    const memberBefore=emit('process',combined,{state:'observed'},samples[2]);
+    const survivorBefore=emit('process',separate,{state:'observed'},b.i);
+    const trigger=emit('kill',combined,{signal:'SIGKILL'},ctl);
+    const termination=emit('interruption',combined,{state:'observed'},ctl);
+    const mainAfter=emit('process',combined,{state:'absent'},ctl);
+    const memberAfter=emit('process',combined,{state:'absent'},ctl);
+    const survivorAfter=emit('process',separate,{state:'observed'},after[2]);
+    add('control',combined,{mode:'in_process',outcome:'cofailure_observed',members:[{name:'worker-main',process:combined,before:mainBefore,after:mainAfter},{name:'observer-thread',process:combined,before:memberBefore,after:memberAfter}],trigger,termination,survivor:{before:survivorBefore,after:survivorAfter}},ctl);
+   }
+  }
  }
  if(!events.length)throw Error('no actual incident events');
  const capturedAt=new Date(r.captured_at*1000).toISOString(),expiresAt=new Date(r.captured_at*1000+30*86400000).toISOString();
- const p=await c.seal({schema:'canopy.incident/1',collector:{id:'canopy-native',version:'1',mechanism:'slog2-serial-libcan'},run:{id:runId,environment:'FRESH_QNX',capturedAt,expiresAt},bindings,artifacts,events});
+ const p=await c.seal({schema:'canopy.incident/2',collector:{id:'canopy-native',version:'2',mechanism:'slog2-serial-libcan'},run:{id:runId,environment:'FRESH_QNX',capturedAt,expiresAt},bindings,artifacts,events});
  const check=await c.validate(JSON.stringify(p));if(check.status!=='VALID')throw Error(check.issues.join(';'));return p;
 }
 module.exports=adapt;
