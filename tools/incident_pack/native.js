@@ -12,7 +12,7 @@ async function adapt(dir,receiptFile){
   if(role==='image'&&b.sha256!==r.image_sha256||role==='disk'&&b.sha256!==r.disk_sha256)throw Error('mixed build/run');
   bindings[role]=role+'.txt';await artifact(bindings[role],role,b.text,b.sha256);
  }
- const raw=read('serial.txt');if(build.captureSha256&&build.captureSha256!==await c.sha(raw))throw Error('mixed raw capture');await artifact('serial.txt','observation',raw,await c.sha(raw));
+ const raw=read('serial.txt');if(r.raw_sha256&&r.raw_sha256!==await c.sha(raw)||build.captureSha256&&build.captureSha256!==await c.sha(raw))throw Error('mixed raw capture');await artifact('serial.txt','observation',raw,await c.sha(raw));
  const lines=raw.replace(/\r/g,'').split('\n'),events=[];
  const add=(kind,process,data,line,observer={name:'host-controller',generation:runId+'-host',independent:true})=>events.push({id:'e'+events.length,seq:events.length,at:events.length,runId,kind,process,observer,evidence:[{path:'serial.txt',line:line+1}],data});
  const proc=(name,pid,generation,domain)=>({name,pid,generation,domain});
