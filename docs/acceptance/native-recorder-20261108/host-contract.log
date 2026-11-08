@@ -1,0 +1,45 @@
+✔ HOST functional end to end (15.933658ms)
+✔ reject schema (2.143259ms)
+✔ reject stale (2.264939ms)
+✔ reject future (2.3101ms)
+✔ reject missing (1.721375ms)
+✔ reject traversal (1.552653ms)
+✔ reject absolute (2.222459ms)
+✔ reject backslash (1.719335ms)
+✔ reject duplicateArtifact (2.553822ms)
+✔ reject mixed (1.527174ms)
+✔ reject sequence (4.110755ms)
+✔ reject time (1.562573ms)
+✔ reject duplicateId (2.856065ms)
+✔ reject pid (1.641054ms)
+✔ reject binding (1.959457ms)
+✔ reject corruptArtifact (1.437092ms)
+✔ reject subjectDigest (1.695255ms)
+✔ reject evidence (2.404821ms)
+✔ reject selfObserver (1.565974ms)
+✔ reject trafficCount (1.367692ms)
+✔ reject generation (1.583974ms)
+✔ reject extraField (1.761255ms)
+✔ reject eventLimit (85.924025ms)
+✔ reject ssh (1.934337ms)
+✔ missing control remains UNKNOWN (1.919057ms)
+✔ digest mismatch remains UNKNOWN (1.674694ms)
+✔ unordered traffic remains UNKNOWN (2.825425ms)
+✔ not independent remains UNKNOWN (1.536734ms)
+✔ no interruption remains UNKNOWN (1.512093ms)
+✔ same domain remains UNKNOWN (1.201451ms)
+✔ raw corrupt, duplicate keys, oversized, deep nesting (3.101147ms)
+✔ local CLI refuses symlink, nonregular, absent and URL paths (191.256699ms)
+✔ limits and provenance edge cases (15.944658ms)
+✔ multiple kills produce UNKNOWN query scope (3.768872ms)
+✔ artificial missing traffic/control remains UNKNOWN (22.107391ms)
+✔ artificial missing sequence rejected (2.183219ms)
+✔ artificial slog2 missing snapshot rejected (1.716655ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 477.303379
