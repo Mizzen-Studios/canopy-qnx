@@ -13,7 +13,8 @@ static slog2_buffer_t h; static unsigned seq; static struct timespec start;
 static unsigned long ms(void){struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);return (t.tv_sec-start.tv_sec)*1000+(t.tv_nsec-start.tv_nsec)/1000000;}
 static int event(const char *phase,long pid,int result){char b[512];snprintf(b,sizeof b,"{\"schema\":\"canopy-native-1\",\"seq\":%u,\"ms\":%lu,\"recorder\":%ld,\"phase\":\"%s\",\"pid\":%ld,\"result\":%d}",seq++,ms(),(long)getpid(),phase,pid,result);puts(b);return slog2c(h,500+seq,SLOG2_INFO,b);}
 int main(int argc,char **argv){
- if(argc!=2)return 2;char *end;long target=strtol(argv[1],&end,10);if(*end||target<2)return 2;
+ if(argc!=2)return 2;
+ char *end;long target=strtol(argv[1],&end,10);if(*end||target<2)return 2;
  setvbuf(stdout,NULL,_IONBF,0);clock_gettime(CLOCK_MONOTONIC,&start);
  slog2_buffer_set_config_t c={0};c.num_buffers=1;c.buffer_set_name="canopy_incident";c.verbosity_level=SLOG2_INFO;c.buffer_config[0].buffer_name="incident";c.buffer_config[0].num_pages=1;c.max_retries=3;
  if(slog2_register(&c,&h,SLOG2_LIMIT_RETRIES))return 3;
