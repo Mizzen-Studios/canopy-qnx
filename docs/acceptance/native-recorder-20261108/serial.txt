@@ -1,0 +1,516 @@
+
+non UEFI or UEFI+CSM boot
+ACPI table not found (0x4746434d)
+System behaves poorly without PCID support.
+overriding mask for controller 2, vector_base 0
+---> Starting slogger2
+---> Starting PCI Services
+---> Starting fsevmgr
+# ---> Starting devb
+---> Mounting file systems
+Path=0 - Intel 82371SB
+ target=0 lun=0     Direct-Access(0) -          QEMU HARDDISK    Rev: 2.5+
+Path=1 - Intel 82371SB
+ target=0 lun=0            CD-ROM(5) - QEMU     QEMU DVD-ROM     Rev: 2.5+
+---> Mounting file systems
+---> Starting Networking
+---> Starting sshd
+Memory fault (core dumped) 
+---> Starting misc
+CANOPY_SLM_IMAGE_READY
+[I 0.000001] OPENED
+[R +0.000033] outl 0xcf8 0x80000800
+[S +0.000042] OK
+[R +0.000130] inl 0xcfc
+[S +0.000138] OK 0x70008086
+[R +0.000202] outl 0xcf8 0x8000083c
+[S +0.000206] OK
+[R +0.000235] inl 0xcfc
+[S +0.000239] OK 0x0000
+[R +0.000287] outl 0xcf8 0x80001000
+[S +0.000291] OK
+[R +0.000322] inl 0xcfc
+[S +0.000326] OK 0x11111234
+[R +0.000378] outl 0xcf8 0x8000103c
+[S +0.000382] OK
+[R +0.000412] inl 0xcfc
+[S +0.000416] OK 0x0000
+[R +0.000505] outl 0xcf8 0x80001800
+[S +0.000509] OK
+[R +0.000542] inl 0xcfc
+[S +0.000546] OK 0x10001af4
+[R +0.000600] outl 0xcf8 0x8000183c
+[S +0.000604] OK
+[R +0.000634] inl 0xcfc
+[S +0.000638] OK 0x010b
+[R +0.000732] outl 0xcf8 0x80002000
+[S +0.000737] OK
+[R +0.000768] inl 0xcfc
+[S +0.000774] OK 0x840610e8
+[R +0.000826] outl 0xcf8 0x8000203c
+[S +0.000831] OK
+[R +0.000862] inl 0xcfc
+[S +0.000866] OK 0x010b
+[R +0.000910] outl 0xcf8 0x80002800
+[S +0.000914] OK
+[R +0.000944] inl 0xcfc
+[S +0.000948] OK 0x11e81234
+[R +0.001000] outl 0xcf8 0x8000283c
+[S +0.001004] OK
+[R +0.001032] inl 0xcfc
+[S +0.001036] OK 0x010a
+[R +0.001080] outl 0xcf8 0x80003000
+[S +0.001083] OK
+[R +0.001112] inl 0xcfc
+[S +0.001115] OK 0xffffffff
+[R +0.001167] outl 0xcf8 0x8000303c
+[S +0.001170] OK
+[R +0.001200] inl 0xcfc
+[S +0.001203] OK 0xffffffff
+[R +0.001256] outl 0xcf8 0x80003800
+[S +0.001259] OK
+[R +0.001288] inl 0xcfc
+[S +0.001291] OK 0xffffffff
+[R +0.001343] outl 0xcf8 0x8000383c
+[S +0.001346] OK
+[R +0.001375] inl 0xcfc
+[S +0.001378] OK 0xffffffff
+[R +0.001439] outl 0xcf8 0x80000860
+[S +0.001442] OK
+[R +0.001485] inl 0xcfc
+[S +0.001489] OK 0xb0b0a0a
+[R +0.001546] outl 0xcf8 0x80000860
+[S +0.001549] OK
+[R +0.001580] outl 0xcfc 0xa0b0a0a
+[S +0.001595] OK
+[R +0.001628] outl 0xcf8 0x80000860
+[S +0.001632] OK
+[R +0.001661] inl 0xcfc
+[S +0.001665] OK 0xa0b0a0a
+[I +0.001731] CLOSED
+pidStartup complete
+in ar; echo BASE_DONE
+     pid Arguments
+QNX noname 8.0.0 2026/06/05-16:26:03EDT x86pc x86_64
+       1 procnto-smp-instr -mr -d 0777 -u 0777 
+   16387 slogger2 
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg 
+   49157 devc-ser8250 -e 
+   57351 ksh ksh 
+   61446 fsevmgr 
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low 
+  131081 random -s /data/var/random/rnd-seed 
+  143370 pipe 
+  155659 devc-pty 
+  159756 dumper -d /data/var/dumper -M 1000 -D cores 
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci 
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks 
+  245774 qconn 
+  249871 mqueue 
+  258064 pidin ar 
+BASE_DONE
+# /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml > /tmp/slm.log 2>&1 & sleep 3; cat /tmp/slm.log; /proc/boot/slmctl -n /dev/slm-canopy 'listall -v'; pidin ar; echo SLM_START_DONE
+[1] 270338
+canopy-can  /proc/boot/dev-can-linux  ACTIVE    INITIALIZED  278546
+     pid Arguments
+       1 procnto-smp-instr -mr -d 0777 -u 0777 
+   16387 slogger2 
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg 
+   49157 devc-ser8250 -e 
+   57351 ksh ksh 
+   61446 fsevmgr 
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low 
+  131081 random -s /data/var/random/rnd-seed 
+  143370 pipe 
+  155659 devc-pty 
+  159756 dumper -d /data/var/dumper -M 1000 -D cores 
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci 
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks 
+  245774 qconn 
+  249871 mqueue 
+  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml 
+  278546 dev-can-linux -b id=0,freq=500k 
+  299024 pidin ar 
+SLM_START_DONE
+[1] + Done                 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -
+# pidin ar; echo ID_CHECK
+     pid Arguments
+       1 procnto-smp-instr -mr -d 0777 -u 0777 
+   16387 slogger2 
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg 
+   49157 devc-ser8250 -e 
+   57351 ksh ksh 
+   61446 fsevmgr 
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low 
+  131081 random -s /data/var/random/rnd-seed 
+  143370 pipe 
+  155659 devc-pty 
+  159756 dumper -d /data/var/dumper -M 1000 -D cores 
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci 
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks 
+  245774 qconn 
+  249871 mqueue 
+  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml 
+  278546 dev-can-linux -b id=0,freq=500k 
+  307216 pidin ar 
+ID_CHECK
+# /proc/boot/incident_recorder 278546; echo RECORDER_RC=$?; sleep 3; /proc/boot/slmctl -n /dev/slm-canopy 'active -v'; pidin ar; ls /dev/can0/rx0; echo RESTART_DONE
+{"schema":"canopy-native-1","seq":0,"ms":6,"recorder":315408,"phase":"before","pid":278546,"result":0}
+{"schema":"canopy-native-1","seq":1,"ms":35,"recorder":315408,"phase":"kill","pid":278546,"result":0}
+{"schema":"canopy-native-1","seq":2,"ms":81,"recorder":315408,"phase":"waitpid","pid":278546,"result":10}
+{"schema":"canopy-native-1","seq":3,"ms":95,"recorder":315408,"phase":"interruption","pid":278546,"result":1}
+{"schema":"canopy-native-1","seq":4,"ms":124,"recorder":315408,"phase":"after","pid":278546,"result":0}
+RECORDER_RC=0
+canopy-can  /proc/boot/dev-can-linux  ACTIVE    INITIALIZED  331794
+     pid Arguments
+       1 procnto-smp-instr -mr -d 0777 -u 0777 
+   16387 slogger2 
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg 
+   49157 devc-ser8250 -e 
+   57351 ksh ksh 
+   61446 fsevmgr 
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low 
+  131081 random -s /data/var/random/rnd-seed 
+  143370 pipe 
+  155659 devc-pty 
+  159756 dumper -d /data/var/dumper -M 1000 -D cores 
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci 
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks 
+  245774 qconn 
+  249871 mqueue 
+  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml 
+  331794 dev-can-linux -b id=0,freq=500k 
+  344080 pidin ar 
+/dev/can0/rx0
+RESTART_DONE
+# /proc/boot/candump -u0,rx0 > /tmp/c3rx 2>&1 & RX=$!; sleep 1; echo RX_READY
+[1] 360464
+RX_READY
+# kill -INT $RX; wait $RX; cat /tmp/c3rx; echo RX_DONE
+  /dev/can0/rx0 TS: 15157ms [SFF] 0 [8] 00 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15186ms [SFF] 1 [8] 01 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15216ms [SFF] 2 [8] 02 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15247ms [SFF] 3 [8] 03 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15277ms [SFF] 4 [8] 04 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15307ms [SFF] 5 [8] 05 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15337ms [SFF] 6 [8] 06 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15367ms [SFF] 7 [8] 07 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15398ms [SFF] 8 [8] 08 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15428ms [SFF] 9 [8] 09 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15458ms [SFF] A [8] 0A 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15488ms [SFF] B [8] 0B 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15518ms [SFF] C [8] 0C 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15548ms [SFF] D [8] 0D 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15579ms [SFF] E [8] 0E 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15610ms [SFF] F [8] 0F 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15639ms [SFF] 10 [8] 10 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15669ms [SFF] 11 [8] 11 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15699ms [SFF] 12 [8] 12 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15730ms [SFF] 13 [8] 13 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15764ms [SFF] 14 [8] 14 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15790ms [SFF] 15 [8] 15 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15820ms [SFF] 16 [8] 16 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15850ms [SFF] 17 [8] 17 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15881ms [SFF] 18 [8] 18 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15911ms [SFF] 19 [8] 19 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15941ms [SFF] 1A [8] 1A 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 15971ms [SFF] 1B [8] 1B 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16001ms [SFF] 1C [8] 1C 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16032ms [SFF] 1D [8] 1D 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16062ms [SFF] 1E [8] 1E 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16092ms [SFF] 1F [8] 1F 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16122ms [SFF] 20 [8] 20 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16152ms [SFF] 21 [8] 21 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16182ms [SFF] 22 [8] 22 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16212ms [SFF] 23 [8] 23 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16243ms [SFF] 24 [8] 24 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16273ms [SFF] 25 [8] 25 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16303ms [SFF] 26 [8] 26 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16333ms [SFF] 27 [8] 27 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16363ms [SFF] 28 [8] 28 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16394ms [SFF] 29 [8] 29 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16424ms [SFF] 2A [8] 2A 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16454ms [SFF] 2B [8] 2B 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16484ms [SFF] 2C [8] 2C 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16514ms [SFF] 2D [8] 2D 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16545ms [SFF] 2E [8] 2E 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16575ms [SFF] 2F [8] 2F 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16609ms [SFF] 30 [8] 30 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16635ms [SFF] 31 [8] 31 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16665ms [SFF] 32 [8] 32 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16695ms [SFF] 33 [8] 33 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16726ms [SFF] 34 [8] 34 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16756ms [SFF] 35 [8] 35 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16786ms [SFF] 36 [8] 36 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16820ms [SFF] 37 [8] 37 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16846ms [SFF] 38 [8] 38 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16876ms [SFF] 39 [8] 39 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16907ms [SFF] 3A [8] 3A 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16937ms [SFF] 3B [8] 3B 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16967ms [SFF] 3C [8] 3C 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 16997ms [SFF] 3D [8] 3D 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17030ms [SFF] 3E [8] 3E 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17058ms [SFF] 3F [8] 3F 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17088ms [SFF] 40 [8] 40 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17118ms [SFF] 41 [8] 41 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17148ms [SFF] 42 [8] 42 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17178ms [SFF] 43 [8] 43 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17208ms [SFF] 44 [8] 44 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17239ms [SFF] 45 [8] 45 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17269ms [SFF] 46 [8] 46 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17299ms [SFF] 47 [8] 47 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17329ms [SFF] 48 [8] 48 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17359ms [SFF] 49 [8] 49 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17390ms [SFF] 4A [8] 4A 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17420ms [SFF] 4B [8] 4B 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17450ms [SFF] 4C [8] 4C 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17480ms [SFF] 4D [8] 4D 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17510ms [SFF] 4E [8] 4E 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17540ms [SFF] 4F [8] 4F 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17571ms [SFF] 50 [8] 50 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17601ms [SFF] 51 [8] 51 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17631ms [SFF] 52 [8] 52 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17661ms [SFF] 53 [8] 53 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17691ms [SFF] 54 [8] 54 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17721ms [SFF] 55 [8] 55 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17752ms [SFF] 56 [8] 56 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17782ms [SFF] 57 [8] 57 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17812ms [SFF] 58 [8] 58 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17842ms [SFF] 59 [8] 59 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17872ms [SFF] 5A [8] 5A 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17903ms [SFF] 5B [8] 5B 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17933ms [SFF] 5C [8] 5C 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17963ms [SFF] 5D [8] 5D 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 17993ms [SFF] 5E [8] 5E 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 18023ms [SFF] 5F [8] 5F 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 18053ms [SFF] 60 [8] 60 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 18084ms [SFF] 61 [8] 61 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 18114ms [SFF] 62 [8] 62 00 00 00 00 00 00 00
+  /dev/can0/rx0 TS: 18144ms [SFF] 63 [8] 63 00 00 00 00 00 00 00
+RX_DONE
+# cat > /tmp/c3tx.sh <<'C3_SCRIPT'
+> /proc/boot/cansend -u0,tx0 -m0x400,0,0x011e3b587592afcc || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x401,0,0x122f4c6986a3c0dd || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x402,0,0x23405d7a97b4d1ee || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x403,0,0x34516e8ba8c5e2ff || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x404,0,0x45627f9cb9d6f310 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x405,0,0x567390adcae70421 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x406,0,0x6784a1bedbf81532 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x407,0,0x7895b2cfec092643 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x408,0,0x89a6c3e0fd1a3754 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x409,0,0x9ab7d4f10e2b4865 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x40a,0,0xabc8e5021f3c5976 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x40b,0,0xbcd9f613304d6a87 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x40c,0,0xcdea0724415e7b98 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x40d,0,0xdefb1835526f8ca9 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x40e,0,0xef0c294663809dba || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x40f,0,0x001d3a577491aecb || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x410,0,0x112e4b6885a2bfdc || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x411,0,0x223f5c7996b3d0ed || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x412,0,0x33506d8aa7c4e1fe || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x413,0,0x44617e9bb8d5f20f || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x414,0,0x55728facc9e60320 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x415,0,0x6683a0bddaf71431 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x416,0,0x7794b1ceeb082542 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x417,0,0x88a5c2dffc193653 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x418,0,0x99b6d3f00d2a4764 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x419,0,0xaac7e4011e3b5875 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x41a,0,0xbbd8f5122f4c6986 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x41b,0,0xcce90623405d7a97 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x41c,0,0xddfa1734516e8ba8 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x41d,0,0xee0b2845627f9cb9 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x41e,0,0xff1c39567390adca || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x41f,0,0x102d4a6784a1bedb || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x420,0,0x213e5b7895b2cfec || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x421,0,0x324f6c89a6c3e0fd || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x422,0,0x43607d9ab7d4f10e || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x423,0,0x54718eabc8e5021f || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x424,0,0x65829fbcd9f61330 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x425,0,0x7693b0cdea072441 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x426,0,0x87a4c1defb183552 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x427,0,0x98b5d2ef0c294663 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x428,0,0xa9c6e3001d3a5774 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x429,0,0xbad7f4112e4b6885 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x42a,0,0xcbe805223f5c7996 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x42b,0,0xdcf91633506d8aa7 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x42c,0,0xed0a2744617e9bb8 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x42d,0,0xfe1b3855728facc9 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x42e,0,0x0f2c496683a0bdda || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x42f,0,0x203d5a7794b1ceeb || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x430,0,0x314e6b88a5c2dffc || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x431,0,0x425f7c99b6d3f00d || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x432,0,0x53708daac7e4011e || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x433,0,0x64819ebbd8f5122f || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x434,0,0x7592afcce9062340 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x435,0,0x86a3c0ddfa173451 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x436,0,0x97b4d1ee0b284562 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x437,0,0xa8c5e2ff1c395673 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x438,0,0xb9d6f3102d4a6784 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x439,0,0xcae704213e5b7895 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x43a,0,0xdbf815324f6c89a6 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x43b,0,0xec092643607d9ab7 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x43c,0,0xfd1a3754718eabc8 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x43d,0,0x0e2b4865829fbcd9 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x43e,0,0x1f3c597693b0cdea || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x43f,0,0x304d6a87a4c1defb || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x440,0,0x415e7b98b5d2ef0c || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x441,0,0x526f8ca9c6e3001d || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x442,0,0x63809dbad7f4112e || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x443,0,0x7491aecbe805223f || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x444,0,0x85a2bfdcf9163350 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x445,0,0x96b3d0ed0a274461 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x446,0,0xa7c4e1fe1b385572 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x447,0,0xb8d5f20f2c496683 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x448,0,0xc9e603203d5a7794 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x449,0,0xdaf714314e6b88a5 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x44a,0,0xeb0825425f7c99b6 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x44b,0,0xfc193653708daac7 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x44c,0,0x0d2a4764819ebbd8 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x44d,0,0x1e3b587592afcce9 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x44e,0,0x2f4c6986a3c0ddfa || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x44f,0,0x405d7a97b4d1ee0b || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x450,0,0x516e8ba8c5e2ff1c || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x451,0,0x627f9cb9d6f3102d || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x452,0,0x7390adcae704213e || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x453,0,0x84a1bedbf815324f || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x454,0,0x95b2cfec09264360 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x455,0,0xa6c3e0fd1a375471 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x456,0,0xb7d4f10e2b486582 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x457,0,0xc8e5021f3c597693 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x458,0,0xd9f613304d6a87a4 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x459,0,0xea0724415e7b98b5 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x45a,0,0xfb1835526f8ca9c6 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x45b,0,0x0c294663809dbad7 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x45c,0,0x1d3a577491aecbe8 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x45d,0,0x2e4b6885a2bfdcf9 || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x45e,0,0x3f5c7996b3d0ed0a || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x45f,0,0x506d8aa7c4e1fe1b || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x460,0,0x617e9bb8d5f20f2c || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x461,0,0x728facc9e603203d || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x462,0,0x83a0bddaf714314e || exit 1
+> sleep 0.03
+> /proc/boot/cansend -u0,tx0 -m0x463,0,0x94b1ceeb0825425f || exit 1
+> sleep 0.03
+> C3_SCRIPT
+# sh /tmp/c3tx.sh; echo C3_TX_RC=$?; echo TX_DONE
+C3_TX_RC=0
+TX_DONE
+# /proc/boot/prereq_containment; echo CONTROL_RC=$?; /proc/boot/ability_lesson deny; echo ABILITY_DENY_RC=$?; /proc/boot/ability_lesson allow; echo ABILITY_ALLOW_RC=$?; /proc/boot/slog2info -b canopy_incident -f -S -t; echo NATIVE_CAPTURE_DONE
+RECORDER captured=COLOCATED sample=0 pid=2465811
+RECORDER captured=COLOCATED sample=1 pid=2465811
+RECORDER captured=COLOCATED sample=2 pid=2465811
+RECORDER captured=COLOCATED_READY
+SEPARATE_RECORDER before_kill pid=2461712 target=2465811
+NEGATIVE_CONTROL signal=9 eof=256 colocated_post_kill=0
+SEPARATE_RECORDER after_kill=0 pid=2461712
+SEPARATE_RECORDER after_kill=1 pid=2461712
+SEPARATE_RECORDER after_kill=2 pid=2461712
+CONTROL_RC=0
+ABILITY_LESSON mode=deny io_subrange=none others=deny-lock operation=IO_LEVEL_1 rc=-1 errno=1
+ABILITY_DENY_RC=0
+ABILITY_LESSON mode=allow io_subrange=0-0 others=deny-lock operation=IO_LEVEL_1 rc=0 errno=0
+ABILITY_ALLOW_RC=0
+1794156530.602         canopy_incident.315408             incident*   1    501      SLOG2_INFO  {"schema":"canopy-native-1","seq":0,"ms":6,"recorder":315408,"phase":"before","pid":278546,"result":0}
+1794156530.648         canopy_incident.315408             incident    1    502      SLOG2_INFO  {"schema":"canopy-native-1","seq":1,"ms":35,"recorder":315408,"phase":"kill","pid":278546,"result":0}
+1794156530.662         canopy_incident.315408             incident    1    503      SLOG2_INFO  {"schema":"canopy-native-1","seq":2,"ms":81,"recorder":315408,"phase":"waitpid","pid":278546,"result":10}
+1794156530.692         canopy_incident.315408             incident    1    504      SLOG2_INFO  {"schema":"canopy-native-1","seq":3,"ms":95,"recorder":315408,"phase":"interruption","pid":278546,"result":1}
+1794156530.706         canopy_incident.315408             incident    1    505      SLOG2_INFO  {"schema":"canopy-native-1","seq":4,"ms":124,"recorder":315408,"phase":"after","pid":278546,"result":0}
+NATIVE_CAPTURE_DONE

@@ -1,0 +1,11 @@
+Warning: Host file 'lib/libexpat.so.2' missing.
+e02a767b082d75501480591e50e89aa78ae64d0e2c81719aec16b4b9b4d4be71  /mnt/host/incident-20261108/repo/native/incident_recorder.c
+074b043ba12e6e1125dd33491725019317eb886ada072020e8869f5695b1d6e4  /mnt/host/incident-20261108/repo/native/prereq_containment.c
+725eb876fc700f72a62d8ba0344a7b30f3c0182d2036dfd361ed5e596918d513  /mnt/host/incident-20261108/incident_recorder
+787039ffedf1e57879ee37516a19cb8a19548d5c1e0facdc26b9e02febb971bf  /mnt/host/incident-20261108/prereq_containment
+cf77f4b1ca12ad607d635630d7a6fe30e4f92cb130004d2866bfc543d6cf619c  /mnt/host/incident-20261108/incident.build
+e596aa81d0a3103112228f3818c9da3f90d785a427ad7aaaf42ebb0ff4d8fb53  /mnt/host/incident-20261108/incident.ifs
+Warning: Host file 'lib/libexpat.so.2' missing.
+c527c865ab357387ae009b1d63cb4c2de92b72d303e74e70a7089ee9775b8739  /mnt/host/incident-20261108/ability_lesson
+764e7e9f3ffcb74e851dce896a513c85abe16589d918937f3ba5157891882a22  /mnt/host/incident-20261108/incident.ifs
+07ea4a6bd8293217755b9c43325dd7e90375b00e649e8fe309723f313bc396c0  /mnt/host/incident-20261108/repo/native/ability_lesson.c
