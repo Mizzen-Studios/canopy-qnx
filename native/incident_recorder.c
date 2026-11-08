@@ -10,7 +10,8 @@
 #include <stdlib.h>
 #include <string.h>
 static slog2_buffer_t h; static unsigned seq; static struct timespec start;
-static unsigned long ms(void){struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);return (t.tv_sec-start.tv_sec)*1000+(t.tv_nsec-start.tv_nsec)/1000000;}
+static unsigned long ms(void){struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);long sec=t.tv_sec-start.tv_sec, ns=t.tv_nsec-start.tv_nsec;
+ if(ns<0){--sec;ns+=1000000000;}return (unsigned long)sec*1000+(unsigned long)ns/1000000;}
 static int event(const char *phase,long pid,int result){char b[512];snprintf(b,sizeof b,"{\"schema\":\"canopy-native-1\",\"seq\":%u,\"ms\":%lu,\"recorder\":%ld,\"phase\":\"%s\",\"pid\":%ld,\"result\":%d}",seq++,ms(),(long)getpid(),phase,pid,result);puts(b);return slog2c(h,500+seq,SLOG2_INFO,b);}
 int main(int argc,char **argv){
  if(argc!=2)return 2;

@@ -20,6 +20,8 @@ async function adapt(dir,receiptFile){
  if(native.length){
   if(native.length!==5||native.some((x,i)=>x.v.seq!==i)||native.map(x=>x.v.phase).join()!=='before,kill,waitpid,interruption,after')throw Error('native sequence incomplete');
   const pid=native[0].v.pid,recorder=native[0].v.recorder;
+  const slog=lines.filter(l=>l.includes('canopy_incident.')&&l.includes('SLOG2_INFO')).map(l=>{try{return JSON.parse(l.slice(l.indexOf('{')));}catch{throw Error('slog2 truncation');}});
+  if(slog.length!==5||slog.some((v,i)=>JSON.stringify(v)!==JSON.stringify(native[i].v)))throw Error('slog2/serial mismatch');
   if(native.some(x=>x.v.pid!==pid||x.v.recorder!==recorder)||native[0].v.result!==0||native[1].v.result!==0)throw Error('target/kill failed');
   const row=r.restarts.find(x=>x.killed_pid===pid),driver=proc('dev-can-linux',pid,runId+'-driver1','can');
   const survivor=proc('io-sock',r.main_io_sock_pid,runId+'-iosock','network');
