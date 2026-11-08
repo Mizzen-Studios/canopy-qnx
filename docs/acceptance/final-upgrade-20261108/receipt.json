@@ -1,0 +1,54 @@
+{
+  "schema": "private-upgrade-final/1",
+  "tested_commit": "f99dcf13d101f4bb967d024f41f9b178720f469e",
+  "scope": "Clean committed checkout HOST-only; native evidence remains at its own original source/image bindings",
+  "host_tests": {
+    "total": 138,
+    "passed": 130,
+    "skipped": 8
+  },
+  "existing_sdk_reused": true,
+  "recorded": false,
+  "native_rerun": false,
+  "independent_implementation_review": {
+    "edu": "0610fda2ffda125d3e3b4888c74c70ecbcf7eb69",
+    "canopy": "32a4ae17b8401e30590437a68f86f403f802c315",
+    "result": "PASS for four assigned integrity findings; not council acceptance or full audit"
+  },
+  "boundaries": [
+    "C6 STOPPED",
+    "SocketCAN UNVERIFIED",
+    "sshd internal cause UNVERIFIED",
+    "no platform health/safety/timing/continuous availability claim",
+    "path policy BLOCKED; ability control only",
+    "single-host readiness not proven in current split-host environment",
+    "no second SDK/fresh-install/human-learning acceptance"
+  ],
+  "files": {
+    "docs/acceptance/final-upgrade-20261108/clean-host.log": "560cbcf9d35254458470deb47b37237b2ed64668cff71320f22bdf7d5ecf2dae",
+    "docs/acceptance/final-upgrade-20261108/independent-REPORT.md": "0892abb0ccdcc329d52a436cc1ae09d13cdcb3b614c5141335c299aa448249ff",
+    "docs/acceptance/final-upgrade-20261108/independent-can-browser.log": "afd3d966ee5b58d537d9dcd4f8384aeec03db139dbf0ede4fb2e01374685e151",
+    "docs/acceptance/final-upgrade-20261108/independent-can-host.log": "d72b77e0c13f752f171e2fc539447cb660b1275ab8bed2887c5cb85e3de823ee",
+    "docs/acceptance/final-upgrade-20261108/independent-edu-browser.log": "f4f8598a208bf52478d0c4451ad7f927ceecf6dcf1205cbb2978f483bc3cb050",
+    "docs/acceptance/final-upgrade-20261108/independent-edu-host.log": "2a5b687202e2e71464cafbeb6f81aac83d22553c59863eee611acfd9f237281a",
+    "docs/acceptance/final-upgrade-20261108/independent-mutation-hashes.log": "c7b55befee99c1de5ac87d3f0f7cce6b243869b8ff4ca635ff042ecccb85c2a8",
+    "docs/acceptance/final-upgrade-20261108/initial-ci-failure.log": "a2f638530494d364425f20e894fad20d49417e98c72dcd22bd766d831e5bd50d",
+    "docs/acceptance/final-upgrade-20261108/initial-clean-failure.log": "742be75abfbbb5405e2340e1a60870d2e945af4344515057160b730fa44c2da0",
+    "docs/acceptance/final-upgrade-20261108/initial-parallel-failure.log": "edf85baacfeeed83b368627ba983a87ccb50dc021fc02ba8bd156835de1dbb58",
+    "docs/acceptance/final-upgrade-20261108/node.log": "02cb5730f07715f882615c28d63dd61cfc0f4cabe483c0407f40562423823269",
+    "docs/acceptance/final-upgrade-20261108/v2-verdict.json": "12ab1351a136007fbcb0144ea6ea1e487c59d958ebbf0f3393035dfed655741c"
+  },
+  "packaging_chronology": "f99dcf1 fresh clone host138/130pass8skip and Node59pass; review inventory correctly detected stale test-source digests, regenerated in following archival packaging commit. See clean-host.log; no native rerun.",
+  "commands": [
+    "python3 -m unittest discover -s tests -v",
+    "node --test tests/incident_pack/*.test.js",
+    "node tools/incident_pack/cli.js validate docs/acceptance/control-fix-20261108/incident.json",
+    "python3 tools/review_claims.py",
+    "python3 tools/claim_lint.py",
+    "python3 tools/proof_capture.py",
+    "python3 tools/incident_workbench.py --verify-only",
+    "sh scripts/check-no-sdk.sh"
+  ],
+  "clean_checkout": "git clone --no-local from private local checkout into a separate previously absent directory; full real history retained",
+  "native_evidence": "Original native receipts remain separately source/ELF/IFS/disk bound; HOST verification never transfers native acceptance"
+}

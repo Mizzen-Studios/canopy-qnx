@@ -1,0 +1,644 @@
+host	Host unit and artifact negative tests (no QNX)	﻿2026-11-08T17:33:31.3996261Z ##[group]Run python3 -m unittest discover -s tests -v
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.3997543Z [36;1mpython3 -m unittest discover -s tests -v[0m
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.4018809Z shell: /usr/bin/bash -e {0}
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.4019602Z ##[endgroup]
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.5936547Z test_declarations_and_pinned_evidence_current (test_capability_ledger.CapabilityLedger.test_declarations_and_pinned_evidence_current) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.5975914Z test_invalid_missing_and_changed_evidence_rejected (test_capability_ledger.CapabilityLedger.test_invalid_missing_and_changed_evidence_rejected) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.5978397Z test_readme_status_use_canonical_ledger (test_capability_ledger.CapabilityLedger.test_readme_status_use_canonical_ledger) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.5983283Z test_annotation_and_summary_escape (test_check.BudgetTests.test_annotation_and_summary_escape) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.5994946Z test_four_failures_and_renderers (test_check.BudgetTests.test_four_failures_and_renderers) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.6009026Z test_invalid_observations (test_check.BudgetTests.test_invalid_observations) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.6043085Z test_json_nonfinite_duplicate (test_check.BudgetTests.test_json_nonfinite_duplicate) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.6044819Z test_missing_evidence_fails_closed (test_check.BudgetTests.test_missing_evidence_fails_closed) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.6046438Z test_nonfinite_unused_metadata_fails_closed (test_check.BudgetTests.test_nonfinite_unused_metadata_fails_closed) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.6048914Z test_pass_boundary (test_check.BudgetTests.test_pass_boundary) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.6050436Z test_provenance (test_check.BudgetTests.test_provenance) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.6052053Z test_strict_yaml (test_check.BudgetTests.test_strict_yaml) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.6053690Z test_human_and_compact (test_check.CandumpTests.test_human_and_compact) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.6055324Z test_id_dlc_payload_and_order (test_check.CandumpTests.test_id_dlc_payload_and_order) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.6057244Z test_malformed_rejected_never_skipped (test_check.CandumpTests.test_malformed_rejected_never_skipped) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:31.7941110Z test_pass_fail_summary_and_missing_evidence (test_check_cli.CheckCLI.test_pass_fail_summary_and_missing_evidence) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.2243394Z test_cli_record_replay_export_and_no_overwrite (test_director.DirectorTests.test_cli_record_replay_export_and_no_overwrite) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.2860678Z test_deterministic_event_order_and_bytes (test_director.DirectorTests.test_deterministic_event_order_and_bytes) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.2960050Z test_reject_malformed_provenance_order_and_types (test_director.DirectorTests.test_reject_malformed_provenance_order_and_types) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.2978011Z test_cli_json_and_up_never_launch (test_doctor.DoctorTests.test_cli_json_and_up_never_launch) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.2979375Z test_disabled_binfmt_is_advisory (test_doctor.DoctorTests.test_disabled_binfmt_is_advisory) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.2981462Z test_each_capability_missing_or_failed_blocks (test_doctor.DoctorTests.test_each_capability_missing_or_failed_blocks) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.2992586Z test_external_path_validation_rejects_repository_and_empty_files (test_doctor.DoctorTests.test_external_path_validation_rejects_repository_and_empty_files) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.2994269Z test_external_sdk_presence_never_implies_qnx_acceptance (test_doctor.DoctorTests.test_external_sdk_presence_never_implies_qnx_acceptance) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.2996149Z test_missing_malformed_or_nonvcan_interfaces (test_doctor.DoctorTests.test_missing_malformed_or_nonvcan_interfaces) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.2997750Z test_missing_qemu_and_can_utils_clean_diagnostics (test_doctor.DoctorTests.test_missing_qemu_and_can_utils_clean_diagnostics) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.3002565Z test_subprocess_timeout_and_missing_binary_are_clean (test_doctor.DoctorTests.test_subprocess_timeout_and_missing_binary_are_clean) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.3013130Z test_tcg_without_kvm_host_ready_but_sdk_and_acceptance_blocked (test_doctor.DoctorTests.test_tcg_without_kvm_host_ready_but_sdk_and_acceptance_blocked) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.3015134Z test_text_summary_distinguishes_host_from_target (test_doctor.DoctorTests.test_text_summary_distinguishes_host_from_target) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.3016507Z test_ubuntu_binfmt_interpreter_name (test_doctor.DoctorTests.test_ubuntu_binfmt_interpreter_name) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:32.3017736Z test_user_emulator_missing_blocks_arm64 (test_doctor.DoctorTests.test_user_emulator_missing_blocks_arm64) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:33.7910229Z test_shared_core_and_cli (test_incident_pack.IncidentPackTests.test_shared_core_and_cli) ... FAIL
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:33.7972191Z test_escape_and_symlink (test_incident_workbench.Workbench.test_escape_and_symlink) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:33.8092644Z test_generated_html_inspection (test_incident_workbench.Workbench.test_generated_html_inspection) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:33.8185253Z test_html_escaping (test_incident_workbench.Workbench.test_html_escaping) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:33.9713883Z test_output_confinement (test_incident_workbench.Workbench.test_output_confinement) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:33.9763706Z test_recording (test_incident_workbench.Workbench.test_recording) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:33.9767235Z test_saved_unknown_review_fixtures (test_incident_workbench.Workbench.test_saved_unknown_review_fixtures) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:34.4893208Z test_tampering (test_incident_workbench.Workbench.test_tampering) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:34.4897697Z test_exact_ordered (test_native_can_three.NativeGateTests.test_exact_ordered) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:34.4904233Z test_native_caps_are_distinct (test_native_can_three.NativeGateTests.test_native_caps_are_distinct) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:34.4905560Z test_native_parser_and_reject_malformed (test_native_can_three.NativeGateTests.test_native_parser_and_reject_malformed) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:34.4906975Z test_reject_count_order_payload_and_constant (test_native_can_three.NativeGateTests.test_reject_count_order_payload_and_constant) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:34.4922505Z test_failed_summary_rejected (test_native_can_three.OfflineEvidenceTests.test_failed_summary_rejected) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:34.4923693Z test_wrong_source_rejected (test_native_can_three.OfflineEvidenceTests.test_wrong_source_rejected) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.6273128Z test_adapter_is_not_host_buildable (test_native_inputs.NativeInputsTests.test_adapter_is_not_host_buildable) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.6434186Z test_existing_wire_core_and_independent_ecu_faults (test_native_inputs.NativeInputsTests.test_existing_wire_core_and_independent_ecu_faults) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.6444107Z test_mapping_missing_malformed_future_and_flags (test_native_inputs.NativeInputsTests.test_mapping_missing_malformed_future_and_flags) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.7015973Z test_c_encoded_heartbeat_existing_actuator_frozen_crc_timeout (test_native_safestop.NativeSafestopTests.test_c_encoded_heartbeat_existing_actuator_frozen_crc_timeout) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.7074331Z test_hard_faults_ten_fresh_and_ramp_parity (test_native_safestop.NativeSafestopTests.test_hard_faults_ten_fresh_and_ramp_parity) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.7134226Z test_protocol_parity_and_corruption (test_native_safestop.NativeSafestopTests.test_protocol_parity_and_corruption) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.8226894Z test_seeded_mixed_sequence_and_long_running_saturation (test_native_safestop.NativeSafestopTests.test_seeded_mixed_sequence_and_long_running_saturation) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.8232554Z test_time_gap_duplicate_backwards_and_large_clock (test_native_safestop.NativeSafestopTests.test_time_gap_duplicate_backwards_and_large_clock) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.8298654Z test_faults_use_existing_ids_and_close (test_native_stimulus.NativeStimulusTests.test_faults_use_existing_ids_and_close) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.8300051Z test_invalid_never_opens_bus (test_native_stimulus.NativeStimulusTests.test_invalid_never_opens_bus) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.8310465Z test_send_failure_closes_without_success (test_native_stimulus.NativeStimulusTests.test_send_failure_closes_without_success) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.8324217Z test_stale_three_second_interval_and_real_action_markers (test_native_stimulus_markers.StimulusMarkers.test_stale_three_second_interval_and_real_action_markers) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:36.8686512Z test_clean_text (test_no_sdk.NoSDKTests.test_clean_text) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:37.1669634Z test_paths_content_symlink (test_no_sdk.NoSDKTests.test_paths_content_symlink) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:37.2045155Z test_staged_blob_after_delete (test_no_sdk.NoSDKTests.test_staged_blob_after_delete) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:37.2437710Z test_unusual_filename (test_no_sdk.NoSDKTests.test_unusual_filename) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:37.3949370Z test_compiled_c_parity_all_rows_random_and_split_boundaries (test_pilot.PilotTests.test_compiled_c_parity_all_rows_random_and_split_boundaries) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:37.4110306Z test_dataset_generation_and_groups (test_pilot.PilotTests.test_dataset_generation_and_groups) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.3583134Z test_fit_is_learned_reproducible_and_train_only (test_pilot.PilotTests.test_fit_is_learned_reproducible_and_train_only) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.3585261Z test_invalid_inputs (test_pilot.PilotTests.test_invalid_inputs) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.3590916Z test_learned_drive_request_veto_and_latch_ownership (test_pilot.PilotTests.test_learned_drive_request_veto_and_latch_ownership) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.3600602Z test_metrics_denominators_and_export (test_pilot.PilotTests.test_metrics_denominators_and_export) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.3626464Z test_cap_failure_has_no_uncapped_retry (test_qemu_capped.CappedLauncherTests.test_cap_failure_has_no_uncapped_retry) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.3645041Z test_exact_cap_and_argument_boundaries (test_qemu_capped.CappedLauncherTests.test_exact_cap_and_argument_boundaries) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.3673336Z test_missing_command (test_qemu_capped.CappedLauncherTests.test_missing_command) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.5462270Z test_missing_permissive_multiline_and_repository_fail_closed (test_qsc_auth.PrivateQSCAuth.test_missing_permissive_multiline_and_repository_fail_closed) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.6205081Z test_private_options_no_argv_or_stdout_leak_and_cleanup (test_qsc_auth.PrivateQSCAuth.test_private_options_no_argv_or_stdout_leak_and_cleanup) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.6208031Z test_actual_elf_bytes_not_only_escaped_markers (test_qsc_hygiene.QSCHygiene.test_actual_elf_bytes_not_only_escaped_markers) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.6225929Z test_qsc_credential_paths_and_installer (test_qsc_hygiene.QSCHygiene.test_qsc_credential_paths_and_installer) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.6360271Z test_fixture_matches_model_and_embedded_copy (test_replay.ReplayTests.test_fixture_matches_model_and_embedded_copy) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.6781166Z Replay parser: valid fixture and malformed/source/type/order/size rejection pass
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.6904059Z test_javascript_parser_and_rejection (test_replay.ReplayTests.test_javascript_parser_and_rejection) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.6931138Z test_page_offline_and_explicit (test_replay.ReplayTests.test_page_offline_and_explicit) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7373780Z test_absent_historical_identity_not_invented (test_review_claims.ReviewClaimsTests.test_absent_historical_identity_not_invented) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7848676Z test_document_coverage_and_paths (test_review_claims.ReviewClaimsTests.test_document_coverage_and_paths) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7849957Z test_visible_parser_excludes_executable_text (test_review_claims.ReviewClaimsTests.test_visible_parser_excludes_executable_text) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7851464Z test_live_seven_faults_and_cleanup (test_runtime.LiveRuntimeTests.test_live_seven_faults_and_cleanup) ... skipped 'opt-in Linux vcan test; set CANOPY_LIVE_VCAN=1 with vcan0 UP'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7874835Z test_missing_malformed_future_nonfinite_fail_closed (test_runtime.RuntimeTests.test_missing_malformed_future_nonfinite_fail_closed) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7880894Z test_snapshot_age_and_pilot_cannot_clear (test_runtime.RuntimeTests.test_snapshot_age_and_pilot_cannot_clear) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7882286Z test_source_tagged_monotonic_record (test_runtime.RuntimeTests.test_source_tagged_monotonic_record) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7883569Z test_unknown_scenario_rejected_before_spawn (test_runtime.RuntimeTests.test_unknown_scenario_rejected_before_spawn) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7884651Z test_clock_backwards (test_safety.ActuatorTests.test_clock_backwards) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7887225Z test_delayed_receive_cannot_hide_timeout (test_safety.ActuatorTests.test_delayed_receive_cannot_hide_timeout) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7902554Z test_frozen_bad_crc_and_out_of_order_never_refresh (test_safety.ActuatorTests.test_frozen_bad_crc_and_out_of_order_never_refresh) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7907587Z test_frozen_recovery_cannot_release (test_safety.ActuatorTests.test_frozen_recovery_cannot_release) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7911891Z test_recovery_requires_ten_safe_fresh_frames (test_safety.ActuatorTests.test_recovery_requires_ten_safe_fresh_frames) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7917592Z test_slow_recovery_is_not_consecutive (test_safety.ActuatorTests.test_slow_recovery_is_not_consecutive) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7919648Z test_timeout_exact_boundary (test_safety.ActuatorTests.test_timeout_exact_boundary) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7929982Z test_wrap (test_safety.ActuatorTests.test_wrap) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7931601Z test_each_fault_latches_and_pilot_cannot_clear (test_safety.LatchTests.test_each_fault_latches_and_pilot_cannot_clear) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7932825Z test_gap_and_duplicate_clock (test_safety.LatchTests.test_gap_and_duplicate_clock) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7933872Z test_ten_fresh_and_ramp (test_safety.LatchTests.test_ten_fresh_and_ramp) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7934854Z test_unhealthy_cycle_resets_streak (test_safety.LatchTests.test_unhealthy_cycle_resets_streak) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7935822Z test_crc_known_answer (test_safety.ProtocolTests.test_crc_known_answer) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7937634Z test_every_single_bit_corruption (test_safety.ProtocolTests.test_every_single_bit_corruption) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7938608Z test_invalid_fields (test_safety.ProtocolTests.test_invalid_fields) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.7947924Z test_roundtrip_all_counters_and_states (test_safety.ProtocolTests.test_roundtrip_all_counters_and_states) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8195363Z test_browser_live_schema_contract (test_session.SessionTests.test_browser_live_schema_contract) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8196562Z test_live_pilot_obstacle_veto (test_session.SessionTests.test_live_pilot_obstacle_veto) ... skipped 'opt-in actual vcan'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8197757Z test_live_session_vss_replay_and_cleanup (test_session.SessionTests.test_live_session_vss_replay_and_cleanup) ... skipped 'opt-in actual vcan'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8199992Z test_pilot_cannot_clear_obstacle_latch (test_session.SessionTests.test_pilot_cannot_clear_obstacle_latch) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8206394Z test_record_roundtrip_and_fail_closed (test_session.SessionTests.test_record_roundtrip_and_fail_closed) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8286288Z test_rotation_bound (test_session.SessionTests.test_rotation_bound) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8580420Z test_all_faults_stop_vehicle (test_sim.SimulationTests.test_all_faults_stop_vehicle) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8650158Z test_determinism (test_sim.SimulationTests.test_determinism) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8650958Z test_socketcan_codec (test_sim.SimulationTests.test_socketcan_codec) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8832180Z test_corruptions_refused (test_slm_continuity_evidence.ContinuityEvidence.test_corruptions_refused) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8840443Z test_saved_receipt (test_slm_continuity_evidence.ContinuityEvidence.test_saved_receipt) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8847370Z test_actual_saved_receipt_offline_only (test_slm_traffic_evidence.RestartTrafficEvidence.test_actual_saved_receipt_offline_only) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8987539Z test_corruptions_rejected (test_slm_traffic_evidence.RestartTrafficEvidence.test_corruptions_rejected) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8989250Z test_invalid_counts (test_socketcan_demo.DemoCLI.test_invalid_counts) ... skipped 'set CANOPY_DEMO_BINARY to externally built native demo'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8990619Z test_invalid_mode (test_socketcan_demo.DemoCLI.test_invalid_mode) ... skipped 'set CANOPY_DEMO_BINARY to externally built native demo'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8992207Z test_live_rx_tx_and_mismatch (test_socketcan_demo.DemoCLI.test_live_rx_tx_and_mismatch) ... skipped 'set CANOPY_DEMO_BINARY to externally built native demo'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8993726Z test_missing_interface (test_socketcan_demo.DemoCLI.test_missing_interface) ... skipped 'set CANOPY_DEMO_BINARY to externally built native demo'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8995259Z test_usage (test_socketcan_demo.DemoCLI.test_usage) ... skipped 'set CANOPY_DEMO_BINARY to externally built native demo'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.8996263Z test_bad_clocks (test_supervision.SupervisionTests.test_bad_clocks) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.9004451Z test_config_is_dedicated_and_fail_closed (test_supervision.SupervisionTests.test_config_is_dedicated_and_fail_closed) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.9006355Z test_identity_and_readiness_rejections (test_supervision.SupervisionTests.test_identity_and_readiness_rejections) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.9007586Z test_pid_is_not_ssh_or_socketcan_evidence (test_supervision.SupervisionTests.test_pid_is_not_ssh_or_socketcan_evidence) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.9008761Z test_rolling_window_and_latch (test_supervision.SupervisionTests.test_rolling_window_and_latch) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.9707644Z test_three_actual_owned_child_restarts_not_qnx (test_supervision.SupervisionTests.test_three_actual_owned_child_restarts_not_qnx) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.9709116Z test_no_sink_call_on_invalid_input (test_vss.AdapterTests.test_no_sink_call_on_invalid_input) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.9710121Z test_sink_failure_propagates (test_vss.AdapterTests.test_sink_failure_propagates) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.9711122Z test_source_timestamp_and_units_preserved (test_vss.AdapterTests.test_source_timestamp_and_units_preserved) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.9715394Z test_text_intents_are_allowlisted_and_terminated (test_vss.AdapterTests.test_text_intents_are_allowlisted_and_terminated) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.9717268Z test_text_intents_reject_path_and_metadata_injection (test_vss.AdapterTests.test_text_intents_reject_path_and_metadata_injection) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.9721768Z test_dbc_matches_fixed_mapping (test_vss.CodecTests.test_dbc_matches_fixed_mapping) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:38.9724348Z test_encode_rejects_invalid_or_lossy_values (test_vss.CodecTests.test_encode_rejects_invalid_or_lossy_values) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6767054Z test_exhaustive_raw_domain (test_vss.CodecTests.test_exhaustive_raw_domain) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6770434Z test_hand_calculated_golden_vectors (test_vss.CodecTests.test_hand_calculated_golden_vectors) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6771731Z test_overlay_extension_is_explicit (test_vss.CodecTests.test_overlay_extension_is_explicit) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6772959Z test_scaling_and_decimal_context (test_vss.CodecTests.test_scaling_and_decimal_context) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6773983Z test_unknown_ids_flags_and_types (test_vss.CodecTests.test_unknown_ids_flags_and_types) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6774863Z test_wrong_payload_type_or_length (test_vss.CodecTests.test_wrong_payload_type_or_length) ... ok
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6775425Z 
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6775698Z ======================================================================
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6776434Z FAIL: test_shared_core_and_cli (test_incident_pack.IncidentPackTests.test_shared_core_and_cli)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6777184Z ----------------------------------------------------------------------
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6777804Z Traceback (most recent call last):
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6778510Z   File "/home/runner/work/canopy-qnx/canopy-qnx/tests/test_incident_pack.py", line 14, in test_shared_core_and_cli
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6779766Z     self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6780350Z AssertionError: 1 != 0 : TAP version 13
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6780788Z # Subtest: HOST functional end to end
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6781236Z ok 1 - HOST functional end to end
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6781810Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6782154Z   duration_ms: 128.598448
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6782531Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6782890Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6783239Z # Subtest: reject schema
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6783618Z ok 2 - reject schema
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6783972Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6784302Z   duration_ms: 1.783722
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6784678Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6785015Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6785504Z # Subtest: reject stale
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6785870Z ok 3 - reject stale
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6786408Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6791084Z   duration_ms: 2.232802
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6791652Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6792009Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6792367Z # Subtest: reject future
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6792768Z ok 4 - reject future
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6793131Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6793471Z   duration_ms: 1.612917
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6793841Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6794183Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6794531Z # Subtest: reject missing
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6794931Z ok 5 - reject missing
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6795291Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6795637Z   duration_ms: 2.736353
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6796003Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6796340Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6796692Z # Subtest: reject traversal
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6797084Z ok 6 - reject traversal
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6797446Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6797777Z   duration_ms: 2.762141
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6798129Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6798472Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6798811Z # Subtest: reject absolute
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6799191Z ok 7 - reject absolute
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6899445Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6899934Z   duration_ms: 1.336975
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6900369Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6900709Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6901068Z # Subtest: reject backslash
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6901468Z ok 8 - reject backslash
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6902018Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6902378Z   duration_ms: 7.651176
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6902807Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6903180Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6903517Z # Subtest: reject duplicateArtifact
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6903971Z ok 9 - reject duplicateArtifact
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6904412Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6904765Z   duration_ms: 2.075988
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6905201Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6905612Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6905963Z # Subtest: reject mixed
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6906350Z ok 10 - reject mixed
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6906743Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6907098Z   duration_ms: 2.513731
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6907472Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6907794Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6908108Z # Subtest: reject sequence
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6908480Z ok 11 - reject sequence
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6908856Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6909205Z   duration_ms: 1.988707
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6909582Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6909939Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6910306Z # Subtest: reject time
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6910697Z ok 12 - reject time
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6911067Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6911411Z   duration_ms: 2.237669
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6912019Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6912380Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6912729Z # Subtest: reject duplicateId
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6913166Z ok 13 - reject duplicateId
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6913563Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6913915Z   duration_ms: 5.159168
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6914281Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6914619Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6914965Z # Subtest: reject pid
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6915354Z ok 14 - reject pid
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6915715Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6916060Z   duration_ms: 4.63114
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6916455Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6916806Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6917147Z # Subtest: reject binding
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6917811Z ok 15 - reject binding
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6918186Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6918542Z   duration_ms: 1.791493
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6918934Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6919290Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6919671Z # Subtest: reject corruptArtifact
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6920114Z ok 16 - reject corruptArtifact
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6920553Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6920899Z   duration_ms: 3.760052
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6921279Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6921909Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6922257Z # Subtest: reject subjectDigest
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6922663Z ok 17 - reject subjectDigest
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6923063Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6923396Z   duration_ms: 3.837856
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6923777Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6924343Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6924789Z # Subtest: reject evidence
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6925240Z ok 18 - reject evidence
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6925588Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6925903Z   duration_ms: 3.85389
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6926240Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6926552Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6926851Z # Subtest: reject selfObserver
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6927224Z ok 19 - reject selfObserver
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6927597Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6927911Z   duration_ms: 2.462213
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6928267Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6928561Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6928850Z # Subtest: reject trafficCount
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6929233Z ok 20 - reject trafficCount
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6929576Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6929872Z   duration_ms: 1.808959
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6930199Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6930495Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6930802Z # Subtest: reject generation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6931162Z ok 21 - reject generation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6931641Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6931962Z   duration_ms: 2.161275
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6932312Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6932621Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6932918Z # Subtest: reject extraField
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6933282Z ok 22 - reject extraField
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6933619Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6933904Z   duration_ms: 1.546027
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6934224Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6934514Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6934811Z # Subtest: reject eventLimit
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6935170Z ok 23 - reject eventLimit
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6935503Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6935786Z   duration_ms: 55.089538
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6936127Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6936437Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6936723Z # Subtest: reject ssh
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6937045Z ok 24 - reject ssh
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6937400Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6937721Z   duration_ms: 2.884304
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6938103Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6938370Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6938655Z # Subtest: missing control remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6939068Z ok 25 - missing control remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6939465Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6939783Z   duration_ms: 2.328284
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6940153Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6940433Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6940741Z # Subtest: digest mismatch remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6941166Z ok 26 - digest mismatch remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6941660Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6941944Z   duration_ms: 2.333742
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6942263Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6942530Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6942824Z # Subtest: unordered traffic remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6943255Z ok 27 - unordered traffic remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6943648Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6943937Z   duration_ms: 1.82307
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6944269Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6944560Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6944886Z # Subtest: not independent remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6945320Z ok 28 - not independent remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6945706Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6946006Z   duration_ms: 1.537764
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6946339Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6946632Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6946936Z # Subtest: no interruption remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6947344Z ok 29 - no interruption remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6947954Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6948233Z   duration_ms: 1.17283
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6948559Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6948847Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6949148Z # Subtest: same domain remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6949543Z ok 30 - same domain remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6949915Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6950204Z   duration_ms: 2.43983
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6950537Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6950836Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6951243Z # Subtest: raw corrupt, duplicate keys, oversized, deep nesting
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6951925Z ok 31 - raw corrupt, duplicate keys, oversized, deep nesting
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6952388Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6952698Z   duration_ms: 2.980677
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6953166Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6953462Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6953870Z # Subtest: local CLI refuses symlink, nonregular, absent and URL paths
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6954502Z not ok 32 - local CLI refuses symlink, nonregular, absent and URL paths
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6955000Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6955282Z   duration_ms: 0.373727
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6955617Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6956137Z   location: '/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/core.test.js:9:1'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6956803Z   failureType: 'testCodeFailure'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6957452Z   error: "ENOENT: no such file or directory, mkdtemp '/home/runner/work/canopy-qnx/canopy-qnx/.openclaw/pack-test-XXXXXX'"
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6958309Z   code: 'ENOENT'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6958653Z   stack: |-
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6958991Z     Object.mkdtempSync (node:fs:3064:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6959745Z     TestContext.<anonymous> (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/core.test.js:9:91)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6960511Z     Test.runInAsyncScope (node:async_hooks:214:14)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6961003Z     Test.run (node:internal/test_runner/test:1047:25)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6961697Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6962348Z     Test.postRun (node:internal/test_runner/test:1173:19)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6962848Z     Test.run (node:internal/test_runner/test:1101:12)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6963431Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6963981Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6964317Z # Subtest: limits and provenance edge cases
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6964756Z ok 33 - limits and provenance edge cases
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6965153Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6965460Z   duration_ms: 16.653168
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6965805Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6966116Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6966470Z # Subtest: multiple kills produce UNKNOWN query scope
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6966981Z ok 34 - multiple kills produce UNKNOWN query scope
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6967424Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6967729Z   duration_ms: 2.027796
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6968077Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6968350Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6968658Z # Subtest: structured cofailure rejects legacy
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6969066Z ok 35 - structured cofailure rejects legacy
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6969441Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6969729Z   duration_ms: 1.510353
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6973227Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6974018Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6974310Z # Subtest: structured cofailure rejects unrelatedSurvivor
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6974720Z ok 36 - structured cofailure rejects unrelatedSurvivor
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6975048Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6975302Z   duration_ms: 4.027499
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6975564Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6975777Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6976079Z # Subtest: structured cofailure rejects missingMembers
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6976543Z ok 37 - structured cofailure rejects missingMembers
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6976910Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6977131Z   duration_ms: 2.847259
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6977357Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6977615Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6977888Z # Subtest: structured cofailure rejects ambiguousMembers
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6982311Z ok 38 - structured cofailure rejects ambiguousMembers
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6982827Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6983153Z   duration_ms: 1.825253
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6983522Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6983849Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6984212Z # Subtest: structured cofailure rejects wrongPid
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6984711Z ok 39 - structured cofailure rejects wrongPid
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6985138Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6985457Z   duration_ms: 1.758845
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6985811Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6986143Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6986444Z # Subtest: structured cofailure rejects wrongGeneration
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6986895Z ok 40 - structured cofailure rejects wrongGeneration
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6987263Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6987670Z   duration_ms: 1.690192
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6987928Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6988157Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6988428Z # Subtest: structured cofailure rejects wrongTrigger
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6988838Z ok 41 - structured cofailure rejects wrongTrigger
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6989189Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6989405Z   duration_ms: 1.765163
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6989654Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6989873Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6990157Z # Subtest: structured cofailure rejects wrongTermination
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6990566Z ok 42 - structured cofailure rejects wrongTermination
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6990798Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6991005Z   duration_ms: 1.799565
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6991178Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6991335Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6991805Z # Subtest: structured cofailure rejects unrelatedMemberBefore
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6992124Z ok 43 - structured cofailure rejects unrelatedMemberBefore
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6992367Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6992527Z   duration_ms: 2.364718
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6992700Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6992855Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6993042Z # Subtest: structured cofailure rejects survivingMember
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6993328Z ok 44 - structured cofailure rejects survivingMember
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6993560Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6993709Z   duration_ms: 1.876179
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6993879Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6994032Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6994229Z # Subtest: structured cofailure rejects noSeparateSurvivor
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6994517Z ok 45 - structured cofailure rejects noSeparateSurvivor
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6994749Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6994895Z   duration_ms: 1.678574
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6995063Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6995213Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6995410Z # Subtest: structured cofailure rejects missingTermination
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6995686Z ok 46 - structured cofailure rejects missingTermination
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6995911Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6996058Z   duration_ms: 1.077838
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6996235Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6996393Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6996611Z # Subtest: CLI unrelated surviving control never yields isolation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6996956Z not ok 47 - CLI unrelated surviving control never yields isolation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6997222Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6997378Z   duration_ms: 0.238576
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6997558Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6997876Z   location: '/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/core.test.js:28:1'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6998235Z   failureType: 'testCodeFailure'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6998658Z   error: "ENOENT: no such file or directory, mkdtemp '/home/runner/work/canopy-qnx/canopy-qnx/.openclaw/control-test-XXXXXX'"
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6999083Z   code: 'ENOENT'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6999245Z   stack: |-
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6999417Z     Object.mkdtempSync (node:fs:3064:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.6999811Z     TestContext.<anonymous> (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/core.test.js:28:86)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7000225Z     Test.runInAsyncScope (node:async_hooks:214:14)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7000493Z     Test.run (node:internal/test_runner/test:1047:25)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7000817Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7001291Z     Test.postRun (node:internal/test_runner/test:1173:19)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7001778Z     Test.run (node:internal/test_runner/test:1101:12)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7002106Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7002400Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7002616Z # Subtest: ambiguous shared member observation bindings rejected
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7002939Z ok 48 - ambiguous shared member observation bindings rejected
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7003188Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7003342Z   duration_ms: 1.066851
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7003527Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7003684Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7003931Z # Subtest: complete unrelated surviving control identity cannot become cofailure
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7004442Z ok 49 - complete unrelated surviving control identity cannot become cofailure
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7004732Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7004883Z   duration_ms: 1.122334
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7005057Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7005207Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7005403Z # Subtest: artificial missing traffic/control remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7005701Z ok 50 - artificial missing traffic/control remains UNKNOWN
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7005943Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7006095Z   duration_ms: 9.794283
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7006261Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7006410Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7006582Z # Subtest: artificial missing sequence rejected
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7006831Z ok 51 - artificial missing sequence rejected
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7007046Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7007193Z   duration_ms: 1.616953
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7007355Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7007503Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7007683Z # Subtest: artificial slog2 missing snapshot rejected
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7007951Z ok 52 - artificial slog2 missing snapshot rejected
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7008179Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7008325Z   duration_ms: 1.084508
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7008492Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7008645Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7008904Z # Subtest: actual preserved native capture re-adapts exactly to v2 with bound cofailure
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7009356Z not ok 53 - actual preserved native capture re-adapts exactly to v2 with bound cofailure
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7009663Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7009810Z   duration_ms: 0.337373
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7009976Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7010266Z   location: '/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:11:1'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7010619Z   failureType: 'testCodeFailure'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7011035Z   error: "ENOENT: no such file or directory, mkdtemp '/home/runner/work/canopy-qnx/canopy-qnx/.openclaw/actual-control-XXXXXX'"
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7011451Z   code: 'ENOENT'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7012071Z   stack: |-
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7012251Z     Object.mkdtempSync (node:fs:3064:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7012590Z     replay (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:10:42)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7013102Z     TestContext.<anonymous> (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:11:109)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7013514Z     Test.runInAsyncScope (node:async_hooks:214:14)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7013774Z     Test.run (node:internal/test_runner/test:1047:25)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7014083Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7014416Z     Test.postRun (node:internal/test_runner/test:1173:19)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7014681Z     Test.run (node:internal/test_runner/test:1101:12)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7014993Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7015277Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7015512Z # Subtest: modified-copy actual capture missingMember cannot infer isolation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7015901Z not ok 54 - modified-copy actual capture missingMember cannot infer isolation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7016190Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7016341Z   duration_ms: 0.210985
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7016624Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7016918Z   location: '/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:12:424'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7017271Z   failureType: 'testCodeFailure'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7017669Z   error: "ENOENT: no such file or directory, mkdtemp '/home/runner/work/canopy-qnx/canopy-qnx/.openclaw/actual-control-XXXXXX'"
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7018075Z   code: 'ENOENT'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7018231Z   stack: |-
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7018398Z     Object.mkdtempSync (node:fs:3064:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7018731Z     replay (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:10:42)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7019236Z     TestContext.<anonymous> (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:12:516)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7019745Z     Test.runInAsyncScope (node:async_hooks:214:14)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7020006Z     Test.run (node:internal/test_runner/test:1047:25)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7020315Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7020637Z     Test.postRun (node:internal/test_runner/test:1173:19)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7020900Z     Test.run (node:internal/test_runner/test:1101:12)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7021214Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7021641Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7021913Z # Subtest: modified-copy actual capture wrongPid cannot infer isolation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7022278Z not ok 55 - modified-copy actual capture wrongPid cannot infer isolation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7022548Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7022696Z   duration_ms: 0.097566
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7022870Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7023162Z   location: '/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:12:424'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7023512Z   failureType: 'testCodeFailure'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7023900Z   error: "ENOENT: no such file or directory, mkdtemp '/home/runner/work/canopy-qnx/canopy-qnx/.openclaw/actual-control-XXXXXX'"
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7024303Z   code: 'ENOENT'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7024464Z   stack: |-
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7024636Z     Object.mkdtempSync (node:fs:3064:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7024968Z     replay (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:10:42)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7025460Z     TestContext.<anonymous> (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:12:516)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7025862Z     Test.runInAsyncScope (node:async_hooks:214:14)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7026116Z     Test.run (node:internal/test_runner/test:1047:25)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7026417Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7026733Z     Test.postRun (node:internal/test_runner/test:1173:19)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7026999Z     Test.run (node:internal/test_runner/test:1101:12)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7027306Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7027599Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7027837Z # Subtest: modified-copy actual capture noCofailure cannot infer isolation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7028210Z not ok 56 - modified-copy actual capture noCofailure cannot infer isolation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7028490Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7028638Z   duration_ms: 0.193218
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7028807Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7029098Z   location: '/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:12:424'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7029439Z   failureType: 'testCodeFailure'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7029830Z   error: "ENOENT: no such file or directory, mkdtemp '/home/runner/work/canopy-qnx/canopy-qnx/.openclaw/actual-control-XXXXXX'"
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7030246Z   code: 'ENOENT'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7030410Z   stack: |-
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7030583Z     Object.mkdtempSync (node:fs:3064:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7030928Z     replay (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:10:42)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7031449Z     TestContext.<anonymous> (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:12:516)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7032138Z     Test.runInAsyncScope (node:async_hooks:214:14)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7032405Z     Test.run (node:internal/test_runner/test:1047:25)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7032720Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7033047Z     Test.postRun (node:internal/test_runner/test:1173:19)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7033331Z     Test.run (node:internal/test_runner/test:1101:12)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7033649Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7033939Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7034179Z # Subtest: modified-copy actual capture noSurvivor cannot infer isolation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7034635Z not ok 57 - modified-copy actual capture noSurvivor cannot infer isolation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7034914Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7035065Z   duration_ms: 0.099348
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7035239Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7035538Z   location: '/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:12:424'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7035898Z   failureType: 'testCodeFailure'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7036302Z   error: "ENOENT: no such file or directory, mkdtemp '/home/runner/work/canopy-qnx/canopy-qnx/.openclaw/actual-control-XXXXXX'"
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7036708Z   code: 'ENOENT'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7036870Z   stack: |-
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7037040Z     Object.mkdtempSync (node:fs:3064:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7037377Z     replay (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:10:42)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7037875Z     TestContext.<anonymous> (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:12:516)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7038282Z     Test.runInAsyncScope (node:async_hooks:214:14)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7038545Z     Test.run (node:internal/test_runner/test:1047:25)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7038854Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7039182Z     Test.postRun (node:internal/test_runner/test:1173:19)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7039446Z     Test.run (node:internal/test_runner/test:1101:12)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7039780Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7040065Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7040292Z # Subtest: modified-copy actual capture ambiguous cannot infer isolation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7040647Z not ok 58 - modified-copy actual capture ambiguous cannot infer isolation
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7040917Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7041070Z   duration_ms: 0.292066
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7041242Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7041740Z   location: '/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:12:424'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7042122Z   failureType: 'testCodeFailure'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7042524Z   error: "ENOENT: no such file or directory, mkdtemp '/home/runner/work/canopy-qnx/canopy-qnx/.openclaw/actual-control-XXXXXX'"
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7042925Z   code: 'ENOENT'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7043088Z   stack: |-
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7043265Z     Object.mkdtempSync (node:fs:3064:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7043596Z     replay (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:10:42)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7044098Z     TestContext.<anonymous> (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:12:516)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7044506Z     Test.runInAsyncScope (node:async_hooks:214:14)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7044771Z     Test.run (node:internal/test_runner/test:1047:25)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7045079Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7045405Z     Test.postRun (node:internal/test_runner/test:1173:19)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7045667Z     Test.run (node:internal/test_runner/test:1101:12)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7045981Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7046262Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7046516Z # Subtest: unknown native source topology cannot manufacture co-located identities
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7047044Z not ok 59 - unknown native source topology cannot manufacture co-located identities
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7047354Z   ---
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7047510Z   duration_ms: 0.379366
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7047686Z   type: 'test'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7047984Z   location: '/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:14:1'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7048329Z   failureType: 'testCodeFailure'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7048734Z   error: "ENOENT: no such file or directory, mkdtemp '/home/runner/work/canopy-qnx/canopy-qnx/.openclaw/topology-test-XXXXXX'"
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7049136Z   code: 'ENOENT'
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7049294Z   stack: |-
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7049467Z     Object.mkdtempSync (node:fs:3064:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7049951Z     TestContext.<anonymous> (/home/runner/work/canopy-qnx/canopy-qnx/tests/incident_pack/native.test.js:14:101)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7050363Z     Test.runInAsyncScope (node:async_hooks:214:14)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7050630Z     Test.run (node:internal/test_runner/test:1047:25)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7050948Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7051276Z     Test.postRun (node:internal/test_runner/test:1173:19)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7051735Z     Test.run (node:internal/test_runner/test:1101:12)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7052052Z     async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7052344Z   ...
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7052485Z 1..59
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7052627Z # tests 59
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7052772Z # suites 0
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7052928Z # pass 50
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7053086Z # fail 9
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7053235Z # cancelled 0
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7053395Z # skipped 0
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7053548Z # todo 0
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7053708Z # duration_ms 483.597034
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7053821Z 
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7053827Z 
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7053956Z ----------------------------------------------------------------------
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7054220Z Ran 138 tests in 8.128s
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7054343Z 
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7054433Z FAILED (failures=1, skipped=8)
+host	Host unit and artifact negative tests (no QNX)	2026-11-08T17:33:39.7064287Z ##[error]Process completed with exit code 1.

@@ -2,7 +2,7 @@
   "status": "PASS",
   "errors": [],
   "scope": "Offline structural lint + explicit REVIEW mapping; not a universal semantic claim verifier",
-  "acceptance": "Previous council CONDITIONAL evidence; Nov8 upgrades in progress, new independent gate pending; human learning and second SDK UNVERIFIED",
+  "acceptance": "Previous council CONDITIONAL evidence; Nov8 scoped host/native observations and integrity recheck recorded; new council gate pending; human learning and second SDK UNVERIFIED",
   "capture": "DRY ONLY; separate Olly OK required for recording/audio",
   "boundaries": [
     "existing licensed SDK reused, not fresh install",
@@ -18,12 +18,12 @@
     },
     {
       "path": "STATUS.md",
-      "sha256": "64f0e2afe75dc1d94c1438991991b824faa9971abad928d155b385c342a1f2c6",
+      "sha256": "6c2a2bda31a5e9c6ff3c92e3a931dde01ccda9cb95e50ee8ac9439c87ed0097b",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "REVIEW.md",
-      "sha256": "7ab5f538b8d24695fcf628b0a6d2799baf7b6fc2e1706fe6bdf8b3d4f0b4cb55",
+      "sha256": "77222a4f1fdccab7c45a08e4c316f7d8ba01a4ec6ab834060d46ab89a95bc37f",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -215,6 +215,11 @@
     },
     {
       "source": "STATUS.md",
+      "target": "docs/acceptance/final-upgrade-20261108/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
       "target": "docs/readiness-gate.md",
       "exists": true
     },
@@ -301,6 +306,11 @@
     {
       "source": "REVIEW.md",
       "target": "docs/acceptance/control-fix-20261108/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "REVIEW.md",
+      "target": "docs/acceptance/final-upgrade-20261108/NOTES.md",
       "exists": true
     },
     {
@@ -725,6 +735,17 @@
         "command": "python3 -m unittest discover -s tests -v",
         "log": "host.log",
         "sha256": "4b5cad147ef21f6d5dd7ef8e9c116e3bd78072000fa58d20611199c42f078ef1"
+      },
+      "scope": "historical host suite at its own revision; never native proof or automatically current count"
+    },
+    {
+      "receipt": "docs/acceptance/final-upgrade-20261108/receipt.json",
+      "sha256": "0a68ce2dfbcf463099b12c02bd6c55ed1c4ceab3c12824cbd03026f8d782b7da",
+      "tested_commit": "f99dcf13d101f4bb967d024f41f9b178720f469e",
+      "counts": {
+        "total": 138,
+        "passed": 130,
+        "skipped": 8
       },
       "scope": "historical host suite at its own revision; never native proof or automatically current count"
     },
