@@ -27,6 +27,8 @@ libcan receipts are not SocketCAN acceptance. QPP remains unverified.
 
 ## Separate evidence journeys
 
+- **Bring your own pack:** open the local [interactive incident desk](web/incident-pack/index.html); import, validate, query, reset and export without a server or SDK. [Schema, CLI and native adapter contract](docs/incident-pack.md). HOST fixtures are synthetic; QNX labels are collector declarations, not attestation. The pinned viewer below is unchanged.
+
 - Recorded native incident: [SLM/SSH receipt](docs/acceptance/slm-continuity-20261107/receipt.json),
   [read-only workbench](docs/workbench/index.html),
   [strict viewer verifier](tools/incident_workbench.py). See [workflow and limits](docs/incident-workbench.md).
