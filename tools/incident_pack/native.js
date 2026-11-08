@@ -50,7 +50,9 @@ async function adapt(dir,receiptFile){
   if(snapshots.length>1)add('process',survivor,{state:'observed'},snapshots.at(-1).i);
   // Known collector topology: worker main joins its observer thread; no TID invented.
   const before=lines.map((l,i)=>({i,m:/^SEPARATE_RECORDER before_kill pid=(\d+) target=(\d+)$/.exec(l)})).filter(x=>x.m);
-  if(before.length===1){
+  const topologySha='074b043ba12e6e1125dd33491725019317eb886ada072020e8869f5695b1d6e4';
+  let topologyKnown=false;try{topologyKnown=JSON.parse(build.source.text).sources?.['native/prereq_containment.c']===topologySha;}catch{}
+  if(before.length===1&&topologyKnown){
    const b=before[0],target=Number(b.m[2]),parent=Number(b.m[1]);
    const samples=[0,1,2].map(n=>lines.findIndex(l=>l==='RECORDER captured=COLOCATED sample='+n+' pid='+target));
    const ready=lines.indexOf('RECORDER captured=COLOCATED_READY');
