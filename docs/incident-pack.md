@@ -42,11 +42,11 @@ Failure invalidates all answers to UNKNOWN. Missing control/observation keeps sp
 
 Exactly one kill per query scope. Recovery requires independent interruption after kill, replacement generation in same domain, then independent ordered matching 100 RX and 100 TX. Survivor means independent same-generation before/after snapshots, not uninterrupted operation. Isolation contrast additionally requires separate-domain survivor and explicit in-process cofailure control. PID change alone is insufficient. Multiple kills currently UNKNOWN: use bounded separate incident packs. No continuous availability, safety, timing, security isolation or native C6 guarantee.
 
-## Native adapter handoff (not yet selected)
+## Native adapter and new collection
 
-After sole native probe owner concludes mechanism feasibility, implement a separate adapter translating actual captures. Do not modify historical receipts or treat HOST fixture as native. Bind collector/version, boot/run, source/build, binary/image/disk digests in textual receipts; keep licensed inputs/secrets outside git. Include actual process generations, actual kill and interruption/recovery. Emit independent traffic and explicit in-process control only when actually proven; otherwise preserve UNKNOWN. Serialize with seal(), validate CLI and import same exact file in UI. Retain raw receipt hashes and review actual native provenance: host validation cannot verify QNX ran.
+The bounded slog2/serial/libcan adapter is tools/incident_pack/native.js. Follow [native-recorder.md](native-recorder.md) to build and collect a new incident, then validate and import its exact JSON. Do not modify historical receipts or treat HOST fixture as native. Bind collector/version, boot/run, source/build, binary/image/disk digests in textual receipts; keep licensed inputs/secrets outside git. Include actual process generations, actual kill and interruption/recovery. Emit independent traffic and explicit in-process control only when actually proven; otherwise preserve UNKNOWN. Serialize with seal(), validate CLI and import same exact file in UI. Retain raw receipt hashes and review actual native provenance: host validation cannot verify QNX ran.
 
-This host lane provides no adapter, native collection, SDK/QEMU operation, mechanism choice or target feature. [Historical viewer](incident-workbench.md), pins and failures remain separate unchanged. No C6/safe-stop/heartbeat/actuation/SocketCAN work.
+The importer itself provides no SDK/QEMU operation. Native collection is a separate explicit command and never starts from the browser. [Historical viewer](incident-workbench.md), pins and failures remain separate unchanged. No C6/safe-stop/heartbeat/actuation/SocketCAN work.
 
 ## Design and verification scope
 
