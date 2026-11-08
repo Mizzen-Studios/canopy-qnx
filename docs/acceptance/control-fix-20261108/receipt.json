@@ -1,0 +1,64 @@
+{
+  "schema": "canopy.control-fix-receipt/1",
+  "tested_source_commit": "b536cc2",
+  "sources": {
+    "tools/incident_pack/core.js": "68019dedc0c16ec23b5d8760a7eb8a2ef051e15e387d5432528f89be55d13ceb",
+    "tools/incident_pack/fixture.js": "a9542b174324fbcb582fa6b8da6045bd19c17832eeba71c566bf37967c60ca5d",
+    "tools/incident_pack/native.js": "6ab24de1864b72bbfa7a6dc3d217819eda354aed475dd60fc0ebb15c2979eb6c",
+    "tests/incident_pack/core.test.js": "def07c5853cf8e078a5140c1f3d93149fa7c6ea6dc36aee367dcb8102f0c9cf9",
+    "tests/incident_pack/native.test.js": "ec90164b13956490905d49b4cae081356ee81e16451a548ba2741f576e4edb70",
+    "tests/incident_pack/control-browser.cjs": "a7bd826c9d990e59a4aac47a6e959462ab44b7447c38567d1d8ef8c8035555f8",
+    "tests/test_incident_pack.py": "20d7c80edabe746891fcda51df54a04361d03621f816bbd8775dccf77c2474cd",
+    "docs/incident-pack.md": "18f89ff1096987a7ae623a1f6f67e874ad42b9176af4cdf27b2074522c8e49d4",
+    "native/prereq_containment.c": "074b043ba12e6e1125dd33491725019317eb886ada072020e8869f5695b1d6e4"
+  },
+  "evidence": {
+    "docs/acceptance/control-fix-20261108/NOTES.md": "04ecdd5879866af15705ba4a660c58170e853aeb7e331255560473b629748762",
+    "docs/acceptance/control-fix-20261108/browser-errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/acceptance/control-fix-20261108/browser-existing-errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/acceptance/control-fix-20261108/browser-existing.json": "4989f47deb6fc45d61cbe6e4db5928974063f6149f38631b37490fd07a1ea2bc",
+    "docs/acceptance/control-fix-20261108/browser.json": "afd3d966ee5b58d537d9dcd4f8384aeec03db139dbf0ede4fb2e01374685e151",
+    "docs/acceptance/control-fix-20261108/cli-validation.json": "12ab1351a136007fbcb0144ea6ea1e487c59d958ebbf0f3393035dfed655741c",
+    "docs/acceptance/control-fix-20261108/contract.log": "d8efd475f8b52f13d8190e1ddabd39de2e4500d591fa6107d85c29bb7a7471fc",
+    "docs/acceptance/control-fix-20261108/first-tests.log": "65d64a5a45bf5fc53cda2d7de3ade650a2872ac893edbda1e5c6fa882baa8e37",
+    "docs/acceptance/control-fix-20261108/host-final.log": "04485360ac7de34fac4d34a80beb58b8e679d4e9a2673091af0828c31e0fa795",
+    "docs/acceptance/control-fix-20261108/host.log": "bc2d98c79f8d143be9eee51efaeae543ddb54d90d87d5b38cc3a6160300e05d7",
+    "docs/acceptance/control-fix-20261108/incident.json": "ced63c778d105bfa7a4a736e5d195fd6dcb65740201a7599d95edb8e9a47da93",
+    "docs/acceptance/control-fix-20261108/initial-failure.json": "01a2ec1cb921b8060fc28316059c7ecfb1a4be620d217e420eaae7285b98546a",
+    "docs/acceptance/control-fix-20261108/second-tests.log": "c75a98b231aa3ce9086b450d6ca952c5393c7928f05b41ae9df685a5a2a5af99"
+  },
+  "native_originals": {
+    "docs/acceptance/native-recorder-20261108/serial.txt": "1fe63c32e4bedf530646189d17288ea8987ccbea21e7740c73809d5f90ce961a",
+    "docs/acceptance/native-recorder-20261108/incident.json": "d70ff89cbf76d2330a2c97bf63a6043e4fd635f74dc8e6a4c7e55e1bd7e03788",
+    "docs/acceptance/native-recorder-20261108/receipt.json": "014961af46955d7ba0517d176f7532f7de019f9d21f01164d60aa01deb04305c",
+    "docs/acceptance/native-recorder-20261108/traffic1.json": "18f41a42d9deb3f2355747d9f3c598f862d963092f14bf755522427b117b9b21"
+  },
+  "host": {
+    "total": 138,
+    "passed": 130,
+    "skipped": 8,
+    "exit": 0
+  },
+  "node": {
+    "total": 59,
+    "passed": 59
+  },
+  "browser": {
+    "widths": [
+      1280,
+      360
+    ],
+    "existing_suite_widths": [
+      1280,
+      768,
+      520,
+      360
+    ],
+    "media": "none"
+  },
+  "native_rerun": false,
+  "gaps": [
+    "No per-thread TID/death timing or continuous availability claims; process-wide termination only."
+  ],
+  "diff_check": "Source diff clean; raw preserved initial failure logs contain original trailing whitespace."
+}
