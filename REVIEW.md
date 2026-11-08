@@ -1,5 +1,13 @@
 # Private capability review — 7 November 2026
 
+## Council gap closure — 8 November 2026, host-only native-first desk
+
+The cold desk now opens the unchanged [recorded native v2 pack](docs/acceptance/control-fix-20261108/incident.json), not a HOST simulation. Four bounded queries link actual CAN observations, explicit co-located control, full raw serial/traffic and original source/build/image/disk bindings. Original FRESH_QNX means fresh at collection, not current-tip native acceptance. Shared serial is multi-product: EDU entries do not substitute for CAN observations. No new native run or new SSH continuity claim.
+
+Native import is primary; HOST simulation requires an explicit secondary origin route. Missing/corrupt/mixed/stale/v1/incompatible or wrong-origin inputs fail UNKNOWN; known HOST/native collector contradictions are rejected. Compatible producer declarations can still be forged: cooperative hash binding is not attestation. Native recorder/collector executable components and original raw captures are unchanged; native_rerun:false.
+
+Council reported its own browser attempt BLOCKED before any journeys executed. It was not a product failure or a parent-browser result. Our actual host Chromium journeys and negative fixtures are separate receipts. No effort spent diagnosing the council machine. C6 STOPPED, SocketCAN UNVERIFIED, recorded:false; all private.
+
 ## Current upgrade — 8 November 2026, implemented; scoped verification complete, council gate pending
 
 Olly approved the substantive [upgrade package](docs/upgrade-acceptance-20261108.md); the earlier feature-freeze statements below are preserved history, not the current instruction. Previous independent acceptance remains conditional and does not transfer to these new features.

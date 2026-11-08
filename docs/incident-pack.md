@@ -1,6 +1,6 @@
 # Bring your own incident pack v2
 
-Open [the incident desk](../web/incident-pack/index.html) directly from a local checkout in Chromium. No server, port, SDK, native process, upload or network. Choose JSON, select a question, follow evidence, export or reset. HOST simulation is synthetic, never native evidence. State clears on reload. Export contains imported text: review confidential observations before sharing.
+Open [the incident desk](../web/incident-pack/index.html) directly from a local checkout in Chromium. No server, port, SDK, native process, upload or network. Cold open loads the original recorded native v2 pack from control-fix-20261108, unchanged and locally bundled. Select a question, follow the actual raw/control evidence, export/reset or import your own JSON. Reset clears the loaded pack; reload deliberately opens the recorded example again. The primary import expects QNX; choose the explicit HOST simulation origin or secondary sample for HOST data. A wrong expected origin fails UNKNOWN. HOST simulation is synthetic, never native evidence. The example is recorded evidence, not a new native run at the current tip. Export contains imported text: review confidential observations before sharing.
 
 ## Run locally
 
@@ -18,7 +18,7 @@ Executable closed-field schema: [core.js](../tools/incident_pack/core.js), share
 Root fields: schema (canopy.incident/2), collector, run, bindings, artifacts, events, seal.
 
 - collector: id, version, mechanism (IDs). Mechanism is descriptive, never selected or executed by importer. No slog2/secpol/dual-versus-in-process mechanism assumption.
-- run: unique id; environment HOST_SIMULATION, RECORDED_QNX or FRESH_QNX; capturedAt/expiresAt date strings. Maximum 30-day window; capture at most 5 minutes in future. Expired input UNKNOWN. Labels are collector declarations, NOT independent QNX proof. FRESH_QNX denotes a newly collected bounded run, never a live connection.
+- run: unique id; environment HOST_SIMULATION, RECORDED_QNX or FRESH_QNX; capturedAt/expiresAt date strings. Maximum 30-day window; capture at most 5 minutes in future. Expired input UNKNOWN. Labels are collector declarations, NOT independent QNX proof. Known synthetic/native collector contradictions and HOST descriptors relabelled native fail UNKNOWN; this does not detect a producer who forges all compatible declarations. FRESH_QNX denotes a newly collected bounded run, never a live connection.
 - bindings: source, binary, image, disk: four distinct artifact paths with corresponding roles.
 - artifacts: 1–32 records, each path, role, runId, text, sha256 (text digest), subjectSha256 (digest of underlying source set, executable, image, disk or raw observation stream). Roles source/binary/image/disk/observation. Native text receipts must record subject-digest computation, source revision + dirty content digest, build invocation/receipt linked input hashes, image/disk lineage and boot/run identity. Actual SDK/binaries/images/disks are NOT embedded. Importer checks text integrity and digest format, NOT native provenance. Host fixture descriptors explicitly are not real binaries/images.
 - events: 1–2048 records: id, seq (zero-based consecutive), at (monotonic relative milliseconds, <=1 day), runId, kind, process, observer, evidence, data.
@@ -55,3 +55,7 @@ Incident desk: paper #f2f6fa, ink #17324c, blue #1c537d, line #b5c6d6, warning #
 ## v1 compatibility break
 
 V2 rejects v1 as UNKNOWN (no silent upgrade or legacy acceptance). Historical packs/viewer/pins remain untouched. Re-adapt preserved original native inputs with the v2 adapter; emit structured controls only when raw records and known collector topology establish them. New accepted replay and source-bound tests: [control-fix-20261108](acceptance/control-fix-20261108/NOTES.md).
+
+## Council browser boundary
+
+Council reported its browser connection attempt BLOCKED before any journey executed; that is not a product failure or a parent test result. New local host Chromium receipts are separately recorded, with desktop/narrow positive recorded-native and negative-pack journeys. native_rerun:false for this host-only change. No SSH continuity on the new recorder pack; historical SSH evidence is separate.

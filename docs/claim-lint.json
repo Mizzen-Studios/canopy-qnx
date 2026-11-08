@@ -13,17 +13,17 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "6eb1333217454d3aa348e6e4905f4ee3825ec52d023ede018d6e0c7b1522aa4b",
+      "sha256": "e4fd2466c49563680882dcbd588dfd63c65a3ab6ec16e07165716e40d54fa201",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "STATUS.md",
-      "sha256": "6c2a2bda31a5e9c6ff3c92e3a931dde01ccda9cb95e50ee8ac9439c87ed0097b",
+      "sha256": "1c46fbc8ae81b3cfefe397bf6fa82a765d216b7705e4b17e95d8e4423db1842d",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "REVIEW.md",
-      "sha256": "77222a4f1fdccab7c45a08e4c316f7d8ba01a4ec6ab834060d46ab89a95bc37f",
+      "sha256": "d70b2452fe2d264b123b7465101366c30681956f8128c8c5152dd967ffdee89f",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -38,12 +38,12 @@
     },
     {
       "path": "docs/incident-pack.md",
-      "sha256": "18f89ff1096987a7ae623a1f6f67e874ad42b9176af4cdf27b2074522c8e49d4",
+      "sha256": "dd541ad9216be05c62638630bce8445530d489ab227cee79881e624e52f4f01c",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "web/incident-pack/index.html",
-      "sha256": "d5e21d30e88704ae624c2093a3f785bd35618d065538272a457edda290717510",
+      "sha256": "06dfb716bc3acce6a2743795bb77ce5ad33bac3adeacfd7a4d70529246a0ddcc",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -58,6 +58,11 @@
     }
   ],
   "local_links": [
+    {
+      "source": "README.md",
+      "target": "web/incident-pack/index.html",
+      "exists": true
+    },
     {
       "source": "README.md",
       "target": "docs/native-recorder.md",
@@ -185,6 +190,11 @@
     },
     {
       "source": "STATUS.md",
+      "target": "docs/acceptance/control-fix-20261108/incident.json",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
       "target": "docs/upgrade-acceptance-20261108.md",
       "exists": true
     },
@@ -276,6 +286,11 @@
     {
       "source": "STATUS.md",
       "target": "docs/acceptance/safestop-build-20261107/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "REVIEW.md",
+      "target": "docs/acceptance/control-fix-20261108/incident.json",
       "exists": true
     },
     {
@@ -396,6 +411,11 @@
     {
       "source": "web/incident-pack/index.html",
       "target": "../../tools/incident_pack/fixture.js",
+      "exists": true
+    },
+    {
+      "source": "web/incident-pack/index.html",
+      "target": "recorded-example.js",
       "exists": true
     },
     {

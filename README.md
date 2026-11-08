@@ -1,5 +1,7 @@
 # CANopy — reusable QNX incident recorder and workbench
 
+**First action: [open the native-first incident desk](web/incident-pack/index.html).** It opens the original recorded QNX v2 pack locally. Query killed/recovery/survivors/isolation, inspect raw/control evidence, export/reset or import your own QNX pack. HOST simulation is a secondary NOT QNX route. This saved capture is not native PASS at the current tip, a live connection, or new SSH continuity.
+
 ## Capture → import → query → inspect evidence
 
 Use the [native recorder](docs/native-recorder.md) for a NEW bounded QNX SLM/libcan incident, then open the [local incident desk](web/incident-pack/index.html) to import that exact pack, query interruption/recovery and inspect evidence. [Pack contract and CLI](docs/incident-pack.md). No server, upload or browser command execution. Missing/corrupt/mixed/stale/incompatible packs fail closed to UNKNOWN.
