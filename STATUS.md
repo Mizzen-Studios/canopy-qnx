@@ -26,6 +26,8 @@ C6/native safety STOPPED; SocketCAN UNVERIFIED. No heartbeat, actuation, recordi
 
 ## Preserved prior review and milestone history
 
+**Historical / out of scope:** host-simulation, doctor/readiness diagnostics, vehicle-model and C6 material below is archive context, not the current incident-recorder product or an instruction to resume it. C6 FAIL / STOPPED. Current recorder SSH UNVERIFIED. No native execution or recording is authorized by this page.
+
 
 ## Current priority — 17:28 UTC timing correction
 

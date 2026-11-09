@@ -1,5 +1,16 @@
 # CANopy — reusable QNX incident recorder and workbench
 
+**What:** capture a bounded QNX incident, then inspect its evidence locally.
+**Real QNX:** recorded SLM driver restart + byte-exact100RX/100TX, slog2 and co-located control ([original build/logs](docs/acceptance/native-recorder-20261108/NOTES.md)).
+**Host-only:** native-first desk import/query/export and rejection tests; native_rerun:false.
+**Not proven:** current-pack SSH UNVERIFIED; no timing, safety or continuous-availability claim.
+**Build in SDK guest:** select existing legal SDP/BSP/SLM/libcan image inputs; run bash tools/build_native_recorder.sh.
+**Barrier:** stop/reap SDK guest; use the sole capped HOST QEMU lease, never concurrent guests.
+**Exact build/collection prerequisites and commands:** [native recorder guide](docs/native-recorder.md); no SDK installer or turnkey image supplied.
+**Inspect without SDK:** [open local desk](web/incident-pack/index.html); host check: python3 -m unittest discover -s tests -v.
+**Freeze:** private £0, C6 STOPPED; [dry script only](docs/proof-capture/SCRIPT.md), no recording or native run.
+
+
 **First action: [open the native-first incident desk](web/incident-pack/index.html).** It opens the original recorded QNX v2 pack locally. Query killed/recovery/survivors/isolation, inspect raw/control evidence, export/reset or import your own QNX pack. HOST simulation is a secondary NOT QNX route. This saved capture is not native PASS at the current tip, a live connection, or new SSH continuity.
 
 ## Private product freeze — 9 November 2026
@@ -54,7 +65,11 @@ libcan receipts are not SocketCAN acceptance. QPP remains unverified.
 - [Experimental SocketCAN demo](docs/socketcan-demo.md): cross-build and host
   Linux tests only; does not resolve the native ABI gate.
 
-## Run on host
+## Historical host regression / simulation — out of scope
+
+Host simulation, doctor/preflight and stopped C6 material below is historical supporting context, not the current incident-recorder product or an instruction to resume it. Host unit tests remain regression checks, not QNX proof.
+
+### Host regression commands
 
 Python 3.10+, Git, and Node.js 18+ for JavaScript replay contract tests;
 no pip/npm packages, SDK, root or network needed:
@@ -136,7 +151,7 @@ See docs/dashboard-design.md and docs/replay/verification.md.
 | Hero director and offline record | canopy_host/director.py, record.py | deterministic bytes and Chromium interaction tests |
 | No-SDK hygiene | scripts/check-no-sdk.sh | staged/deleted blob, binary, path, symlink negative tests |
 
-## Optional Linux vcan transport
+## Historical optional Linux vcan transport — out of scope
 
 SocketCAN(interface='vcan0') is a standard-library transport adapter for an
 **already configured** Linux CAN interface. It never loads modules, creates
@@ -169,11 +184,11 @@ and QPP runtime remain unverified. No SDK, licence, binary or image is distribut
 The [capability ledger](docs/capabilities.md), not host doctor output, records
 observed capability scope. No QNX evaluation/performance result is published.
 
-## Read-only host preflight
+## Historical doctor/preflight — out of scope
 
 ~~~sh
-./canopy doctor          # human-readable diagnostics; expected exit 1 today
-./canopy doctor --json   # stable schema_version=1, same nonzero exit
+./canopy doctor          # historical diagnostic example; current readiness not asserted
+./canopy doctor --json   # historical schema example; not native acceptance
 ./canopy up              # explicit blocked result; no guest started
 ~~~
 

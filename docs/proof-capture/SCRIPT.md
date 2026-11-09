@@ -2,50 +2,43 @@
 
 No recording or audio capture. Separate Olly OK required. No publication/upload authorized.
 
-Accepted-tip asset binding: 88b1bcf5fcc1f97da03321d35b03e89c85090227
-recorded: false; acceptance CONDITIONAL (receipt-inspected, not re-run). Historical receipt source/build pins are unchanged.
-Exact whitespace narration word count: 190; planned 155 seconds (not measured).
+Packaging asset snapshot (not native acceptance): 7c3972226ed6cc9d28f48b85985d6038e9ad00e9
+recorded: false; script-only packaging refresh, no native rerun. Historical receipt source/build pins are unchanged.
+Exact whitespace narration word count: 219; planned 160 seconds (not measured).
 C6 FAIL / STOPPED; SocketCAN UNVERIFIED. Historical native and host-only frames remain separate.
 
-## L01 — 0–20 seconds · host-only
-Claim: Read-only static workbench presents recorded native libcan/SLM evidence, not live telemetry or safety.
-Planned frame: Historical frame only: git show 88b1bcf5fcc1f97da03321d35b03e89c85090227:docs/workbench/index.html. Not the newly edited workbench page. Local sanitized file view: docs/workbench/index.html, docs/workbench/recorded-manifest.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.
-Narration: CANopy is a private, read-only workbench for one recorded QNX libcan and SLM experiment. It presents saved evidence, not a live safety dashboard.
-Frozen files: docs/workbench/index.html SHA256 5282e9f446f35a2b48679c26a349deeed533f7cbc756e39bfb2f803df1c57408 [git-show-at-accepted-tip], docs/workbench/recorded-manifest.json SHA256 36f4c42e48866ba3871b9254a72b1f2d2348b9cb5fc183c72c2da34ee7dc0efa [current file equals accepted tip]
-REVIEW boundary: Incident viewer / corrupt, missing, mixed rejection / Chromium
+## L01 — 0–25 seconds · host-only
+Claim: Native-first desk presents unchanged saved QNX v2 pack; native_rerun:false.
+Planned frame: Local saved desk web/incident-pack/index.html plus original v2 pack and host-browser receipt. Label host-only rendering of recorded native evidence; no guest or live session.
+Narration: CANopy records a bounded QNX incident and makes the saved evidence inspectable. The local desk opens the original native pack. This screen is host software presenting a recorded capture, not live telemetry or a new QNX run.
+Frozen files: web/incident-pack/index.html SHA256 8cbb63fad54c41b0be5e3d08afafcc1843b91609bfb3b12cb4083683a14384bf [current file equals packaging snapshot], docs/acceptance/control-fix-20261108/incident.json SHA256 ced63c778d105bfa7a4a736e5d195fd6dcb65740201a7599d95edb8e9a47da93 [current file equals packaging snapshot], docs/acceptance/native-first-20261108/receipt.json SHA256 0a2b0b84c04698a21de66df37f7c4050ca79d44e1d50efde6012e596af1047ed [current file equals packaging snapshot]
+REVIEW boundary: host-only native-first desk
 
-## L02 — 20–55 seconds · recorded native QEMU observation
-Claim: Three recorded positively identified managed CAN PID kills/restarts with100RX/100TX ordered exact bytes per post-restart trial.
-Planned frame: Local sanitized file view: docs/acceptance/slm-continuity-20261107/receipt.json, docs/acceptance/slm-continuity-20261107/serial.txt, docs/acceptance/slm-continuity-20261107/traffic1.json, docs/acceptance/slm-continuity-20261107/traffic2.json, docs/acceptance/slm-continuity-20261107/traffic3.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.
-Narration: In three recorded trials, the controller identified and killed the managed CAN process. A new process appeared. The saved post-restart capture contains one hundred received and one hundred transmitted frames per trial, checked for order and exact bytes.
-Frozen files: docs/acceptance/slm-continuity-20261107/receipt.json SHA256 9df1cab467af2785af8461d133e7b2845fc05a5cf8175f00717eb32e1478df56 [current file equals accepted tip], docs/acceptance/slm-continuity-20261107/serial.txt SHA256 a1fa4f0fd2ac5473507b5ba273f063aea9998a2d28a97df4beb856d5e96a0d88 [current file equals accepted tip], docs/acceptance/slm-continuity-20261107/traffic1.json SHA256 18f41a42d9deb3f2355747d9f3c598f862d963092f14bf755522427b117b9b21 [current file equals accepted tip], docs/acceptance/slm-continuity-20261107/traffic2.json SHA256 bfa758c2253d7414ded2a7d049dd342e9bf0fb617dbe6b9e465c4aecd397cfea [current file equals accepted tip], docs/acceptance/slm-continuity-20261107/traffic3.json SHA256 aff53bc86bb0c8bb553d7ee38b4f67e00d666e9ec28be83787869ec93fb70c70 [current file equals accepted tip]
-REVIEW boundary: authenticated SSH continuity
+## L02 — 25–65 seconds · recorded native QEMU observation
+Claim: Original Nov8 scoped native recorder PASS: SLM restart, byte-exact100RX100TX, finite slog2 and actual co-located control.
+Planned frame: Local saved evidence only: docs/acceptance/native-recorder-20261108/receipt.json, docs/acceptance/native-recorder-20261108/serial.txt, docs/acceptance/native-recorder-20261108/traffic1.json, docs/acceptance/native-recorder-20261108/control-slog.txt. Label recorded native or host-only; never show a live session or run a guest.
+Narration: In the original source-bound native capture, the separate recorder observed the managed CAN driver stop and restart. Independent traffic checks compared one hundred received and one hundred transmitted frames in order and byte for byte. Finite slog phases and the co-located death control are retained with their raw observations.
+Frozen files: docs/acceptance/native-recorder-20261108/receipt.json SHA256 014961af46955d7ba0517d176f7532f7de019f9d21f01164d60aa01deb04305c [current file equals packaging snapshot], docs/acceptance/native-recorder-20261108/serial.txt SHA256 1fe63c32e4bedf530646189d17288ea8987ccbea21e7740c73809d5f90ce961a [current file equals packaging snapshot], docs/acceptance/native-recorder-20261108/traffic1.json SHA256 18f41a42d9deb3f2355747d9f3c598f862d963092f14bf755522427b117b9b21 [current file equals packaging snapshot], docs/acceptance/native-recorder-20261108/control-slog.txt SHA256 a72b39ee4be1568e5d27e5c866d171db3040dfad6081de203caebb6c84aea933 [current file equals packaging snapshot]
+REVIEW boundary: SLM-managed driver kill/restart
 
-## L03 — 55–85 seconds · recorded native QEMU observation
-Claim: Same authenticated SSH stream and unchanged main io-sock PID during bounded historical observation only.
-Planned frame: Local sanitized file view: docs/acceptance/slm-continuity-20261107/receipt.json, docs/acceptance/slm-continuity-20261107/ssh-stream.txt, docs/acceptance/slm-continuity-20261107/ssh-debug.txt, docs/acceptance/slm-continuity-20261107/ssh-server.txt. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.
-Narration: During this bounded experiment, the same authenticated SSH connection kept streaming and the main io-sock PID was unchanged. That observation does not establish continuous CAN service, production isolation or general SSH health.
-Frozen files: docs/acceptance/slm-continuity-20261107/receipt.json SHA256 9df1cab467af2785af8461d133e7b2845fc05a5cf8175f00717eb32e1478df56 [current file equals accepted tip], docs/acceptance/slm-continuity-20261107/ssh-stream.txt SHA256 4d378ab4eacc905a2a309ceb02b66f134faaa05a1c161990c6af77bc3e65c681 [current file equals accepted tip], docs/acceptance/slm-continuity-20261107/ssh-debug.txt SHA256 7d8f7672b526229cd0019b00518d2ee5a366115c89c7ff04d196ef37f39e0304 [current file equals accepted tip], docs/acceptance/slm-continuity-20261107/ssh-server.txt SHA256 dbfa92dfdc29f4631cfdf8c7ebc6771ce6a9141ddef276b0b5cc8eeb60962ff5 [current file equals accepted tip]
-REVIEW boundary: authenticated SSH continuity
+## L03 — 65–100 seconds · recorded native QEMU observation
+Claim: Original source/ELF/IFS/disk bindings and unchanged raw capture; derived v2 control pack, not tip-native acceptance.
+Planned frame: Local saved evidence only: docs/acceptance/control-fix-20261108/receipt.json, docs/acceptance/control-fix-20261108/incident.json, docs/acceptance/native-recorder-20261108/build-projection.log. Label recorded native or host-only; never show a live session or run a guest.
+Narration: Follow the raw evidence and source, binary, image and disk bindings. These identify the original capture, not a fresh build at this documentation tip. The schema two control pack preserves those bytes. Producer declarations and matching hashes provide cooperative integrity, not adversarial attestation.
+Frozen files: docs/acceptance/control-fix-20261108/receipt.json SHA256 4ba52fd8b40023c8751cb3df6ebd866dbbdd3b03219ed7fa62ca0ae28e80a499 [current file equals packaging snapshot], docs/acceptance/control-fix-20261108/incident.json SHA256 ced63c778d105bfa7a4a736e5d195fd6dcb65740201a7599d95edb8e9a47da93 [current file equals packaging snapshot], docs/acceptance/native-recorder-20261108/build-projection.log SHA256 b587532fc4c615a3aa9946464e4f256ef1cf1c89bf7b2d1d96b7c14b0494adb4 [current file equals packaging snapshot]
+REVIEW boundary: cooperative hash binding is not attestation
 
-## L04 — 85–115 seconds · host-only
-Claim: Missing/corrupt/mixed evidence yields UNKNOWN; saved desktop/mobile browser checks are host-only.
-Planned frame: Local sanitized file view: docs/acceptance/unknown-review-20261107/missing.html, docs/acceptance/unknown-review-20261107/corrupt.html, docs/acceptance/unknown-review-20261107/mixed.html, docs/acceptance/browser-20261107/receipt.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.
-Narration: Missing, corrupt or mixed evidence yields UNKNOWN rather than an accepted incident timeline. Saved Chromium checks cover desktop and mobile layouts. This is host-side rendering and rejection evidence, not another native run.
-Frozen files: docs/acceptance/unknown-review-20261107/missing.html SHA256 1748ab4b2831df42b9fad86641319637cf97f1d937bc033b7cd7fbd5d3df55c7 [current file equals accepted tip], docs/acceptance/unknown-review-20261107/corrupt.html SHA256 d0dd2e1deeb0217482b3fe68d7595e4885e67986802c7eea916e04ffe56867e0 [current file equals accepted tip], docs/acceptance/unknown-review-20261107/mixed.html SHA256 d0dd2e1deeb0217482b3fe68d7595e4885e67986802c7eea916e04ffe56867e0 [current file equals accepted tip], docs/acceptance/browser-20261107/receipt.json SHA256 8d6392815e0c3855d2efefd4a1cf0eda7f564a50d03bd254ca08e5489d6901c5 [current file equals accepted tip]
-REVIEW boundary: Incident viewer / corrupt, missing, mixed rejection / Chromium
+## L04 — 100–130 seconds · host-only
+Claim: Recorded host/browser checks: native-first queries/evidence/export/reset and negative packs UNKNOWN.
+Planned frame: Local saved evidence only: docs/acceptance/native-first-20261108/receipt.json, docs/acceptance/native-first-20261108/footer-browser.log. Label recorded native or host-only; never show a live session or run a guest.
+Narration: The saved desktop and narrow-browser checks exercise four queries, raw evidence, export, reset and rejected inputs. Missing, corrupt, mixed, stale or incompatible packs return UNKNOWN. These are host interface and rejection checks. They do not establish additional target behavior.
+Frozen files: docs/acceptance/native-first-20261108/receipt.json SHA256 0a2b0b84c04698a21de66df37f7c4050ca79d44e1d50efde6012e596af1047ed [current file equals packaging snapshot], docs/acceptance/native-first-20261108/footer-browser.log SHA256 bc3fd63f7d03957396fbd3cd22de8eccd8c4dc5bf66c6c18e5ade21141f14842 [current file equals packaging snapshot]
+REVIEW boundary: host-only native-first desk
 
-## L05 — 115–135 seconds · host-only
-Claim: Separate replay is HOST SIMULATION; no QNX proof transfers.
-Planned frame: Local sanitized file view: docs/replay/index.html, docs/replay/run.jsonl. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.
-Narration: The older replay is a different, explicitly host-only simulation. Its logical clock and model states do not become QNX proof.
-Frozen files: docs/replay/index.html SHA256 e003d6f78ab2517d936567979a8d200d6a209a9a4152db73ee7a305561f14c7b [current file equals accepted tip], docs/replay/run.jsonl SHA256 10433ce54c9aa1dedf22e0a5cdb9df0b0a583c15c7af388afb4aae445aabede9 [current file equals accepted tip]
-REVIEW boundary: host-only
-
-## L06 — 135–155 seconds · UNVERIFIED boundaries
-Claim: Historical driver source/binary binding incomplete; SocketCAN UNVERIFIED and C6FAIL/STOPPED; no safety/timing/availability acceptance.
-Planned frame: Historical accepted-tip capabilities, read with git show 88b1bcf5fcc1f97da03321d35b03e89c85090227:docs/capabilities.json; not the upgraded current product. Local sanitized file view: docs/capabilities.json, docs/acceptance/safestop-focused-failure-20261107/receipt.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.
-Narration: Historical driver source and binary identity are not fully bound. SocketCAN remains unverified. The C6 attempt failed and is stopped. No safety, timing, continuous availability or certification claim follows. Council acceptance is conditional; native feature scope is frozen. Recording and audio need separate Olly approval.
-Frozen files: docs/capabilities.json SHA256 d3cbf3e8325320858e9cf4c1eb33d474a5ee635a01d3977c0928c2270b8da1a8 [git-show-at-accepted-tip], docs/acceptance/safestop-focused-failure-20261107/receipt.json SHA256 adf790f90acabfbfbaaf2620037ced5f0a4c3aab401148d0f5eaaffbf75f70f0 [current file equals accepted tip]
-REVIEW boundary: UNVERIFIED
+## L05 — 130–160 seconds · UNVERIFIED boundaries
+Claim: Current-pack SSH UNVERIFIED; historical host-sim/doctor and C6 out of scope, C6 STOPPED, SocketCAN UNVERIFIED.
+Planned frame: Local saved evidence only: docs/acceptance/native-recorder-20261108/NOTES.md, docs/acceptance/native-first-20261108/NOTES.md. Label recorded native or host-only; never show a live session or run a guest.
+Narration: Current recorder SSH continuity remains unverified. The older authenticated-stream experiment is separate and does not transfer. Host simulation and doctor material are historical; C6 failed and is stopped. SocketCAN is unverified. No safety, timing, continuous availability or full-platform claim follows. This is a script only. Nothing has been recorded or published.
+Frozen files: docs/acceptance/native-recorder-20261108/NOTES.md SHA256 d5cd11538ec878e2229601f5e1b55819a7c6f7e0bfb58debb0551516fa983c40 [current file equals packaging snapshot], docs/acceptance/native-first-20261108/NOTES.md SHA256 8ca64b543fef4df494a4cdfffe1f48de3a41015c86a91febbe4434a8ab63b660 [current file equals packaging snapshot]
+REVIEW boundary: C6/native safety STOPPED
 

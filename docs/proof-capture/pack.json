@@ -1,162 +1,128 @@
 {
   "schema": "private-dry-pack.v1",
-  "frozen_commit": "88b1bcf5fcc1f97da03321d35b03e89c85090227",
+  "frozen_commit": "7c3972226ed6cc9d28f48b85985d6038e9ad00e9",
   "capture_authorization": "NOT_GRANTED: separate Olly OK required",
   "lines": [
     {
       "id": "L01",
       "start": 0,
-      "end": 20,
-      "narration": "CANopy is a private, read-only workbench for one recorded QNX libcan and SLM experiment. It presents saved evidence, not a live safety dashboard.",
-      "claim": "Read-only static workbench presents recorded native libcan/SLM evidence, not live telemetry or safety.",
-      "frame": "Historical frame only: git show 88b1bcf5fcc1f97da03321d35b03e89c85090227:docs/workbench/index.html. Not the newly edited workbench page. Local sanitized file view: docs/workbench/index.html, docs/workbench/recorded-manifest.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
+      "end": 25,
+      "narration": "CANopy records a bounded QNX incident and makes the saved evidence inspectable. The local desk opens the original native pack. This screen is host software presenting a recorded capture, not live telemetry or a new QNX run.",
+      "claim": "Native-first desk presents unchanged saved QNX v2 pack; native_rerun:false.",
+      "frame": "Local saved desk web/incident-pack/index.html plus original v2 pack and host-browser receipt. Label host-only rendering of recorded native evidence; no guest or live session.",
       "label": "host-only",
-      "review_quote": "Incident viewer / corrupt, missing, mixed rejection / Chromium",
+      "review_quote": "host-only native-first desk",
       "assets": [
         {
-          "path": "docs/workbench/index.html",
-          "sha256": "5282e9f446f35a2b48679c26a349deeed533f7cbc756e39bfb2f803df1c57408",
-          "view": "git-show-at-accepted-tip"
+          "path": "web/incident-pack/index.html",
+          "sha256": "8cbb63fad54c41b0be5e3d08afafcc1843b91609bfb3b12cb4083683a14384bf"
         },
         {
-          "path": "docs/workbench/recorded-manifest.json",
-          "sha256": "36f4c42e48866ba3871b9254a72b1f2d2348b9cb5fc183c72c2da34ee7dc0efa"
+          "path": "docs/acceptance/control-fix-20261108/incident.json",
+          "sha256": "ced63c778d105bfa7a4a736e5d195fd6dcb65740201a7599d95edb8e9a47da93"
+        },
+        {
+          "path": "docs/acceptance/native-first-20261108/receipt.json",
+          "sha256": "0a2b0b84c04698a21de66df37f7c4050ca79d44e1d50efde6012e596af1047ed"
         }
       ]
     },
     {
       "id": "L02",
-      "start": 20,
-      "end": 55,
-      "narration": "In three recorded trials, the controller identified and killed the managed CAN process. A new process appeared. The saved post-restart capture contains one hundred received and one hundred transmitted frames per trial, checked for order and exact bytes.",
-      "claim": "Three recorded positively identified managed CAN PID kills/restarts with100RX/100TX ordered exact bytes per post-restart trial.",
-      "frame": "Local sanitized file view: docs/acceptance/slm-continuity-20261107/receipt.json, docs/acceptance/slm-continuity-20261107/serial.txt, docs/acceptance/slm-continuity-20261107/traffic1.json, docs/acceptance/slm-continuity-20261107/traffic2.json, docs/acceptance/slm-continuity-20261107/traffic3.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
+      "start": 25,
+      "end": 65,
+      "narration": "In the original source-bound native capture, the separate recorder observed the managed CAN driver stop and restart. Independent traffic checks compared one hundred received and one hundred transmitted frames in order and byte for byte. Finite slog phases and the co-located death control are retained with their raw observations.",
+      "claim": "Original Nov8 scoped native recorder PASS: SLM restart, byte-exact100RX100TX, finite slog2 and actual co-located control.",
+      "frame": "Local saved evidence only: docs/acceptance/native-recorder-20261108/receipt.json, docs/acceptance/native-recorder-20261108/serial.txt, docs/acceptance/native-recorder-20261108/traffic1.json, docs/acceptance/native-recorder-20261108/control-slog.txt. Label recorded native or host-only; never show a live session or run a guest.",
       "label": "recorded native QEMU observation",
-      "review_quote": "authenticated SSH continuity",
+      "review_quote": "SLM-managed driver kill/restart",
       "assets": [
         {
-          "path": "docs/acceptance/slm-continuity-20261107/receipt.json",
-          "sha256": "9df1cab467af2785af8461d133e7b2845fc05a5cf8175f00717eb32e1478df56"
+          "path": "docs/acceptance/native-recorder-20261108/receipt.json",
+          "sha256": "014961af46955d7ba0517d176f7532f7de019f9d21f01164d60aa01deb04305c"
         },
         {
-          "path": "docs/acceptance/slm-continuity-20261107/serial.txt",
-          "sha256": "a1fa4f0fd2ac5473507b5ba273f063aea9998a2d28a97df4beb856d5e96a0d88"
+          "path": "docs/acceptance/native-recorder-20261108/serial.txt",
+          "sha256": "1fe63c32e4bedf530646189d17288ea8987ccbea21e7740c73809d5f90ce961a"
         },
         {
-          "path": "docs/acceptance/slm-continuity-20261107/traffic1.json",
+          "path": "docs/acceptance/native-recorder-20261108/traffic1.json",
           "sha256": "18f41a42d9deb3f2355747d9f3c598f862d963092f14bf755522427b117b9b21"
         },
         {
-          "path": "docs/acceptance/slm-continuity-20261107/traffic2.json",
-          "sha256": "bfa758c2253d7414ded2a7d049dd342e9bf0fb617dbe6b9e465c4aecd397cfea"
-        },
-        {
-          "path": "docs/acceptance/slm-continuity-20261107/traffic3.json",
-          "sha256": "aff53bc86bb0c8bb553d7ee38b4f67e00d666e9ec28be83787869ec93fb70c70"
+          "path": "docs/acceptance/native-recorder-20261108/control-slog.txt",
+          "sha256": "a72b39ee4be1568e5d27e5c866d171db3040dfad6081de203caebb6c84aea933"
         }
       ]
     },
     {
       "id": "L03",
-      "start": 55,
-      "end": 85,
-      "narration": "During this bounded experiment, the same authenticated SSH connection kept streaming and the main io-sock PID was unchanged. That observation does not establish continuous CAN service, production isolation or general SSH health.",
-      "claim": "Same authenticated SSH stream and unchanged main io-sock PID during bounded historical observation only.",
-      "frame": "Local sanitized file view: docs/acceptance/slm-continuity-20261107/receipt.json, docs/acceptance/slm-continuity-20261107/ssh-stream.txt, docs/acceptance/slm-continuity-20261107/ssh-debug.txt, docs/acceptance/slm-continuity-20261107/ssh-server.txt. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
+      "start": 65,
+      "end": 100,
+      "narration": "Follow the raw evidence and source, binary, image and disk bindings. These identify the original capture, not a fresh build at this documentation tip. The schema two control pack preserves those bytes. Producer declarations and matching hashes provide cooperative integrity, not adversarial attestation.",
+      "claim": "Original source/ELF/IFS/disk bindings and unchanged raw capture; derived v2 control pack, not tip-native acceptance.",
+      "frame": "Local saved evidence only: docs/acceptance/control-fix-20261108/receipt.json, docs/acceptance/control-fix-20261108/incident.json, docs/acceptance/native-recorder-20261108/build-projection.log. Label recorded native or host-only; never show a live session or run a guest.",
       "label": "recorded native QEMU observation",
-      "review_quote": "authenticated SSH continuity",
+      "review_quote": "cooperative hash binding is not attestation",
       "assets": [
         {
-          "path": "docs/acceptance/slm-continuity-20261107/receipt.json",
-          "sha256": "9df1cab467af2785af8461d133e7b2845fc05a5cf8175f00717eb32e1478df56"
+          "path": "docs/acceptance/control-fix-20261108/receipt.json",
+          "sha256": "4ba52fd8b40023c8751cb3df6ebd866dbbdd3b03219ed7fa62ca0ae28e80a499"
         },
         {
-          "path": "docs/acceptance/slm-continuity-20261107/ssh-stream.txt",
-          "sha256": "4d378ab4eacc905a2a309ceb02b66f134faaa05a1c161990c6af77bc3e65c681"
+          "path": "docs/acceptance/control-fix-20261108/incident.json",
+          "sha256": "ced63c778d105bfa7a4a736e5d195fd6dcb65740201a7599d95edb8e9a47da93"
         },
         {
-          "path": "docs/acceptance/slm-continuity-20261107/ssh-debug.txt",
-          "sha256": "7d8f7672b526229cd0019b00518d2ee5a366115c89c7ff04d196ef37f39e0304"
-        },
-        {
-          "path": "docs/acceptance/slm-continuity-20261107/ssh-server.txt",
-          "sha256": "dbfa92dfdc29f4631cfdf8c7ebc6771ce6a9141ddef276b0b5cc8eeb60962ff5"
+          "path": "docs/acceptance/native-recorder-20261108/build-projection.log",
+          "sha256": "b587532fc4c615a3aa9946464e4f256ef1cf1c89bf7b2d1d96b7c14b0494adb4"
         }
       ]
     },
     {
       "id": "L04",
-      "start": 85,
-      "end": 115,
-      "narration": "Missing, corrupt or mixed evidence yields UNKNOWN rather than an accepted incident timeline. Saved Chromium checks cover desktop and mobile layouts. This is host-side rendering and rejection evidence, not another native run.",
-      "claim": "Missing/corrupt/mixed evidence yields UNKNOWN; saved desktop/mobile browser checks are host-only.",
-      "frame": "Local sanitized file view: docs/acceptance/unknown-review-20261107/missing.html, docs/acceptance/unknown-review-20261107/corrupt.html, docs/acceptance/unknown-review-20261107/mixed.html, docs/acceptance/browser-20261107/receipt.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
+      "start": 100,
+      "end": 130,
+      "narration": "The saved desktop and narrow-browser checks exercise four queries, raw evidence, export, reset and rejected inputs. Missing, corrupt, mixed, stale or incompatible packs return UNKNOWN. These are host interface and rejection checks. They do not establish additional target behavior.",
+      "claim": "Recorded host/browser checks: native-first queries/evidence/export/reset and negative packs UNKNOWN.",
+      "frame": "Local saved evidence only: docs/acceptance/native-first-20261108/receipt.json, docs/acceptance/native-first-20261108/footer-browser.log. Label recorded native or host-only; never show a live session or run a guest.",
       "label": "host-only",
-      "review_quote": "Incident viewer / corrupt, missing, mixed rejection / Chromium",
+      "review_quote": "host-only native-first desk",
       "assets": [
         {
-          "path": "docs/acceptance/unknown-review-20261107/missing.html",
-          "sha256": "1748ab4b2831df42b9fad86641319637cf97f1d937bc033b7cd7fbd5d3df55c7"
+          "path": "docs/acceptance/native-first-20261108/receipt.json",
+          "sha256": "0a2b0b84c04698a21de66df37f7c4050ca79d44e1d50efde6012e596af1047ed"
         },
         {
-          "path": "docs/acceptance/unknown-review-20261107/corrupt.html",
-          "sha256": "d0dd2e1deeb0217482b3fe68d7595e4885e67986802c7eea916e04ffe56867e0"
-        },
-        {
-          "path": "docs/acceptance/unknown-review-20261107/mixed.html",
-          "sha256": "d0dd2e1deeb0217482b3fe68d7595e4885e67986802c7eea916e04ffe56867e0"
-        },
-        {
-          "path": "docs/acceptance/browser-20261107/receipt.json",
-          "sha256": "8d6392815e0c3855d2efefd4a1cf0eda7f564a50d03bd254ca08e5489d6901c5"
+          "path": "docs/acceptance/native-first-20261108/footer-browser.log",
+          "sha256": "bc3fd63f7d03957396fbd3cd22de8eccd8c4dc5bf66c6c18e5ade21141f14842"
         }
       ]
     },
     {
       "id": "L05",
-      "start": 115,
-      "end": 135,
-      "narration": "The older replay is a different, explicitly host-only simulation. Its logical clock and model states do not become QNX proof.",
-      "claim": "Separate replay is HOST SIMULATION; no QNX proof transfers.",
-      "frame": "Local sanitized file view: docs/replay/index.html, docs/replay/run.jsonl. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
-      "label": "host-only",
-      "review_quote": "host-only",
-      "assets": [
-        {
-          "path": "docs/replay/index.html",
-          "sha256": "e003d6f78ab2517d936567979a8d200d6a209a9a4152db73ee7a305561f14c7b"
-        },
-        {
-          "path": "docs/replay/run.jsonl",
-          "sha256": "10433ce54c9aa1dedf22e0a5cdb9df0b0a583c15c7af388afb4aae445aabede9"
-        }
-      ]
-    },
-    {
-      "id": "L06",
-      "start": 135,
-      "end": 155,
-      "narration": "Historical driver source and binary identity are not fully bound. SocketCAN remains unverified. The C6 attempt failed and is stopped. No safety, timing, continuous availability or certification claim follows. Council acceptance is conditional; native feature scope is frozen. Recording and audio need separate Olly approval.",
-      "claim": "Historical driver source/binary binding incomplete; SocketCAN UNVERIFIED and C6FAIL/STOPPED; no safety/timing/availability acceptance.",
-      "frame": "Historical accepted-tip capabilities, read with git show 88b1bcf5fcc1f97da03321d35b03e89c85090227:docs/capabilities.json; not the upgraded current product. Local sanitized file view: docs/capabilities.json, docs/acceptance/safestop-focused-failure-20261107/receipt.json. Show receipt checks/observed markers and binding fields; cuts labelled recorded evidence, never live telemetry.",
+      "start": 130,
+      "end": 160,
+      "narration": "Current recorder SSH continuity remains unverified. The older authenticated-stream experiment is separate and does not transfer. Host simulation and doctor material are historical; C6 failed and is stopped. SocketCAN is unverified. No safety, timing, continuous availability or full-platform claim follows. This is a script only. Nothing has been recorded or published.",
+      "claim": "Current-pack SSH UNVERIFIED; historical host-sim/doctor and C6 out of scope, C6 STOPPED, SocketCAN UNVERIFIED.",
+      "frame": "Local saved evidence only: docs/acceptance/native-recorder-20261108/NOTES.md, docs/acceptance/native-first-20261108/NOTES.md. Label recorded native or host-only; never show a live session or run a guest.",
       "label": "UNVERIFIED boundaries",
-      "review_quote": "UNVERIFIED",
+      "review_quote": "C6/native safety STOPPED",
       "assets": [
         {
-          "path": "docs/capabilities.json",
-          "sha256": "d3cbf3e8325320858e9cf4c1eb33d474a5ee635a01d3977c0928c2270b8da1a8",
-          "view": "git-show-at-accepted-tip"
+          "path": "docs/acceptance/native-recorder-20261108/NOTES.md",
+          "sha256": "d5cd11538ec878e2229601f5e1b55819a7c6f7e0bfb58debb0551516fa983c40"
         },
         {
-          "path": "docs/acceptance/safestop-focused-failure-20261107/receipt.json",
-          "sha256": "adf790f90acabfbfbaaf2620037ced5f0a4c3aab401148d0f5eaaffbf75f70f0"
+          "path": "docs/acceptance/native-first-20261108/NOTES.md",
+          "sha256": "8ca64b543fef4df494a4cdfffe1f48de3a41015c86a91febbe4434a8ab63b660"
         }
       ]
     }
   ],
-  "prior_frozen_commit": "79912ef4ab2a738263d1ea22d42210d722182f35",
+  "prior_frozen_commit": "88b1bcf5fcc1f97da03321d35b03e89c85090227",
   "recorded": false,
-  "gate": "CONDITIONAL: owner receipt-inspected, not re-run, 2026-11-07 20:03 UTC",
-  "packet_source_commit": "22ffcaca1269ec0402099fc06b4876a4e8d51748",
-  "packet_binding_scope": "Current packaging source; historical frozen asset and native receipt bindings unchanged."
+  "gate": "Docs-only script refresh after council re-review; independent gate separate; no new native execution",
+  "packet_source_commit": "7c3972226ed6cc9d28f48b85985d6038e9ad00e9",
+  "packet_binding_scope": "Packaging asset snapshot at previous private freeze; original native source/build/ELF/IFS/disk pins unchanged. Not a new native acceptance."
 }

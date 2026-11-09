@@ -1,18 +1,11 @@
-# Private demo preparation — DRY PACK only
+# Private demo preparation — refreshed DRY SCRIPT only
 
-Canonical [line-by-line script, claims, frozen files and planned frames](proof-capture/SCRIPT.md); [machine-readable pack](proof-capture/pack.json), [validation report](proof-capture/report.json). Exact narration count **190 words**, planned **155 seconds (2:35)**. This is editorial arithmetic, not recorded/rehearsed duration or QNX timing.
+The [line-by-line script](proof-capture/SCRIPT.md), [machine-readable pack](proof-capture/pack.json) and [validation report](proof-capture/report.json) now follow the current native-first recorder/desk journey. Narration: **219 words**, planned **160 seconds**, editorial only, not a recording, rehearsal or QNX timing measurement.
 
-Run from any workdir: `python3 /your/checkout/tools/proof_capture.py`. It fails on missing/changed frozen assets, absent claim/REVIEW mapping, stale script/report or an edit plan of180seconds or more. Semantic mapping remains human-reviewed; hashing does not prove claim truth. Current packet asset binding is to88b1bcf5fcc1f97da03321d35b03e89c85090227, not repinned.
+Packaging assets are frozen at private docs tip 7c3972226ed6cc9d28f48b85985d6038e9ad00e9. This is an asset snapshot, **not native acceptance**. Original Nov8 recorder source/ELF/IFS/disk bindings and actual raw captures are unchanged. Prior dry-pack assets/script remain in git history; no acceptance receipt is rewritten.
 
-**No recording or audio capture yet. Separate Olly OK required.** Nothing uploaded, published, deployed or posted. Native feature scope frozen following conditional council acceptance. C6FAIL/STOPPED; SocketCAN UNVERIFIED. Frames distinguish recorded native observations from host-only UNKNOWN/replay. No live availability, safety or measured restart-latency claim.
+Planned sequence: host-only saved native-first desk → original recorded native SLM/libcan restart and exact traffic → original provenance/control → host-only query/export/UNKNOWN checks → boundaries. **native_rerun:false**. SSH **UNVERIFIED for current recorder packs**; no historical SSH continuity transfers. Host-sim/doctor material is history/out of scope. C6 FAIL / STOPPED; SocketCAN UNVERIFIED; no safety, timing, continuous-availability or full-platform claim.
 
-Historical179-word draft receipt remains at acceptance/private-demo-20261107/receipt.json and describes its own tested2366b96 revision, not this corrected190-word script. No historical receipt overwritten.
+Validate offline with python3 tools/proof_capture.py. It checks frozen assets, REVIEW mapping, script/report consistency and planned duration below180seconds. Hashes establish identity, not semantic truth or attestation.
 
-## Accepted completion tip
-
-Packet aligned to 88b1bcf5fcc1f97da03321d35b03e89c85090227; **recorded: false**. Owner gate CONDITIONAL, receipt-inspected not re-run. Asset hashes are checked against this exact accepted tip; historical receipt source/binary/image pins and failures are unchanged. Previous checklist asset pin 79912ef4ab2a738263d1ea22d42210d722182f35 remains in git history and prior_frozen_commit. No script polish or capture. Videos remain deferred until the end and separate Olly OK.
-
-
-## Residual packaging source — 21:05 UTC
-
-Current packaging/review source: 22ffcaca1269ec0402099fc06b4876a4e8d51748 (owner remote-verified at 21:05 UTC). Conditional native-completion acceptance remains at 88b1bcf5fcc1f97da03321d35b03e89c85090227, receipt-inspected, not re-run. No CANopy native rerun. Historical native labels mean observed in this QEMU run, not benchmarks. recorded:false. C6 FAIL / STOPPED; SocketCAN UNVERIFIED. No capture, audio, publication, deployment, submission or outside contact. Historical frozen assets and source/build/image pins remain unchanged; packet_source_commit is separate from frozen_commit.
+**No recording/audio/video capture, no QEMU run, no publication or upload.** Separate Olly recording authorization remains absent; this wave approves script edits only. Everything private, £0. Freeze after host CI and wait for independent review.
