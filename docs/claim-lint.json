@@ -13,12 +13,12 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "e4fd2466c49563680882dcbd588dfd63c65a3ab6ec16e07165716e40d54fa201",
+      "sha256": "44bf54877245f438fff469da6b0980fda248ac98809d0640c43cd259654dd69c",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "STATUS.md",
-      "sha256": "1c46fbc8ae81b3cfefe397bf6fa82a765d216b7705e4b17e95d8e4423db1842d",
+      "sha256": "f904a6bdbf08d3b40cff9d6364b9c63c6bf77cc2862fcd9b80be405b0b2328de",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -61,6 +61,16 @@
     {
       "source": "README.md",
       "target": "web/incident-pack/index.html",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/native-recorder-20261108/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/native-first-20261108/receipt.json",
       "exists": true
     },
     {
@@ -186,6 +196,16 @@
     {
       "source": "README.md",
       "target": "docs/capabilities.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/native-recorder-20261108/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/native-first-20261108/receipt.json",
       "exists": true
     },
     {

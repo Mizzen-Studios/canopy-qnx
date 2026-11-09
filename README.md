@@ -2,11 +2,17 @@
 
 **First action: [open the native-first incident desk](web/incident-pack/index.html).** It opens the original recorded QNX v2 pack locally. Query killed/recovery/survivors/isolation, inspect raw/control evidence, export/reset or import your own QNX pack. HOST simulation is a secondary NOT QNX route. This saved capture is not native PASS at the current tip, a live connection, or new SSH continuity.
 
+## Private product freeze — 9 November 2026
+
+The native recorder has **scoped recorded PASS** for the bound Nov8 SLM/libcan capture: driver kill/restart, independent ordered byte-exact100RX/100TX, finite slog2 and the co-located control. [Original capture and bindings](docs/acceptance/native-recorder-20261108/NOTES.md). **SSH UNVERIFIED for current recorder packs**; the separate historical SSH receipt does not transfer. The native-first desk is host/browser evidence against that saved capture: **native_rerun:false**, not current-tip native PASS. [Desk receipt](docs/acceptance/native-first-20261108/receipt.json).
+
+This freeze is documentation-only; no new recorder/collector/desk feature or QEMU run. C6 STOPPED, SocketCAN UNVERIFIED; no recording, publication, deployment or spend. Independent review is the next gate.
+
 ## Capture → import → query → inspect evidence
 
 Use the [native recorder](docs/native-recorder.md) for a NEW bounded QNX SLM/libcan incident, then open the [local incident desk](web/incident-pack/index.html) to import that exact pack, query interruption/recovery and inspect evidence. [Pack contract and CLI](docs/incident-pack.md). No server, upload or browser command execution. Missing/corrupt/mixed/stale/incompatible packs fail closed to UNKNOWN.
 
-[Fresh native receipt](docs/acceptance/native-recorder-20261108/NOTES.md): actual supervised driver kill/restart and independent ordered byte-exact100RX100TX, bounded structured slog2 and a co-located observer death/separate-recorder control. New packs have NO authenticated SSH-continuity proof; that exists only in the separate historical record below. Origin labels and hash bindings are collector-declared cooperative integrity, not attestation. The current independent host review is being closed before final council inspection.
+[Fresh native receipt](docs/acceptance/native-recorder-20261108/NOTES.md): actual supervised driver kill/restart and independent ordered byte-exact100RX100TX, bounded structured slog2 and a co-located observer death/separate-recorder control. New packs have NO authenticated SSH-continuity proof; that exists only in the separate historical record below. Origin labels and hash bindings are collector-declared cooperative integrity, not attestation. The completed host review remains separate from the next independent gate; no native rerun is claimed.
 
 Olly approved these upgrades on8Nov; earlier feature-freeze gates are historical. New council acceptance pending. C6/native safety STOPPED; SocketCAN UNVERIFIED. recorded:false; no media now, no publication/deployment. Videos only after all features and final verification plus the separate recording gate.
 

@@ -1,4 +1,10 @@
-# Status — 7 November 2026
+# Status — private product freeze, 9 November 2026
+
+## Current freeze — scoped evidence, no new execution
+
+Native recorder: **scoped recorded PASS** at the original [Nov8 capture bindings](docs/acceptance/native-recorder-20261108/NOTES.md), covering SLM driver restart, independent ordered byte-exact100RX/100TX, finite slog2 and co-located death control. **SSH UNVERIFIED for these recorder packs**; the separate historical authenticated-stream receipt below is not new-pack proof. Native-first desk: host/browser PASS against saved native evidence, **native_rerun:false**, with [original host receipt](docs/acceptance/native-first-20261108/receipt.json). No tip-native acceptance or current live connection claim.
+
+Nov9 changes are docs-only. Recorder, collector, desk code and original capture bytes unchanged. C6 STOPPED; SocketCAN UNVERIFIED; no recording, publication, deployment or spend. Freeze and wait for independent review; no further work scheduled.
 
 ## Council gap closure — 8 November 2026, host-only native-first desk
 
