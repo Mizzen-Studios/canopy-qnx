@@ -2,7 +2,7 @@
 
 No recording or audio capture. Separate Olly OK required. No publication/upload authorized.
 
-Packaging asset snapshot (not native acceptance): 7c3972226ed6cc9d28f48b85985d6038e9ad00e9
+Packaging asset snapshot (not native acceptance): a8bfd165f3c4e90e4802c4ec1a8b6deb3ab64525
 recorded: false; script-only packaging refresh, no native rerun. Historical receipt source/build pins are unchanged.
 Exact whitespace narration word count: 219; planned 160 seconds (not measured).
 C6 FAIL / STOPPED; SocketCAN UNVERIFIED. Historical native and host-only frames remain separate.

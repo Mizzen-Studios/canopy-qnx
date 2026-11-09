@@ -1,6 +1,6 @@
 {
   "schema": "private-dry-pack.v1",
-  "frozen_commit": "7c3972226ed6cc9d28f48b85985d6038e9ad00e9",
+  "frozen_commit": "a8bfd165f3c4e90e4802c4ec1a8b6deb3ab64525",
   "capture_authorization": "NOT_GRANTED: separate Olly OK required",
   "lines": [
     {
@@ -123,6 +123,6 @@
   "prior_frozen_commit": "88b1bcf5fcc1f97da03321d35b03e89c85090227",
   "recorded": false,
   "gate": "Docs-only script refresh after council re-review; independent gate separate; no new native execution",
-  "packet_source_commit": "7c3972226ed6cc9d28f48b85985d6038e9ad00e9",
+  "packet_source_commit": "a8bfd165f3c4e90e4802c4ec1a8b6deb3ab64525",
   "packet_binding_scope": "Packaging asset snapshot at previous private freeze; original native source/build/ELF/IFS/disk pins unchanged. Not a new native acceptance."
 }

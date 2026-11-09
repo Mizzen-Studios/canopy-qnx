@@ -2,7 +2,7 @@
 
 The [line-by-line script](proof-capture/SCRIPT.md), [machine-readable pack](proof-capture/pack.json) and [validation report](proof-capture/report.json) now follow the current native-first recorder/desk journey. Narration: **219 words**, planned **160 seconds**, editorial only, not a recording, rehearsal or QNX timing measurement.
 
-Packaging assets are frozen at private docs tip 7c3972226ed6cc9d28f48b85985d6038e9ad00e9. This is an asset snapshot, **not native acceptance**. Original Nov8 recorder source/ELF/IFS/disk bindings and actual raw captures are unchanged. Prior dry-pack assets/script remain in git history; no acceptance receipt is rewritten.
+Packaging assets are frozen at private docs tip a8bfd165f3c4e90e4802c4ec1a8b6deb3ab64525. This is an asset snapshot, **not native acceptance**. Original Nov8 recorder source/ELF/IFS/disk bindings and actual raw captures are unchanged. Prior dry-pack assets/script remain in git history; no acceptance receipt is rewritten.
 
 Planned sequence: host-only saved native-first desk → original recorded native SLM/libcan restart and exact traffic → original provenance/control → host-only query/export/UNKNOWN checks → boundaries. **native_rerun:false**. SSH **UNVERIFIED for current recorder packs**; no historical SSH continuity transfers. Host-sim/doctor material is history/out of scope. C6 FAIL / STOPPED; SocketCAN UNVERIFIED; no safety, timing, continuous-availability or full-platform claim.
 
