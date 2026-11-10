@@ -1,6 +1,6 @@
 {
   "schema": "private-dry-pack.v1",
-  "frozen_commit": "a8bfd165f3c4e90e4802c4ec1a8b6deb3ab64525",
+  "frozen_commit": "e764551aad66624b723a924b46916af7ba13cfde",
   "capture_authorization": "NOT_GRANTED: separate Olly OK required",
   "lines": [
     {
@@ -59,11 +59,11 @@
       "id": "L03",
       "start": 65,
       "end": 100,
-      "narration": "Follow the raw evidence and source, binary, image and disk bindings. These identify the original capture, not a fresh build at this documentation tip. The schema two control pack preserves those bytes. Producer declarations and matching hashes provide cooperative integrity, not adversarial attestation.",
-      "claim": "Original source/ELF/IFS/disk bindings and unchanged raw capture; derived v2 control pack, not tip-native acceptance.",
-      "frame": "Local saved evidence only: docs/acceptance/control-fix-20261108/receipt.json, docs/acceptance/control-fix-20261108/incident.json, docs/acceptance/native-recorder-20261108/build-projection.log. Label recorded native or host-only; never show a live session or run a guest.",
-      "label": "recorded native QEMU observation",
-      "review_quote": "cooperative hash binding is not attestation",
+      "narration": "The new query face uses explicit Neutrino message passing. Its three application ELF builds succeeded. The unchanged capped SDK guest then exhausted memory while mkifs relinked the existing kernel. The image stayed empty. This measured blocker is not native acceptance of the new query or a fresh recorder run.",
+      "claim": "New guest query qcc ELF build PASS; native NOT_RUN due measured stock mkifs kernel relink OOM, not fresh runtime proof.",
+      "frame": "Saved Nov10 measured receipt, stage logs and memory census only. No guest or live session. Original Nov8 bindings stay separate.",
+      "label": "recorded SDK build / native NOT_RUN",
+      "review_quote": "qcc ELF build PASS",
       "assets": [
         {
           "path": "docs/acceptance/control-fix-20261108/receipt.json",
@@ -76,6 +76,10 @@
         {
           "path": "docs/acceptance/native-recorder-20261108/build-projection.log",
           "sha256": "b587532fc4c615a3aa9946464e4f256ef1cf1c89bf7b2d1d96b7c14b0494adb4"
+        },
+        {
+          "path": "docs/acceptance/query-retry-20261110/receipt.json",
+          "sha256": "af6986cf176a2a88d93a4a9c5510814675751596035d7996f9abb7d81a7e2a33"
         }
       ]
     },
@@ -83,11 +87,11 @@
       "id": "L04",
       "start": 100,
       "end": 130,
-      "narration": "The saved desktop and narrow-browser checks exercise four queries, raw evidence, export, reset and rejected inputs. Missing, corrupt, mixed, stale or incompatible packs return UNKNOWN. These are host interface and rejection checks. They do not establish additional target behavior.",
-      "claim": "Recorded host/browser checks: native-first queries/evidence/export/reset and negative packs UNKNOWN.",
-      "frame": "Local saved evidence only: docs/acceptance/native-first-20261108/receipt.json, docs/acceptance/native-first-20261108/footer-browser.log. Label recorded native or host-only; never show a live session or run a guest.",
+      "narration": "Host tests exercise the new same-pack query and slog viewer, with missing, corrupt, mixed and wrong-origin inputs rejected as UNKNOWN. This is host validation using fixtures, not new QNX behavior or a completed browser acceptance journey. The cold desk still opens the original recorded pack.",
+      "claim": "New same-pack guest query and slog2 adapter/desk host tests only; no fresh native pack or new browser acceptance.",
+      "frame": "Saved host test and measured blocker receipt; original browser receipt explicitly historical. No live or newly accepted native pack.",
       "label": "host-only",
-      "review_quote": "host-only native-first desk",
+      "review_quote": "host tests only",
       "assets": [
         {
           "path": "docs/acceptance/native-first-20261108/receipt.json",
@@ -96,6 +100,10 @@
         {
           "path": "docs/acceptance/native-first-20261108/footer-browser.log",
           "sha256": "bc3fd63f7d03957396fbd3cd22de8eccd8c4dc5bf66c6c18e5ade21141f14842"
+        },
+        {
+          "path": "docs/acceptance/query-retry-20261110/receipt.json",
+          "sha256": "af6986cf176a2a88d93a4a9c5510814675751596035d7996f9abb7d81a7e2a33"
         }
       ]
     },
@@ -103,7 +111,7 @@
       "id": "L05",
       "start": 130,
       "end": 160,
-      "narration": "Current recorder SSH continuity remains unverified. The older authenticated-stream experiment is separate and does not transfer. Host simulation and doctor material are historical; C6 failed and is stopped. SocketCAN is unverified. No safety, timing, continuous availability or full-platform claim follows. This is a script only. Nothing has been recorded or published.",
+      "narration": "SSH remains unverified for the new source. Original native results keep their original bindings. C6 is stopped, SocketCAN unverified, and pathname policy blocked. No platform repair, swap, cap increase or single-host retry followed. No safety, timing or continuous-availability claim is made. This is a private script only; nothing was recorded or published.",
       "claim": "Current-pack SSH UNVERIFIED; historical host-sim/doctor and C6 out of scope, C6 STOPPED, SocketCAN UNVERIFIED.",
       "frame": "Local saved evidence only: docs/acceptance/native-recorder-20261108/NOTES.md, docs/acceptance/native-first-20261108/NOTES.md. Label recorded native or host-only; never show a live session or run a guest.",
       "label": "UNVERIFIED boundaries",

@@ -1,5 +1,8 @@
 # Capture a new bounded QNX incident
 
+**Nov10 gate:** guest_query ELF qcc build PASS; new native query/recorder/SSH journey NOT_RUN, no fresh same-pack native acceptance. Stock mkifs procnto relink OOM at unchanged caps; [measured blocker](acceptance/query-retry-20261110/NOTES.md). The new guest-query/slog2 viewer is host-tested only. Original Nov8 example and bindings unchanged; SSH UNVERIFIED. No further run authorized by this guide.
+
+
 This is an active collector, not the historical museum pack. It uses an existing
 licensed QNX8 x86_64 SDP/BSP and libcan fallback image. No SDK installation,
 licence activation, new credentials, server, upload, or target SocketCAN claim.

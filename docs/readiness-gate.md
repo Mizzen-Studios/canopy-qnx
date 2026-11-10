@@ -1,5 +1,8 @@
 # Completed-version gate — videos deferred
 
+**Nov10 freeze:** new query ELF build PASS only; native NOT_RUN because stock mkifs procnto relink OOM. [Measured blocker](acceptance/query-retry-20261110/receipt.json). New same-pack desk host tests do not transfer original Nov8 native acceptance. SSH UNVERIFIED; C6 STOPPED; no recording. No further guest runs scheduled.
+
+
 Owner timing correction, 7 November2026 17:28UTC: demo videos come at the end once everything is complete, to avoid re-recording. Preserve the existing dry checklist without further polishing it against moving builds. Capture is NOT the next blocker.
 
 ## Current product scope

@@ -1,6 +1,15 @@
 # Status — private product freeze, 9 November 2026
 
-## Current freeze — scoped evidence, no new execution
+## Nov10 features wave — native gate BLOCKED
+
+The new explicit Neutrino ChannelCreate/MsgSend/MsgReceive guest query face has **qcc ELF build PASS** at source2879bf8848daffca66fabb4a6a7d5e96d2141a5a, not native runtime PASS. The one low-memory retry reached **BLOCKED_MKIFS_PROCNT0_LINK_OOM**: mkifs relinking existing procnto-smp-instr exhausted the unchanged512MiB guest; IFS stayed empty. [Precise measured receipt](docs/acceptance/query-retry-20261110/receipt.json), [commands, resident census and logs](docs/acceptance/query-retry-20261110/NOTES.md); [first preserved failure](docs/acceptance/query-20261110/receipt.json).
+
+New query/recorder/SSH native journey **NOT_RUN**; **SSH UNVERIFIED**. Same-pack guest-query/slog2 adapter and desk changes have host tests only (Python132PASS/8SKIP; Node70PASS), including corrupt/mixed/missing/wrong-origin UNKNOWN cases; no new native pack or browser runtime acceptance. **native_rerun:false**. Original Nov8 native source/ELF/IFS/disk bindings and recorded scoped PASS remain unchanged and do not transfer to the new source. Historical host-sim/doctor/C6 are out of scope; C6 STOPPED, SocketCAN UNVERIFIED, pathname policy BLOCKED. No APS, safety, timing or continuous-availability claim.
+
+Split-host remains the only supported topology: licensed SDK guest build → STOP/REAP → sole capped HOST QEMU. New-source route is blocked before that barrier; no native retry or repair is scheduled. Canonical caps and no-swap limit unchanged. Private £0; recorded:false; no media or public action. Stop for independent review.
+
+
+## Historical Nov9 freeze — scoped evidence, no new execution
 
 Native recorder: **scoped recorded PASS** at the original [Nov8 capture bindings](docs/acceptance/native-recorder-20261108/NOTES.md), covering SLM driver restart, independent ordered byte-exact100RX/100TX, finite slog2 and co-located death control. **SSH UNVERIFIED for these recorder packs**; the separate historical authenticated-stream receipt below is not new-pack proof. Native-first desk: host/browser PASS against saved native evidence, **native_rerun:false**, with [original host receipt](docs/acceptance/native-first-20261108/receipt.json). No tip-native acceptance or current live connection claim.
 

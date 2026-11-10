@@ -1,5 +1,8 @@
 # Bring your own incident pack v2
 
+**Nov10 gate:** guest_query ELF qcc build PASS; new native query/recorder/SSH journey NOT_RUN, no fresh same-pack native acceptance. Stock mkifs procnto relink OOM at unchanged caps; [measured blocker](acceptance/query-retry-20261110/NOTES.md). The new guest-query/slog2 viewer is host-tested only. Original Nov8 example and bindings unchanged; SSH UNVERIFIED. No further run authorized by this guide.
+
+
 Open [the incident desk](../web/incident-pack/index.html) directly from a local checkout in Chromium. No server, port, SDK, native process, upload or network. Cold open loads the original recorded native v2 pack from control-fix-20261108, unchanged and locally bundled. Select a question, follow the actual raw/control evidence, export/reset or import your own JSON. Reset clears the loaded pack; reload deliberately opens the recorded example again. The primary import expects QNX; choose the explicit HOST simulation origin or secondary sample for HOST data. A wrong expected origin fails UNKNOWN. HOST simulation is synthetic, never native evidence. The example is recorded evidence, not a new native run at the current tip. Export contains imported text: review confidential observations before sharing.
 
 ## Run locally

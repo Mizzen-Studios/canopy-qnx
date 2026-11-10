@@ -13,17 +13,17 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "31def586d3669832c2c4a5f5f8ddaa969b894e3eec70a1274b04e5cf1a5ea509",
+      "sha256": "cdaa844b41dcd688b35706c1d57b5d5b7928afec82a3d2cee174ea2594405617",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "STATUS.md",
-      "sha256": "fbe6910d6bed2ef299d858403fc7447d20a230c7e8e18e62976f1b8048567a15",
+      "sha256": "557d92f0e65481dc893065e369a2d98b67f310dd3a4e69a6aa756d9c5d2210fd",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "REVIEW.md",
-      "sha256": "d70b2452fe2d264b123b7465101366c30681956f8128c8c5152dd967ffdee89f",
+      "sha256": "c4d65b64863d43a0664fe217f136d967627afa533505f22d661e09cc64bd8566",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -33,12 +33,12 @@
     },
     {
       "path": "docs/proof-capture/SCRIPT.md",
-      "sha256": "8f6c30107c80aa63222b9ff55c3dcdf48477b9ae11126d5270272b7960afe20a",
+      "sha256": "4da01eb40c1a9fd559ecab95159b756869391d3b582e3127d8ee6ae863ad78e3",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "docs/incident-pack.md",
-      "sha256": "dd541ad9216be05c62638630bce8445530d489ab227cee79881e624e52f4f01c",
+      "sha256": "31e79f7ec60e9e81ce5b054bfbe16e4b9e94d55dd9bb929b8d5f8565696168e4",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -60,11 +60,6 @@
   "local_links": [
     {
       "source": "README.md",
-      "target": "docs/acceptance/native-recorder-20261108/NOTES.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
       "target": "docs/native-recorder.md",
       "exists": true
     },
@@ -76,6 +71,21 @@
     {
       "source": "README.md",
       "target": "docs/proof-capture/SCRIPT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/query-retry-20261110/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/query-retry-20261110/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/query-20261110/receipt.json",
       "exists": true
     },
     {
@@ -220,6 +230,21 @@
     },
     {
       "source": "STATUS.md",
+      "target": "docs/acceptance/query-retry-20261110/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/query-retry-20261110/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/query-20261110/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
       "target": "docs/acceptance/native-recorder-20261108/NOTES.md",
       "exists": true
     },
@@ -330,6 +355,21 @@
     },
     {
       "source": "REVIEW.md",
+      "target": "docs/acceptance/query-retry-20261110/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "REVIEW.md",
+      "target": "docs/acceptance/query-retry-20261110/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "REVIEW.md",
+      "target": "docs/acceptance/query-20261110/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "REVIEW.md",
       "target": "docs/acceptance/control-fix-20261108/incident.json",
       "exists": true
     },
@@ -396,6 +436,11 @@
     {
       "source": "docs/private-demo.md",
       "target": "proof-capture/report.json",
+      "exists": true
+    },
+    {
+      "source": "docs/incident-pack.md",
+      "target": "acceptance/query-retry-20261110/NOTES.md",
       "exists": true
     },
     {
@@ -593,8 +638,8 @@
     "kind": "private-proof-capture-DRY-PACK",
     "status": "PASS",
     "errors": [],
-    "frozen_commit": "a8bfd165f3c4e90e4802c4ec1a8b6deb3ab64525",
-    "narration_words": 219,
+    "frozen_commit": "e764551aad66624b723a924b46916af7ba13cfde",
+    "narration_words": 232,
     "planned_seconds": 160,
     "duration_verified": "editorial plan only; no rehearsal/recorded duration",
     "recorded": false,
@@ -655,12 +700,12 @@
       },
       {
         "id": "L03",
-        "words": 43,
+        "words": 49,
         "start": 65,
         "end": 100,
-        "claim": "Original source/ELF/IFS/disk bindings and unchanged raw capture; derived v2 control pack, not tip-native acceptance.",
-        "frame": "Local saved evidence only: docs/acceptance/control-fix-20261108/receipt.json, docs/acceptance/control-fix-20261108/incident.json, docs/acceptance/native-recorder-20261108/build-projection.log. Label recorded native or host-only; never show a live session or run a guest.",
-        "label": "recorded native QEMU observation",
+        "claim": "New guest query qcc ELF build PASS; native NOT_RUN due measured stock mkifs kernel relink OOM, not fresh runtime proof.",
+        "frame": "Saved Nov10 measured receipt, stage logs and memory census only. No guest or live session. Original Nov8 bindings stay separate.",
+        "label": "recorded SDK build / native NOT_RUN",
         "assets": [
           {
             "path": "docs/acceptance/control-fix-20261108/receipt.json",
@@ -673,16 +718,20 @@
           {
             "path": "docs/acceptance/native-recorder-20261108/build-projection.log",
             "sha256": "b587532fc4c615a3aa9946464e4f256ef1cf1c89bf7b2d1d96b7c14b0494adb4"
+          },
+          {
+            "path": "docs/acceptance/query-retry-20261110/receipt.json",
+            "sha256": "af6986cf176a2a88d93a4a9c5510814675751596035d7996f9abb7d81a7e2a33"
           }
         ]
       },
       {
         "id": "L04",
-        "words": 39,
+        "words": 45,
         "start": 100,
         "end": 130,
-        "claim": "Recorded host/browser checks: native-first queries/evidence/export/reset and negative packs UNKNOWN.",
-        "frame": "Local saved evidence only: docs/acceptance/native-first-20261108/receipt.json, docs/acceptance/native-first-20261108/footer-browser.log. Label recorded native or host-only; never show a live session or run a guest.",
+        "claim": "New same-pack guest query and slog2 adapter/desk host tests only; no fresh native pack or new browser acceptance.",
+        "frame": "Saved host test and measured blocker receipt; original browser receipt explicitly historical. No live or newly accepted native pack.",
         "label": "host-only",
         "assets": [
           {
@@ -692,12 +741,16 @@
           {
             "path": "docs/acceptance/native-first-20261108/footer-browser.log",
             "sha256": "bc3fd63f7d03957396fbd3cd22de8eccd8c4dc5bf66c6c18e5ade21141f14842"
+          },
+          {
+            "path": "docs/acceptance/query-retry-20261110/receipt.json",
+            "sha256": "af6986cf176a2a88d93a4a9c5510814675751596035d7996f9abb7d81a7e2a33"
           }
         ]
       },
       {
         "id": "L05",
-        "words": 51,
+        "words": 52,
         "start": 130,
         "end": 160,
         "claim": "Current-pack SSH UNVERIFIED; historical host-sim/doctor and C6 out of scope, C6 STOPPED, SocketCAN UNVERIFIED.",

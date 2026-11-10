@@ -1,19 +1,28 @@
 # CANopy — reusable QNX incident recorder and workbench
 
-**What:** capture a bounded QNX incident, then inspect its evidence locally.
-**Real QNX:** recorded SLM driver restart + byte-exact100RX/100TX, slog2 and co-located control ([original build/logs](docs/acceptance/native-recorder-20261108/NOTES.md)).
-**Host-only:** native-first desk import/query/export and rejection tests; native_rerun:false.
-**Not proven:** current-pack SSH UNVERIFIED; no timing, safety or continuous-availability claim.
-**Build in SDK guest:** select existing legal SDP/BSP/SLM/libcan image inputs; run bash tools/build_native_recorder.sh.
-**Barrier:** stop/reap SDK guest; use the sole capped HOST QEMU lease, never concurrent guests.
-**Exact build/collection prerequisites and commands:** [native recorder guide](docs/native-recorder.md); no SDK installer or turnkey image supplied.
-**Inspect without SDK:** [open local desk](web/incident-pack/index.html); host check: python3 -m unittest discover -s tests -v.
-**Freeze:** private £0, C6 STOPPED; [dry script only](docs/proof-capture/SCRIPT.md), no recording or native run.
+**What:** bounded QNX incident recorder plus a local evidence desk.
+**Original real QNX:** Nov8 SLM restart, exact100RX/100TX, finite slog2 and co-located control; original bindings only.
+**New query:** qcc ELF build PASS; runtime NOT_RUN because stock mkifs kernel relink OOM; no fresh native pack.
+**Host-only:** new same-pack query/slog2 adapter and desk tests; native_rerun:false.
+**Not proven:** SSH UNVERIFIED; no safety, timing or continuous-availability claim.
+**Build:** existing licensed SDP/BSP in SDK guest; bash tools/build_native_recorder.sh (new image currently BLOCKED).
+**Barrier:** STOP/REAP SDK guest → sole capped HOST QEMU; split-host only, no concurrent guests.
+**Exact prerequisites:** [build guide](docs/native-recorder.md); no SDK/image shipped or new licence/login.
+**Inspect:** [local desk](web/incident-pack/index.html) opens original Nov8 capture, not a new native rerun.
+**Freeze:** private £0, C6 STOPPED; [dry script](docs/proof-capture/SCRIPT.md) only, recorded:false.
+
+## Nov10 features wave — native gate BLOCKED
+
+The new explicit Neutrino ChannelCreate/MsgSend/MsgReceive guest query face has **qcc ELF build PASS** at source2879bf8848daffca66fabb4a6a7d5e96d2141a5a, not native runtime PASS. The one low-memory retry reached **BLOCKED_MKIFS_PROCNT0_LINK_OOM**: mkifs relinking existing procnto-smp-instr exhausted the unchanged512MiB guest; IFS stayed empty. [Precise measured receipt](docs/acceptance/query-retry-20261110/receipt.json), [commands, resident census and logs](docs/acceptance/query-retry-20261110/NOTES.md); [first preserved failure](docs/acceptance/query-20261110/receipt.json).
+
+New query/recorder/SSH native journey **NOT_RUN**; **SSH UNVERIFIED**. Same-pack guest-query/slog2 adapter and desk changes have host tests only (Python132PASS/8SKIP; Node70PASS), including corrupt/mixed/missing/wrong-origin UNKNOWN cases; no new native pack or browser runtime acceptance. **native_rerun:false**. Original Nov8 native source/ELF/IFS/disk bindings and recorded scoped PASS remain unchanged and do not transfer to the new source. Historical host-sim/doctor/C6 are out of scope; C6 STOPPED, SocketCAN UNVERIFIED, pathname policy BLOCKED. No APS, safety, timing or continuous-availability claim.
+
+Split-host remains the only supported topology: licensed SDK guest build → STOP/REAP → sole capped HOST QEMU. New-source route is blocked before that barrier; no native retry or repair is scheduled. Canonical caps and no-swap limit unchanged. Private £0; recorded:false; no media or public action. Stop for independent review.
 
 
 **First action: [open the native-first incident desk](web/incident-pack/index.html).** It opens the original recorded QNX v2 pack locally. Query killed/recovery/survivors/isolation, inspect raw/control evidence, export/reset or import your own QNX pack. HOST simulation is a secondary NOT QNX route. This saved capture is not native PASS at the current tip, a live connection, or new SSH continuity.
 
-## Private product freeze — 9 November 2026
+## Historical private product freeze — 9 November 2026
 
 The native recorder has **scoped recorded PASS** for the bound Nov8 SLM/libcan capture: driver kill/restart, independent ordered byte-exact100RX/100TX, finite slog2 and the co-located control. [Original capture and bindings](docs/acceptance/native-recorder-20261108/NOTES.md). **SSH UNVERIFIED for current recorder packs**; the separate historical SSH receipt does not transfer. The native-first desk is host/browser evidence against that saved capture: **native_rerun:false**, not current-tip native PASS. [Desk receipt](docs/acceptance/native-first-20261108/receipt.json).
 

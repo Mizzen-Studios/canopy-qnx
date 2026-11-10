@@ -2,8 +2,8 @@
   "kind": "private-proof-capture-DRY-PACK",
   "status": "PASS",
   "errors": [],
-  "frozen_commit": "a8bfd165f3c4e90e4802c4ec1a8b6deb3ab64525",
-  "narration_words": 219,
+  "frozen_commit": "e764551aad66624b723a924b46916af7ba13cfde",
+  "narration_words": 232,
   "planned_seconds": 160,
   "duration_verified": "editorial plan only; no rehearsal/recorded duration",
   "recorded": false,
@@ -64,12 +64,12 @@
     },
     {
       "id": "L03",
-      "words": 43,
+      "words": 49,
       "start": 65,
       "end": 100,
-      "claim": "Original source/ELF/IFS/disk bindings and unchanged raw capture; derived v2 control pack, not tip-native acceptance.",
-      "frame": "Local saved evidence only: docs/acceptance/control-fix-20261108/receipt.json, docs/acceptance/control-fix-20261108/incident.json, docs/acceptance/native-recorder-20261108/build-projection.log. Label recorded native or host-only; never show a live session or run a guest.",
-      "label": "recorded native QEMU observation",
+      "claim": "New guest query qcc ELF build PASS; native NOT_RUN due measured stock mkifs kernel relink OOM, not fresh runtime proof.",
+      "frame": "Saved Nov10 measured receipt, stage logs and memory census only. No guest or live session. Original Nov8 bindings stay separate.",
+      "label": "recorded SDK build / native NOT_RUN",
       "assets": [
         {
           "path": "docs/acceptance/control-fix-20261108/receipt.json",
@@ -82,16 +82,20 @@
         {
           "path": "docs/acceptance/native-recorder-20261108/build-projection.log",
           "sha256": "b587532fc4c615a3aa9946464e4f256ef1cf1c89bf7b2d1d96b7c14b0494adb4"
+        },
+        {
+          "path": "docs/acceptance/query-retry-20261110/receipt.json",
+          "sha256": "af6986cf176a2a88d93a4a9c5510814675751596035d7996f9abb7d81a7e2a33"
         }
       ]
     },
     {
       "id": "L04",
-      "words": 39,
+      "words": 45,
       "start": 100,
       "end": 130,
-      "claim": "Recorded host/browser checks: native-first queries/evidence/export/reset and negative packs UNKNOWN.",
-      "frame": "Local saved evidence only: docs/acceptance/native-first-20261108/receipt.json, docs/acceptance/native-first-20261108/footer-browser.log. Label recorded native or host-only; never show a live session or run a guest.",
+      "claim": "New same-pack guest query and slog2 adapter/desk host tests only; no fresh native pack or new browser acceptance.",
+      "frame": "Saved host test and measured blocker receipt; original browser receipt explicitly historical. No live or newly accepted native pack.",
       "label": "host-only",
       "assets": [
         {
@@ -101,12 +105,16 @@
         {
           "path": "docs/acceptance/native-first-20261108/footer-browser.log",
           "sha256": "bc3fd63f7d03957396fbd3cd22de8eccd8c4dc5bf66c6c18e5ade21141f14842"
+        },
+        {
+          "path": "docs/acceptance/query-retry-20261110/receipt.json",
+          "sha256": "af6986cf176a2a88d93a4a9c5510814675751596035d7996f9abb7d81a7e2a33"
         }
       ]
     },
     {
       "id": "L05",
-      "words": 51,
+      "words": 52,
       "start": 130,
       "end": 160,
       "claim": "Current-pack SSH UNVERIFIED; historical host-sim/doctor and C6 out of scope, C6 STOPPED, SocketCAN UNVERIFIED.",

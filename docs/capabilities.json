@@ -1,7 +1,7 @@
 {
   "schema": "qnx-capabilities.v1",
   "project": "CANopy reusable bounded QNX incident recorder and workbench",
-  "boundary": "Nov8 approved bounded executable upgrades; historical rows retain their original receipts. HOST interface checks and native observations are distinct; new independent council gate pending. New native recorder capture is separate from historical SSH record; SSH continuity unsupported for new packs. Cooperative integrity is not attestation. C6/native safety STOPPED; SocketCAN UNVERIFIED; no safety/timing/availability/platform-health claims.",
+  "boundary": "Nov10 feature wave stopped at measured stock mkifs kernel relink OOM; new guest query ELF build PASS but native NOT_RUN. Same-pack desk host tests only; historical Nov8 native pins unchanged, no transfer. SSH UNVERIFIED. C6 STOPPED, SocketCAN UNVERIFIED, pathname policy BLOCKED; no safety/timing/continuous-availability claim.",
   "rows": [
     {
       "id": "host-model",
@@ -60,7 +60,7 @@
       "domain": "host",
       "level": "framework",
       "status": "PASS",
-      "claim": "Source-bound current full Python host suite:126 passed/8 skipped. Browser rendering is separately recorded; no fresh native acceptance.",
+      "claim": "Historical source-bound Python host suite:126 passed/8 skipped; not the Nov10 tip suite. Browser rendering is separately recorded; no fresh native acceptance.",
       "evidence": "docs/acceptance/browser-20261107/receipt.json",
       "evidence_sha256": "8d6392815e0c3855d2efefd4a1cf0eda7f564a50d03bd254ca08e5489d6901c5"
     },
@@ -88,6 +88,33 @@
       "status": "PASS",
       "claim": "New parameterized recorder captured SLM driver kill/restart and independent ordered byte-exact100RX100TX; bounded slog2 plus actual co-located death control. No SSH continuity or continuous CAN guarantee.",
       "evidence": "docs/acceptance/native-recorder-20261108/receipt.json"
+    },
+    {
+      "id": "guest-query-build",
+      "domain": "host",
+      "level": "sdk-build",
+      "status": "PASS",
+      "claim": "Existing SDK qcc-built explicit Neutrino query ELF; not native runtime acceptance. Stock IFS build blocked.",
+      "evidence": "docs/acceptance/query-retry-20261110/receipt.json",
+      "evidence_sha256": "af6986cf176a2a88d93a4a9c5510814675751596035d7996f9abb7d81a7e2a33"
+    },
+    {
+      "id": "guest-query-native",
+      "domain": "native",
+      "level": "runtime",
+      "status": "UNVERIFIED",
+      "claim": "BLOCKED / NOT_RUN: stock mkifs procnto relink OOM; empty IFS, no new recorder/query/SSH native pack.",
+      "evidence": "docs/acceptance/query-retry-20261110/receipt.json",
+      "evidence_sha256": "af6986cf176a2a88d93a4a9c5510814675751596035d7996f9abb7d81a7e2a33"
+    },
+    {
+      "id": "same-pack-query-desk",
+      "domain": "host",
+      "level": "framework",
+      "status": "PASS",
+      "claim": "Host-only adapter/desk query+slog2 and failclosed fixture tests; new native pack and browser journey NOT_RUN.",
+      "evidence": "docs/acceptance/query-retry-20261110/receipt.json",
+      "evidence_sha256": "af6986cf176a2a88d93a4a9c5510814675751596035d7996f9abb7d81a7e2a33"
     }
   ]
 }

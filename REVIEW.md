@@ -1,5 +1,14 @@
 # Private capability review — 7 November 2026
 
+## Nov10 features wave — native gate BLOCKED
+
+The new explicit Neutrino ChannelCreate/MsgSend/MsgReceive guest query face has **qcc ELF build PASS** at source2879bf8848daffca66fabb4a6a7d5e96d2141a5a, not native runtime PASS. The one low-memory retry reached **BLOCKED_MKIFS_PROCNT0_LINK_OOM**: mkifs relinking existing procnto-smp-instr exhausted the unchanged512MiB guest; IFS stayed empty. [Precise measured receipt](docs/acceptance/query-retry-20261110/receipt.json), [commands, resident census and logs](docs/acceptance/query-retry-20261110/NOTES.md); [first preserved failure](docs/acceptance/query-20261110/receipt.json).
+
+New query/recorder/SSH native journey **NOT_RUN**; **SSH UNVERIFIED**. Same-pack guest-query/slog2 adapter and desk changes have host tests only (Python132PASS/8SKIP; Node70PASS), including corrupt/mixed/missing/wrong-origin UNKNOWN cases; no new native pack or browser runtime acceptance. **native_rerun:false**. Original Nov8 native source/ELF/IFS/disk bindings and recorded scoped PASS remain unchanged and do not transfer to the new source. Historical host-sim/doctor/C6 are out of scope; C6 STOPPED, SocketCAN UNVERIFIED, pathname policy BLOCKED. No APS, safety, timing or continuous-availability claim.
+
+Split-host remains the only supported topology: licensed SDK guest build → STOP/REAP → sole capped HOST QEMU. New-source route is blocked before that barrier; no native retry or repair is scheduled. Canonical caps and no-swap limit unchanged. Private £0; recorded:false; no media or public action. Stop for independent review.
+
+
 ## Council gap closure — 8 November 2026, host-only native-first desk
 
 The cold desk now opens the unchanged [recorded native v2 pack](docs/acceptance/control-fix-20261108/incident.json), not a HOST simulation. Four bounded queries link actual CAN observations, explicit co-located control, full raw serial/traffic and original source/build/image/disk bindings. Original FRESH_QNX means fresh at collection, not current-tip native acceptance. Shared serial is multi-product: EDU entries do not substitute for CAN observations. No new native run or new SSH continuity claim.
