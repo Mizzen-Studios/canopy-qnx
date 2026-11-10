@@ -12,6 +12,13 @@ async function adapt(dir,receiptFile){
   if(role==='image'&&b.sha256!==r.image_sha256||role==='disk'&&b.sha256!==r.disk_sha256)throw Error('mixed build/run');
   bindings[role]=role+'.txt';await artifact(bindings[role],role,b.text,b.sha256);
  }
+ let guestQuery=false;
+ if(r.guest_query){
+  if(r.guest_query.status!=='PASS')throw Error('guest query not observed');
+  const text=read('guest-query.txt');if(await c.sha(text)!==r.guest_query.sha256)throw Error('mixed guest query');
+  await artifact('guest-query.txt','observation',text,await c.sha(text));guestQuery=true;
+  const slog=read('control-slog.txt');await artifact('slog2.txt','observation',slog,await c.sha(slog));
+ }
  const raw=read('serial.txt');if(r.raw_sha256&&r.raw_sha256!==await c.sha(raw)||build.captureSha256&&build.captureSha256!==await c.sha(raw))throw Error('mixed raw capture');await artifact('serial.txt','observation',raw,await c.sha(raw));
  const lines=raw.replace(/\r/g,'').split('\n'),events=[];
  const add=(kind,process,data,line,observer={name:'host-controller',generation:runId+'-host',independent:true})=>events.push({id:'e'+events.length,seq:events.length,at:events.length,runId,kind,process,observer,evidence:[{path:'serial.txt',line:line+1}],data});
@@ -75,7 +82,7 @@ async function adapt(dir,receiptFile){
  }
  if(!events.length)throw Error('no actual incident events');
  const capturedAt=new Date(r.captured_at*1000).toISOString(),expiresAt=new Date(r.captured_at*1000+30*86400000).toISOString();
- const p=await c.seal({schema:'canopy.incident/2',collector:{id:'canopy-native',version:'2',mechanism:'slog2-serial-libcan'},run:{id:runId,environment:'FRESH_QNX',capturedAt,expiresAt},bindings,artifacts,events});
+ const p=await c.seal({schema:'canopy.incident/2',collector:{id:guestQuery?'canopy-native-query':'canopy-native',version:'2',mechanism:guestQuery?'slog2-libcan-query':'slog2-serial-libcan'},run:{id:runId,environment:'FRESH_QNX',capturedAt,expiresAt},bindings,artifacts,events});
  const check=await c.validate(JSON.stringify(p));if(check.status!=='VALID')throw Error(check.issues.join(';'));return p;
 }
 module.exports=adapt;

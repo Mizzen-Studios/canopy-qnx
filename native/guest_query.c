@@ -4,6 +4,7 @@
 #include <sys/netmgr.h>
 #include <sys/stat.h>
 #include <stdint.h>
+#include <time.h>
 #include <signal.h>
 #include <errno.h>
 #include <stdio.h>
@@ -32,7 +33,7 @@ int main(int argc,char **argv) {
    if(info.msglen!=(int)sizeof m||m.magic!=MAGIC||m.op<0||m.op>6){MsgError(rcvid,EINVAL);continue;}
    if(m.op==1){if(replacement||m.replacement<2||m.replacement==target||m.replacement==mainpid||!absent(target)||!alive(m.replacement)||!alive(mainpid)){MsgError(rcvid,EINVAL);continue;}replacement=m.replacement;}
    struct response r={MAGIC,absent(target),replacement>1&&replacement!=target&&alive(replacement),alive(mainpid),getpid(),target,replacement,mainpid};
-   MsgReply(rcvid,EOK,&r,sizeof r);if(m.op==5)break;
+   if(MsgReply(rcvid,EOK,&r,sizeof r)<0){unlink(ENDPOINT);ChannelDestroy(chid);return 10;}if(m.op==5)break;
   }
   unlink(ENDPOINT);ChannelDestroy(chid);return 0;
  }
@@ -43,7 +44,7 @@ int main(int argc,char **argv) {
  long server;int chid;FILE*f=fopen(ENDPOINT,"r");if(!f)return 6;
  int parsed=fscanf(f,"%ld %d",&server,&chid);fclose(f);if(parsed!=2||server<2||server>INT_MAX||chid<0)return 7;
  int coid=ConnectAttach(ND_LOCAL_NODE,(pid_t)server,chid,_NTO_SIDE_CHANNEL,0);if(coid<0)return 8;
- struct request m={MAGIC,op,replacement};struct response r={0};uint64_t timeout=5000000000ULL;TimerTimeout(CLOCK_MONOTONIC,_NTO_TIMEOUT_SEND|_NTO_TIMEOUT_REPLY,NULL,&timeout,NULL);int rc=MsgSend(coid,&m,sizeof m,&r,sizeof r);ConnectDetach(coid);
+ struct request m={MAGIC,op,replacement};struct response r={0};uint64_t timeout=5000000000ULL;if(TimerTimeout(CLOCK_MONOTONIC,_NTO_TIMEOUT_SEND|_NTO_TIMEOUT_REPLY,NULL,&timeout,NULL)<0){ConnectDetach(coid);return 10;}int rc=MsgSend(coid,&m,sizeof m,&r,sizeof r);ConnectDetach(coid);
  if(rc<0||r.magic!=MAGIC||r.server!=server)return 9;
  const char*q=op==1?"publish":op==2?"killed":op==3?"recovery":op==4?"survivors":op==5?"stop":"isolation";
  printf("CANOPY_GUEST_QUERY {\"schema\":\"canopy-query-1\",\"query\":\"%s\",\"server\":%ld,\"target\":%ld,\"replacement\":%ld,\"main\":%ld,\"killed\":%d,\"recovery\":%d,\"survivor\":%d}\n",q,(long)r.server,(long)r.target,(long)r.replacement,(long)r.mainpid,r.killed,r.recovery,r.survivor);

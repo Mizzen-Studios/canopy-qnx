@@ -4,13 +4,16 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from native_can_three import assert_caps,parse_qnx,require_exact
 import argparse,uuid
+from ssh_continuity import Continuity
 ap=argparse.ArgumentParser(description="Bounded QNX libcan incident")
 for n in ('image','disk','out','lock'):ap.add_argument('--'+n,required=True,type=Path)
 ap.add_argument('--interface',default='vcan1')
+ap.add_argument('--ssh-key',type=Path,default=Path.home()/'.openclaw/.secrets/qnx-test/id_ed25519')
 a=ap.parse_args();out=a.out.resolve();out.mkdir(parents=True,exist_ok=False)
 lock=open(a.lock,'a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
 caps=assert_caps();image=a.image.resolve()
-args=["qemu-system-x86_64","-machine","pc,accel=tcg","-cpu","max","-smp","1","-m","512","-display","none","-serial","stdio","-monitor","none","-no-reboot","-kernel",str(image),"-drive",f"file={a.disk.resolve()},format=raw,if=ide,snapshot=on","-nic","user,model=virtio-net-pci","-object","can-bus,id=canbus0","-device","kvaser_pci,canbus=canbus0","-device","edu,dma_mask=0xffffffff"]
+probe=socket.socket();probe.bind(("127.0.0.1",0));sshport=probe.getsockname()[1];probe.close();ssh=None
+args=["qemu-system-x86_64","-machine","pc,accel=tcg","-cpu","max","-smp","1","-m","512","-display","none","-serial","stdio","-monitor","none","-no-reboot","-kernel",str(image),"-drive",f"file={a.disk.resolve()},format=raw,if=ide,snapshot=on","-nic","user,model=virtio-net-pci,hostfwd=tcp:127.0.0.1:"+str(sshport)+"-:22","-object","can-bus,id=canbus0","-device","kvaser_pci,canbus=canbus0","-device","edu,dma_mask=0xffffffff"]
 qpath=out/"qtest.sock"
 if qpath.exists():raise RuntimeError("existing qtest socket; inspect owner")
 args += ["-qtest","unix:"+str(qpath)+",server=on,wait=off","-object","can-host-socketcan,id=hostcan0,if="+a.interface+",canbus=canbus0"]
@@ -87,6 +90,7 @@ try:
  query_start=command("/proc/boot/guest_query serve "+str(current)+" "+str(mainpid)+" > /tmp/query-service.log 2>&1 & QUERY=$!; sleep 1; cat /tmp/query-service.log; echo QUERY_START_DONE","QUERY_START_DONE")
  assert "CANOPY_QUERY_READY" in query_start
  report["guest_query_server_pid"]=int(query_start.split("CANOPY_QUERY_READY pid=",1)[1].split()[0])
+ ssh=Continuity(sshport,a.ssh_key,out)
  for number in range(1,2):
   check=command("pidin ar; echo ID_CHECK","ID_CHECK");assert pid(check,"dev-can-linux")==current and pid(check,"io-sock")==mainpid and current!=mainpid
   start=time.monotonic();text=command("/proc/boot/incident_recorder "+str(current)+"; echo RECORDER_RC=$?; sleep 3; /proc/boot/slmctl -n /dev/slm-canopy 'active -v'; pidin ar; ls /dev/can0/rx0; echo RESTART_DONE","RESTART_DONE")
@@ -101,12 +105,15 @@ try:
   assert all(x["server"]==report["guest_query_server_pid"] and x["target"]==report["restarts"][-1]["killed_pid"] and x["replacement"]==new and x["main"]==mainpid and x["killed"]==x["recovery"]==x["survivor"]==1 for x in records)
   assert query.count("QUERY_RC=0")==4 and "QUERY_PUBLISH_RC=0" in query
   (out/"guest-query.txt").write_text(query);report["guest_query"]={"status":"PASS","rows":records,"sha256":hashlib.sha256(query.encode()).hexdigest(),"scope":"process snapshots, not continuous availability or adversarial isolation"}
- control=command("/proc/boot/prereq_containment; echo CONTROL_RC=$?; /proc/boot/ability_lesson deny; echo ABILITY_DENY_RC=$?; /proc/boot/ability_lesson allow; echo ABILITY_ALLOW_RC=$?; /proc/boot/slog2info -b canopy_incident -f -S -t; echo NATIVE_CAPTURE_DONE","NATIVE_CAPTURE_DONE")
+ if ssh is not None:
+  report["ssh_observation"]=ssh.finish();report["ssh_authenticated_continuity"]=report["ssh_observation"]["status"]
+ control=command("/proc/boot/prereq_containment; echo CONTROL_RC=$?; /proc/boot/slog2info -b canopy_incident -f -S -t; echo NATIVE_CAPTURE_DONE","NATIVE_CAPTURE_DONE")
  (out/"control-slog.txt").write_text(control)
  report["success"]=True
 except Exception as error:
  report["error"]=str(error);print("NATIVE_SLM_FAIL "+str(error),flush=True)
 finally:
+ if ssh is not None:ssh.close()
  r.terminate()
  try:r.wait(10)
  except subprocess.TimeoutExpired:r.kill();r.wait()

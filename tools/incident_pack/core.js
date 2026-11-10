@@ -19,7 +19,7 @@ keys(p.collector,'id version mechanism');need(Object.values(p.collector).every(i
 keys(p.run,'id environment capturedAt expiresAt');need(id(p.run.id),'run identity');need(['HOST_SIMULATION','RECORDED_QNX','FRESH_QNX'].includes(p.run.environment),'environment');need(typeof p.run.capturedAt==='string'&&typeof p.run.expiresAt==='string','date strings required');const start=Date.parse(p.run.capturedAt),end=Date.parse(p.run.expiresAt),now=options.now??Date.now();need(Number.isFinite(start)&&Number.isFinite(end)&&start<=now+300000&&end>start&&end-start<=30*86400000&&now<=end,'stale/invalid capture window');
 need(Array.isArray(p.artifacts)&&p.artifacts.length>0&&p.artifacts.length<=32,'artifact limit');const artifacts=new Map();let bytes=0;
 for(const a of p.artifacts){keys(a,'path role runId sha256 text subjectSha256');need(digest(a.subjectSha256),'subject digest required');need(safePath(a.path)&&!artifacts.has(a.path),'unsafe/duplicate artifact path');need(a.runId===p.run.id,'mixed artifact run');need(['source','binary','image','disk','observation'].includes(a.role),'artifact role');need(typeof a.text==='string'&&a.text.length<=131072,'artifact text limit');bytes+=new TextEncoder().encode(a.text).length;need(bytes<=1048576,'artifact total limit');need(digest(a.sha256)&&await sha(a.text)===a.sha256,'artifact digest mismatch');artifacts.set(a.path,a);}
-const nativeOrigin=p.run.environment!=='HOST_SIMULATION';need(!(p.collector.id==='host-fixture'||p.collector.mechanism==='synthetic')||!nativeOrigin,'wrong origin: synthetic collector is NOT QNX');need(!(p.collector.id==='canopy-native'||p.collector.mechanism==='slog2-serial-libcan')||nativeOrigin,'wrong origin: native collector cannot be HOST simulation');need(!nativeOrigin||!p.artifacts.some(a=>a.text.startsWith('HOST_SIMULATION ')),'wrong origin: HOST descriptors cannot establish native capture');
+const nativeOrigin=p.run.environment!=='HOST_SIMULATION';need(!(p.collector.id==='host-fixture'||p.collector.mechanism==='synthetic')||!nativeOrigin,'wrong origin: synthetic collector is NOT QNX');need(!(p.collector.id==='canopy-native'||p.collector.id==='canopy-native-query'||p.collector.mechanism==='slog2-serial-libcan'||p.collector.mechanism==='slog2-libcan-query')||nativeOrigin,'wrong origin: native collector cannot be HOST simulation');need(!nativeOrigin||!p.artifacts.some(a=>a.text.startsWith('HOST_SIMULATION ')),'wrong origin: HOST descriptors cannot establish native capture');
 keys(p.bindings,'source binary image disk');for(const role of ['source','binary','image','disk'])need(artifacts.get(p.bindings[role])?.role===role,'nonsensical '+role+' binding');need(new Set(Object.values(p.bindings)).size===4,'overlapping bindings');
 need(Array.isArray(p.events)&&p.events.length>0&&p.events.length<=MAX_EVENTS,'event limit');const generations=new Map(),events=new Map(),sessions=new Map(),observers=new Map();let last=-1;
 for(const e of p.events){keys(e,'id seq at runId kind process observer evidence data');need(id(e.id)&&!events.has(e.id)&&e.seq===events.size,'duplicate/out-of-order event');need(integer(e.at)&&e.at>=last&&e.at<=86400000,'out-of-order/invalid event time');last=e.at;need(e.runId===p.run.id,'mixed event run');need(['process','kill','traffic','interruption','recovery','control','ssh'].includes(e.kind),'event kind');
@@ -45,7 +45,31 @@ for(const m of d.members){const b=get(m.before),a=get(m.after);need(same(b)&&b.k
 const b=get(d.survivor.before),a=get(d.survivor.after);
 need(b&&a&&b.kind==='process'&&a.kind==='process'&&b.data.state==='observed'&&a.data.state==='observed'&&ind(b)&&ind(a)&&canonical(b.process)===canonical(a.process)&&b.process.pid!==e.process.pid&&b.process.generation!==e.process.generation&&b.process.domain!==e.process.domain&&b.at<trigger.at&&a.at>termination.at&&a.at<e.at,'control separate survivor mismatch');
 }
-return {status:'VALID',pack:p,issues:[],answers:query(p)};
+const answers=query(p);
+if(p.collector.id==='canopy-native-query'||p.collector.mechanism==='slog2-libcan-query'){
+ const a=artifacts.get('guest-query.txt'),raw=artifacts.get('serial.txt'),slog=artifacts.get('slog2.txt');
+ need(a?.role==='observation'&&raw?.role==='observation'&&slog?.role==='observation','missing same-pack guest query/slog2');
+ need(slog.text.includes('canopy_incident.')&&slog.text.includes('SLOG2_INFO')&&raw.text.includes(slog.text),'mixed slog2 snapshot');
+ const rows=a.text.split(String.fromCharCode(10)).map(x=>x.replaceAll(String.fromCharCode(13),'')).filter(x=>x.startsWith('CANOPY_GUEST_QUERY '));
+ need(rows.length===5,'guest query sequence missing/ambiguous');
+ const values=rows.map(x=>JSON.parse(x.slice('CANOPY_GUEST_QUERY '.length)));
+ need(values.map(v=>v.query).join() === 'publish,killed,recovery,survivors,isolation','guest query order');
+ const killed=p.events.filter(e=>e.kind==='kill'&&e.process.name==='dev-can-linux');need(killed.length===1,'guest target ambiguous');
+ const k=killed[0],replacement=p.events.find(e=>e.kind==='recovery'&&e.process.name===k.process.name),survivor=p.events.filter(e=>e.kind==='process'&&e.process.name==='io-sock');
+ need(replacement&&survivor.length>=2,'guest query missing recorder identity evidence');
+ const first=values[0];
+ need(Number.isSafeInteger(first.server)&&first.server>1&&![k.process.pid,replacement.process.pid,survivor[0].process.pid].includes(first.server),'guest observer overlaps target');
+ need(raw.text.includes('CANOPY_QUERY_READY pid='+first.server+' ')&&raw.text.indexOf('CANOPY_QUERY_READY pid='+first.server+' ')<raw.text.indexOf('{'+String.fromCharCode(34)+'schema'+String.fromCharCode(34)+':'+String.fromCharCode(34)+'canopy-native-1'),'guest service did not precede capture');
+ for(let i=0;i<values.length;i++){
+ const v=values[i];keys(v,'schema query server target replacement main killed recovery survivor');
+ need(v.schema==='canopy-query-1'&&v.server===first.server&&v.target===k.process.pid&&v.replacement===replacement.process.pid&&v.main===survivor[0].process.pid&&v.killed===1&&v.recovery===1&&v.survivor===1,'guest query mismatched identities/outcomes');
+ need(raw.text.split(String.fromCharCode(10)).filter(x=>x.replaceAll(String.fromCharCode(13),'')===rows[i]).length===1,'mixed or repeated guest transcript');
+ }
+ for(const q of ['killed','recovery','survivors','isolation']){
+ answers[q].guestQuery={artifact:'guest-query.txt',text:rows[values.findIndex(v=>v.query===q)],scope:'Native message-passing process snapshots; not continuous availability or adversarial isolation. SLM/traffic/control remain independently required.',slog2Artifact:'slog2.txt'};
+ }
+}
+return {status:'VALID',pack:p,issues:[],answers};
 }catch(e){return {status:'UNKNOWN',issues:[e.message],answers:Object.fromEntries(['killed','recovery','survivors','isolation'].map(k=>[k,{status:'UNKNOWN',text:'Pack not accepted; no verdict.',evidence:[]}]))};}}
 function query(p){const es=p.events,controlTriggers=new Set(es.filter(e=>e.kind==='control').map(e=>e.data.trigger)),kills=es.filter(e=>e.kind==='kill'&&!controlTriggers.has(e.id)),k=kills.length===1?kills[0]:null;const ans=(ok,text,xs)=>({status:ok?'OBSERVED':'UNKNOWN',text,evidence:[...new Set(xs.filter(Boolean).flatMap(e=>e.kind==='process'?[...es.filter(b=>b.kind==='process'&&b.process.generation===e.process.generation&&b.at<e.at),e].map(v=>v.id):[e.id]))]});
 const interruption=k&&es.find(e=>e.kind==='interruption'&&e.process.generation===k.process.generation&&e.at>k.at&&e.data.state==='observed'&&e.observer.independent);
