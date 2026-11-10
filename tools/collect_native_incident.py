@@ -84,6 +84,9 @@ try:
  baseline=command("pidin ar; echo BASE_DONE","BASE_DONE");mainpid=pid(baseline,"io-sock");report["main_io_sock_pid"]=mainpid
  text=command("/proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml > /tmp/slm.log 2>&1 & sleep 3; cat /tmp/slm.log; /proc/boot/slmctl -n /dev/slm-canopy 'listall -v'; pidin ar; echo SLM_START_DONE","SLM_START_DONE")
  (out/"startup.txt").write_text(text);print(text,flush=True);current=pid(text,"dev-can-linux")
+ query_start=command("/proc/boot/guest_query serve "+str(current)+" "+str(mainpid)+" > /tmp/query-service.log 2>&1 & QUERY=$!; sleep 1; cat /tmp/query-service.log; echo QUERY_START_DONE","QUERY_START_DONE")
+ assert "CANOPY_QUERY_READY" in query_start
+ report["guest_query_server_pid"]=int(query_start.split("CANOPY_QUERY_READY pid=",1)[1].split()[0])
  for number in range(1,2):
   check=command("pidin ar; echo ID_CHECK","ID_CHECK");assert pid(check,"dev-can-linux")==current and pid(check,"io-sock")==mainpid and current!=mainpid
   start=time.monotonic();text=command("/proc/boot/incident_recorder "+str(current)+"; echo RECORDER_RC=$?; sleep 3; /proc/boot/slmctl -n /dev/slm-canopy 'active -v'; pidin ar; ls /dev/can0/rx0; echo RESTART_DONE","RESTART_DONE")
@@ -92,6 +95,12 @@ try:
   assert "/dev/can0/rx0" in text and "No such file" not in text
   report["restarts"].append({"run":number,"killed_pid":current,"new_pid":new,"main_pid_unchanged":True,"observed_seconds_including_fixed_3s_settle":time.monotonic()-start});current=new;print("NATIVE_SLM_RESTART_PASS "+str(number),flush=True)
   report["restarts"][-1]["traffic"]=traffic(number)
+  query=command("/proc/boot/guest_query publish "+str(new)+"; echo QUERY_PUBLISH_RC=$?; for q in killed recovery survivors isolation; do /proc/boot/guest_query $q; echo QUERY_RC=$?; done; echo QUERY_DONE","QUERY_DONE")
+  records=[json.loads(line.split("CANOPY_GUEST_QUERY ",1)[1]) for line in query.replace(chr(13),"").splitlines() if line.startswith("CANOPY_GUEST_QUERY ")]
+  assert len(records)==5 and [x["query"] for x in records]==["publish","killed","recovery","survivors","isolation"]
+  assert all(x["server"]==report["guest_query_server_pid"] and x["target"]==report["restarts"][-1]["killed_pid"] and x["replacement"]==new and x["main"]==mainpid and x["killed"]==x["recovery"]==x["survivor"]==1 for x in records)
+  assert query.count("QUERY_RC=0")==4 and "QUERY_PUBLISH_RC=0" in query
+  (out/"guest-query.txt").write_text(query);report["guest_query"]={"status":"PASS","rows":records,"sha256":hashlib.sha256(query.encode()).hexdigest(),"scope":"process snapshots, not continuous availability or adversarial isolation"}
  control=command("/proc/boot/prereq_containment; echo CONTROL_RC=$?; /proc/boot/ability_lesson deny; echo ABILITY_DENY_RC=$?; /proc/boot/ability_lesson allow; echo ABILITY_ALLOW_RC=$?; /proc/boot/slog2info -b canopy_incident -f -S -t; echo NATIVE_CAPTURE_DONE","NATIVE_CAPTURE_DONE")
  (out/"control-slog.txt").write_text(control)
  report["success"]=True
