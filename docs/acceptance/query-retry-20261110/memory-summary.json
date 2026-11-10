@@ -1,0 +1,7 @@
+{
+  "samples": 14,
+  "min_available_kib": 21948,
+  "max_linker_sample_rss_kib": 319384,
+  "before_mkifs_available_kib": 327000,
+  "guest_swap_kib": 0
+}

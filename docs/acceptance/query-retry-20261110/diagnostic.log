@@ -1,0 +1,73 @@
+Tue Nov 10 10:12:17 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      154808      198448         992      137024      313408
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+    670       1 apport          30324 /usr/bin/python3 /usr/share/apport/apport --start
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    671       1 cloud-init      23972 /usr/bin/python3 /usr/bin/cloud-init modules --mode=config
+    681       1 snapd           22012 /usr/lib/snapd/snapd
+    680       1 snap            21936 /usr/bin/snap wait system seed.loaded
+      1       0 systemd         13020 /sbin/init
+    482       1 systemd-resolve 12948 /usr/lib/systemd/systemd-resolved
+    305       1 systemd-journal 12472 /usr/lib/systemd/systemd-journald
+    678       1 (polkitd)        9524 (polkitd)
+    626       1 systemd-network  9504 /usr/lib/systemd/systemd-networkd
+    688       1 (d-logind)       9216 (d-logind)
+    699       1 udisksd          9092 /usr/libexec/udisks2/udisksd
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    369       1 systemd-udevd    7820 /usr/lib/systemd/systemd-udevd
+    731       1 9                6928 /usr/lib/systemd/systemd-executor --deserialize 96 --log-level info --log-target journal-or-kmsg
+    725     722 apparmor_parser  5964 apparmor_parser -r -W -T /etc/apparmor.d/usr.sbin.rsyslogd
+    673       1 dbus-daemon      5272 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    727     711 ps               4152 ps -eo pid,ppid,comm,rss,args --sort=-rss
+    728     711 awk              3744 awk NR<=21
+    711     677 bash             3692 bash /mnt/host/queue/1794305218237972855.sh.running
+INSPECT_UNIT=snapd.socket
+MemoryCurrent=0
+ActiveState=active
+INSPECT_UNIT=snapd.service
+MainPID=0
+MemoryCurrent=[not set]
+ActiveState=inactive
+INSPECT_UNIT=apport.service
+MainPID=0
+MemoryCurrent=[not set]
+ActiveState=active
+INSPECT_UNIT=fwupd.service
+MainPID=0
+MemoryCurrent=[not set]
+ActiveState=inactive
+INSPECT_UNIT=udisks2.service
+MainPID=699
+MemoryCurrent=8503296
+ActiveState=active
+INSPECT_UNIT=packagekit.service
+MainPID=0
+MemoryCurrent=[not set]
+ActiveState=inactive
+Tue Nov 10 10:14:44 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      140580      155744         972      193936      327636
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 23116 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd         13376 /sbin/init
+    482       1 systemd-resolve 12960 /usr/lib/systemd/systemd-resolved
+    793       1 ModemManager    12892 /usr/sbin/ModemManager
+    305       1 systemd-journal 12636 /usr/lib/systemd/systemd-journald
+    626       1 systemd-network  9504 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   8148 /usr/lib/systemd/systemd-logind
+    678       1 polkitd          8056 /usr/lib/polkit-1/polkitd --no-debug
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    369       1 systemd-udevd    7820 /usr/lib/systemd/systemd-udevd
+    749       1 rsyslogd         6080 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5480 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1006     711 ps               4172 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1007     711 awk              3752 awk NR<=21
+    711     677 bash             3716 bash /mnt/host/queue/1794305218237972855.sh.running
+    677       1 host-queue       3688 /bin/bash /usr/local/sbin/host-queue
+    672       1 cron             2748 /usr/sbin/cron -f -P
+    797       1 agetty           2152 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+    839       1 agetty           2032 /sbin/agetty -o -p -- \u --noclear - linux

@@ -1,0 +1,32 @@
+CAN_BUILD_STAGE_BEGIN=incident_recorder
+               total        used        free      shared  buff/cache   available
+Mem:          468216      134724      160280         968      195256      333492
+Swap:              0           0           0
+CAN_BUILD_STAGE_RC=0
+               total        used        free      shared  buff/cache   available
+Mem:          468216      136332      128056         968      225868      331884
+Swap:              0           0           0
+CAN_BUILD_STAGE_BEGIN=prereq_containment
+               total        used        free      shared  buff/cache   available
+Mem:          468216      136332      128056         968      225868      331884
+Swap:              0           0           0
+CAN_BUILD_STAGE_RC=0
+               total        used        free      shared  buff/cache   available
+Mem:          468216      143868      120244         968      226144      324348
+Swap:              0           0           0
+CAN_BUILD_STAGE_BEGIN=guest_query
+               total        used        free      shared  buff/cache   available
+Mem:          468216      143860      120244         968      226152      324356
+Swap:              0           0           0
+CAN_BUILD_STAGE_RC=0
+               total        used        free      shared  buff/cache   available
+Mem:          468216      141396      122332         968      226528      326820
+Swap:              0           0           0
+CAN_BUILD_STAGE_BEGIN=mkifs
+               total        used        free      shared  buff/cache   available
+Mem:          468216      141216      122352         968      226688      327000
+Swap:              0           0           0
+Warning: Host file 'lib/libexpat.so.2' missing.
+
+Session terminated, killing shell...cc: caught signal: 15
+ ...killed.

@@ -1,0 +1,104 @@
+{
+  "schema": "canopy-feature-retry-1",
+  "status": "BLOCKED_MKIFS_PROCNT0_LINK_OOM",
+  "source_commit": "2879bf8848daffca66fabb4a6a7d5e96d2141a5a",
+  "source_clean_tracked": true,
+  "previous_failure": "../query-20261110/receipt.json",
+  "retry_count": 1,
+  "stages": {
+    "incident_recorder": 0,
+    "prereq_containment": 0,
+    "guest_query": 0,
+    "mkifs": null
+  },
+  "blocker": {
+    "stage": "mkifs qcc linker relinking existing procnto-smp-instr to procnto-smp-instr.sym",
+    "pid": 1075,
+    "executable": "x86_64-pc-nto-qnx8.0.0-ld",
+    "kernel_oom_guest_seconds": 567.044006,
+    "total_vm_kib": 588920,
+    "anon_rss_kib": 332584,
+    "file_rss_kib": 1732,
+    "ifs_bytes": 0,
+    "libexpat_warning_causal_status": "UNVERIFIED"
+  },
+  "memory": {
+    "before_mkifs_available_kib": 327000,
+    "samples": 14,
+    "min_sample_available_kib": 21948,
+    "max_sample_linker_rss_kib": 319384,
+    "swap_kib": 0
+  },
+  "commands": {
+    "owner": "bash .openclaw/tmp/can-features-sdk-owner.sh",
+    "queue": "python3 /home/ubuntu/qnx-host/guest/guestctl-capped.py exec /home/ubuntu/qnx-host/guest/shared/features-can-retry-20261110/launch.sh 1500",
+    "job": "1794305218237972855",
+    "queue_rc": null,
+    "client_exit": "SIGTERM manual-cancel after observed failure",
+    "shutdown": "python3 /home/ubuntu/qnx-host/guest/guestctl-capped.py stop",
+    "shutdown_rc": 0,
+    "shutdown_observation": "ACPI timeout; existing controller QMP quit"
+  },
+  "native_rerun": false,
+  "native_query": "NOT_RUN",
+  "native_recorder": "NOT_RUN",
+  "same_pack_native_desk": "NOT_RUN",
+  "SSH": "UNVERIFIED",
+  "F": "WAIT_PARENT",
+  "caps": {
+    "cpu_max": "100000 100000",
+    "memory_max": 1073741824,
+    "nice": 15,
+    "smp": 1,
+    "guest_mib": 512
+  },
+  "transient_service_changes": {
+    "stopped": [
+      "snapd.socket",
+      "apport.service",
+      "udisks2.service"
+    ],
+    "permanent": false,
+    "restoration": "trap attempted design; completion NOT_OBSERVED after OOM; guest powered off, no enablement changes"
+  },
+  "cleanup": {
+    "qemu_pid": 381682,
+    "guest_exit": 0,
+    "owner_exit": 0,
+    "reaped": true,
+    "lease_free": true,
+    "qemu_processes": 0,
+    "job": "failed-preserved, no runnable .sh",
+    "redundant_owner_stop": "missing QMP socket diagnostic retained in notes"
+  },
+  "constraints": {
+    "new_sdk": false,
+    "login": false,
+    "swap": false,
+    "cap_increase": false,
+    "repair": false,
+    "C6": "STOPPED",
+    "SocketCAN": "UNVERIFIED",
+    "media": false,
+    "public": false,
+    "spend": 0
+  },
+  "evidence_sha256": {
+    "sdk-serial.txt": "8182b9b047e67d2de5a542790f02b73f158216597671fbbfe6587363c1df1671",
+    "launch.sh": "a38efa199811eb175d018d881a964eb516d0b360a87d96aee324ccb437f8f222",
+    "artifact-hashes.json": "4e9fba807dc75a4c4d5a7cf545c2c3d53720fb8f08812b10c35a8e05dc2517e7",
+    "build.log": "659a7356db2804290493f06e4a77ca2f26e707b83dfb9551306e22b6b01ead23",
+    "memory-summary.json": "9c92dd52e00bf7b8bc50fc0fead484cdfade91f1beaef6317cbb0dcc5cea678f",
+    "diagnostic.log": "10fca54a6ea815f3a8beb44d67f4171f7cf2696ab4cf29fe65e9a742d24233fa",
+    "memory-samples.log": "40814de6c7fb43f39b82cc2f5ca159b6615a1f5683e2ded6cae66f788f0c3bac",
+    "effective-caps.json": "49b1e8b68ccfa28bcb3c85f3da2c8d86ec9cbdc9adaebd37fdd1f3908470ad20",
+    "NOTES.md": "a0e973efdcc4fb0f0205c1a14bef321991138a2aeb1ac1d1c738114a67fdd773",
+    "source-commit": "a2c71f835783a60efa3e5170d9eafb4bee2c1d2751910e327176dbd525ed7bd5"
+  },
+  "source_sha256": {
+    "native/guest_query.c": "32fd31013c122caebb99ea2aa09d818a626898927cc13ade7b22ed5cde49ac42",
+    "tools/build_native_recorder.sh": "0e3431c5789894db9abdb9bbe8b53e823693b9897c3a25de96ec0df882b802b9",
+    "tools/collect_native_incident.py": "f9c34a8f79b0c2144232a6ed8e2c8e84fa9746093381bd04d1e1ab9f380df9a3",
+    "tools/ssh_continuity.py": "1fef1dbf37c8d276ca8717082f09fbc1429ba8ee9d9a9dbfecd2bcb4164cc9fb"
+  }
+}

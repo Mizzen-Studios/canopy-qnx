@@ -1,0 +1,350 @@
+Tue Nov 10 10:14:46 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      134664      161024         968      194576      333552
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 23116 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd         13380 /sbin/init
+    482       1 systemd-resolve 12960 /usr/lib/systemd/systemd-resolved
+    793       1 ModemManager    12892 /usr/sbin/ModemManager
+    305       1 systemd-journal 12640 /usr/lib/systemd/systemd-journald
+    626       1 systemd-network  9504 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   8148 /usr/lib/systemd/systemd-logind
+    678       1 polkitd          8056 /usr/lib/polkit-1/polkitd --no-debug
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    369       1 systemd-udevd    7820 /usr/lib/systemd/systemd-udevd
+    749       1 rsyslogd         6080 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5480 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1015    1011 ps               4180 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          4096 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1016    1011 awk              3740 awk NR<=21
+    711     677 bash             3720 bash /mnt/host/queue/1794305218237972855.sh.running
+    677       1 host-queue       3688 /bin/bash /usr/local/sbin/host-queue
+   1017    1012 bash             3532 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    672       1 cron             2748 /usr/sbin/cron -f -P
+Tue Nov 10 10:14:50 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      136212      140564         968      213496      332004
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 23116 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+   1028    1026 cc1             17500 /home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/cc1 -quiet -fstack-protector-strong -nostdinc -D__LANGUAGE_C -D_LANGUAGE_C -D__QNX__=800 -D__QNXNTO__ -D__GNUC__=12 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=0 -D__unix__ -D__unix -D__ELF__ -fPIE -D__X86_64__ -D__LITTLEENDIAN__ -Asystem(unix) -iplugindir=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/plugin -std=gnu11 -Wall -Wextra -isystem /home/qnx/qnx800/target/qnx/usr/include -isystem /home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/include /mnt/host/features-can-retry-20261110/repo/native/incident_recorder.c -dumpbase /mnt/host/features-can-retry-20261110/repo/native/incident_recorder.c -o -
+      1       0 systemd         13380 /sbin/init
+    482       1 systemd-resolve 12960 /usr/lib/systemd/systemd-resolved
+    793       1 ModemManager    12892 /usr/sbin/ModemManager
+    305       1 systemd-journal 12640 /usr/lib/systemd/systemd-journald
+    626       1 systemd-network  9504 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   8148 /usr/lib/systemd/systemd-logind
+    678       1 polkitd          8056 /usr/lib/polkit-1/polkitd --no-debug
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    369       1 systemd-udevd    7820 /usr/lib/systemd/systemd-udevd
+    749       1 rsyslogd         6080 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5480 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1031    1011 ps               4180 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          4096 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1032    1011 awk              3748 awk NR<=21
+    711     677 bash             3720 bash /mnt/host/queue/1794305218237972855.sh.running
+   1017    1012 bash             3712 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    677       1 host-queue       3688 /bin/bash /usr/local/sbin/host-queue
+Tue Nov 10 10:14:55 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      136212      128180         968      225852      332004
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 23116 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd         13380 /sbin/init
+    482       1 systemd-resolve 12960 /usr/lib/systemd/systemd-resolved
+    793       1 ModemManager    12892 /usr/sbin/ModemManager
+    305       1 systemd-journal 12640 /usr/lib/systemd/systemd-journald
+    626       1 systemd-network  9504 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   8148 /usr/lib/systemd/systemd-logind
+    678       1 polkitd          8056 /usr/lib/polkit-1/polkitd --no-debug
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    369       1 systemd-udevd    7820 /usr/lib/systemd/systemd-udevd
+    749       1 rsyslogd         6080 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5480 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1037    1011 ps               4156 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          4096 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1038    1011 awk              3780 awk NR<=21
+    711     677 bash             3720 bash /mnt/host/queue/1794305218237972855.sh.running
+   1017    1012 bash             3712 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    677       1 host-queue       3688 /bin/bash /usr/local/sbin/host-queue
+    672       1 cron             2748 /usr/sbin/cron -f -P
+Tue Nov 10 10:14:59 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      143860      120244         968      226152      324356
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 23116 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+   1052    1049 cc1             18892 /home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/cc1 -quiet -fstack-protector-strong -nostdinc -D__LANGUAGE_C -D_LANGUAGE_C -D__QNX__=800 -D__QNXNTO__ -D__GNUC__=12 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=0 -D__unix__ -D__unix -D__ELF__ -fPIE -D__X86_64__ -D__LITTLEENDIAN__ -Asystem(unix) -iplugindir=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/plugin -std=gnu11 -Wall -Wextra -isystem /home/qnx/qnx800/target/qnx/usr/include -isystem /home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/include /mnt/host/features-can-retry-20261110/repo/native/guest_query.c -dumpbase /mnt/host/features-can-retry-20261110/repo/native/guest_query.c -o -
+      1       0 systemd         13380 /sbin/init
+    482       1 systemd-resolve 12960 /usr/lib/systemd/systemd-resolved
+    793       1 ModemManager    12892 /usr/sbin/ModemManager
+    305       1 systemd-journal 12640 /usr/lib/systemd/systemd-journald
+    626       1 systemd-network  9504 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   8148 /usr/lib/systemd/systemd-logind
+    678       1 polkitd          8056 /usr/lib/polkit-1/polkitd --no-debug
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    369       1 systemd-udevd    7820 /usr/lib/systemd/systemd-udevd
+    749       1 rsyslogd         6080 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5480 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1053    1011 ps               4160 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          4096 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1054    1011 awk              3728 awk NR<=21
+    711     677 bash             3720 bash /mnt/host/queue/1794305218237972855.sh.running
+   1017    1012 bash             3712 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    677       1 host-queue       3688 /bin/bash /usr/local/sbin/host-queue
+Tue Nov 10 10:15:04 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      138784      122116         968      229400      329432
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 23116 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd         13380 /sbin/init
+    482       1 systemd-resolve 12960 /usr/lib/systemd/systemd-resolved
+    793       1 ModemManager    12892 /usr/sbin/ModemManager
+    305       1 systemd-journal 12648 /usr/lib/systemd/systemd-journald
+    626       1 systemd-network  9504 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   8148 /usr/lib/systemd/systemd-logind
+    678       1 polkitd          8056 /usr/lib/polkit-1/polkitd --no-debug
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    369       1 systemd-udevd    7820 /usr/lib/systemd/systemd-udevd
+    749       1 rsyslogd         6080 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5480 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1067    1011 ps               4180 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          4096 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1068    1011 awk              3752 awk NR<=21
+    711     677 bash             3720 bash /mnt/host/queue/1794305218237972855.sh.running
+   1017    1012 bash             3720 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    677       1 host-queue       3688 /bin/bash /usr/local/sbin/host-queue
+   1064    1062 mkifs            2764 mkifs /mnt/host/features-can-retry-20261110/out/incident.build /mnt/host/features-can-retry-20261110/out/incident.ifs
+Tue Nov 10 10:15:09 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      159796       89628         968      240832      308420
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+   1075    1074 x86_64-pc-nto-q 26224 /home/qnx/qnx800/host/linux/x86_64/usr/bin/x86_64-pc-nto-qnx8.0.0-ld -dn -Bstatic -plugin=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/liblto_plugin.so -plugin-opt=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/fileB1ZhCk_qcc_1074/tmp_qcc_1074.res --sysroot=/home/qnx/qnx800/target/qnx/x86_64/ -T/home/qnx/qnx800/target/qnx/x86_64/lib/nto.link --no-keep-memory -z max-page-size=4096 --section-start .text=0xffff800000002000 --no-relax /home/qnx/qnx800/target/qnx/x86_64/boot/sys/procnto-smp-instr -o procnto-smp-instr.sym -rpath-link /home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -Y/home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -L/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0 -L/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0 -L/home/qnx/qnx800/target/qnx/usr/x86_64-pc-nto-qnx8.0.0/lib -L/home/qnx/qnx800/target/qnx/x86_64/lib -L/home/qnx/qnx800/target/qnx/x86_64/usr/lib -L/home/qnx/qnx800/target/qnx/x86_64/opt/lib
+    801       1 unattended-upgr 23116 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd         13380 /sbin/init
+    482       1 systemd-resolve 12960 /usr/lib/systemd/systemd-resolved
+    793       1 ModemManager    12892 /usr/sbin/ModemManager
+    305       1 systemd-journal 12648 /usr/lib/systemd/systemd-journald
+    626       1 systemd-network  9504 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   8148 /usr/lib/systemd/systemd-logind
+    678       1 polkitd          8056 /usr/lib/polkit-1/polkitd --no-debug
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    369       1 systemd-udevd    7820 /usr/lib/systemd/systemd-udevd
+    749       1 rsyslogd         6080 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5480 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1078    1011 ps               4184 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          4096 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1079    1011 awk              3748 awk NR<=21
+    711     677 bash             3720 bash /mnt/host/queue/1794305218237972855.sh.running
+   1017    1012 bash             3720 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    677       1 host-queue       3688 /bin/bash /usr/local/sbin/host-queue
+Tue Nov 10 10:15:13 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      181448       30732         968      278076      286768
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+   1075    1074 x86_64-pc-nto-q 54964 /home/qnx/qnx800/host/linux/x86_64/usr/bin/x86_64-pc-nto-qnx8.0.0-ld -dn -Bstatic -plugin=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/liblto_plugin.so -plugin-opt=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/fileB1ZhCk_qcc_1074/tmp_qcc_1074.res --sysroot=/home/qnx/qnx800/target/qnx/x86_64/ -T/home/qnx/qnx800/target/qnx/x86_64/lib/nto.link --no-keep-memory -z max-page-size=4096 --section-start .text=0xffff800000002000 --no-relax /home/qnx/qnx800/target/qnx/x86_64/boot/sys/procnto-smp-instr -o procnto-smp-instr.sym -rpath-link /home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -Y/home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -L/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0 -L/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0 -L/home/qnx/qnx800/target/qnx/usr/x86_64-pc-nto-qnx8.0.0/lib -L/home/qnx/qnx800/target/qnx/x86_64/lib -L/home/qnx/qnx800/target/qnx/x86_64/usr/lib -L/home/qnx/qnx800/target/qnx/x86_64/opt/lib
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 23116 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd         13380 /sbin/init
+    482       1 systemd-resolve 12960 /usr/lib/systemd/systemd-resolved
+    793       1 ModemManager    12892 /usr/sbin/ModemManager
+    305       1 systemd-journal 12648 /usr/lib/systemd/systemd-journald
+    626       1 systemd-network  9504 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   8148 /usr/lib/systemd/systemd-logind
+    678       1 polkitd          8056 /usr/lib/polkit-1/polkitd --no-debug
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    369       1 systemd-udevd    7820 /usr/lib/systemd/systemd-udevd
+    749       1 rsyslogd         6080 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5480 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1083    1011 ps               4176 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          4096 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1084    1011 awk              3736 awk NR<=21
+    711     677 bash             3720 bash /mnt/host/queue/1794305218237972855.sh.running
+   1017    1012 bash             3720 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    677       1 host-queue       3688 /bin/bash /usr/local/sbin/host-queue
+Tue Nov 10 10:15:18 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      232632       11044         968      246580      235584
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+   1075    1074 x86_64-pc-nto-q 106296 /home/qnx/qnx800/host/linux/x86_64/usr/bin/x86_64-pc-nto-qnx8.0.0-ld -dn -Bstatic -plugin=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/liblto_plugin.so -plugin-opt=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/fileB1ZhCk_qcc_1074/tmp_qcc_1074.res --sysroot=/home/qnx/qnx800/target/qnx/x86_64/ -T/home/qnx/qnx800/target/qnx/x86_64/lib/nto.link --no-keep-memory -z max-page-size=4096 --section-start .text=0xffff800000002000 --no-relax /home/qnx/qnx800/target/qnx/x86_64/boot/sys/procnto-smp-instr -o procnto-smp-instr.sym -rpath-link /home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -Y/home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -L/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0 -L/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0 -L/home/qnx/qnx800/target/qnx/usr/x86_64-pc-nto-qnx8.0.0/lib -L/home/qnx/qnx800/target/qnx/x86_64/lib -L/home/qnx/qnx800/target/qnx/x86_64/usr/lib -L/home/qnx/qnx800/target/qnx/x86_64/opt/lib
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 23116 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd         13380 /sbin/init
+    482       1 systemd-resolve 12960 /usr/lib/systemd/systemd-resolved
+    793       1 ModemManager    12832 /usr/sbin/ModemManager
+    305       1 systemd-journal 12648 /usr/lib/systemd/systemd-journald
+    626       1 systemd-network  9504 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   8148 /usr/lib/systemd/systemd-logind
+    678       1 polkitd          8028 /usr/lib/polkit-1/polkitd --no-debug
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    369       1 systemd-udevd    7820 /usr/lib/systemd/systemd-udevd
+    749       1 rsyslogd         6080 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5480 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1088    1011 ps               4180 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          4096 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1089    1011 awk              3748 awk NR<=21
+    711     677 bash             3720 bash /mnt/host/queue/1794305218237972855.sh.running
+   1017    1012 bash             3720 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    677       1 host-queue       3688 /bin/bash /usr/local/sbin/host-queue
+Tue Nov 10 10:15:24 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      271184       14260         968      204812      197032
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+   1075    1074 x86_64-pc-nto-q 148728 /home/qnx/qnx800/host/linux/x86_64/usr/bin/x86_64-pc-nto-qnx8.0.0-ld -dn -Bstatic -plugin=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/liblto_plugin.so -plugin-opt=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/fileB1ZhCk_qcc_1074/tmp_qcc_1074.res --sysroot=/home/qnx/qnx800/target/qnx/x86_64/ -T/home/qnx/qnx800/target/qnx/x86_64/lib/nto.link --no-keep-memory -z max-page-size=4096 --section-start .text=0xffff800000002000 --no-relax /home/qnx/qnx800/target/qnx/x86_64/boot/sys/procnto-smp-instr -o procnto-smp-instr.sym -rpath-link /home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -Y/home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -L/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0 -L/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0 -L/home/qnx/qnx800/target/qnx/usr/x86_64-pc-nto-qnx8.0.0/lib -L/home/qnx/qnx800/target/qnx/x86_64/lib -L/home/qnx/qnx800/target/qnx/x86_64/usr/lib -L/home/qnx/qnx800/target/qnx/x86_64/opt/lib
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 23116 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd         13380 /sbin/init
+    482       1 systemd-resolve 12960 /usr/lib/systemd/systemd-resolved
+    793       1 ModemManager    12832 /usr/sbin/ModemManager
+    305       1 systemd-journal 12648 /usr/lib/systemd/systemd-journald
+    626       1 systemd-network  9504 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   8148 /usr/lib/systemd/systemd-logind
+    678       1 polkitd          8028 /usr/lib/polkit-1/polkitd --no-debug
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    369       1 systemd-udevd    7716 /usr/lib/systemd/systemd-udevd
+    749       1 rsyslogd         6080 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5480 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1093    1011 ps               4184 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          4096 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1094    1011 awk              3740 awk NR<=21
+    711     677 bash             3664 bash /mnt/host/queue/1794305218237972855.sh.running
+   1017    1012 bash             3664 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    677       1 host-queue       3632 /bin/bash /usr/local/sbin/host-queue
+Tue Nov 10 10:15:30 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      342848        9920         968      137496      125368
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+   1075    1074 x86_64-pc-nto-q 220860 /home/qnx/qnx800/host/linux/x86_64/usr/bin/x86_64-pc-nto-qnx8.0.0-ld -dn -Bstatic -plugin=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/liblto_plugin.so -plugin-opt=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/fileB1ZhCk_qcc_1074/tmp_qcc_1074.res --sysroot=/home/qnx/qnx800/target/qnx/x86_64/ -T/home/qnx/qnx800/target/qnx/x86_64/lib/nto.link --no-keep-memory -z max-page-size=4096 --section-start .text=0xffff800000002000 --no-relax /home/qnx/qnx800/target/qnx/x86_64/boot/sys/procnto-smp-instr -o procnto-smp-instr.sym -rpath-link /home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -Y/home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -L/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0 -L/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0 -L/home/qnx/qnx800/target/qnx/usr/x86_64-pc-nto-qnx8.0.0/lib -L/home/qnx/qnx800/target/qnx/x86_64/lib -L/home/qnx/qnx800/target/qnx/x86_64/usr/lib -L/home/qnx/qnx800/target/qnx/x86_64/opt/lib
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 19784 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd         13380 /sbin/init
+    305       1 systemd-journal 12648 /usr/lib/systemd/systemd-journald
+    482       1 systemd-resolve 12332 /usr/lib/systemd/systemd-resolved
+    793       1 ModemManager    11844 /usr/sbin/ModemManager
+    626       1 systemd-network  9376 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   8148 /usr/lib/systemd/systemd-logind
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    678       1 polkitd          7148 /usr/lib/polkit-1/polkitd --no-debug
+    369       1 systemd-udevd    6700 /usr/lib/systemd/systemd-udevd
+    749       1 rsyslogd         5924 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5308 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1098    1011 ps               4180 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          4096 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1099    1011 awk              3712 awk NR<=21
+    711     677 bash             3664 bash /mnt/host/queue/1794305218237972855.sh.running
+   1017    1012 bash             3664 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    677       1 host-queue       3632 /bin/bash /usr/local/sbin/host-queue
+Tue Nov 10 10:15:35 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      377896        4780         968      107636       90320
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+   1075    1074 x86_64-pc-nto-q 255100 /home/qnx/qnx800/host/linux/x86_64/usr/bin/x86_64-pc-nto-qnx8.0.0-ld -dn -Bstatic -plugin=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/liblto_plugin.so -plugin-opt=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/fileB1ZhCk_qcc_1074/tmp_qcc_1074.res --sysroot=/home/qnx/qnx800/target/qnx/x86_64/ -T/home/qnx/qnx800/target/qnx/x86_64/lib/nto.link --no-keep-memory -z max-page-size=4096 --section-start .text=0xffff800000002000 --no-relax /home/qnx/qnx800/target/qnx/x86_64/boot/sys/procnto-smp-instr -o procnto-smp-instr.sym -rpath-link /home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -Y/home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -L/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0 -L/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0 -L/home/qnx/qnx800/target/qnx/usr/x86_64-pc-nto-qnx8.0.0/lib -L/home/qnx/qnx800/target/qnx/x86_64/lib -L/home/qnx/qnx800/target/qnx/x86_64/usr/lib -L/home/qnx/qnx800/target/qnx/x86_64/opt/lib
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 19208 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd         13380 /sbin/init
+    305       1 systemd-journal 12440 /usr/lib/systemd/systemd-journald
+    482       1 systemd-resolve 10588 /usr/lib/systemd/systemd-resolved
+    793       1 ModemManager     9968 /usr/sbin/ModemManager
+    626       1 systemd-network  8444 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   7916 /usr/lib/systemd/systemd-logind
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    369       1 systemd-udevd    6680 /usr/lib/systemd/systemd-udevd
+    678       1 polkitd          6576 /usr/lib/polkit-1/polkitd --no-debug
+    749       1 rsyslogd         5412 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5256 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1103    1011 ps               4168 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          3928 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1104    1011 awk              3724 awk NR<=21
+    711     677 bash             3272 bash /mnt/host/queue/1794305218237972855.sh.running
+   1017    1012 bash             3256 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    677       1 host-queue       3236 /bin/bash /usr/local/sbin/host-queue
+Tue Nov 10 10:15:40 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      411276        5596         968       73392       56940
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+   1075    1074 x86_64-pc-nto-q 282240 /home/qnx/qnx800/host/linux/x86_64/usr/bin/x86_64-pc-nto-qnx8.0.0-ld -dn -Bstatic -plugin=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/liblto_plugin.so -plugin-opt=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/fileB1ZhCk_qcc_1074/tmp_qcc_1074.res --sysroot=/home/qnx/qnx800/target/qnx/x86_64/ -T/home/qnx/qnx800/target/qnx/x86_64/lib/nto.link --no-keep-memory -z max-page-size=4096 --section-start .text=0xffff800000002000 --no-relax /home/qnx/qnx800/target/qnx/x86_64/boot/sys/procnto-smp-instr -o procnto-smp-instr.sym -rpath-link /home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -Y/home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -L/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0 -L/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0 -L/home/qnx/qnx800/target/qnx/usr/x86_64-pc-nto-qnx8.0.0/lib -L/home/qnx/qnx800/target/qnx/x86_64/lib -L/home/qnx/qnx800/target/qnx/x86_64/usr/lib -L/home/qnx/qnx800/target/qnx/x86_64/opt/lib
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 19208 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd         13380 /sbin/init
+    305       1 systemd-journal 12440 /usr/lib/systemd/systemd-journald
+    482       1 systemd-resolve 10064 /usr/lib/systemd/systemd-resolved
+    626       1 systemd-network  8444 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   7916 /usr/lib/systemd/systemd-logind
+    498       1 systemd-timesyn  7904 /usr/lib/systemd/systemd-timesyncd
+    793       1 ModemManager     7808 /usr/sbin/ModemManager
+    678       1 polkitd          6576 /usr/lib/polkit-1/polkitd --no-debug
+    369       1 systemd-udevd    6552 /usr/lib/systemd/systemd-udevd
+    749       1 rsyslogd         5412 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5256 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1108    1011 ps               4180 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          3796 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1109    1011 awk              3724 awk NR<=21
+    711     677 bash             3256 bash /mnt/host/queue/1794305218237972855.sh.running
+   1017    1012 bash             3240 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    677       1 host-queue       3220 /bin/bash /usr/local/sbin/host-queue
+Tue Nov 10 10:15:47 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      429032        5584         968       55632       39184
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+   1075    1074 x86_64-pc-nto-q 302264 /home/qnx/qnx800/host/linux/x86_64/usr/bin/x86_64-pc-nto-qnx8.0.0-ld -dn -Bstatic -plugin=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/liblto_plugin.so -plugin-opt=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/fileB1ZhCk_qcc_1074/tmp_qcc_1074.res --sysroot=/home/qnx/qnx800/target/qnx/x86_64/ -T/home/qnx/qnx800/target/qnx/x86_64/lib/nto.link --no-keep-memory -z max-page-size=4096 --section-start .text=0xffff800000002000 --no-relax /home/qnx/qnx800/target/qnx/x86_64/boot/sys/procnto-smp-instr -o procnto-smp-instr.sym -rpath-link /home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -Y/home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -L/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0 -L/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0 -L/home/qnx/qnx800/target/qnx/usr/x86_64-pc-nto-qnx8.0.0/lib -L/home/qnx/qnx800/target/qnx/x86_64/lib -L/home/qnx/qnx800/target/qnx/x86_64/usr/lib -L/home/qnx/qnx800/target/qnx/x86_64/opt/lib
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 17744 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd         13380 /sbin/init
+    305       1 systemd-journal  9428 /usr/lib/systemd/systemd-journald
+    482       1 systemd-resolve  9332 /usr/lib/systemd/systemd-resolved
+    626       1 systemd-network  8148 /usr/lib/systemd/systemd-networkd
+    688       1 systemd-logind   7776 /usr/lib/systemd/systemd-logind
+    498       1 systemd-timesyn  7676 /usr/lib/systemd/systemd-timesyncd
+    793       1 ModemManager     7420 /usr/sbin/ModemManager
+    369       1 systemd-udevd    6488 /usr/lib/systemd/systemd-udevd
+    678       1 polkitd          6372 /usr/lib/polkit-1/polkitd --no-debug
+    749       1 rsyslogd         5808 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      5176 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+   1115       1 apt-helper       4372 /usr/lib/apt/apt-helper wait-online
+   1113    1011 ps               4188 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          3724 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1114    1011 awk              3680 awk NR<=21
+   1017    1012 bash             2884 bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+    711     677 bash             2872 bash /mnt/host/queue/1794305218237972855.sh.running
+Tue Nov 10 10:15:58 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:          468216      446268        6428         972       37584       21948
+Swap:              0           0           0
+    PID    PPID COMMAND           RSS COMMAND
+   1075    1074 x86_64-pc-nto-q 319384 /home/qnx/qnx800/host/linux/x86_64/usr/bin/x86_64-pc-nto-qnx8.0.0-ld -dn -Bstatic -plugin=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/liblto_plugin.so -plugin-opt=/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/fileB1ZhCk_qcc_1074/tmp_qcc_1074.res --sysroot=/home/qnx/qnx800/target/qnx/x86_64/ -T/home/qnx/qnx800/target/qnx/x86_64/lib/nto.link --no-keep-memory -z max-page-size=4096 --section-start .text=0xffff800000002000 --no-relax /home/qnx/qnx800/target/qnx/x86_64/boot/sys/procnto-smp-instr -o procnto-smp-instr.sym -rpath-link /home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -Y/home/qnx/qnx800/target/qnx/x86_64/lib:/home/qnx/qnx800/target/qnx/x86_64/usr/lib:/home/qnx/qnx800/target/qnx/x86_64/opt/lib -L/home/qnx/qnx800/host/linux/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx8.0.0/12.2.0 -L/home/qnx/qnx800/target/qnx/x86_64/lib/gcc/12.2.0 -L/home/qnx/qnx800/target/qnx/usr/x86_64-pc-nto-qnx8.0.0/lib -L/home/qnx/qnx800/target/qnx/x86_64/lib -L/home/qnx/qnx800/target/qnx/x86_64/usr/lib -L/home/qnx/qnx800/target/qnx/x86_64/opt/lib
+    362       1 multipathd      27300 /sbin/multipathd -d -s
+    801       1 unattended-upgr 12900 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+      1       0 systemd          8932 /sbin/init
+    482       1 systemd-resolve  6100 /usr/lib/systemd/systemd-resolved
+    626       1 systemd-network  5740 /usr/lib/systemd/systemd-networkd
+    793       1 ModemManager     5540 /usr/sbin/ModemManager
+    369       1 systemd-udevd    5124 /usr/lib/systemd/systemd-udevd
+    305       1 systemd-journal  4840 /usr/lib/systemd/systemd-journald
+    749       1 rsyslogd         4804 /usr/sbin/rsyslogd -n -iNONE
+    673       1 dbus-daemon      4620 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    498       1 systemd-timesyn  4604 /usr/lib/systemd/systemd-timesyncd
+    688       1 systemd-logind   4576 /usr/lib/systemd/systemd-logind
+    678       1 polkitd          4452 /usr/lib/polkit-1/polkitd --no-debug
+   1123    1011 ps               3632 ps -eo pid,ppid,comm,rss,args --sort=-rss
+   1012     711 runuser          2980 runuser -u qnx -- env HOME=/home/qnx CAN_SDP_ENV=/home/qnx/qnx800/qnxsdp-env.sh CAN_BUILD_FILE=/home/qnx/qnx-work/edu-followup10/ifs.slm.build CAN_BSP_CWD=/home/qnx/qnx-work/can-gate CAN_OUT=/mnt/host/features-can-retry-20261110/out bash /mnt/host/features-can-retry-20261110/repo/tools/build_native_recorder.sh
+   1127       1 9                2976 /usr/lib/systemd/systemd-executor --deserialize 82 --log-level info --log-target journal-or-kmsg
+    672       1 cron             2532 /usr/sbin/cron -f -P
+    677       1 host-queue       2452 /bin/bash /usr/local/sbin/host-queue
+   1124    1011 awk              2336 awk NR<=21
