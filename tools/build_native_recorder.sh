@@ -4,7 +4,7 @@ set -euo pipefail
 source "$CAN_SDP_ENV"
 root=$(cd "$(dirname "$0")/.." && pwd)
 mkdir -p "$CAN_OUT"
-export MAKEFLAGS="4{MAKEFLAGS:-} -j1"
+export MAKEFLAGS="${MAKEFLAGS:-} -j1"
 stage() {
  echo "CAN_BUILD_STAGE_BEGIN=$1"; shift
  free -k
