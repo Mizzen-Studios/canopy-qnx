@@ -1,0 +1,7 @@
+EXISTING_LICENSED_HOST
+Linux x86_64
+TARGET SOURCE     FSTYPE OPTIONS
+/boot  /dev/vda16 ext4   rw,relatime
+TARGET    SOURCE     FSTYPE OPTIONS
+/boot/efi /dev/vda15 vfat   rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro
+SDK_ENV_PRESENT

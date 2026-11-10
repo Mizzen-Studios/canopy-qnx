@@ -1,0 +1,49 @@
+{
+  "schema": "canopy-feature-wave-1",
+  "status": "BLOCKED_SDK_BUILD_OOM",
+  "source_commit": "f931808794e86547d90aa14a044b93060b77fea1",
+  "native_rerun": false,
+  "guest_query_native": "NOT_RUN",
+  "recorder_native": "NOT_RUN",
+  "ssh_authenticated_continuity": "UNVERIFIED",
+  "same_pack_native_desk": "NOT_RUN",
+  "host_only": {
+    "python": "132 PASS / 8 SKIP",
+    "node": "70 PASS"
+  },
+  "observed_blocker": "SDK guest kernel OOM killed process973 x86_64-pc-nto-q; build log terminated; incident.ifs empty. libexpat missing warning separately retained, causal relationship UNVERIFIED.",
+  "queue_job": "1794301868258859843",
+  "queue_result_exit_code": null,
+  "client_exit": "SIGTERM manual-cancel after observed failure",
+  "build_artifact_bindings": "build-artifact-hashes.txt",
+  "base_build_sha256": "121cf21fba9c0cf20cf3f4af0d3278ab2af2a2872263d0f3b0014929f967b563",
+  "caps": {
+    "cpu.max": "100000 100000",
+    "memory.max": "1073741824",
+    "nice": 15,
+    "vcpus": 1,
+    "guest_memory_mib": 512
+  },
+  "cleanup": {
+    "guest_pid": 374225,
+    "guest_stopped_reaped": true,
+    "guest_exit_code": 0,
+    "owner_exit_code": 0,
+    "shutdown_command_exit_code": 0,
+    "lease_free": true,
+    "qemu_processes": 0,
+    "queue_state": "this job .sh.running renamed .sh.failed-preserved after guest exit; no runnable .sh"
+  },
+  "constraints": {
+    "platform_repair": false,
+    "cap_changes": false,
+    "new_sdk": false,
+    "C6": "STOPPED",
+    "SocketCAN": "UNVERIFIED",
+    "recorded": false,
+    "public": false,
+    "spend": 0
+  },
+  "raw_build_log_sha256": "e14ccf14baae94d533610df6529cbcf0ea0feafd61be575f00075c74b0c7a4c0",
+  "log_sanitization": "SDK environment export banner removed from committed log; raw external log retained"
+}
