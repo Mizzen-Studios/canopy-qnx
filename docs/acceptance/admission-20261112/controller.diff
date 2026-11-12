@@ -1,0 +1,22 @@
+--- /home/ubuntu/qnx-host/guest/shared/features-can-20261112/guestctl-capped.before.py	2026-11-07 09:17:30.790739805 +0000
++++ /home/ubuntu/qnx-host/guest/guestctl-capped.py	2026-11-12 20:46:10.720340580 +0000
+@@ -25,7 +25,9 @@
+    quota,period=limit.read_text().split()
+    if quota!='max' and int(quota)<=2.5*int(period): capped=True
+  if not capped: raise SystemExit('Refusing uncapped QEMU: use guestctl.py start or an explicit <=250% CPU scope')
+- args=['qemu-system-x86_64','-machine','q35,accel=tcg','-cpu','max','-smp','1','-m','512','-display','none','-no-reboot','-serial','stdio','-monitor','none','-qmp',f'unix:{qmp},server=on,wait=off','-drive',f'file={p}/guest.qcow2,format=qcow2,if=virtio','-drive',f'file={p}/seed.iso,format=raw,media=cdrom,readonly=on','-nic','user,model=virtio-net-pci','-virtfs',f'local,path={p}/shared,mount_tag=hostshare,security_model=mapped-xattr,id=shared']
++ sdk_memory=os.environ.get('CAN_SDK_MEMORY_MIB','512')
++ if sdk_memory not in ('512','768'): raise SystemExit('SDK memory override must be512 or768')
++ args=['qemu-system-x86_64','-machine','q35,accel=tcg','-cpu','max','-smp','1','-m',sdk_memory,'-display','none','-no-reboot','-serial','stdio','-monitor','none','-qmp',f'unix:{qmp},server=on,wait=off','-drive',f'file={p}/guest.qcow2,format=qcow2,if=virtio','-drive',f'file={p}/seed.iso,format=raw,media=cdrom,readonly=on','-nic','user,model=virtio-net-pci','-virtfs',f'local,path={p}/shared,mount_tag=hostshare,security_model=mapped-xattr,id=shared']
+  (p/'launch.json').write_text(json.dumps({'args':args,'started':time.time()},indent=2))
+  proc=subprocess.Popen(args,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,stdin=subprocess.DEVNULL)
+  (p/'qemu.pid').write_text(str(proc.pid)); log=open(p/'serial.log','ab')
+@@ -43,7 +45,7 @@
+   try: print(request('query-status'));sys.exit(0)
+   except (OSError,ValueError):qmp.unlink()
+  (p/'shared/ready').unlink(missing_ok=True)
+- os.execvp('systemd-run',['systemd-run','--user','--scope','--quiet','-p','CPUQuota=100%','-p','MemoryMax=1G','nice','-n','15',sys.executable,__file__,'run'])
++ os.execvp('systemd-run',['systemd-run','--user','--scope','--quiet','-p','CPUQuota=100%','-p','MemoryMax=1G','-p','MemorySwapMax=0','nice','-n','15',sys.executable,__file__,'run'])
+ elif mode=='status':print(request('query-status'))
+ elif mode=='stop':
+  print(request('system_powerdown'))

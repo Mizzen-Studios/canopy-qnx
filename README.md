@@ -1,5 +1,8 @@
 # CANopy — reusable QNX incident recorder and workbench
 
+**Nov12 admission BLOCKED:** requested SDK768MiB was not admitted under unchanged1GiB host cap: full-RAM reserve plus measured overhead left52.71MiB, below64MiB safety reserve; later shutdown sample projected1363.03MiB before reserve (cache included, not an irreducible minimum). No build queued or new native run. [Measured receipt](docs/acceptance/admission-20261112/receipt.json). SSH UNVERIFIED; lease free, no guest. No cap raise/swap/media; stop pending review.
+
+
 **What:** bounded QNX incident recorder plus a local evidence desk.
 **Original real QNX:** Nov8 SLM restart, exact100RX/100TX, finite slog2 and co-located control; original bindings only.
 **New query:** qcc ELF build PASS; runtime NOT_RUN because stock mkifs kernel relink OOM; no fresh native pack.

@@ -1,0 +1,107 @@
+{
+  "admitted": false,
+  "reserve_bytes": 67108864,
+  "policy": "Full768MiB guest RAM plus measured cgroup non-guest overhead (includes TCG, buffers, pagecache), plus64MiB reserve must fit1GiB. No host/guest swap. Ongoing monitor detects growth; not a future peak guarantee.",
+  "samples": [
+    {
+      "time": 1794516394.0171988,
+      "pid": 467661,
+      "cgroup": "/sys/fs/cgroup/user.slice/user-1001.slice/user@1001.service/app.slice/run-ra225dfec612c45fa8280e9154827de3d.scope",
+      "memory_current": 395833344,
+      "memory_peak": 395833344,
+      "swap_current": 0,
+      "guest_reserved_bytes": 805306368,
+      "guest_resident_bytes": 234881024,
+      "measured_total_non_guest_overhead_bytes": 160952320,
+      "full_reservation_projection_bytes": 966258688,
+      "remaining_after_full_reservation_bytes": 107483136,
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+      "memory_stat": "anon 374132736\nfile 19582976\nkernel 1560576\nkernel_stack 81920\npagetables 1249280\nsec_pagetables 0\npercpu 192\nsock 0\nvmalloc 0\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 0\nfile_dirty 36864\nfile_writeback 0\nswapcached 0\nanon_thp 337641472\nfile_thp 8388608\nshmem_thp 0\ninactive_anon 0\nactive_anon 374132736\ninactive_file 19582976\nactive_file 0\nunevictable 0\nslab_reclaimable 11184\nslab_unreclaimable 208088\nslab 219272\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 15049\npgmajfault 0\npgrefill 0\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 161\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+      "ram_mapping": {
+        "map": "eff9ffe00000-effa2fe00000 rw-p 00000000 00:00 0 ",
+        "Size": 805306368,
+        "Rss": 234881024
+      }
+    },
+    {
+      "time": 1794516396.024841,
+      "pid": 467661,
+      "cgroup": "/sys/fs/cgroup/user.slice/user-1001.slice/user@1001.service/app.slice/run-ra225dfec612c45fa8280e9154827de3d.scope",
+      "memory_current": 424906752,
+      "memory_peak": 424906752,
+      "swap_current": 0,
+      "guest_reserved_bytes": 805306368,
+      "guest_resident_bytes": 234881024,
+      "measured_total_non_guest_overhead_bytes": 190025728,
+      "full_reservation_projection_bytes": 995332096,
+      "remaining_after_full_reservation_bytes": 78409728,
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+      "memory_stat": "anon 403181568\nfile 19582976\nkernel 1622016\nkernel_stack 81920\npagetables 1310720\nsec_pagetables 0\npercpu 192\nsock 0\nvmalloc 0\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 0\nfile_dirty 36864\nfile_writeback 0\nswapcached 0\nanon_thp 360710144\nfile_thp 8388608\nshmem_thp 0\ninactive_anon 0\nactive_anon 403107840\ninactive_file 19582976\nactive_file 0\nunevictable 0\nslab_reclaimable 11184\nslab_unreclaimable 208472\nslab 219656\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 17550\npgmajfault 0\npgrefill 0\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 172\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+      "ram_mapping": {
+        "map": "eff9ffe00000-effa2fe00000 rw-p 00000000 00:00 0 ",
+        "Size": 805306368,
+        "Rss": 234881024
+      }
+    },
+    {
+      "time": 1794516398.033729,
+      "pid": 467661,
+      "cgroup": "/sys/fs/cgroup/user.slice/user-1001.slice/user@1001.service/app.slice/run-ra225dfec612c45fa8280e9154827de3d.scope",
+      "memory_current": 440971264,
+      "memory_peak": 440971264,
+      "swap_current": 0,
+      "guest_reserved_bytes": 805306368,
+      "guest_resident_bytes": 234881024,
+      "measured_total_non_guest_overhead_bytes": 206090240,
+      "full_reservation_projection_bytes": 1011396608,
+      "remaining_after_full_reservation_bytes": 62345216,
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+      "memory_stat": "anon 419282944\nfile 19582976\nkernel 1622016\nkernel_stack 65536\npagetables 1339392\nsec_pagetables 0\npercpu 192\nsock 0\nvmalloc 0\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 0\nfile_dirty 36864\nfile_writeback 0\nswapcached 0\nanon_thp 375390208\nfile_thp 8388608\nshmem_thp 0\ninactive_anon 0\nactive_anon 419282944\ninactive_file 19582976\nactive_file 0\nunevictable 0\nslab_reclaimable 11184\nslab_unreclaimable 199624\nslab 210808\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 17928\npgmajfault 0\npgrefill 0\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 179\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+      "ram_mapping": {
+        "map": "eff9ffe00000-effa2fe00000 rw-p 00000000 00:00 0 ",
+        "Size": 805306368,
+        "Rss": 234881024
+      }
+    },
+    {
+      "time": 1794516400.0414634,
+      "pid": 467661,
+      "cgroup": "/sys/fs/cgroup/user.slice/user-1001.slice/user@1001.service/app.slice/run-ra225dfec612c45fa8280e9154827de3d.scope",
+      "memory_current": 443330560,
+      "memory_peak": 443330560,
+      "swap_current": 0,
+      "guest_reserved_bytes": 805306368,
+      "guest_resident_bytes": 234881024,
+      "measured_total_non_guest_overhead_bytes": 208449536,
+      "full_reservation_projection_bytes": 1013755904,
+      "remaining_after_full_reservation_bytes": 59985920,
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+      "memory_stat": "anon 421638144\nfile 19582976\nkernel 1626112\nkernel_stack 65536\npagetables 1343488\nsec_pagetables 0\npercpu 192\nsock 0\nvmalloc 0\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 0\nfile_dirty 36864\nfile_writeback 0\nswapcached 0\nanon_thp 377487360\nfile_thp 8388608\nshmem_thp 0\ninactive_anon 0\nactive_anon 421638144\ninactive_file 19582976\nactive_file 0\nunevictable 0\nslab_reclaimable 11184\nslab_unreclaimable 199624\nslab 210808\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 17992\npgmajfault 0\npgrefill 0\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 180\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+      "ram_mapping": {
+        "map": "eff9ffe00000-effa2fe00000 rw-p 00000000 00:00 0 ",
+        "Size": 805306368,
+        "Rss": 234881024
+      }
+    },
+    {
+      "time": 1794516402.0511868,
+      "pid": 467661,
+      "cgroup": "/sys/fs/cgroup/user.slice/user-1001.slice/user@1001.service/app.slice/run-ra225dfec612c45fa8280e9154827de3d.scope",
+      "memory_current": 448049152,
+      "memory_peak": 448049152,
+      "swap_current": 0,
+      "guest_reserved_bytes": 805306368,
+      "guest_resident_bytes": 234881024,
+      "measured_total_non_guest_overhead_bytes": 213168128,
+      "full_reservation_projection_bytes": 1018474496,
+      "remaining_after_full_reservation_bytes": 55267328,
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+      "memory_stat": "anon 426254336\nfile 19582976\nkernel 1638400\nkernel_stack 65536\npagetables 1355776\nsec_pagetables 0\npercpu 192\nsock 0\nvmalloc 0\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 0\nfile_dirty 36864\nfile_writeback 0\nswapcached 0\nanon_thp 381681664\nfile_thp 8388608\nshmem_thp 0\ninactive_anon 0\nactive_anon 426221568\ninactive_file 19582976\nactive_file 0\nunevictable 0\nslab_reclaimable 11184\nslab_unreclaimable 199624\nslab 210808\nworkingset_refault_anon 0\nworkingset_refault_file 0\nworkingset_activate_anon 0\nworkingset_activate_file 0\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 0\npgsteal 0\npswpin 0\npswpout 0\npgscan_kswapd 0\npgscan_direct 0\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 0\npgsteal_direct 0\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 18097\npgmajfault 0\npgrefill 0\npgactivate 0\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 182\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+      "ram_mapping": {
+        "map": "eff9ffe00000-effa2fe00000 rw-p 00000000 00:00 0 ",
+        "Size": 805306368,
+        "Rss": 234881024
+      }
+    }
+  ]
+}

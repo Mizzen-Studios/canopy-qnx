@@ -1,0 +1,105 @@
+{
+  "schema": "canopy-sdk-admission-1",
+  "status": "BLOCKED_ADMISSION_HEADROOM",
+  "source_commit": "7038c08b39457b6c9b43308ce036ee069fbb5983",
+  "build_dispatched": false,
+  "native_run": false,
+  "native_rerun": false,
+  "SSH": "UNVERIFIED",
+  "admission": {
+    "method": "cgroup charged memory minus resident bytes of unique768MiB guest-RAM smaps mapping; reserve full768MiB plus all observed non-guest charges including TCG/pagecache/buffers plus64MiB safety reserve within1GiB",
+    "reserve_bytes": 67108864,
+    "initial_last_sample": {
+      "memory_current": 448049152,
+      "memory_peak": 448049152,
+      "guest_reserved_bytes": 805306368,
+      "guest_resident_bytes": 234881024,
+      "measured_total_non_guest_overhead_bytes": 213168128,
+      "full_reservation_projection_bytes": 1018474496,
+      "remaining_after_full_reservation_bytes": 55267328,
+      "swap_current": 0,
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n"
+    },
+    "initial_reserve_shortfall_bytes": 11841536,
+    "later_during_shutdown": {
+      "memory_current": 874672128,
+      "memory_peak": 874672128,
+      "guest_reserved_bytes": 805306368,
+      "guest_resident_bytes": 250740736,
+      "measured_total_non_guest_overhead_bytes": 623931392,
+      "full_reservation_projection_bytes": 1429237760,
+      "remaining_after_full_reservation_bytes": -355495936,
+      "swap_current": 0,
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n"
+    },
+    "interpretation": "Conservative admission failed before build. Non-guest charge includes reclaimable cache; this is NOT proof that an optimized steady-state configuration inevitably needs a larger host cap. No tuning/retry/raise attempted. Final cgroup lifetime peak unavailable after scope removal; report sampled memory.peak only, not a fabricated final peak."
+  },
+  "effective_caps": {
+    "cpu.max": "100000 100000",
+    "memory.max": "1073741824",
+    "memory.swap.max": "0",
+    "memory.swap.current": "0",
+    "nice": 15,
+    "sdk_guest_mib": 768,
+    "smp": 1,
+    "native_guest_mib": 512
+  },
+  "controller": {
+    "backup_external": "/home/ubuntu/qnx-host/guest/shared/features-can-20261112/guestctl-capped.before.py",
+    "backup_sha256": "d91dcdef4068f6a3811c4ada2b02dd3fcbcd59517a42a7e3a2403cd1967af3ee",
+    "current_sha256": "b8be88f8085aaf02c6524d86c2689a67171861c1b5186e2cfd0bd8b9db44bdd1",
+    "changes": "opt-in CAN_SDK_MEMORY_MIB limited512or768 default512; MemorySwapMax=0 tightened; collector native512 unchanged"
+  },
+  "commands": [
+    {
+      "command": "CAN_SDK_MEMORY_MIB=768 bash .openclaw/tmp/can-features-sdk-owner.sh",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 .openclaw/tmp/can-admission.py",
+      "exit_code": 73
+    },
+    {
+      "command": "python3 /home/ubuntu/qnx-host/guest/guestctl-capped.py stop",
+      "exit_code": 0,
+      "note": "ACPI requested; existing controller QMP quit explicitly invoked early when overhead kept rising"
+    },
+    {
+      "command": "python3 -c \"import runpy,sys; sys.argv=['guestctl-capped.py','status']; n=runpy.run_path('/home/ubuntu/qnx-host/guest/guestctl-capped.py'); print(n['request']('quit'))\"",
+      "exit_code": 0,
+      "note": "Exact script in NOTES; QMP quit returned success"
+    }
+  ],
+  "cleanup": {
+    "qemu_pid": 467661,
+    "guest_exit": 0,
+    "owner_exit": 0,
+    "reaped": true,
+    "no_qemu": true,
+    "lease_free": true,
+    "runnable_queue_scripts": 0,
+    "redundant_owner_stop": "missing socket diagnostic after reaping retained in notes"
+  },
+  "constraints": {
+    "spend": 0,
+    "public": false,
+    "media": false,
+    "new_sdk": false,
+    "license_login": false,
+    "host_cap_raise": false,
+    "swap_used": false,
+    "platform_repair": false,
+    "single_host": false,
+    "C6": "STOPPED"
+  },
+  "evidence_sha256": {
+    "sdk-serial.txt": "e8880506984f051530e27648bcfac7f68eb8ff17758f4d853e05b1f220a4b3eb",
+    "admission-monitor.py": "80de051ea95009a66a9990dfb8d50b033c5ee7520b02378ddabbf4938d049d2c",
+    "admission.log": "cd32715646878faeb759c4f291d5725a63c4e815cac818e503449c35a8848a68",
+    "final-measurement.json": "3a46f9c20935cd051127d961e855d0c33e61b1c4c2b1c8fec4de1443cab94c2b",
+    "admission.json": "a3626d56712da56f26966f8f7d24986383a0a80c7cd8062cf385e65e24ec2aa5",
+    "shutdown-sample.json": "ecbcae33b207c673b7e545eccdd3a0d323081aebff0147a13b6606fa24d5a390",
+    "controller.diff": "4962bd5d36c5911b725c2041f0a7e8c2ee17026dc51f3147438768444aab4134",
+    "NOTES.md": "c6d89448fb722bdf7f172f945d7121c30aa330b8d525da59ee2ed27e7463cc9b"
+  }
+}

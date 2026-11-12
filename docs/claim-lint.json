@@ -13,12 +13,12 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "cdaa844b41dcd688b35706c1d57b5d5b7928afec82a3d2cee174ea2594405617",
+      "sha256": "cf1c00be7b8295b098d78557fb170db0771f601786e856cb06b1ba09dbc5fa22",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "STATUS.md",
-      "sha256": "557d92f0e65481dc893065e369a2d98b67f310dd3a4e69a6aa756d9c5d2210fd",
+      "sha256": "42a2059aebe8a917a0f38e1388fa8b004438ad5a0c6a9bf50583c660d1e5e260",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -58,6 +58,11 @@
     }
   ],
   "local_links": [
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/admission-20261112/receipt.json",
+      "exists": true
+    },
     {
       "source": "README.md",
       "target": "docs/native-recorder.md",
@@ -226,6 +231,11 @@
     {
       "source": "README.md",
       "target": "docs/capabilities.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/admission-20261112/receipt.json",
       "exists": true
     },
     {

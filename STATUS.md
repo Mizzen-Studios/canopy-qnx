@@ -1,5 +1,8 @@
 # Status — private product freeze, 9 November 2026
 
+**Nov12 admission BLOCKED:** requested SDK768MiB was not admitted under unchanged1GiB host cap: full-RAM reserve plus measured overhead left52.71MiB, below64MiB safety reserve; later shutdown sample projected1363.03MiB before reserve (cache included, not an irreducible minimum). No build queued or new native run. [Measured receipt](docs/acceptance/admission-20261112/receipt.json). SSH UNVERIFIED; lease free, no guest. No cap raise/swap/media; stop pending review.
+
+
 ## Nov10 features wave — native gate BLOCKED
 
 The new explicit Neutrino ChannelCreate/MsgSend/MsgReceive guest query face has **qcc ELF build PASS** at source2879bf8848daffca66fabb4a6a7d5e96d2141a5a, not native runtime PASS. The one low-memory retry reached **BLOCKED_MKIFS_PROCNT0_LINK_OOM**: mkifs relinking existing procnto-smp-instr exhausted the unchanged512MiB guest; IFS stayed empty. [Precise measured receipt](docs/acceptance/query-retry-20261110/receipt.json), [commands, resident census and logs](docs/acceptance/query-retry-20261110/NOTES.md); [first preserved failure](docs/acceptance/query-20261110/receipt.json).
