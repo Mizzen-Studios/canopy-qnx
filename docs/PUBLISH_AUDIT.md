@@ -1,0 +1,284 @@
+# Publication audit — 15 November 2026
+
+**HOLD for owner privacy review; no history rewrite performed. Repository remains PRIVATE.**
+
+Audited content tip: cf1365034aedea9a81c5ddeea03944ae26812c4e. All local branch, fetched remote-branch and tag refs: 23; 139 reachable commits, 1272 objects, 627 blobs, 12687532 uncompressed blob bytes. Every reachable blob was inspected, not merely the checkout. This report commit is a reporting delta, not an assertion that its own hash was known in advance.
+
+## Methods and scope
+
+- Fetched all origin branches and tags; enumerated refs with git show-ref and all reachable objects with git rev-list --objects --all / git cat-file --batch. Binary signatures inspected anywhere in every blob: ELF, QCOW, QNX filesystem markers; artifact filename/suffix check for SDK tools/libraries, IFS, disk, ELF and archives.
+- Gitleaks 8.30.0: git --log-opts="--all --full-history", built-in default rules explicitly extended with no repository allowlist, --ignore-gitleaks-allow, --redact=100. Exit1: eight candidate occurrences. Gitleaks reports127 changed commits; separate reachability census covers all commits, including merges and branch-only history.
+- Independent whole-blob regex/candidate review: IPv4, IPv6, private DNS suffixes and hostname contexts, local home paths and emails. Author and committer metadata inspected across all commits. Regex matches are not automatically secrets.
+- No Git LFS pointers found. No external submodule/LFS payload, unreachable/dangling object, reflog-only object or remote provider-internal hidden ref claim. Hostname detection is heuristic, not proof arbitrary identifiers are absent. Deduplicated blob inventory records a representative path; same blob may have historical aliases.
+- Redacted scanner reports and raw private identifier inventory retained outside this repo under the operator workspace audit directory, not committed. No credential validation, SDK execution, guest, network probe or history mutation.
+
+## Results
+
+- All627 reachable blobs were also checked for NUL-bearing binary content and classified with the installed file utility where applicable: none were NUL-bearing. This supports the absence of hidden executable/disk payloads, without treating source text as licensed SDK distribution.
+- **No confirmed credential/token/private-key exposure** in the reviewed candidates. No recognized ELF, SDK library, IFS/disk or archive artifacts found in reachable blobs; SDK filenames/paths and hashes in text are not distributed SDK bytes. This is a signature/filename scan, not legal provenance certification.
+- Eight gitleaks candidates are false positives: six Ubuntu kernel public X.509 certificate identifiers and two accepted SSH public-key fingerprints, not signing keys, private SSH keys or authentication tokens. Exact locations below; original bytes unchanged.
+- **Personal author email is present** in commit metadata at 9dfc1e47bb2fb6b05f7acbd06fb2c77862c72dd5 (author-email field; personal Gmail address, intentionally not duplicated here). Other authors use GitHub noreply addresses. Owner must accept public attribution or authorize a separately planned rewrite before visibility changes.
+- **Historical lab identifiers remain:** /home/ubuntu and /home/qnx path prefixes (176 deduplicated blob/value matches at the pre-audit base); private QEMU NAT10.0.2.x, loopback/listen addresses and netmasks; guest hostname qnx-linux-fallback in SDK serial logs. These are not live endpoint credentials, but they are publication-relevant metadata.
+- IPv6 candidates include guest link-local/site-local addresses in network/serial evidence. Generic email scanner matches mostly systemd unit names, SSH algorithm names and public upstream Linux maintainer contacts; the personal author email is in metadata rather than file content. No tailnet hostname was found.
+
+## Gitleaks candidate disposition
+
+- f461343e09a8bf1d5e57e83ccb2a725c22288d23:docs/acceptance/admission-20261112/sdk-serial.txt:353 — generic-api-key; public Ubuntu kernel certificate identifier; not a credential.
+- f461343e09a8bf1d5e57e83ccb2a725c22288d23:docs/acceptance/admission-20261112/sdk-serial.txt:376 — generic-api-key; public Ubuntu kernel certificate identifier; not a credential.
+- e764551aad66624b723a924b46916af7ba13cfde:docs/acceptance/query-retry-20261110/sdk-serial.txt:353 — generic-api-key; public Ubuntu kernel certificate identifier; not a credential.
+- e764551aad66624b723a924b46916af7ba13cfde:docs/acceptance/query-retry-20261110/sdk-serial.txt:376 — generic-api-key; public Ubuntu kernel certificate identifier; not a credential.
+- dc5db80ec562b033d12f10461442c7474e69e1d2:docs/acceptance/query-20261110/sdk-serial.txt:355 — generic-api-key; public Ubuntu kernel certificate identifier; not a credential.
+- dc5db80ec562b033d12f10461442c7474e69e1d2:docs/acceptance/query-20261110/sdk-serial.txt:378 — generic-api-key; public Ubuntu kernel certificate identifier; not a credential.
+- 568ea6ab26b39a7e133d1fc8bbfdf68bd1f4b2d6:docs/acceptance/slm-continuity-20261107/serial.txt:2054 — generic-api-key; public SSH key fingerprint; not a credential.
+- 568ea6ab26b39a7e133d1fc8bbfdf68bd1f4b2d6:docs/acceptance/slm-continuity-20261107/serial.txt:2058 — generic-api-key; public SSH key fingerprint; not a credential.
+
+## Exact publication-review locations
+
+Values are not copied into this report. A row gives category, representative path, first matched line in that blob, blob OID and a SHA256 fingerprint of the value. This keeps the audit actionable without multiplying personal identifiers.
+
+- host_path: docs/acceptance/admission-20261112/NOTES.md:13; blob 73e059761a93fc6b86b5de59fdc01dae58cc4278; value fingerprint 09c906db290e1978.
+- host_path: docs/acceptance/admission-20261112/NOTES.md:14; blob 73e059761a93fc6b86b5de59fdc01dae58cc4278; value fingerprint e060eb1cfdc6269b.
+- host_path: docs/acceptance/admission-20261112/NOTES.md:17; blob 73e059761a93fc6b86b5de59fdc01dae58cc4278; value fingerprint 069e9302b8ca6c1f.
+- host_path: docs/acceptance/admission-20261112/admission-monitor.py:3; blob fea7b207bd5065ee04827b17a8297079c3fa62aa; value fingerprint a9b7496b983e44db.
+- host_path: docs/acceptance/admission-20261112/admission-monitor.py:4; blob fea7b207bd5065ee04827b17a8297079c3fa62aa; value fingerprint 68178dc5371d3bf5.
+- email: docs/acceptance/admission-20261112/admission.json:9; blob 524d4ce5c2e7480936051e62e198c0f80c91e54d; value fingerprint 679dfdde16db76da.
+- email: docs/acceptance/admission-20261112/admission.log:9; blob b83c4e6ed3beefb03204f89cf1df85e3b300e7b0; value fingerprint 679dfdde16db76da.
+- host_path: docs/acceptance/admission-20261112/controller.diff:1; blob 8f902c73f106a1b216ed94978c24157de3ee5325; value fingerprint e35fddcb75750b50.
+- host_path: docs/acceptance/admission-20261112/controller.diff:2; blob 8f902c73f106a1b216ed94978c24157de3ee5325; value fingerprint e060eb1cfdc6269b.
+- host_path: docs/acceptance/admission-20261112/final-measurement.json:12; blob 0f16f7c0986d24e774c6c4c26bee895b354ea44c; value fingerprint 5bdc526093ac8a72.
+- host_path: docs/acceptance/admission-20261112/receipt.json:48; blob e2e7cddf6b50998843838877697ddfd15d1c2803; value fingerprint e35fddcb75750b50.
+- host_path: docs/acceptance/admission-20261112/receipt.json:63; blob e2e7cddf6b50998843838877697ddfd15d1c2803; value fingerprint e060eb1cfdc6269b.
+- email: docs/acceptance/admission-20261112/sdk-serial.txt:252; blob 6a9107215c9cba049d15eca0e8f73520ce57b268; value fingerprint 0deb762d8ba0d7a5.
+- email: docs/acceptance/admission-20261112/sdk-serial.txt:339; blob 6a9107215c9cba049d15eca0e8f73520ce57b268; value fingerprint 0db55f8ebd4c44d1.
+- email: docs/acceptance/admission-20261112/sdk-serial.txt:533; blob 6a9107215c9cba049d15eca0e8f73520ce57b268; value fingerprint ef61c920c029af28.
+- email: docs/acceptance/admission-20261112/sdk-serial.txt:534; blob 6a9107215c9cba049d15eca0e8f73520ce57b268; value fingerprint 7aa8c899204637f6.
+- email: docs/acceptance/admission-20261112/sdk-serial.txt:537; blob 6a9107215c9cba049d15eca0e8f73520ce57b268; value fingerprint 91b7ac12a88db74a.
+- email: docs/acceptance/admission-20261112/sdk-serial.txt:538; blob 6a9107215c9cba049d15eca0e8f73520ce57b268; value fingerprint 9c0869566840c8ef.
+- email: docs/acceptance/admission-20261112/sdk-serial.txt:541; blob 6a9107215c9cba049d15eca0e8f73520ce57b268; value fingerprint 1f408b7f09aa1c67.
+- email: docs/acceptance/admission-20261112/sdk-serial.txt:542; blob 6a9107215c9cba049d15eca0e8f73520ce57b268; value fingerprint 2c0a4e8e39ab51b3.
+- email: docs/acceptance/admission-20261112/sdk-serial.txt:543; blob 6a9107215c9cba049d15eca0e8f73520ce57b268; value fingerprint f378840d9d106223.
+- email: docs/acceptance/admission-20261112/sdk-serial.txt:544; blob 6a9107215c9cba049d15eca0e8f73520ce57b268; value fingerprint 45bd8d77d48aee38.
+- email: docs/acceptance/admission-20261112/shutdown-sample.json:4; blob 2c968fcf93c47f8c91b449dc20879fc8e57b9aa5; value fingerprint 679dfdde16db76da.
+- host_path: docs/acceptance/browser-20261107/receipt.json:141; blob 56ecb52b7c00265760707213570274e3a7c8c840; value fingerprint d8b2bc7efc12bfa1.
+- host_path: docs/acceptance/browser-20261107/receipt.json:145; blob 56ecb52b7c00265760707213570274e3a7c8c840; value fingerprint 8869821d9543bfcc.
+- host_path: docs/acceptance/browser-20261107/receipt.json:149; blob 56ecb52b7c00265760707213570274e3a7c8c840; value fingerprint 2f3fc371ab6a77a0.
+- host_path: docs/acceptance/browser-20261107/receipt.json:153; blob 56ecb52b7c00265760707213570274e3a7c8c840; value fingerprint ecd1ce58599eeb7e.
+- host_path: docs/acceptance/browser-20261107/receipt.json:157; blob 56ecb52b7c00265760707213570274e3a7c8c840; value fingerprint 0e2c8ea88f832028.
+- host_path: docs/acceptance/browser-20261107/receipt.json:161; blob 56ecb52b7c00265760707213570274e3a7c8c840; value fingerprint 7910388d3e0aefc9.
+- host_path: docs/acceptance/browser-20261107/receipt.json:165; blob 56ecb52b7c00265760707213570274e3a7c8c840; value fingerprint a0c627429c6067ca.
+- host_path: docs/acceptance/browser-20261107/receipt.json:169; blob 56ecb52b7c00265760707213570274e3a7c8c840; value fingerprint 65282faddccd19f8.
+- host_path: docs/acceptance/control-fix-20261108/first-tests.log:61; blob e891a552d441a012227b26f9b812462ac3a7dca4; value fingerprint f0af7fbd387badfe.
+- host_path: docs/acceptance/control-fix-20261108/first-tests.log:78; blob e891a552d441a012227b26f9b812462ac3a7dca4; value fingerprint e8411fb75bafbf34.
+- host_path: docs/acceptance/control-fix-20261108/first-tests.log:112; blob e891a552d441a012227b26f9b812462ac3a7dca4; value fingerprint 79547ad8efacdb60.
+- host_path: docs/acceptance/control-fix-20261108/first-tests.log:126; blob e891a552d441a012227b26f9b812462ac3a7dca4; value fingerprint 8e33dfb260f3fedc.
+- host_path: docs/acceptance/control-fix-20261108/first-tests.log:127; blob e891a552d441a012227b26f9b812462ac3a7dca4; value fingerprint 74c2fbbdc03135f5.
+- host_path: docs/acceptance/control-fix-20261108/first-tests.log:128; blob e891a552d441a012227b26f9b812462ac3a7dca4; value fingerprint 7f57e269d3fb4168.
+- host_path: docs/acceptance/control-fix-20261108/incident.json:25; blob 89fb11bb0906c00e234127f6510470019971de4c; value fingerprint de1bfb3839b76fd5.
+- host_path: docs/acceptance/control-fix-20261108/incident.json:33; blob 89fb11bb0906c00e234127f6510470019971de4c; value fingerprint 7f592906329e818f.
+- host_path: docs/acceptance/control-fix-20261108/incident.json:41; blob 89fb11bb0906c00e234127f6510470019971de4c; value fingerprint e00ece5e58622662.
+- host_path: docs/acceptance/control-fix-20261108/incident.json:49; blob 89fb11bb0906c00e234127f6510470019971de4c; value fingerprint 3b4b50cfa3a990e9.
+- host_path: docs/acceptance/control-fix-20261108/second-tests.log:55; blob d7b62faf95d19faf20256d557b681d8f35b857bd; value fingerprint 7f7584a64db14ecc.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-clean-failure.log:145; blob ac222e0b45dc15cb48e251d7a8c847ac773fd26d; value fingerprint 3713bf87728156e3.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-clean-failure.log:219; blob ac222e0b45dc15cb48e251d7a8c847ac773fd26d; value fingerprint 837a37a05d406c65.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-clean-failure.log:221; blob ac222e0b45dc15cb48e251d7a8c847ac773fd26d; value fingerprint ded6c57ad1e51e81.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-clean-failure.log:236; blob ac222e0b45dc15cb48e251d7a8c847ac773fd26d; value fingerprint 77cc4d2689d1b46b.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-clean-failure.log:238; blob ac222e0b45dc15cb48e251d7a8c847ac773fd26d; value fingerprint c35296529ee5f58d.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-clean-failure.log:253; blob ac222e0b45dc15cb48e251d7a8c847ac773fd26d; value fingerprint d496f9caf1ca7fb5.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-clean-failure.log:255; blob ac222e0b45dc15cb48e251d7a8c847ac773fd26d; value fingerprint adbdc35fccc0018b.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-clean-failure.log:256; blob ac222e0b45dc15cb48e251d7a8c847ac773fd26d; value fingerprint 3098c70195e32182.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-clean-failure.log:274; blob ac222e0b45dc15cb48e251d7a8c847ac773fd26d; value fingerprint 8922cc8938c1bbe0.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-clean-failure.log:361; blob ac222e0b45dc15cb48e251d7a8c847ac773fd26d; value fingerprint cc361c0243613dda.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-clean-failure.log:363; blob ac222e0b45dc15cb48e251d7a8c847ac773fd26d; value fingerprint 24876ba1f569236c.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-parallel-failure.log:145; blob 9aeda3a9c7413d3e024b2d144b706738c8bf49b9; value fingerprint 3713bf87728156e3.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-parallel-failure.log:219; blob 9aeda3a9c7413d3e024b2d144b706738c8bf49b9; value fingerprint d496f9caf1ca7fb5.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-parallel-failure.log:221; blob 9aeda3a9c7413d3e024b2d144b706738c8bf49b9; value fingerprint adbdc35fccc0018b.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-parallel-failure.log:222; blob 9aeda3a9c7413d3e024b2d144b706738c8bf49b9; value fingerprint 3098c70195e32182.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-parallel-failure.log:240; blob 9aeda3a9c7413d3e024b2d144b706738c8bf49b9; value fingerprint 8922cc8938c1bbe0.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-parallel-failure.log:327; blob 9aeda3a9c7413d3e024b2d144b706738c8bf49b9; value fingerprint cc361c0243613dda.
+- host_path: docs/acceptance/final-upgrade-20261108/initial-parallel-failure.log:329; blob 9aeda3a9c7413d3e024b2d144b706738c8bf49b9; value fingerprint 24876ba1f569236c.
+- host_path: docs/acceptance/native-can-three.md:11; blob ee5a3df11ae686abd45129d1513cc87dd1320041; value fingerprint 21492ba255fcaa4d.
+- host_path: docs/acceptance/native-first-20261108/browser-runner.sh:3; blob 330e45206a89c4922842d1e027d1dbdb6fe2843a; value fingerprint a212559d94f4bfe0.
+- host_path: docs/acceptance/native-first-20261108/browser-runner.sh:5; blob 330e45206a89c4922842d1e027d1dbdb6fe2843a; value fingerprint 5c92c6eeb6288c06.
+- host_path: docs/acceptance/native-first-20261108/independent-initial-runner.log:1; blob a7a3a8c0d8e1bcc37db41954253a5bd3f5d161ec; value fingerprint 74870e5f503053c5.
+- host_path: docs/acceptance/native-recorder-20261108/incident.json:25; blob 3ab33acde43db6ec2071927a7288fe0b29580fbf; value fingerprint de1bfb3839b76fd5.
+- host_path: docs/acceptance/native-recorder-20261108/incident.json:33; blob 3ab33acde43db6ec2071927a7288fe0b29580fbf; value fingerprint 7f592906329e818f.
+- host_path: docs/acceptance/native-recorder-20261108/incident.json:41; blob 3ab33acde43db6ec2071927a7288fe0b29580fbf; value fingerprint e00ece5e58622662.
+- host_path: docs/acceptance/native-recorder-20261108/incident.json:49; blob 3ab33acde43db6ec2071927a7288fe0b29580fbf; value fingerprint 3b4b50cfa3a990e9.
+- host_path: docs/acceptance/native-recorder-20261108/receipt.json:27; blob acf25198a41ca2a36e4d3208ab31972184ce6b11; value fingerprint d08ead3c0a6ea7ac.
+- host_path: docs/acceptance/native-recorder-20261108/receipt.json:29; blob acf25198a41ca2a36e4d3208ab31972184ce6b11; value fingerprint e9307d8c6e2483a0.
+- host_path: docs/acceptance/native-recorder-20261108/receipt.json:39; blob acf25198a41ca2a36e4d3208ab31972184ce6b11; value fingerprint d8f666d5e142c0d0.
+- host_path: docs/acceptance/packaging-20261107/initial-host-failed.log:144; blob 9c4df437ebc014dce255f78943bffac7b630cd19; value fingerprint 9fae75eac9a9610f.
+- host_path: docs/acceptance/prereq-20261108/NOTES.md:9; blob 8a40c8c409b917a2412d857031b8c212f7091fef; value fingerprint 2b08740b3a985f63.
+- host_path: docs/acceptance/prereq-20261108/native.py:3; blob 93a35fc20b835632ee0ad4dfde0ace63eb97cb6d; value fingerprint 3b80f9cc2339dab4.
+- host_path: docs/acceptance/prereq-20261108/native.py:4; blob 93a35fc20b835632ee0ad4dfde0ace63eb97cb6d; value fingerprint 069e9302b8ca6c1f.
+- host_path: docs/acceptance/prereq-20261108/native.py:5; blob 93a35fc20b835632ee0ad4dfde0ace63eb97cb6d; value fingerprint 43a02895920dc92d.
+- host_path: docs/acceptance/prereq-20261108/native.py:8; blob 93a35fc20b835632ee0ad4dfde0ace63eb97cb6d; value fingerprint 90176fca51702487.
+- host_path: docs/acceptance/prereq-20261108/sdk-build-final.log:3; blob 50c654cc4d78349f55b0b0da07df74f8f93ec70a; value fingerprint 4ce7135f526c3a57.
+- host_path: docs/acceptance/query-20261110/NOTES.md:9; blob 127cc5eef6687df53a723990219259f4b09eeb8b; value fingerprint e060eb1cfdc6269b.
+- host_path: docs/acceptance/query-20261110/NOTES.md:13; blob 127cc5eef6687df53a723990219259f4b09eeb8b; value fingerprint 069e9302b8ca6c1f.
+- host_path: docs/acceptance/query-20261110/build-artifact-hashes.txt:1; blob f356ed159723a4c9e79b20912f4a5073f6de1e6b; value fingerprint 485f2bc01f02046c.
+- host_path: docs/acceptance/query-20261110/build-artifact-hashes.txt:2; blob f356ed159723a4c9e79b20912f4a5073f6de1e6b; value fingerprint f6976574cd7cfe33.
+- host_path: docs/acceptance/query-20261110/build-artifact-hashes.txt:3; blob f356ed159723a4c9e79b20912f4a5073f6de1e6b; value fingerprint 0821766449903a67.
+- host_path: docs/acceptance/query-20261110/build-artifact-hashes.txt:4; blob f356ed159723a4c9e79b20912f4a5073f6de1e6b; value fingerprint d1adf8bc7cd3d49f.
+- host_path: docs/acceptance/query-20261110/build-artifact-hashes.txt:5; blob f356ed159723a4c9e79b20912f4a5073f6de1e6b; value fingerprint 67b034f32de64700.
+- host_path: docs/acceptance/query-20261110/build-artifact-hashes.txt:6; blob f356ed159723a4c9e79b20912f4a5073f6de1e6b; value fingerprint dc70a59767385ce5.
+- host_path: docs/acceptance/query-20261110/build.sh:4; blob 51913c14598350741f4ae97c9f4f71d7d7a96b78; value fingerprint de1bfb3839b76fd5.
+- host_path: docs/acceptance/query-20261110/build.sh:5; blob 51913c14598350741f4ae97c9f4f71d7d7a96b78; value fingerprint 9c7b19b061d61f1b.
+- host_path: docs/acceptance/query-20261110/build.sh:6; blob 51913c14598350741f4ae97c9f4f71d7d7a96b78; value fingerprint 34716cbce51d179c.
+- host_path: docs/acceptance/query-20261110/launch-build.sh:10; blob b82b84a37aee3b0cacdcf67914fdbe40680f7a43; value fingerprint de1bfb3839b76fd5.
+- email: docs/acceptance/query-20261110/sdk-serial.txt:254; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 0deb762d8ba0d7a5.
+- email: docs/acceptance/query-20261110/sdk-serial.txt:341; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 0db55f8ebd4c44d1.
+- email: docs/acceptance/query-20261110/sdk-serial.txt:535; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint ef61c920c029af28.
+- email: docs/acceptance/query-20261110/sdk-serial.txt:536; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 7aa8c899204637f6.
+- email: docs/acceptance/query-20261110/sdk-serial.txt:539; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 91b7ac12a88db74a.
+- email: docs/acceptance/query-20261110/sdk-serial.txt:540; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 9c0869566840c8ef.
+- email: docs/acceptance/query-20261110/sdk-serial.txt:543; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 1f408b7f09aa1c67.
+- email: docs/acceptance/query-20261110/sdk-serial.txt:544; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 2c0a4e8e39ab51b3.
+- email: docs/acceptance/query-20261110/sdk-serial.txt:545; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint f378840d9d106223.
+- email: docs/acceptance/query-20261110/sdk-serial.txt:546; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 45bd8d77d48aee38.
+- email: docs/acceptance/query-20261110/sdk-serial.txt:789; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 8770374c1d27dc10.
+- email: docs/acceptance/query-20261110/sdk-serial.txt:794; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 516af3a7f0a6719a.
+- ipv4: docs/acceptance/query-20261110/sdk-serial.txt:666; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 4b7280351cfd0832.
+- ipv4: docs/acceptance/query-20261110/sdk-serial.txt:669; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 12ca17b49af22894.
+- ipv4: docs/acceptance/query-20261110/sdk-serial.txt:676; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 19e36255972107d4.
+- ipv4: docs/acceptance/query-20261110/sdk-serial.txt:677; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 3dc2126799d2d8dd.
+- ipv4: docs/acceptance/query-20261110/sdk-serial.txt:678; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint f45462bf3cd12ea2.
+- ipv4: docs/acceptance/query-20261110/sdk-serial.txt:679; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa; value fingerprint 7c595d8fd2a09fa6.
+- host_path: docs/acceptance/query-retry-20261110/NOTES.md:13; blob aad8d5adcfc12550e31b357ec87f122a91417316; value fingerprint e060eb1cfdc6269b.
+- host_path: docs/acceptance/query-retry-20261110/effective-caps.json:6; blob 9460691f6e5bc1861dfe74c608f3d3cb91595796; value fingerprint 5bdc526093ac8a72.
+- host_path: docs/acceptance/query-retry-20261110/launch.sh:29; blob 0407001af05cbea93bebadadfa2f3fe34a522a06; value fingerprint de1bfb3839b76fd5.
+- host_path: docs/acceptance/query-retry-20261110/memory-samples.log:20; blob cd75b3af493426d1d7b2298c6cf97d545fb82d89; value fingerprint de1bfb3839b76fd5.
+- host_path: docs/acceptance/query-retry-20261110/memory-samples.log:33; blob cd75b3af493426d1d7b2298c6cf97d545fb82d89; value fingerprint 983b10d3f601e561.
+- host_path: docs/acceptance/query-retry-20261110/memory-samples.log:132; blob cd75b3af493426d1d7b2298c6cf97d545fb82d89; value fingerprint 5ff5bcbb248376f4.
+- host_path: docs/acceptance/query-retry-20261110/receipt.json:34; blob 401011c66c062ee1e12f8e5bdd8dd4fce74f05bd; value fingerprint e060eb1cfdc6269b.
+- email: docs/acceptance/query-retry-20261110/sdk-serial.txt:252; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 0deb762d8ba0d7a5.
+- email: docs/acceptance/query-retry-20261110/sdk-serial.txt:339; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 0db55f8ebd4c44d1.
+- email: docs/acceptance/query-retry-20261110/sdk-serial.txt:534; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint ef61c920c029af28.
+- email: docs/acceptance/query-retry-20261110/sdk-serial.txt:535; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 7aa8c899204637f6.
+- email: docs/acceptance/query-retry-20261110/sdk-serial.txt:538; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 91b7ac12a88db74a.
+- email: docs/acceptance/query-retry-20261110/sdk-serial.txt:539; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 9c0869566840c8ef.
+- email: docs/acceptance/query-retry-20261110/sdk-serial.txt:542; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 1f408b7f09aa1c67.
+- email: docs/acceptance/query-retry-20261110/sdk-serial.txt:543; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 2c0a4e8e39ab51b3.
+- email: docs/acceptance/query-retry-20261110/sdk-serial.txt:544; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint f378840d9d106223.
+- email: docs/acceptance/query-retry-20261110/sdk-serial.txt:545; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 45bd8d77d48aee38.
+- ipv4: docs/acceptance/query-retry-20261110/sdk-serial.txt:667; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 4b7280351cfd0832.
+- ipv4: docs/acceptance/query-retry-20261110/sdk-serial.txt:670; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 12ca17b49af22894.
+- ipv4: docs/acceptance/query-retry-20261110/sdk-serial.txt:677; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 19e36255972107d4.
+- ipv4: docs/acceptance/query-retry-20261110/sdk-serial.txt:678; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 3dc2126799d2d8dd.
+- ipv4: docs/acceptance/query-retry-20261110/sdk-serial.txt:679; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint f45462bf3cd12ea2.
+- ipv4: docs/acceptance/query-retry-20261110/sdk-serial.txt:680; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21; value fingerprint 7c595d8fd2a09fa6.
+- host_path: docs/acceptance/safestop-failure-20261107/controller.py:3; blob 62a9434db2004c7432a89b9ef38a0b33bbc07a42; value fingerprint 43a02895920dc92d.
+- host_path: docs/acceptance/safestop-failure-20261107/controller.py:5; blob 62a9434db2004c7432a89b9ef38a0b33bbc07a42; value fingerprint 5b6ea6e94ab197c2.
+- host_path: docs/acceptance/safestop-failure-20261107/controller.py:6; blob 62a9434db2004c7432a89b9ef38a0b33bbc07a42; value fingerprint 069e9302b8ca6c1f.
+- host_path: docs/acceptance/safestop-failure-20261107/controller.py:7; blob 62a9434db2004c7432a89b9ef38a0b33bbc07a42; value fingerprint 3cfbe3cdf4ba29b9.
+- host_path: docs/acceptance/safestop-failure-20261107/controller.py:9; blob 62a9434db2004c7432a89b9ef38a0b33bbc07a42; value fingerprint e9307d8c6e2483a0.
+- host_path: docs/acceptance/safestop-failure-20261107/controller.py:110; blob 62a9434db2004c7432a89b9ef38a0b33bbc07a42; value fingerprint 0094935c5fbae7da.
+- host_path: docs/acceptance/safestop-focused-failure-20261107/controller.py:3; blob d7e56c423abfb378884464e98def627f171990de; value fingerprint 43a02895920dc92d.
+- host_path: docs/acceptance/safestop-focused-failure-20261107/controller.py:5; blob d7e56c423abfb378884464e98def627f171990de; value fingerprint cd9ec3ee4ca10a79.
+- host_path: docs/acceptance/safestop-focused-failure-20261107/controller.py:6; blob d7e56c423abfb378884464e98def627f171990de; value fingerprint 069e9302b8ca6c1f.
+- host_path: docs/acceptance/safestop-focused-failure-20261107/controller.py:7; blob d7e56c423abfb378884464e98def627f171990de; value fingerprint 3cfbe3cdf4ba29b9.
+- host_path: docs/acceptance/safestop-focused-failure-20261107/controller.py:9; blob d7e56c423abfb378884464e98def627f171990de; value fingerprint e9307d8c6e2483a0.
+- host_path: docs/acceptance/safestop-focused-failure-20261107/controller.py:110; blob d7e56c423abfb378884464e98def627f171990de; value fingerprint 0094935c5fbae7da.
+- host_path: docs/acceptance/slm-20261107/controller.py:3; blob 05598f5ef70743a79baf7b8bc3c43b417fcedd84; value fingerprint 43a02895920dc92d.
+- host_path: docs/acceptance/slm-20261107/controller.py:5; blob 05598f5ef70743a79baf7b8bc3c43b417fcedd84; value fingerprint 6ceb93231e985532.
+- host_path: docs/acceptance/slm-20261107/controller.py:6; blob 05598f5ef70743a79baf7b8bc3c43b417fcedd84; value fingerprint 069e9302b8ca6c1f.
+- host_path: docs/acceptance/slm-20261107/controller.py:7; blob 05598f5ef70743a79baf7b8bc3c43b417fcedd84; value fingerprint 5ec9cf3e6d15ccdd.
+- host_path: docs/acceptance/slm-20261107/controller.py:9; blob 05598f5ef70743a79baf7b8bc3c43b417fcedd84; value fingerprint e9307d8c6e2483a0.
+- ipv4: docs/acceptance/slm-continuity-20261107/controller.py:9; blob 62f6c08b8c1c6535eae4862b89ed440ead3b6679; value fingerprint 12ca17b49af22894.
+- ipv4: docs/acceptance/slm-continuity-20261107/controller.py:93; blob 62f6c08b8c1c6535eae4862b89ed440ead3b6679; value fingerprint 4b7280351cfd0832.
+- ipv4: docs/acceptance/slm-continuity-20261107/controller.py:101; blob 62f6c08b8c1c6535eae4862b89ed440ead3b6679; value fingerprint 19e36255972107d4.
+- host_path: docs/acceptance/slm-continuity-20261107/controller.py:3; blob 62f6c08b8c1c6535eae4862b89ed440ead3b6679; value fingerprint 43a02895920dc92d.
+- host_path: docs/acceptance/slm-continuity-20261107/controller.py:5; blob 62f6c08b8c1c6535eae4862b89ed440ead3b6679; value fingerprint c41bf7e99a94fa0c.
+- host_path: docs/acceptance/slm-continuity-20261107/controller.py:6; blob 62f6c08b8c1c6535eae4862b89ed440ead3b6679; value fingerprint 069e9302b8ca6c1f.
+- host_path: docs/acceptance/slm-continuity-20261107/controller.py:7; blob 62f6c08b8c1c6535eae4862b89ed440ead3b6679; value fingerprint 3cfbe3cdf4ba29b9.
+- host_path: docs/acceptance/slm-continuity-20261107/controller.py:11; blob 62f6c08b8c1c6535eae4862b89ed440ead3b6679; value fingerprint e9307d8c6e2483a0.
+- host_path: docs/acceptance/slm-continuity-20261107/controller.py:99; blob 62f6c08b8c1c6535eae4862b89ed440ead3b6679; value fingerprint 0a63dcb4e72f5861.
+- host_path: docs/acceptance/slm-continuity-20261107/controller.py:106; blob 62f6c08b8c1c6535eae4862b89ed440ead3b6679; value fingerprint 035a438e00bce330.
+- ipv4: docs/acceptance/slm-continuity-20261107/network-before.txt:79; blob 3c4dba693542c65ef43ad8219bb2aab67ccc8d17; value fingerprint 12ca17b49af22894.
+- ipv4: docs/acceptance/slm-continuity-20261107/network-before.txt:133; blob 3c4dba693542c65ef43ad8219bb2aab67ccc8d17; value fingerprint 7c595d8fd2a09fa6.
+- ipv4: docs/acceptance/slm-continuity-20261107/network-configured.txt:1; blob d254fc5ebd28e0c757a16ebd216c5a56018d5be2; value fingerprint 4b7280351cfd0832.
+- ipv4: docs/acceptance/slm-continuity-20261107/network-configured.txt:8; blob d254fc5ebd28e0c757a16ebd216c5a56018d5be2; value fingerprint 42b0f0eb867e90e9.
+- ipv4: docs/acceptance/slm-continuity-20261107/network-configured.txt:16; blob d254fc5ebd28e0c757a16ebd216c5a56018d5be2; value fingerprint 3dc2126799d2d8dd.
+- ipv4: docs/acceptance/slm-continuity-20261107/network-configured.txt:18; blob d254fc5ebd28e0c757a16ebd216c5a56018d5be2; value fingerprint 12ca17b49af22894.
+- ipv4: docs/acceptance/slm-continuity-20261107/serial.txt:155; blob 289e6f3bc279e966bf51bc7c1576916cb4bdecc1; value fingerprint 12ca17b49af22894.
+- ipv4: docs/acceptance/slm-continuity-20261107/serial.txt:209; blob 289e6f3bc279e966bf51bc7c1576916cb4bdecc1; value fingerprint 7c595d8fd2a09fa6.
+- ipv4: docs/acceptance/slm-continuity-20261107/serial.txt:212; blob 289e6f3bc279e966bf51bc7c1576916cb4bdecc1; value fingerprint 4b7280351cfd0832.
+- ipv4: docs/acceptance/slm-continuity-20261107/serial.txt:219; blob 289e6f3bc279e966bf51bc7c1576916cb4bdecc1; value fingerprint 42b0f0eb867e90e9.
+- ipv4: docs/acceptance/slm-continuity-20261107/serial.txt:227; blob 289e6f3bc279e966bf51bc7c1576916cb4bdecc1; value fingerprint 3dc2126799d2d8dd.
+- ipv4: docs/acceptance/slm-continuity-20261107/serial.txt:275; blob 289e6f3bc279e966bf51bc7c1576916cb4bdecc1; value fingerprint 19e36255972107d4.
+- ipv4: docs/acceptance/slm-continuity-20261107/serial.txt:2052; blob 289e6f3bc279e966bf51bc7c1576916cb4bdecc1; value fingerprint f9292b96ff7d66ab.
+- email: docs/acceptance/slm-continuity-20261107/ssh-debug.txt:18; blob e9038415ab84a919d947c94cde3a8301de6de246; value fingerprint 28f9c6dfabef74a1.
+- email: docs/acceptance/slm-continuity-20261107/ssh-debug.txt:20; blob e9038415ab84a919d947c94cde3a8301de6de246; value fingerprint d4d73b2a25cc9a0e.
+- email: docs/acceptance/slm-continuity-20261107/ssh-debug.txt:40; blob e9038415ab84a919d947c94cde3a8301de6de246; value fingerprint 571f8ff4c960d22d.
+- email: docs/acceptance/slm-continuity-20261107/ssh-debug.txt:41; blob e9038415ab84a919d947c94cde3a8301de6de246; value fingerprint b18c40853be9e3fa.
+- email: docs/acceptance/slm-continuity-20261107/ssh-debug.txt:42; blob e9038415ab84a919d947c94cde3a8301de6de246; value fingerprint 6e49c1092665b7c4.
+- email: docs/acceptance/slm-continuity-20261107/ssh-debug.txt:55; blob e9038415ab84a919d947c94cde3a8301de6de246; value fingerprint 4b55077c3301b698.
+- email: docs/acceptance/slm-continuity-20261107/ssh-debug.txt:58; blob e9038415ab84a919d947c94cde3a8301de6de246; value fingerprint 6f597c21d3e0f09d.
+- ipv4: docs/acceptance/slm-continuity-20261107/ssh-debug.txt:5; blob e9038415ab84a919d947c94cde3a8301de6de246; value fingerprint 12ca17b49af22894.
+- host_path: docs/acceptance/slm-continuity-20261107/ssh-debug.txt:8; blob e9038415ab84a919d947c94cde3a8301de6de246; value fingerprint 035a438e00bce330.
+- host_path: docs/acceptance/slm-continuity-20261107/ssh-debug.txt:9; blob e9038415ab84a919d947c94cde3a8301de6de246; value fingerprint ac4e5b79796c36b1.
+- ipv4: docs/acceptance/slm-continuity-20261107/ssh-server.txt:6; blob 6ca442d66f13572a645ebcd1b59cf50fff69db63; value fingerprint 19e36255972107d4.
+- host_path: docs/acceptance/slm-traffic-20261107/controller.py:3; blob f301c0bc1e708b998bfcedb03684b984dfa9667e; value fingerprint 43a02895920dc92d.
+- host_path: docs/acceptance/slm-traffic-20261107/controller.py:5; blob f301c0bc1e708b998bfcedb03684b984dfa9667e; value fingerprint 4399fcb388001d5d.
+- host_path: docs/acceptance/slm-traffic-20261107/controller.py:6; blob f301c0bc1e708b998bfcedb03684b984dfa9667e; value fingerprint 069e9302b8ca6c1f.
+- host_path: docs/acceptance/slm-traffic-20261107/controller.py:7; blob f301c0bc1e708b998bfcedb03684b984dfa9667e; value fingerprint 5ec9cf3e6d15ccdd.
+- host_path: docs/acceptance/slm-traffic-20261107/controller.py:9; blob f301c0bc1e708b998bfcedb03684b984dfa9667e; value fingerprint e9307d8c6e2483a0.
+- host_path: docs/qemu-recovery-safety.md:5; blob 9208f2ba69783e5bb5dc33106f0448a40d475468; value fingerprint c8141c78dcd0ca80.
+- host_path: docs/restart.md:28; blob 16cecdb261f9ec67f6f0ef9ab69012369335e850; value fingerprint 7d2519bcbbd38e31.
+- host_path: docs/restart.md:29; blob 16cecdb261f9ec67f6f0ef9ab69012369335e850; value fingerprint ec8dc2071e640bea.
+- host_path: docs/sdk-host-preparation.md:9; blob 29b65cc7d1f9c9d43b1b0cf8d4e737af0e29470f; value fingerprint 6d88daee812772dc.
+- host_path: docs/sdk-install-result-20261104.md:7; blob 1608abac3f8569c1958e4ee927dca547edb2ffc5; value fingerprint 9604d4686a581bcc.
+- host_path: docs/sdk-install-result-20261104.md:8; blob 1608abac3f8569c1958e4ee927dca547edb2ffc5; value fingerprint ba1513b3de86c811.
+- host_path: docs/sdk-install-result-20261104.md:11; blob 1608abac3f8569c1958e4ee927dca547edb2ffc5; value fingerprint f2ded0bb46455d20.
+- host_path: docs/sdk-install-result-20261104.md:42; blob 1608abac3f8569c1958e4ee927dca547edb2ffc5; value fingerprint c8141c78dcd0ca80.
+- host_path: docs/sdk-install-result-20261104.md:44; blob 1608abac3f8569c1958e4ee927dca547edb2ffc5; value fingerprint 14cf193fa86f234f.
+- host_path: docs/socketcan-x86-gate-20261104.md:4; blob d1e484cdd981b72bec91de07a4ab3eadff5f4f99; value fingerprint 70c91c0bb7840380.
+- ipv4: tools/collect_native_incident.py:15; blob d129683a2c4e08feae53d0276a670359e12ca8c0; value fingerprint 12ca17b49af22894.
+- ipv4: tools/ssh_continuity.py:10; blob b561ac1f9396683f8e76323bee8d1a45fde0b993; value fingerprint 12ca17b49af22894.
+- host_path: web/incident-pack/recorded-example.js:2; blob 97842b9eade0b3007591b87cf5b38415e95eb837; value fingerprint de1bfb3839b76fd5.
+- host_path: docs/acceptance/prereq-20261108/sdk-build-final.log:1; blob 9888290b41d234e61ffdd9fa5e9c45174606c3ed; value fingerprint 6b2809d5ea1dce50.
+- host_path: docs/acceptance/prereq-20261108/sdk-build-final.log:2; blob 9888290b41d234e61ffdd9fa5e9c45174606c3ed; value fingerprint e2a26fc3d3664cff.
+- host_path: docs/acceptance/prereq-20261108/sdk-build-final.log:3; blob 9888290b41d234e61ffdd9fa5e9c45174606c3ed; value fingerprint 4ce7135f526c3a57.
+- host_path: docs/safestop-native.md:45; blob 73d3f49b5e084a35fef516e0f2f5bde6fb9eaca4; value fingerprint 77eab31fdcd8caea.
+- host_path: docs/acceptance/native-can-three.md:11; blob a7760c4684ff2383962d715462d314fe9547740f; value fingerprint 21492ba255fcaa4d.
+- host_path: docs/sdk-host-preparation.md:7; blob fac5e024f82c8eb6ed6c9064f20baad1898402bc; value fingerprint 6d88daee812772dc.
+- Guest hostname context: docs/acceptance/admission-20261112/sdk-serial.txt:464; blob 6a9107215c9cba049d15eca0e8f73520ce57b268.
+- Guest hostname context: docs/acceptance/query-20261110/sdk-serial.txt:466; blob c0fa2e86912444772b83e831e0a3bf58ed3490aa.
+- Guest hostname context: docs/acceptance/query-retry-20261110/sdk-serial.txt:465; blob 0b5c72ca8032fcfe01ddced714054c34cddc7f21.
+- IPv6 candidate reviewed: canopy_host/check.py; code/text false positives are not endpoints.
+- IPv6 candidate reviewed: docs/acceptance/query-20261110/sdk-serial.txt; code/text false positives are not endpoints.
+- IPv6 candidate reviewed: docs/acceptance/query-retry-20261110/sdk-serial.txt; code/text false positives are not endpoints.
+- IPv6 candidate reviewed: docs/acceptance/slm-continuity-20261107/network-before.txt; code/text false positives are not endpoints.
+- IPv6 candidate reviewed: docs/acceptance/slm-continuity-20261107/network-configured.txt; code/text false positives are not endpoints.
+- IPv6 candidate reviewed: docs/acceptance/slm-continuity-20261107/serial.txt; code/text false positives are not endpoints.
+- IPv6 candidate reviewed: tests/test_check_cli.py; code/text false positives are not endpoints.
+
+## Audited refs
+
+- cf1365034aedea9a81c5ddeea03944ae26812c4e refs/heads/main
+- 26a88887edfee09cde6cfc064041303e0aa0db91 refs/heads/work/core-budgets-20261103
+- ae62097d87f05c6584dcf001bf0c1e46b013519d refs/heads/work/core-host-integration-20261103
+- 2501c9c2bbcad467519f40627a2d8a8534b70dbf refs/heads/work/core-pilot-20261103
+- 3eace30f80e9d93a13400b2530bd5d55919bc758 refs/heads/work/core-replay-20261103
+- be5c0df1d5f314abc47f9eed6592c086eb60fd14 refs/heads/work/core-safety-20261103
+- dc3b4d993543f3f35e51b789199e701af037afeb refs/heads/work/core-vss-20261103
+- 153ad6e4c94480f541716fe1950c1238158328ac refs/heads/work/followup10-c2
+- 55fd23588210d421272a44fddb26568a6fb6c876 refs/heads/work/followup10-safety
+- c8163fbc72c093a950123196fb1cbac153736c58 refs/heads/work/followup10-slm
+- 3e01624153365599e9211c21bb4595147995bf4a refs/heads/work/followup11-safestop
+- cf1365034aedea9a81c5ddeea03944ae26812c4e refs/remotes/origin/HEAD
+- cf1365034aedea9a81c5ddeea03944ae26812c4e refs/remotes/origin/main
+- 26a88887edfee09cde6cfc064041303e0aa0db91 refs/remotes/origin/work/core-budgets-20261103
+- ae62097d87f05c6584dcf001bf0c1e46b013519d refs/remotes/origin/work/core-host-integration-20261103
+- 2501c9c2bbcad467519f40627a2d8a8534b70dbf refs/remotes/origin/work/core-pilot-20261103
+- 3eace30f80e9d93a13400b2530bd5d55919bc758 refs/remotes/origin/work/core-replay-20261103
+- be5c0df1d5f314abc47f9eed6592c086eb60fd14 refs/remotes/origin/work/core-safety-20261103
+- dc3b4d993543f3f35e51b789199e701af037afeb refs/remotes/origin/work/core-vss-20261103
+- 153ad6e4c94480f541716fe1950c1238158328ac refs/remotes/origin/work/followup10-c2
+- 55fd23588210d421272a44fddb26568a6fb6c876 refs/remotes/origin/work/followup10-safety
+- c8163fbc72c093a950123196fb1cbac153736c58 refs/remotes/origin/work/followup10-slm
+- 3e01624153365599e9211c21bb4595147995bf4a refs/remotes/origin/work/followup11-safestop
+
+## Publication decision
+
+No rewrite, redaction of historical receipts, branch deletion or email rewrite is authorized by this audit. Keep PRIVATE until the owner accepts the identifiers or approves an explicit history-cleanup plan. Removing a string only at HEAD would not remove history. Historical receipt/source hash bindings would need separate preservation and review if any rewrite is later authorized. No paid resources used.
