@@ -1,0 +1,148 @@
+{
+  "status": "NATIVE_PASS_SCREEN_ABORT_STOP",
+  "base_source_tip": "27c7452a42149e79ea1b6860ee6914588e32b343",
+  "native_run_id": "native-e6afa64bc3c34ee588dade624927dcf1",
+  "native_success": true,
+  "screen_success": false,
+  "screen_attempts": 1,
+  "headless_diagnostic_runs": 1,
+  "restarts": [
+    {
+      "run": 1,
+      "killed_pid": 286739,
+      "new_pid": 421906,
+      "main_pid_unchanged": true,
+      "observed_seconds_including_fixed_3s_settle": 3.759610909037292,
+      "traffic": {
+        "rx_host": 100,
+        "rx_qnx": 100,
+        "tx_expected": 100,
+        "tx_host": 100,
+        "ordered_byte_exact": true
+      }
+    }
+  ],
+  "caps": {
+    "cpu.max": "100000 100000",
+    "memory.max": "2147483648",
+    "nice": 15
+  },
+  "peak_bytes": 728186880,
+  "pressure_breaches": 0,
+  "own_guest_reaped": true,
+  "cleanup": {
+    "native_qemu_pid": 810935,
+    "own_guest_reaped": true,
+    "lease_free_checked": true,
+    "epoch": 1794777872.4020307,
+    "source": "receipt plus nonblocking canonical lease probe",
+    "scope": "instant at CAN cleanup, not global guarantee after other owner starts"
+  },
+  "private_root": ".openclaw/tmp/can-recording-20261115c",
+  "files": {
+    "native/receipt.json": {
+      "sha256": "142d200887746915f12a001e5a915a5d4650bdb7937507daa703d33e873f99c2",
+      "bytes": 94912
+    },
+    "native/serial.txt": {
+      "sha256": "c92c0aa9a415f4d5d62971dc83137b231278518b613fcfce3915b581b7ff0611",
+      "bytes": 22203
+    },
+    "native/timed-events.jsonl": {
+      "sha256": "595eb593ccfcc241767f40bc75e97d9db3e71eff33a124161c301ea0414889b7",
+      "bytes": 977763
+    },
+    "native/traffic1.json": {
+      "sha256": "18f41a42d9deb3f2355747d9f3c598f862d963092f14bf755522427b117b9b21",
+      "bytes": 19710
+    },
+    "native/uname.txt": {
+      "sha256": "2ad9294e42002df377974faa264be49a6601c256de28b3b7e0fff918c63b27da",
+      "bytes": 160
+    },
+    "native/startup.txt": {
+      "sha256": "bb21e5ed3ba89b1cd5c4d8a7119e11d9d1df7049194f2543f6c32cc2f207d5e8",
+      "bytes": 1142
+    },
+    "native/restart.txt": {
+      "sha256": "44c0c0542ec207c7c0f6c3359f943ae295bfcf0ea8daeba3ce0a6ad31e1d9a9b",
+      "bytes": 1633
+    },
+    "native/control-slog.txt": {
+      "sha256": "54783ecc06ad5b7ef717b5aca46da0415a9ff4e3e491763ae09d559fa26878c7",
+      "bytes": 1609
+    },
+    "native-cleanup.json": {
+      "sha256": "529570799245ddc7ac32c7d8718f42a503b8e401940ec464dbdc0f06e46b1fab",
+      "bytes": 266
+    },
+    "continuous-raw.mp4": {
+      "sha256": "a3219409cc60d43c804f7d0d615ba22ac72fc844b3db454938d0f8b66e87ae7e",
+      "bytes": 7351192
+    },
+    "raw-ffprobe.json": {
+      "sha256": "4faa7bd18ddaa3eb6047bbdef4021a4cb923e79927f0e67f1729069013d699a4",
+      "bytes": 2640
+    },
+    "raw-decode-errors.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "screen-launch.log": {
+      "sha256": "d1ed41adfde746ffb3a3f907e0a3c8ab6aa8c630dc816c1d04efcc3e91e6fee9",
+      "bytes": 3212
+    },
+    "screen-start.json": {
+      "sha256": "1d92849593aed51c7beac8aa38491467aa91db1f4d70af4019562f56b90496a5",
+      "bytes": 117
+    },
+    "service-properties.txt": {
+      "sha256": "b0e1c669e9845adeb6c47628850fd04f150478729b5626463a3dd129fd87e233",
+      "bytes": 123
+    },
+    "service-cwd-reproduction.stderr": {
+      "sha256": "4d38047a925a6937233e4855f82a548fa5d2b18c06986ecfa4b728edc0b4d295",
+      "bytes": 773
+    },
+    "capture-live-x11.py": {
+      "sha256": "67cdd3ebc6c075847dc5cf4c30839d6748788f43d18e3b7c2f67ba1dede8f174",
+      "bytes": 10679
+    },
+    "record-screen.py": {
+      "sha256": "ef0852ee4cbb1a279d4c5dc363cfa7b725e47b1ce7896f53c86b5661681ead13",
+      "bytes": 4453
+    },
+    "pack-fresh.py": {
+      "sha256": "a3607065960709a390d8e4d1834e62b44aa4f91e4d6debf760a4d654f92b3230",
+      "bytes": 1025
+    },
+    "browser-live.cjs": {
+      "sha256": "800fd44fd78bc46b21cefafbd416c2b0da254fa42ad5071f8785804435e1a920",
+      "bytes": 2568
+    },
+    "postmortem-pack.json": {
+      "sha256": "7f1434b19020dc33dd3f3f1d9c919d4bff8125d9699989fa7d2e6186687ddcb7",
+      "bytes": 54458
+    },
+    "host-contract-tests.json": {
+      "sha256": "303b824f2494b661764f08b0780ed15c5c867d33d5b6ec3a1ab939aab1020533",
+      "bytes": 134
+    },
+    "host-tests-correct-cwd.log": {
+      "sha256": "db2bc0fb1e662a304d54dd7dbb8773ec079d3279c4399b5a95f66e28ac2481ff",
+      "bytes": 333
+    },
+    "node-tests.log": {
+      "sha256": "ffc29ac99df5e697253f081ca88a42df280713c25e5c3ab7d1618844e3d6114f",
+      "bytes": 3921
+    },
+    "host-browser-contract-observation.json": {
+      "sha256": "e0b8ed8f6df968d516a313c5ed78b3144338cfc0f735ba63fb2d696fe8d5b4af",
+      "bytes": 2099
+    }
+  },
+  "draft_asset_touched": false,
+  "final_media": null,
+  "cause": "Host pack helper relative path disagreed with systemd WorkingDirectory; MODULE_NOT_FOUND before browser",
+  "cause_confidence": "high for capture abort; earlier RX loss cause remains unproven"
+}

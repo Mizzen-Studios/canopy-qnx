@@ -17,3 +17,17 @@ Private root: workspace .openclaw/tmp/can-recording-20261115c. Diagnostic headle
 ## Retry
 
 Exactly one continuous actualX11 attempt is authorized. Final status appended after execution; existing private draft446240848 asset751796962 is untouched pending parent independent review. No safety,timing,availability,SocketCAN target,C6/controller/heartbeat claims.
+
+## Final single-retry outcome: native PASS, screencast ABORT / STOP
+
+Exactly one continuous realX11 attempt ran. Fresh QNX8.0.0 output, SLM startup, driver kill and replacement286739→421906, and100RX/100TX ordered byte-exact checks passed. io-sock PID was unchanged in snapshots only; no continuity guarantee. The actual native receipt success=true is preserved separately from outer capture exit1.
+
+After own QEMU810935 was reaped, the runner checked the canonical lease free at epoch1794777872.4020307. This describes that cleanup instant only. No later native run or re-record occurred.
+
+The host pack helper then aborted because systemd's effective WorkingDirectory was /home/ubuntu while the helper referenced relative apps/canopy-qnx/tools/incident_pack/native.js. Reproducing that host-only invocation from the recorded service directory yields MODULE_NOT_FOUND; from workspace the adapter succeeds on these fresh artifacts. Thus the capture abort is a high-confidence orchestration working-directory bug, NOT a demonstrated product bug. Host preflight had incorrectly tested workspace execution rather than the actual service context. Product files are unchanged.
+
+Continuous raw pixels94.4seconds,1920x1080,H264,5fps,7351192bytes were preserved (raw-decode-errors empty; complete decode exit0). The browser fresh-pack journey was NOT captured: the helper failed before browser launch. Existing incident.json/browser-observation.json are diagnostic preflight files, NOT evidence of the screen run. A postmortem pack generated host-only from the screen-run native artifacts is distinctly named postmortem-pack.json; it is NOT screencast footage. No final edited MP4,still/editmap deliverable or asset replacement is offered. Stop condition honored; another attempt requires new owner direction.
+
+Bounds:CPU100000/100000,nice15,HOST2GiB,swap0,guest512MiB/1vCPU,TCG256MiB,reserve64MiB; peak728186880bytes;0 recorded reserve/swap breaches. This is functional paced traffic evidence only, not performance,availability,safety or SocketCAN target proof.
+
+Existing private draft446240848 asset751796962 remains untouched by this task. No uploads,release edits,public changes,EDU/HostShare actions or product source edits.
