@@ -1,0 +1,62 @@
+[
+  {
+    "stage": "uname",
+    "output": 2.6217436181847003,
+    "source": 11.0217436181847,
+    "mean_abs_rgb_error": 1.0025538137596604
+  },
+  {
+    "stage": "slm-ready",
+    "output": 16.863434983207846,
+    "source": 25.263434983207844,
+    "mean_abs_rgb_error": 5.991606951716574
+  },
+  {
+    "stage": "restart-verified",
+    "output": 30.801528452220374,
+    "source": 39.20152845222037,
+    "mean_abs_rgb_error": 6.758317251161344
+  },
+  {
+    "stage": "host-byte-check",
+    "output": 78.37572085114661,
+    "source": 86.77572085114662,
+    "mean_abs_rgb_error": 5.186551657166761
+  },
+  {
+    "stage": "browser3",
+    "output": 92.64868340492248,
+    "source": 101.04868340492249,
+    "mean_abs_rgb_error": 3.668995505779915
+  },
+  {
+    "stage": "browser15",
+    "output": 104.64868340492248,
+    "source": 113.04868340492249,
+    "mean_abs_rgb_error": 2.2288198673704156
+  },
+  {
+    "stage": "browser25",
+    "output": 114.64868340492248,
+    "source": 123.04868340492249,
+    "mean_abs_rgb_error": 2.5177521253952437
+  },
+  {
+    "stage": "browser35",
+    "output": 124.64868340492248,
+    "source": 133.04868340492249,
+    "mean_abs_rgb_error": 2.3515404611628727
+  },
+  {
+    "stage": "browser45",
+    "output": 134.64868340492248,
+    "source": 143.04868340492249,
+    "mean_abs_rgb_error": 2.77724631911599
+  },
+  {
+    "stage": "browser55",
+    "output": 144.64868340492248,
+    "source": 153.04868340492249,
+    "mean_abs_rgb_error": 2.90952174432686
+  }
+]

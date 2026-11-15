@@ -1,0 +1,50 @@
+{
+  "intervals": [
+    {
+      "output_start": 0,
+      "output_end": 161.0,
+      "source_start": 8.4,
+      "source_end": 169.4,
+      "speed": 1
+    }
+  ],
+  "captions": [
+    [
+      9.0217436181847,
+      19.0217436181847,
+      "A live QNX 8 system"
+    ],
+    [
+      23.263434983207844,
+      33.263434983207844,
+      "The service manager starts the CAN driver"
+    ],
+    [
+      37.20152845222037,
+      47.20152845222037,
+      "The driver is killed and restarted with a new process ID"
+    ],
+    [
+      84.77572085114662,
+      94.77572085114662,
+      "100 frames received and 100 sent. Every byte matches."
+    ],
+    [
+      98.04868340492249,
+      158.675683259964,
+      "HOST-SIDE VIEWER  |  Incident desk reads this fresh run"
+    ]
+  ],
+  "source_fps": 5,
+  "source_epoch": 1794781164.1313167,
+  "phases": {
+    "uname": 9.0217436181847,
+    "slm-ready": 23.263434983207844,
+    "restart-verified": 37.20152845222037,
+    "host-byte-check": 84.77572085114662
+  },
+  "browser_start": 98.04868340492249,
+  "run_id": "native-e4d027f8f10d49738b9a1c7ca9409f44",
+  "actual_pixels_only": true,
+  "raw_sha256": "0711be571a1a90fafe25820ae6067e916ebefa2e9f42d6ef4378bd7b381b4624"
+}

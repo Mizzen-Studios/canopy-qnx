@@ -1,0 +1,17 @@
+{
+  "raw_line_count": 658,
+  "classes": {
+    "command/control/system output": 275,
+    "process snapshot": 71,
+    "incident record": 10,
+    "CAN frame": 100,
+    "TX script echo": 202
+  },
+  "scope": "Native serial bytes, plus host exact-check and cleanup text; boot initially suppressed from terminal",
+  "privacy_scan_hits": [],
+  "operational_names": [
+    "noname",
+    "QNX device and process names"
+  ],
+  "browser": "Full-screen local file, address bar hidden; fresh run pack only; no network requests"
+}

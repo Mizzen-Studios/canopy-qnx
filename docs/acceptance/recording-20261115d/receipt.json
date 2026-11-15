@@ -1,0 +1,289 @@
+{
+  "status": "READY_PARENT_INDEPENDENT_REVIEW_NO_UPLOAD",
+  "base_tip": "5f99a158143f64eb647b13f77018278f963ab2b1",
+  "media": {
+    "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/can-recording-20261115d/demo-video.mp4",
+    "bytes": 12006708,
+    "sha256": "c9e877cb1d28a640c0e5f44543eb86662049571b8cf70236b4da382c18588d9d",
+    "duration": "161.000000",
+    "frames": "805",
+    "samples": [
+      {
+        "stage": "uname",
+        "output": 2.6217436181847003,
+        "source": 11.0217436181847,
+        "mean_abs_rgb_error": 1.0025538137596604
+      },
+      {
+        "stage": "slm-ready",
+        "output": 16.863434983207846,
+        "source": 25.263434983207844,
+        "mean_abs_rgb_error": 5.991606951716574
+      },
+      {
+        "stage": "restart-verified",
+        "output": 30.801528452220374,
+        "source": 39.20152845222037,
+        "mean_abs_rgb_error": 6.758317251161344
+      },
+      {
+        "stage": "host-byte-check",
+        "output": 78.37572085114661,
+        "source": 86.77572085114662,
+        "mean_abs_rgb_error": 5.186551657166761
+      },
+      {
+        "stage": "browser3",
+        "output": 92.64868340492248,
+        "source": 101.04868340492249,
+        "mean_abs_rgb_error": 3.668995505779915
+      },
+      {
+        "stage": "browser15",
+        "output": 104.64868340492248,
+        "source": 113.04868340492249,
+        "mean_abs_rgb_error": 2.2288198673704156
+      },
+      {
+        "stage": "browser25",
+        "output": 114.64868340492248,
+        "source": 123.04868340492249,
+        "mean_abs_rgb_error": 2.5177521253952437
+      },
+      {
+        "stage": "browser35",
+        "output": 124.64868340492248,
+        "source": 133.04868340492249,
+        "mean_abs_rgb_error": 2.3515404611628727
+      },
+      {
+        "stage": "browser45",
+        "output": 134.64868340492248,
+        "source": 143.04868340492249,
+        "mean_abs_rgb_error": 2.77724631911599
+      },
+      {
+        "stage": "browser55",
+        "output": 144.64868340492248,
+        "source": 153.04868340492249,
+        "mean_abs_rgb_error": 2.90952174432686
+      }
+    ]
+  },
+  "native_run": "native-e4d027f8f10d49738b9a1c7ca9409f44",
+  "restarts": [
+    {
+      "run": 1,
+      "killed_pid": 368658,
+      "new_pid": 421906,
+      "main_pid_unchanged": true,
+      "observed_seconds_including_fixed_3s_settle": 3.7866457119816914,
+      "traffic": {
+        "rx_host": 100,
+        "rx_qnx": 100,
+        "tx_expected": 100,
+        "tx_host": 100,
+        "ordered_byte_exact": true
+      }
+    }
+  ],
+  "caps": {
+    "cpu.max": "100000 100000",
+    "memory.max": "2147483648",
+    "nice": 15
+  },
+  "guest_mib": 512,
+  "guest_vcpu": 1,
+  "tcg_mib": 256,
+  "swap_max": 0,
+  "reserve_mib": 64,
+  "native_memory_peak": 726130688,
+  "pressure": [],
+  "cleanup": {
+    "native_qemu_pid": 816243,
+    "own_guest_reaped": true,
+    "lease_free_checked": true,
+    "epoch": 1794781259.9700484,
+    "source": "receipt plus nonblocking canonical lease probe",
+    "scope": "instant at CAN cleanup, not global guarantee after other owner starts"
+  },
+  "browser": {
+    "status": "PASS",
+    "host_only": true,
+    "native_run": false,
+    "runId": "native-e4d027f8f10d49738b9a1c7ca9409f44",
+    "events": [
+      {
+        "kind": "host-viewer-start",
+        "epoch": 1794781262.18,
+        "t": 0.387
+      },
+      {
+        "kind": "fresh-import-valid",
+        "epoch": 1794781262.31,
+        "t": 0.517,
+        "runId": "native-e4d027f8f10d49738b9a1c7ca9409f44"
+      },
+      {
+        "kind": "answer",
+        "epoch": 1794781272.405,
+        "t": 10.612,
+        "q": "killed",
+        "text": "OBSERVED \u2014 SIGKILL: dev-can-linux, PID 368658, generation native-e4d027f8f10d49738b9a1c7ca9409f44-driver1.\n\nEvidence e1"
+      },
+      {
+        "kind": "answer",
+        "epoch": 1794781282.471,
+        "t": 20.678,
+        "q": "recovery",
+        "text": "OBSERVED \u2014 Interruption and replacement recovery observed, followed by ordered byte-digest-matched 100 RX and 100 TX. Not continuous availability.\n\nEvidence e1 Evidence e2 Evidence e3 Evidence e4 Evidence e5"
+      },
+      {
+        "kind": "answer",
+        "epoch": 1794781292.554,
+        "t": 30.761,
+        "q": "survivors",
+        "text": "OBSERVED \u2014 Before/after snapshots: io-sock generation native-e4d027f8f10d49738b9a1c7ca9409f44-iosock. Between-snapshot continuity unknown.\n\nEvidence e0 Evidence e6"
+      },
+      {
+        "kind": "answer",
+        "epoch": 1794781302.638,
+        "t": 40.845,
+        "q": "isolation",
+        "text": "OBSERVED \u2014 Bounded separate-domain outcome contrasts with explicit in-process cofailure control; not adversarial isolation proof.\n\nEvidence e1 Evidence e2 Evidence e3 Evidence e0 Evidence e6 Evidence e4 Evidence e5 Evidence e15 Evidence e7 Evidence e8 Evidence e12 Evidence e13 Evidence e10 Evidence e11 Evidence e9 Evidence e14"
+      },
+      {
+        "kind": "corrupt-rejected",
+        "epoch": 1794781312.805,
+        "t": 51.012,
+        "text": "UNKNOWN: corrupt/mixed cooperative binding. Preserve this copy; import a complete matching, current pack. Do not edit hashes to silence failure."
+      },
+      {
+        "kind": "browser-complete",
+        "epoch": 1794781322.807,
+        "t": 61.014
+      }
+    ],
+    "requests": []
+  },
+  "edit": {
+    "intervals": [
+      {
+        "output_start": 0,
+        "output_end": 161.0,
+        "source_start": 8.4,
+        "source_end": 169.4,
+        "speed": 1
+      }
+    ],
+    "captions": [
+      [
+        9.0217436181847,
+        19.0217436181847,
+        "A live QNX 8 system"
+      ],
+      [
+        23.263434983207844,
+        33.263434983207844,
+        "The service manager starts the CAN driver"
+      ],
+      [
+        37.20152845222037,
+        47.20152845222037,
+        "The driver is killed and restarted with a new process ID"
+      ],
+      [
+        84.77572085114662,
+        94.77572085114662,
+        "100 frames received and 100 sent. Every byte matches."
+      ],
+      [
+        98.04868340492249,
+        158.675683259964,
+        "HOST-SIDE VIEWER  |  Incident desk reads this fresh run"
+      ]
+    ],
+    "source_fps": 5,
+    "source_epoch": 1794781164.1313167,
+    "phases": {
+      "uname": 9.0217436181847,
+      "slm-ready": 23.263434983207844,
+      "restart-verified": 37.20152845222037,
+      "host-byte-check": 84.77572085114662
+    },
+    "browser_start": 98.04868340492249,
+    "run_id": "native-e4d027f8f10d49738b9a1c7ca9409f44",
+    "actual_pixels_only": true,
+    "raw_sha256": "0711be571a1a90fafe25820ae6067e916ebefa2e9f42d6ef4378bd7b381b4624"
+  },
+  "privacy": "Native658line lexical review0hits;10stage stills+5extra start/end/transition stills reviewed; no addresses,credentials,personal paths seen. Generic nodename noname retained. Not mathematical allpixel guarantee.",
+  "tests": "Python140with8skipped;Node70pass;noSDKcheck pass",
+  "asset_touched": false,
+  "limitations": "OriginalNov8guest,not current-tip query acceptance.100ms paced hostTX. No safety,timing,availability or SocketCAN target proof. Earlier capture failures preserved.",
+  "bindings": {
+    "continuous-raw.mp4": {
+      "sha256": "0711be571a1a90fafe25820ae6067e916ebefa2e9f42d6ef4378bd7b381b4624",
+      "bytes": 9720006
+    },
+    "demo-video.mp4": {
+      "sha256": "c9e877cb1d28a640c0e5f44543eb86662049571b8cf70236b4da382c18588d9d",
+      "bytes": 12006708
+    },
+    "native/receipt.json": {
+      "sha256": "6d546cac094ee8a9fd3f9056d59b44c3562f1188d1fa3eef67152c9f0716a11b",
+      "bytes": 96662
+    },
+    "native/serial.txt": {
+      "sha256": "91b0d5fffd15f420c88c02d387082f6f7746275eb147593a594b41d9861760f4",
+      "bytes": 22260
+    },
+    "native/timed-events.jsonl": {
+      "sha256": "4e6d64d56b926a6f0be2f3474a6d33121dac52f9c909bb54f5ebfb3503462d60",
+      "bytes": 949491
+    },
+    "native/traffic1.json": {
+      "sha256": "18f41a42d9deb3f2355747d9f3c598f862d963092f14bf755522427b117b9b21",
+      "bytes": 19710
+    },
+    "incident.json": {
+      "sha256": "1f80b6992b4e1447a9d7e564dbd07b185402c49965f4a60bc9c55bc4c7d1af4f",
+      "bytes": 54517
+    },
+    "browser-observation.json": {
+      "sha256": "b768c1077e7cc3af71d0c017d587789d8bd5ac9d4188e93ab94edcc078aff09b",
+      "bytes": 2100
+    },
+    "HOST-PREFLIGHT.json": {
+      "sha256": "d601dacaa93ee9660e99a44067680c91f6589a80c3d7072a793d3a0a153604c7",
+      "bytes": 2367
+    },
+    "frame-map.json": {
+      "sha256": "0b8ee0084209f77f8bb042354b44310843a4c530116cd262bb3d49ab9a72a7df",
+      "bytes": 84969
+    },
+    "editmap.json": {
+      "sha256": "8b75c9236e6e54468d2ba52f9e753110eeaefea78b4ecbf807fd1beaf77351b9",
+      "bytes": 1195
+    },
+    "ffprobe.json": {
+      "sha256": "9daef2deccd77fbb8d3cdfa18291abad89c07c5ddc10d19303c9d2d42ae2cffc",
+      "bytes": 2170
+    },
+    "decode-errors.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "pixel-comparisons.json": {
+      "sha256": "e0c14dac27c3af5bdac99fe2faa5b6ed1f3dae08a29a3470297a66d905c7770a",
+      "bytes": 1476
+    },
+    "service-properties.txt": {
+      "sha256": "47e91b8adc85d543c63723243705c6ecbf27899c59e134a2455e8a35c9e30ce5",
+      "bytes": 220
+    },
+    "helper-path-fix.diff": {
+      "sha256": "ec006a567a018725e1586bc534bbbbaff5d898b1cfe9379a29559bbdd9c169cf",
+      "bytes": 7454
+    }
+  }
+}
