@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "guest_stopped_reaped": true,
+  "qemu_pid": 762729,
+  "qemu_exit": 0,
+  "no_qemu": true,
+  "lease_free": true,
+  "cpu.max": "100000 100000",
+  "memory.max": "2147483648",
+  "memory.swap.max": "0",
+  "memory.swap.current": "0",
+  "nice": 15,
+  "smp": 1,
+  "guest_mib": 512,
+  "tcg_mib": 256,
+  "reserve_bytes": 67108864,
+  "observed_peak_bytes": 639528960,
+  "min_headroom_bytes": 1507954688,
+  "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+  "pressure": []
+}

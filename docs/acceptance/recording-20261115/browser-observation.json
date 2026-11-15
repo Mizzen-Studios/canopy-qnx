@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "host_only": true,
+  "native_run": false,
+  "runId": "native-b3458630b640438da7dc0fda5eda8778",
+  "requests": [],
+  "events": [
+    {
+      "kind": "recording-start",
+      "t": 0.001
+    },
+    {
+      "kind": "import-fresh",
+      "t": 1.204,
+      "runId": "native-b3458630b640438da7dc0fda5eda8778"
+    },
+    {
+      "kind": "query",
+      "t": 3.112,
+      "q": "killed",
+      "text": "OBSERVED — SIGKILL: dev-can-linux, PID 278546, generation native-b3458630b640438da7dc0fda5eda8778-driver1.\n\nEvidence e1"
+    },
+    {
+      "kind": "query",
+      "t": 6.364,
+      "q": "recovery",
+      "text": "OBSERVED — Interruption and replacement recovery observed, followed by ordered byte-digest-matched 100 RX and 100 TX. Not continuous availability.\n\nEvidence e1 Evidence e2 Evidence e3 Evidence e4 Evidence e5"
+    },
+    {
+      "kind": "query",
+      "t": 9.611,
+      "q": "survivors",
+      "text": "OBSERVED — Before/after snapshots: io-sock generation native-b3458630b640438da7dc0fda5eda8778-iosock. Between-snapshot continuity unknown.\n\nEvidence e0 Evidence e6"
+    },
+    {
+      "kind": "query",
+      "t": 12.847,
+      "q": "isolation",
+      "text": "OBSERVED — Bounded separate-domain outcome contrasts with explicit in-process cofailure control; not adversarial isolation proof.\n\nEvidence e1 Evidence e2 Evidence e3 Evidence e0 Evidence e6 Evidence e4 Evidence e5 Evidence e15 Evidence e7 Evidence e8 Evidence e12 Evidence e13 Evidence e10 Evidence e11 Evidence e9 Evidence e14"
+    },
+    {
+      "kind": "import-corrupt",
+      "t": 16.048
+    },
+    {
+      "kind": "corrupt-rejected",
+      "t": 16.083,
+      "status": "UNKNOWN: corrupt/mixed cooperative binding. Preserve this copy; import a complete matching, current pack. Do not edit hashes to silence failure."
+    },
+    {
+      "kind": "complete",
+      "t": 21.585
+    }
+  ],
+  "frames": 40
+}

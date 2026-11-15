@@ -1,0 +1,29 @@
+# /proc/boot/incident_recorder 278546; echo RECORDER_RC=$?; sleep 3; /proc/boot/slmctl -n /dev/slm-canopy 'active -v'; pidin ar; ls /dev/can0/rx0; echo RESTART_DONE
+{"schema":"canopy-native-1","seq":0,"ms":6,"recorder":315408,"phase":"before","pid":278546,"result":0}
+{"schema":"canopy-native-1","seq":1,"ms":24,"recorder":315408,"phase":"kill","pid":278546,"result":0}
+{"schema":"canopy-native-1","seq":2,"ms":80,"recorder":315408,"phase":"waitpid","pid":278546,"result":10}
+{"schema":"canopy-native-1","seq":3,"ms":94,"recorder":315408,"phase":"interruption","pid":278546,"result":1}
+{"schema":"canopy-native-1","seq":4,"ms":109,"recorder":315408,"phase":"after","pid":278546,"result":0}
+RECORDER_RC=0
+canopy-can  /proc/boot/dev-can-linux  ACTIVE    INITIALIZED  331794
+     pid Arguments
+       1 procnto-smp-instr -mr -d 0777 -u 0777 
+   16387 slogger2 
+   28676 pci-server --aspace-enable --config=/proc/boot/pci_server.cfg 
+   49157 devc-ser8250 -e 
+   57351 ksh ksh 
+   61446 fsevmgr 
+   65544 devb-eide blk cache=64M,auto=partition,vnode=2000,ncache=2000,commit=low 
+  131081 random -s /data/var/random/rnd-seed 
+  143370 pipe 
+  155659 devc-pty 
+  159756 dumper -d /data/var/dumper -M 1000 -D cores 
+  163853 io-sock -m phy -m pci -m usb -d vtnet_pci 
+  217105 dhcpcd: [manager] [ip4] [ip6] -bq -f /system/etc/dhcpcd/dhcpcd.conf -c /system/etc/dhcpcd/dhcpcd-run-hooks 
+  245774 qconn 
+  249871 mqueue 
+  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml 
+  331794 dev-can-linux -b id=0,freq=500k 
+  344080 pidin ar 
+/dev/can0/rx0
+RESTART_DONE

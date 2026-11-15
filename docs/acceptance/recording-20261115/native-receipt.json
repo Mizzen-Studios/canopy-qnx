@@ -1,0 +1,1352 @@
+{
+  "caps": {
+    "cpu.max": "100000 100000",
+    "memory.max": "2147483648",
+    "nice": 15
+  },
+  "qemu_pid": 762729,
+  "collector_sha256": "88d49526993bbdf5f7d028a9370a0bfe897cee2ee992a4afa90acf10b9bc6a20",
+  "qemu_command": [
+    "qemu-system-x86_64",
+    "-machine",
+    "pc",
+    "-cpu",
+    "max",
+    "-smp",
+    "1",
+    "-m",
+    "512",
+    "-display",
+    "none",
+    "-serial",
+    "stdio",
+    "-monitor",
+    "none",
+    "-no-reboot",
+    "-kernel",
+    "/home/ubuntu/qnx-host/guest/shared/incident-20261108/incident.ifs",
+    "-drive",
+    "file=/home/ubuntu/qnx-host/guest/shared/qnx-native/disk-edu-libc,format=raw,if=ide,snapshot=on",
+    "-nic",
+    "user,model=virtio-net-pci",
+    "-object",
+    "can-bus,id=canbus0",
+    "-device",
+    "kvaser_pci,canbus=canbus0",
+    "-device",
+    "edu,dma_mask=0xffffffff",
+    "-accel",
+    "tcg,tb-size=256",
+    "-qtest",
+    "unix:/home/ubuntu/.openclaw/workspace/.openclaw/tmp/can-recording-20261115/live/qtest.sock,server=on,wait=off",
+    "-object",
+    "can-host-socketcan,id=hostcan0,if=vcan1,canbus=canbus0"
+  ],
+  "image_sha256": "764e7e9f3ffcb74e851dce896a513c85abe16589d918937f3ba5157891882a22",
+  "label": "observed in this QEMU run; app budget, not QNX benchmark",
+  "run_id": "native-b3458630b640438da7dc0fda5eda8778",
+  "captured_at": 1794763886.6789446,
+  "disk_sha256": "59269af3ae940d2e520271e8b2e989cc8de5918c8e6cf283bc88cfd734c30951",
+  "restarts": [
+    {
+      "run": 1,
+      "killed_pid": 278546,
+      "new_pid": 331794,
+      "main_pid_unchanged": true,
+      "observed_seconds_including_fixed_3s_settle": 3.524308850057423,
+      "traffic": {
+        "rx_host": 100,
+        "rx_qnx": 100,
+        "tx_expected": 100,
+        "tx_host": 100,
+        "ordered_byte_exact": true
+      }
+    }
+  ],
+  "success": true,
+  "ssh_authenticated_continuity": "UNVERIFIED",
+  "pci_devices": [
+    {
+      "slot": 1,
+      "id": 1879081094,
+      "irq": 0
+    },
+    {
+      "slot": 2,
+      "id": 286331444,
+      "irq": 0
+    },
+    {
+      "slot": 3,
+      "id": 268442356,
+      "irq": 267
+    },
+    {
+      "slot": 4,
+      "id": 2214990056,
+      "irq": 267
+    },
+    {
+      "slot": 5,
+      "id": 300421684,
+      "irq": 266
+    },
+    {
+      "slot": 6,
+      "id": 4294967295,
+      "irq": 4294967295
+    },
+    {
+      "slot": 7,
+      "id": 4294967295,
+      "irq": 4294967295
+    }
+  ],
+  "routing": {
+    "original": 185272842,
+    "updated": 168495626,
+    "pirq_index": 3,
+    "irq": 10,
+    "only_kvaser_route_changed": true
+  },
+  "main_io_sock_pid": 163853,
+  "guest_stopped_reaped": true,
+  "memory_samples": [
+    {
+      "memory.current": "190197760",
+      "memory.peak": "343846912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 0.7487827949225903
+    },
+    {
+      "memory.current": "196878336",
+      "memory.peak": "343846912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 0.9991787869948894
+    },
+    {
+      "memory.current": "208146432",
+      "memory.peak": "343846912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 1.2496051389025524
+    },
+    {
+      "memory.current": "213553152",
+      "memory.peak": "343846912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 1.500024810899049
+    },
+    {
+      "memory.current": "222449664",
+      "memory.peak": "343846912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 1.7504606429720297
+    },
+    {
+      "memory.current": "227418112",
+      "memory.peak": "343846912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 2.0008609149372205
+    },
+    {
+      "memory.current": "231698432",
+      "memory.peak": "343846912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 2.2512581469491124
+    },
+    {
+      "memory.current": "305360896",
+      "memory.peak": "343846912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 2.501701459987089
+    },
+    {
+      "memory.current": "314441728",
+      "memory.peak": "343846912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 2.7521013719961047
+    },
+    {
+      "memory.current": "321253376",
+      "memory.peak": "343846912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 3.0025249239988625
+    },
+    {
+      "memory.current": "330686464",
+      "memory.peak": "343846912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 3.2529297159053385
+    },
+    {
+      "memory.current": "337502208",
+      "memory.peak": "343846912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 3.5033804279519245
+    },
+    {
+      "memory.current": "354795520",
+      "memory.peak": "354795520",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 3.753801540005952
+    },
+    {
+      "memory.current": "371834880",
+      "memory.peak": "371834880",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 4.004204211989418
+    },
+    {
+      "memory.current": "380538880",
+      "memory.peak": "380538880",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 4.25463028496597
+    },
+    {
+      "memory.current": "386854912",
+      "memory.peak": "386854912",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 4.505088756908663
+    },
+    {
+      "memory.current": "395456512",
+      "memory.peak": "395456512",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 4.75552034995053
+    },
+    {
+      "memory.current": "405364736",
+      "memory.peak": "405364736",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 5.005907020997256
+    },
+    {
+      "memory.current": "412172288",
+      "memory.peak": "416374784",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 5.256360053899698
+    },
+    {
+      "memory.current": "418455552",
+      "memory.peak": "418455552",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 5.506747565930709
+    },
+    {
+      "memory.current": "425005056",
+      "memory.peak": "425005056",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 5.757131677935831
+    },
+    {
+      "memory.current": "430243840",
+      "memory.peak": "430243840",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 6.007533109979704
+    },
+    {
+      "memory.current": "434700288",
+      "memory.peak": "434700288",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 6.257928581908345
+    },
+    {
+      "memory.current": "438366208",
+      "memory.peak": "438366208",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 6.508377333986573
+    },
+    {
+      "memory.current": "442810368",
+      "memory.peak": "442810368",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 6.758759845979512
+    },
+    {
+      "memory.current": "445452288",
+      "memory.peak": "445505536",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 7.009156277985312
+    },
+    {
+      "memory.current": "450162688",
+      "memory.peak": "450162688",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 7.259572790004313
+    },
+    {
+      "memory.current": "456716288",
+      "memory.peak": "456716288",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 7.509959621937014
+    },
+    {
+      "memory.current": "456716288",
+      "memory.peak": "456716288",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 7.76040077500511
+    },
+    {
+      "memory.current": "456716288",
+      "memory.peak": "456716288",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 8.01081520691514
+    },
+    {
+      "memory.current": "456716288",
+      "memory.peak": "456716288",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 8.261222358909436
+    },
+    {
+      "memory.current": "456716288",
+      "memory.peak": "456716288",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 8.51168091094587
+    },
+    {
+      "memory.current": "456716288",
+      "memory.peak": "456716288",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 8.762084182933904
+    },
+    {
+      "memory.current": "456716288",
+      "memory.peak": "456716288",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 9.012593496008776
+    },
+    {
+      "memory.current": "456716288",
+      "memory.peak": "456716288",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 9.262994207907468
+    },
+    {
+      "memory.current": "456716288",
+      "memory.peak": "456716288",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 9.513417760957964
+    },
+    {
+      "memory.current": "456716288",
+      "memory.peak": "456716288",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 9.763807192910463
+    },
+    {
+      "memory.current": "456716288",
+      "memory.peak": "456716288",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 10.014185704989359
+    },
+    {
+      "memory.current": "459075584",
+      "memory.peak": "459075584",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 10.264619897003286
+    },
+    {
+      "memory.current": "461717504",
+      "memory.peak": "461799424",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 10.514999848906882
+    },
+    {
+      "memory.current": "463937536",
+      "memory.peak": "464207872",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 10.76543036091607
+    },
+    {
+      "memory.current": "466296832",
+      "memory.peak": "466296832",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 11.015879913931713
+    },
+    {
+      "memory.current": "466296832",
+      "memory.peak": "466296832",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 11.266356305917725
+    },
+    {
+      "memory.current": "466296832",
+      "memory.peak": "466296832",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 11.516763297957368
+    },
+    {
+      "memory.current": "468918272",
+      "memory.peak": "468918272",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 11.767160410992801
+    },
+    {
+      "memory.current": "468918272",
+      "memory.peak": "468918272",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 12.017580162966624
+    },
+    {
+      "memory.current": "468918272",
+      "memory.peak": "468918272",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 12.26800431497395
+    },
+    {
+      "memory.current": "468918272",
+      "memory.peak": "468918272",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 12.518456587917171
+    },
+    {
+      "memory.current": "468918272",
+      "memory.peak": "468918272",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 12.768847419996746
+    },
+    {
+      "memory.current": "468918272",
+      "memory.peak": "468918272",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 13.019249891978689
+    },
+    {
+      "memory.current": "468918272",
+      "memory.peak": "468918272",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 13.269656443968415
+    },
+    {
+      "memory.current": "468918272",
+      "memory.peak": "468918272",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 13.520056915935129
+    },
+    {
+      "memory.current": "468918272",
+      "memory.peak": "468918272",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 13.77052570891101
+    },
+    {
+      "memory.current": "473595904",
+      "memory.peak": "473620480",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 14.020874819951132
+    },
+    {
+      "memory.current": "477753344",
+      "memory.peak": "477757440",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 14.27128185192123
+    },
+    {
+      "memory.current": "477753344",
+      "memory.peak": "477757440",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 14.521694844937883
+    },
+    {
+      "memory.current": "477753344",
+      "memory.peak": "477757440",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 14.77209371700883
+    },
+    {
+      "memory.current": "477753344",
+      "memory.peak": "477757440",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 15.022530668997206
+    },
+    {
+      "memory.current": "477745152",
+      "memory.peak": "477757440",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 15.272980141919106
+    },
+    {
+      "memory.current": "480628736",
+      "memory.peak": "480628736",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 15.523383373976685
+    },
+    {
+      "memory.current": "485085184",
+      "memory.peak": "485085184",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 15.773845205898397
+    },
+    {
+      "memory.current": "491900928",
+      "memory.peak": "491900928",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 16.024225437897258
+    },
+    {
+      "memory.current": "496615424",
+      "memory.peak": "496615424",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 16.274601069977507
+    },
+    {
+      "memory.current": "501334016",
+      "memory.peak": "501334016",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 16.52499938197434
+    },
+    {
+      "memory.current": "506052608",
+      "memory.peak": "506052608",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 16.775404373998754
+    },
+    {
+      "memory.current": "508674048",
+      "memory.peak": "508674048",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 17.025792325963266
+    },
+    {
+      "memory.current": "513392640",
+      "memory.peak": "513392640",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 17.276222638902254
+    },
+    {
+      "memory.current": "513392640",
+      "memory.peak": "513392640",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 17.526875952957198
+    },
+    {
+      "memory.current": "515489792",
+      "memory.peak": "515489792",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 17.777292344952002
+    },
+    {
+      "memory.current": "515489792",
+      "memory.peak": "515489792",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 18.0276893369155
+    },
+    {
+      "memory.current": "515489792",
+      "memory.peak": "515489792",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 18.27809164999053
+    },
+    {
+      "memory.current": "515141632",
+      "memory.peak": "515489792",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 18.52853112190496
+    },
+    {
+      "memory.current": "515133440",
+      "memory.peak": "515489792",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 18.779629479977302
+    },
+    {
+      "memory.current": "515440640",
+      "memory.peak": "515571712",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 19.030019431957044
+    },
+    {
+      "memory.current": "515440640",
+      "memory.peak": "515571712",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 19.280499544925988
+    },
+    {
+      "memory.current": "515440640",
+      "memory.peak": "515571712",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 19.53096753801219
+    },
+    {
+      "memory.current": "515440640",
+      "memory.peak": "515571712",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 19.78137312992476
+    },
+    {
+      "memory.current": "515440640",
+      "memory.peak": "515571712",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 20.03176844189875
+    },
+    {
+      "memory.current": "515436544",
+      "memory.peak": "515571712",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 20.28213111392688
+    },
+    {
+      "memory.current": "515436544",
+      "memory.peak": "515571712",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 20.53261846699752
+    },
+    {
+      "memory.current": "515371008",
+      "memory.peak": "515571712",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 20.78295945795253
+    },
+    {
+      "memory.current": "515371008",
+      "memory.peak": "515571712",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 21.03342801099643
+    },
+    {
+      "memory.current": "515371008",
+      "memory.peak": "515571712",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 21.283824322978035
+    },
+    {
+      "memory.current": "515371008",
+      "memory.peak": "515571712",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 21.53427067596931
+    },
+    {
+      "memory.current": "515633152",
+      "memory.peak": "515633152",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 21.784679547999986
+    },
+    {
+      "memory.current": "515633152",
+      "memory.peak": "515633152",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 22.035075419931673
+    },
+    {
+      "memory.current": "515633152",
+      "memory.peak": "515633152",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 22.285489971982315
+    },
+    {
+      "memory.current": "520613888",
+      "memory.peak": "520613888",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 22.535875123925507
+    },
+    {
+      "memory.current": "522706944",
+      "memory.peak": "522706944",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 22.78626199590508
+    },
+    {
+      "memory.current": "522944512",
+      "memory.peak": "522969088",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 23.03662018792238
+    },
+    {
+      "memory.current": "525803520",
+      "memory.peak": "525803520",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 23.28699549997691
+    },
+    {
+      "memory.current": "527876096",
+      "memory.peak": "527876096",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 23.537445212947205
+    },
+    {
+      "memory.current": "530493440",
+      "memory.peak": "530493440",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 23.787837284966372
+    },
+    {
+      "memory.current": "541089792",
+      "memory.peak": "548892672",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 24.038220596965402
+    },
+    {
+      "memory.current": "544911360",
+      "memory.peak": "548892672",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 24.288633388932794
+    },
+    {
+      "memory.current": "549367808",
+      "memory.peak": "549367808",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 24.53899290098343
+    },
+    {
+      "memory.current": "556896256",
+      "memory.peak": "556896256",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 24.789407812990248
+    },
+    {
+      "memory.current": "557682688",
+      "memory.peak": "557682688",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 25.039801684906706
+    },
+    {
+      "memory.current": "560803840",
+      "memory.peak": "560803840",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 25.29016967699863
+    },
+    {
+      "memory.current": "562114560",
+      "memory.peak": "562114560",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 25.54058626992628
+    },
+    {
+      "memory.current": "566521856",
+      "memory.peak": "566521856",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 25.79097918199841
+    },
+    {
+      "memory.current": "569905152",
+      "memory.peak": "569905152",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 26.04147945495788
+    },
+    {
+      "memory.current": "573812736",
+      "memory.peak": "573812736",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 26.291855566902086
+    },
+    {
+      "memory.current": "576172032",
+      "memory.peak": "576172032",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 26.54222323896829
+    },
+    {
+      "memory.current": "578506752",
+      "memory.peak": "578506752",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 26.792743352008983
+    },
+    {
+      "memory.current": "581103616",
+      "memory.peak": "581103616",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 27.043109183898196
+    },
+    {
+      "memory.current": "582414336",
+      "memory.peak": "582414336",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 27.29351445590146
+    },
+    {
+      "memory.current": "582414336",
+      "memory.peak": "582414336",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 27.543912207940593
+    },
+    {
+      "memory.current": "582676480",
+      "memory.peak": "582676480",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 27.794691724004224
+    },
+    {
+      "memory.current": "582676480",
+      "memory.peak": "582676480",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 28.0451286759926
+    },
+    {
+      "memory.current": "582672384",
+      "memory.peak": "582676480",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 28.29555930895731
+    },
+    {
+      "memory.current": "582672384",
+      "memory.peak": "582676480",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 28.545951820909977
+    },
+    {
+      "memory.current": "582668288",
+      "memory.peak": "582676480",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 28.79639941395726
+    },
+    {
+      "memory.current": "582668288",
+      "memory.peak": "582676480",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 29.04678640596103
+    },
+    {
+      "memory.current": "582668288",
+      "memory.peak": "582676480",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 29.29719223792199
+    },
+    {
+      "memory.current": "587059200",
+      "memory.peak": "587059200",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 29.54763882991392
+    },
+    {
+      "memory.current": "592007168",
+      "memory.peak": "592007168",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 29.798056502942927
+    },
+    {
+      "memory.current": "597458944",
+      "memory.peak": "597458944",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 30.048471734975465
+    },
+    {
+      "memory.current": "601915392",
+      "memory.peak": "601915392",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 30.298853487009183
+    },
+    {
+      "memory.current": "606633984",
+      "memory.peak": "606633984",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 30.54929607990198
+    },
+    {
+      "memory.current": "611303424",
+      "memory.peak": "611303424",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 30.79980563290883
+    },
+    {
+      "memory.current": "615759872",
+      "memory.peak": "615759872",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 31.05020550498739
+    },
+    {
+      "memory.current": "620216320",
+      "memory.peak": "620216320",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 31.300654657999985
+    },
+    {
+      "memory.current": "622837760",
+      "memory.peak": "622837760",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 31.55105149000883
+    },
+    {
+      "memory.current": "627257344",
+      "memory.peak": "627261440",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 31.80147768300958
+    },
+    {
+      "memory.current": "631664640",
+      "memory.peak": "631664640",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 32.051887274952605
+    },
+    {
+      "memory.current": "636383232",
+      "memory.peak": "636383232",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 32.30228554690257
+    },
+    {
+      "memory.current": "639528960",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 32.55262293899432
+    },
+    {
+      "memory.current": "600371200",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 32.80302397091873
+    },
+    {
+      "memory.current": "601419776",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 33.05346856394317
+    },
+    {
+      "memory.current": "601112576",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 33.30401127692312
+    },
+    {
+      "memory.current": "601075712",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 33.55444718990475
+    },
+    {
+      "memory.current": "602374144",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 33.80484674195759
+    },
+    {
+      "memory.current": "602550272",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 34.0552518540062
+    },
+    {
+      "memory.current": "602537984",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 34.30565936595667
+    },
+    {
+      "memory.current": "602800128",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 34.55608671891969
+    },
+    {
+      "memory.current": "603062272",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 34.80652415193617
+    },
+    {
+      "memory.current": "605392896",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 35.0569331839215
+    },
+    {
+      "memory.current": "605655040",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 35.307360255974345
+    },
+    {
+      "memory.current": "605917184",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 35.5577707689954
+    },
+    {
+      "memory.current": "606179328",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 35.80817436100915
+    },
+    {
+      "memory.current": "606441472",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 36.05858443293255
+    },
+    {
+      "memory.current": "606965760",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 36.30898706591688
+    },
+    {
+      "memory.current": "607227904",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 36.559440017910674
+    },
+    {
+      "memory.current": "607485952",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 36.80983657098841
+    },
+    {
+      "memory.current": "608010240",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 37.060338923940435
+    },
+    {
+      "memory.current": "608272384",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 37.31073655595537
+    },
+    {
+      "memory.current": "608796672",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 37.56113894795999
+    },
+    {
+      "memory.current": "613257216",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 37.8115664209472
+    },
+    {
+      "memory.current": "613519360",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 38.061966773006134
+    },
+    {
+      "memory.current": "613781504",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 38.3124144859612
+    },
+    {
+      "memory.current": "614043648",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 38.562831677962095
+    },
+    {
+      "memory.current": "614567936",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 38.81324203091208
+    },
+    {
+      "memory.current": "614830080",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 39.06361310300417
+    },
+    {
+      "memory.current": "615354368",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 39.31401885498781
+    },
+    {
+      "memory.current": "615878656",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 39.56446604791563
+    },
+    {
+      "memory.current": "616140800",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 39.81488064001314
+    },
+    {
+      "memory.current": "616665088",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 40.06529387191404
+    },
+    {
+      "memory.current": "616927232",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 40.315716544981115
+    },
+    {
+      "memory.current": "617451520",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 40.56611865700688
+    },
+    {
+      "memory.current": "617975808",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 40.816539609921165
+    },
+    {
+      "memory.current": "618500096",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 41.06693140196148
+    },
+    {
+      "memory.current": "618762240",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 41.317334193969145
+    },
+    {
+      "memory.current": "619286528",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 41.56772746692877
+    },
+    {
+      "memory.current": "619810816",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 41.818102978984825
+    },
+    {
+      "memory.current": "620335104",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 42.0685374509776
+    },
+    {
+      "memory.current": "620859392",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 42.31892240291927
+    },
+    {
+      "memory.current": "621383680",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 42.569348755991086
+    },
+    {
+      "memory.current": "621907968",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 42.81974010798149
+    },
+    {
+      "memory.current": "621907968",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 43.07013373996597
+    },
+    {
+      "memory.current": "631255040",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 43.32054441294167
+    },
+    {
+      "memory.current": "631255040",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 43.57094368489925
+    },
+    {
+      "memory.current": "631296000",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 43.82138107798528
+    },
+    {
+      "memory.current": "631476224",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 44.07175742997788
+    },
+    {
+      "memory.current": "631361536",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 44.322129381936975
+    },
+    {
+      "memory.current": "631365632",
+      "memory.peak": "639528960",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+      "memory.swap.current": "0",
+      "t": 44.57255933491979
+    }
+  ],
+  "pressure": [],
+  "actual_qemu_exit": 0,
+  "source_binding_scope": "Fresh run of original Nov8 source/ELF/IFS, NOT current-tip guest query acceptance",
+  "raw_sha256": "5a8d46b69542cd5c675c811bde0436db05d2dc0f642c5d3e4a6514942c8ec57e"
+}
