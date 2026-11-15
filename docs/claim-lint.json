@@ -13,12 +13,12 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "a541de5a0a7261eb21293c2ca2147c72d02b7c1cb6bd7609c116e3f4b18cfa92",
+      "sha256": "e7503b1a89a1e3428db23f5ccfaeac940902cf643382f6baad70ae05b36c9c72",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "STATUS.md",
-      "sha256": "42a2059aebe8a917a0f38e1388fa8b004438ad5a0c6a9bf50583c660d1e5e260",
+      "sha256": "650b141aa60a4dd51b769f5e24c33d56ce66a8fbb61984fb5a468b6fa1142a0d",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -28,12 +28,12 @@
     },
     {
       "path": "docs/private-demo.md",
-      "sha256": "81c69e89d50aa3379b9846517ec2ff7568075270b6ed4bda2be04c7ce54f149c",
+      "sha256": "e41e060b7755013c9d85e64404b230c51ad89b18175c530fe0f2991f33ddd3fe",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "docs/proof-capture/SCRIPT.md",
-      "sha256": "4da01eb40c1a9fd559ecab95159b756869391d3b582e3127d8ee6ae863ad78e3",
+      "sha256": "6cd0c8d18a1410e8728b42770e74fcfd90e042b7bbdd63f70928a16ee99b84ce",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "path": "web/incident-pack/index.html",
-      "sha256": "8cbb63fad54c41b0be5e3d08afafcc1843b91609bfb3b12cb4083683a14384bf",
+      "sha256": "477a05e7e26194d4d46af95e230294b5743a3156de2f60e9661adcf32a9bdb97",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -60,7 +60,47 @@
   "local_links": [
     {
       "source": "README.md",
+      "target": "docs/acceptance/recording-20261115d/RESULT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/recording-20261115d/PUBLICATION.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
       "target": "web/incident-pack/index.html",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/recording-20261115d/RESULT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/recording-20261115d/draft-replacement.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/native-recorder.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/incident-pack.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/query-retry-20261110/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/recording-20261115d/RESULT.md",
       "exists": true
     },
     {
@@ -71,6 +111,16 @@
     {
       "source": "README.md",
       "target": "web/incident-pack/index.html",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/native-recorder-20261108/NOTES.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/recording-20261115d/RESULT.md",
       "exists": true
     },
     {
@@ -111,26 +161,6 @@
     {
       "source": "README.md",
       "target": "docs/acceptance/native-first-20261108/receipt.json",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/native-recorder.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "web/incident-pack/index.html",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/incident-pack.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/native-recorder-20261108/NOTES.md",
       "exists": true
     },
     {
@@ -236,6 +266,21 @@
     {
       "source": "README.md",
       "target": "docs/capabilities.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/recording-20261115d/RESULT.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/recording-20261115d/draft-replacement.json",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/recording-20261115d/PUBLICATION.md",
       "exists": true
     },
     {
@@ -440,6 +485,11 @@
     },
     {
       "source": "docs/private-demo.md",
+      "target": "acceptance/recording-20261115d/RESULT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/private-demo.md",
       "target": "proof-capture/SCRIPT.md",
       "exists": true
     },
@@ -451,6 +501,11 @@
     {
       "source": "docs/private-demo.md",
       "target": "proof-capture/report.json",
+      "exists": true
+    },
+    {
+      "source": "docs/proof-capture/SCRIPT.md",
+      "target": "../acceptance/recording-20261115d/RESULT.md",
       "exists": true
     },
     {
@@ -668,13 +723,14 @@
         "words": 37,
         "start": 0,
         "end": 25,
-        "claim": "Native-first desk presents unchanged saved QNX v2 pack; native_rerun:false.",
+        "claim": "HISTORICAL PRE-RECORDING DRY PACK (9 November 2026), not the completed screencast. See [15 November live run](../acceptance/recording-20261115d/RESULT.md) and [public narrated video](https://youtu.be/f0yBRgMJvfk). All no-recording/private gates in this script apply to that historical dry-pack checkpoint. Native-first desk presents unchanged saved QNX v2 pack; native_rerun:false.",
         "frame": "Local saved desk web/incident-pack/index.html plus original v2 pack and host-browser receipt. Label host-only rendering of recorded native evidence; no guest or live session.",
         "label": "host-only",
         "assets": [
           {
             "path": "web/incident-pack/index.html",
-            "sha256": "8cbb63fad54c41b0be5e3d08afafcc1843b91609bfb3b12cb4083683a14384bf"
+            "sha256": "8cbb63fad54c41b0be5e3d08afafcc1843b91609bfb3b12cb4083683a14384bf",
+            "view": "git-show-at-accepted-tip"
           },
           {
             "path": "docs/acceptance/control-fix-20261108/incident.json",

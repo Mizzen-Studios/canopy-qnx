@@ -1,4 +1,6 @@
-# Private demo preparation — refreshed DRY SCRIPT only
+# Historical pre-recording dry pack — 9 November 2026
+
+Superseded as demo preparation by the [15 November live recording](acceptance/recording-20261115d/RESULT.md) and [public narrated video](https://youtu.be/f0yBRgMJvfk). The restrictions and recorded:false metadata below apply to this historical dry pack, not the completed recording.
 
 The [line-by-line script](proof-capture/SCRIPT.md), [machine-readable pack](proof-capture/pack.json) and [validation report](proof-capture/report.json) now follow the current native-first recorder/desk journey. Narration: **219 words**, planned **160 seconds**, editorial only, not a recording, rehearsal or QNX timing measurement.
 

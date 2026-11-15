@@ -1,9 +1,21 @@
-# Status — private product freeze, 9 November 2026
+# Current status — 15 November 2026
+
+**Live recording complete and accepted. [Narrated video public](https://youtu.be/f0yBRgMJvfk) (2:42).** [15 November evidence](docs/acceptance/recording-20261115d/RESULT.md): QNX uname, SLM start and driver restart368658→421906, independent ordered byte-exact100RX/100TX PASS, fresh-pack host Incident desk with four OBSERVED answers and corrupt-pack UNKNOWN. The silent 161-second source video was verified and replaced on the draft release; [unchanged replacement record](docs/acceptance/recording-20261115d/draft-replacement.json) and [publication note](docs/acceptance/recording-20261115d/PUBLICATION.md).
+
+**Public repository handoff:** documentation is ready for the owner-managed public release. The video is already public; this commit does not change repository visibility.
+
+**Limits unchanged:** guest_query native **NOT_RUN** (compile-only PASS; image build blocked), **C6 FAIL / STOPPED**, SSH and SocketCAN **UNVERIFIED**, pathname policy BLOCKED. Frozen guest product binaries/image unchanged. **Demo in QEMU; not a safety or latency claim.** No continuous availability or platform-health claim.
+
+This commit is documentation/text only: no QEMU, SDK, licence work, new recording or C6 changes. Prior failures, raw captures, source/ELF/image pins and draft-replacement.json remain intact.
+
+## Historical chronology — 7–12 November, not current freeze instructions
+
+Everything below is preserved as dated history. Old private/recorded:false/no-publication gates describe those checkpoints and were superseded only for the separately authorized 15 November recording and owner publication. They do not prohibit viewing the public video, grant new execution permission or promote guest_query/C6/SSH/SocketCAN acceptance.
 
 **Nov12 admission BLOCKED:** requested SDK768MiB was not admitted under unchanged1GiB host cap: full-RAM reserve plus measured overhead left52.71MiB, below64MiB safety reserve; later shutdown sample projected1363.03MiB before reserve (cache included, not an irreducible minimum). No build queued or new native run. [Measured receipt](docs/acceptance/admission-20261112/receipt.json). SSH UNVERIFIED; lease free, no guest. No cap raise/swap/media; stop pending review.
 
 
-## Nov10 features wave — native gate BLOCKED
+## Historical 10 November features wave — native gate BLOCKED
 
 The new explicit Neutrino ChannelCreate/MsgSend/MsgReceive guest query face has **qcc ELF build PASS** at source2879bf8848daffca66fabb4a6a7d5e96d2141a5a, not native runtime PASS. The one low-memory retry reached **BLOCKED_MKIFS_PROCNT0_LINK_OOM**: mkifs relinking existing procnto-smp-instr exhausted the unchanged512MiB guest; IFS stayed empty. [Precise measured receipt](docs/acceptance/query-retry-20261110/receipt.json), [commands, resident census and logs](docs/acceptance/query-retry-20261110/NOTES.md); [first preserved failure](docs/acceptance/query-20261110/receipt.json).
 
@@ -18,7 +30,7 @@ Native recorder: **scoped recorded PASS** at the original [Nov8 capture bindings
 
 Nov9 changes are docs-only. Recorder, collector, desk code and original capture bytes unchanged. C6 STOPPED; SocketCAN UNVERIFIED; no recording, publication, deployment or spend. Freeze and wait for independent review; no further work scheduled.
 
-## Council gap closure — 8 November 2026, host-only native-first desk
+## Historical council gap closure — 8 November 2026, host-only native-first desk
 
 The cold desk now opens the unchanged [recorded native v2 pack](docs/acceptance/control-fix-20261108/incident.json), not a HOST simulation. Four bounded queries link actual CAN observations, explicit co-located control, full raw serial/traffic and original source/build/image/disk bindings. Original FRESH_QNX means fresh at collection, not current-tip native acceptance. Shared serial is multi-product: EDU entries do not substitute for CAN observations. No new native run or new SSH continuity claim.
 
@@ -26,7 +38,7 @@ Native import is primary; HOST simulation requires an explicit secondary origin 
 
 Council reported its own browser attempt BLOCKED before any journeys executed. It was not a product failure or a parent-browser result. Our actual host Chromium journeys and negative fixtures are separate receipts. No effort spent diagnosing the council machine. C6 STOPPED, SocketCAN UNVERIFIED, recorded:false; all private.
 
-## Current upgrade — 8 November 2026, implemented; scoped verification complete, council gate pending
+## Historical upgrade — 8 November 2026, implemented; scoped verification complete, council gate pending
 
 Olly approved the substantive [upgrade package](docs/upgrade-acceptance-20261108.md); the earlier feature-freeze statements below are preserved history, not the current instruction. Previous independent acceptance remains conditional and does not transfer to these new features.
 
@@ -41,7 +53,7 @@ C6/native safety STOPPED; SocketCAN UNVERIFIED. No heartbeat, actuation, recordi
 **Historical / out of scope:** host-simulation, doctor/readiness diagnostics, vehicle-model and C6 material below is archive context, not the current incident-recorder product or an instruction to resume it. C6 FAIL / STOPPED. Current recorder SSH UNVERIFIED. No native execution or recording is authorized by this page.
 
 
-## Current priority — 17:28 UTC timing correction
+## Historical 9 November priority — 17:28 UTC timing correction
 
 Finish supported onboarding and product/evidence consistency, then verify completed revisions and return for independent gate. Videos are deferred to the end after final freeze+finalverification+independentgate and separate Olly OK; capture is not the next blocker. Existing dry checklist parked without script polishing. Native scope remains frozen; C6STOPPED. [Gate order](docs/readiness-gate.md).
 
@@ -51,7 +63,7 @@ Private [claim-to-receipt review](REVIEW.md): this is historical evidence, not a
 
 Actual [desktop/mobile Chromium validation](docs/acceptance/browser-20261107/NOTES.md): missing/corrupt/mixed → UNKNOWN; recorded native labels remain separate from simulation. Host suite **126 passed / 8 skipped**. No fresh native acceptance.
 
-## Current direction — council approval, 7 November 2026
+## Historical direction — council approval, 7 November 2026
 
 Canonical [capability ledger](docs/capabilities.md) separates host simulation,
 recorded native libcan/SLM PASS, SocketCAN UNVERIFIED and C6 FAIL/stopped.
@@ -103,7 +115,7 @@ native FIFO/pulse/actuator runtime attempt FAILED; lane stopped after the focuse
 attempt below. SDK/native guests stopped/reaped. Effective caps remained
 CPU100%,1GiB,nice15,1vCPU/512MiB.
 
-## Still unverified
+## Historical unverified gates at that checkpoint
 
 Full SocketCAN C2/C3 requires matching x86_64 module/board ABI. Identity-safe production supervision, rolling-window/manual-latch limits, least privilege and robust failure injection are not established by the restart smoke. The separate authenticated stream above—not PID snapshots—proves the bounded SSH observation. No full C3 policy acceptance is claimed.
 
@@ -126,6 +138,6 @@ Disposable missing/corrupt/mixed UNKNOWN pages and command/input/outcome/digest 
 Actual source-bound host full-suite logs and pinned receipt: docs/acceptance/host-review-20261107/receipt.json. Reviewed 0c65197 rerun: 133 total / 125 PASS / 8 SKIP. Current f09f69d: 134 total / 126 PASS / 8 SKIP, including saved UNKNOWN fixture regression. These counts are host checks, never fresh native acceptance. C6 remains FAIL/stopped.
 
 
-## Residual packaging source — 21:05 UTC
+## Historical 9 November packaging source — 21:05 UTC
 
 Current packaging/review source: 22ffcaca1269ec0402099fc06b4876a4e8d51748 (owner remote-verified at 21:05 UTC). Conditional native-completion acceptance remains at 88b1bcf5fcc1f97da03321d35b03e89c85090227, receipt-inspected, not re-run. No CANopy native rerun. Historical native labels mean observed in this QEMU run, not benchmarks. recorded:false. C6 FAIL / STOPPED; SocketCAN UNVERIFIED. No capture, audio, publication, deployment, submission or outside contact. Historical frozen assets and source/build/image pins remain unchanged; packet_source_commit is separate from frozen_commit.

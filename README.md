@@ -1,55 +1,58 @@
 # CANopy — reusable QNX incident recorder and workbench
 
-**Start here: [native-first incident desk](web/incident-pack/index.html)** — inspect the recorded 8 November QNX capture at its original bindings; the desk is host-side, not a live connection or a current-tip native rerun.
+**Watch the [15 November live demo](https://youtu.be/f0yBRgMJvfk) (narrated, 2:42).** The [accepted live run and evidence](docs/acceptance/recording-20261115d/RESULT.md) show QNX 8, SLM-managed driver start, kill/restart with a new PID, independent ordered byte-exact **100 RX / 100 TX**, and the fresh incident pack inspected in the host-side desk.
 
+**Demo in QEMU; not a safety or latency claim.** The narrated video is public; the source, guides and evidence are linked here. Repository visibility is managed separately by the owner.
 
-**What:** bounded QNX incident recorder plus a local evidence desk.
-**Original real QNX:** Nov8 SLM restart, exact100RX/100TX, finite slog2 and co-located control; original bindings only.
-**New query:** qcc ELF build PASS; runtime NOT_RUN because stock mkifs kernel relink OOM; no fresh native pack.
-**Host-only:** new same-pack query/slog2 adapter and desk tests; native_rerun:false.
-**Not proven:** SSH UNVERIFIED; no safety, timing or continuous-availability claim.
-**Build:** existing licensed SDP/BSP in SDK guest; bash tools/build_native_recorder.sh (new image currently BLOCKED).
-**Barrier:** STOP/REAP SDK guest → sole capped HOST QEMU; split-host only, no concurrent guests.
-**Exact prerequisites:** [build guide](docs/native-recorder.md); no SDK/image shipped or new licence/login.
-**Inspect:** [local desk](web/incident-pack/index.html) opens original Nov8 capture, not a new native rerun.
-**Scope:** recorded evidence; no safety or timing claim. [Dry script](docs/proof-capture/SCRIPT.md) only, recorded:false. C6 stays stopped.
+## Start here
+
+- **Watch:** [public narrated video](https://youtu.be/f0yBRgMJvfk); [publication note](docs/acceptance/recording-20261115d/PUBLICATION.md).
+- **Inspect:** [local incident desk](web/incident-pack/index.html). It opens a bundled example pack; import the fresh 15 November pack to inspect that run. The desk is a host-side viewer, not a live QNX connection.
+- **Evidence:** [15 November result](docs/acceptance/recording-20261115d/RESULT.md) and [verified silent draft replacement](docs/acceptance/recording-20261115d/draft-replacement.json). The published narrated video is a separate owner-supplied artifact; its 2:42 duration does not replace the silent recording's 161-second hash/size record.
+- **Collect your own:** [native recorder guide](docs/native-recorder.md) and [pack contract / CLI](docs/incident-pack.md). Existing licensed SDP/BSP and external images are required; no SDK, licence or image is shipped.
+
+## Current scope and limits
+
+The bounded QNX libcan/SLM recording and fresh-pack host viewer journey completed on 15 November using the frozen guest binaries/image. That run does not promote the newer **guest_query native runtime: NOT_RUN** gate: qcc ELF build passed, but the new image route remains blocked by the recorded mkifs kernel-relink OOM. [Guest-query blocker](docs/acceptance/query-retry-20261110/NOTES.md).
+
+**C6 FAIL / STOPPED. SSH and SocketCAN UNVERIFIED for current recorder packs.** Pathname policy remains BLOCKED. There is no safety, timing, continuous-availability, full-platform-health or physical-hardware claim. The separate historical SSH receipt does not transfer to the 15 November pack. Collector origin labels and hashes provide cooperative integrity, not attestation.
+
+Supported build topology remains licensed SDK guest → STOP/REAP → sole capped host QEMU; no concurrent guests. The [15 November result](docs/acceptance/recording-20261115d/RESULT.md) records that run's exact caps, frozen bindings and cleanup, not a guarantee of current host readiness. This documentation change runs no QEMU and authorizes no new native work.
+
+## Capture → import → query → inspect evidence
+
+Use the [native recorder](docs/native-recorder.md) for a bounded QNX SLM/libcan incident, then import that exact pack in the [local incident desk](web/incident-pack/index.html). Query interruption/recovery and inspect raw evidence. No server, upload or browser command execution. Missing/corrupt/mixed/stale/incompatible packs fail closed to UNKNOWN.
+
+The [8 November source-bound recorder capture](docs/acceptance/native-recorder-20261108/NOTES.md) retains its finite slog2 and co-located observer-control evidence. The [15 November live recording](docs/acceptance/recording-20261115d/RESULT.md) is the later restart/traffic/fresh-pack journey; neither receipt silently expands the other's scope. [Earlier dry script](docs/proof-capture/SCRIPT.md) is historical preparation, not the completed screencast.
 
 ## History — November 12 admission gate
 
 **Nov12 admission BLOCKED:** requested SDK768MiB was not admitted under unchanged1GiB host cap: full-RAM reserve plus measured overhead left52.71MiB, below64MiB safety reserve; later shutdown sample projected1363.03MiB before reserve (cache included, not an irreducible minimum). No build queued or new native run. [Measured receipt](docs/acceptance/admission-20261112/receipt.json). SSH UNVERIFIED; lease free, no guest. No cap raise/swap/media; stop pending review.
 
-## Nov10 features wave — native gate BLOCKED
+## History — 10 November guest_query native gate BLOCKED
 
 The new explicit Neutrino ChannelCreate/MsgSend/MsgReceive guest query face has **qcc ELF build PASS** at source2879bf8848daffca66fabb4a6a7d5e96d2141a5a, not native runtime PASS. The one low-memory retry reached **BLOCKED_MKIFS_PROCNT0_LINK_OOM**: mkifs relinking existing procnto-smp-instr exhausted the unchanged512MiB guest; IFS stayed empty. [Precise measured receipt](docs/acceptance/query-retry-20261110/receipt.json), [commands, resident census and logs](docs/acceptance/query-retry-20261110/NOTES.md); [first preserved failure](docs/acceptance/query-20261110/receipt.json).
 
-New query/recorder/SSH native journey **NOT_RUN**; **SSH UNVERIFIED**. Same-pack guest-query/slog2 adapter and desk changes have host tests only (Python132PASS/8SKIP; Node70PASS), including corrupt/mixed/missing/wrong-origin UNKNOWN cases; no new native pack or browser runtime acceptance. **native_rerun:false**. Original Nov8 native source/ELF/IFS/disk bindings and recorded scoped PASS remain unchanged and do not transfer to the new source. Historical host-sim/doctor/C6 are out of scope; C6 STOPPED, SocketCAN UNVERIFIED, pathname policy BLOCKED. No APS, safety, timing or continuous-availability claim.
+At this 10 November checkpoint, the new query/recorder/SSH native journey was **NOT_RUN**; **SSH UNVERIFIED**. Same-pack guest-query/slog2 adapter and desk changes have host tests only (Python132PASS/8SKIP; Node70PASS), including corrupt/mixed/missing/wrong-origin UNKNOWN cases; no new native pack or browser runtime acceptance at that checkpoint. **native_rerun:false**. Original Nov8 native source/ELF/IFS/disk bindings and recorded scoped PASS remain unchanged and do not transfer to the new source. Historical host-sim/doctor/C6 are out of scope; C6 STOPPED, SocketCAN UNVERIFIED, pathname policy BLOCKED. No APS, safety, timing or continuous-availability claim.
 
-Split-host remains the only supported topology: licensed SDK guest build → STOP/REAP → sole capped HOST QEMU. New-source route is blocked before that barrier; no native retry or repair is scheduled. Canonical caps and no-swap limit unchanged. Private £0; recorded:false; no media or public action. Stop for independent review.
+Split-host remains the only supported topology: licensed SDK guest build → STOP/REAP → sole capped HOST QEMU. New-source route is blocked before that barrier; no native retry or repair is scheduled. Canonical caps and no-swap limit unchanged. At that checkpoint the repository was private, recorded:false, with no media or public action authorized. These were dated freeze instructions, superseded by the separately authorized 15 November recording.
 
 
-**First action: [open the native-first incident desk](web/incident-pack/index.html).** It opens the original recorded QNX v2 pack locally. Query killed/recovery/survivors/isolation, inspect raw/control evidence, export/reset or import your own QNX pack. HOST simulation is a secondary NOT QNX route. This saved capture is not native PASS at the current tip, a live connection, or new SSH continuity.
+**Historical desk milestone: [native-first incident desk](web/incident-pack/index.html).** It opens the original recorded QNX v2 pack locally. Query killed/recovery/survivors/isolation, inspect raw/control evidence, export/reset or import your own QNX pack. HOST simulation is a secondary NOT QNX route. This saved capture is not native PASS at the current tip, a live connection, or new SSH continuity.
 
 ## Historical private product freeze — 9 November 2026
 
 The native recorder has **scoped recorded PASS** for the bound Nov8 SLM/libcan capture: driver kill/restart, independent ordered byte-exact100RX/100TX, finite slog2 and the co-located control. [Original capture and bindings](docs/acceptance/native-recorder-20261108/NOTES.md). **SSH UNVERIFIED for current recorder packs**; the separate historical SSH receipt does not transfer. The native-first desk is host/browser evidence against that saved capture: **native_rerun:false**, not current-tip native PASS. [Desk receipt](docs/acceptance/native-first-20261108/receipt.json).
 
-This freeze is documentation-only; no new recorder/collector/desk feature or QEMU run. C6 STOPPED, SocketCAN UNVERIFIED; no recording, publication, deployment or spend. Independent review is the next gate.
-
-## Capture → import → query → inspect evidence
-
-Use the [native recorder](docs/native-recorder.md) for a NEW bounded QNX SLM/libcan incident, then open the [local incident desk](web/incident-pack/index.html) to import that exact pack, query interruption/recovery and inspect evidence. [Pack contract and CLI](docs/incident-pack.md). No server, upload or browser command execution. Missing/corrupt/mixed/stale/incompatible packs fail closed to UNKNOWN.
-
-[Fresh native receipt](docs/acceptance/native-recorder-20261108/NOTES.md): actual supervised driver kill/restart and independent ordered byte-exact100RX100TX, bounded structured slog2 and a co-located observer death/separate-recorder control. New packs have NO authenticated SSH-continuity proof; that exists only in the separate historical record below. Origin labels and hash bindings are collector-declared cooperative integrity, not attestation. The completed host review remains separate from the next independent gate; no native rerun is claimed.
-
-Olly approved these upgrades on8Nov; earlier feature-freeze gates are historical. New council acceptance pending. C6/native safety STOPPED; SocketCAN UNVERIFIED. recorded:false; no media now, no publication/deployment. Videos only after all features and final verification plus the separate recording gate.
+The 9 November freeze was documentation-only; no new recorder/collector/desk feature or QEMU run. C6 STOPPED, SocketCAN UNVERIFIED; at that checkpoint no recording, publication, deployment or spend was authorized. Independent review was the next gate.
 
 ## Historical recorded experiment — separate from new capture
 
-Private [claim-to-receipt review](REVIEW.md): historical source/build gaps remain UNVERIFIED.
+Historical [claim-to-receipt review](REVIEW.md): historical source/build gaps remain UNVERIFIED.
 
 Actual [desktop/mobile Chromium validation](docs/acceptance/browser-20261107/NOTES.md): missing/corrupt/mixed → UNKNOWN; recorded native labels remain separate from simulation. That browser milestone records host suite **126 passed / 8 skipped** at its own pinned revision; later host receipts are chronological, not new native acceptance.
 
-Private evidence workbench for a bounded **native QNX libcan + SLM experiment**.
+Historical evidence workbench for a bounded **native QNX libcan + SLM experiment**.
 The historical recorded journey is: positively identified CAN PID killed → new CAN PID →
 100 RX + 100 TX ordered byte-exact post-restart traffic, while the **same
 authenticated SSH connection** continued and main io-sock PID stayed unchanged.
@@ -245,9 +248,8 @@ are ignored only in the worktree; tracked bytecode still fails. This heuristic
 is not proof of provenance, an arbitrary SDK detector, or a substitute for review.
 Keep SDK installations outside the repository. CI requires no SDK access.
 
-Prior art we learned from: Deniz-Eren/dev-can-linux (GPL-2.0, libcan ports incl. kvaser_pci), stappdev/qnxCAN1000, NikhilGogu/qnx-ctucanfd (libcan CAN FD driver for ctucan_pci with supervised restart). The current private CANopy slice is an evidence-bound recorded libcan/SLM incident workbench. SocketCAN remains blocked/unverified; the historical vehicle fail-safe lane is C6 FAIL/stopped, not current positioning or a validated capability.
+Prior art we learned from: Deniz-Eren/dev-can-linux (GPL-2.0, libcan ports incl. kvaser_pci), stappdev/qnxCAN1000, NikhilGogu/qnx-ctucanfd (libcan CAN FD driver for ctucan_pci with supervised restart). CANopy is an evidence-bound recorded libcan/SLM incident workbench. SocketCAN remains blocked/unverified; the historical vehicle fail-safe lane is C6 FAIL/stopped, not current positioning or a validated capability.
 
 That credit describes design intent, not implemented target support. This
 milestone was written from the supplied plan without copying rival source.
-No Pages, public publication, upstream PR, video, submission or contact is
-part of this milestone.
+The earlier milestone did not authorize Pages, publication, upstream PRs, video, submission or contact. The 15 November video was separately authorized and is now public; no Pages deployment, submission or upstream PR is part of this documentation update.

@@ -8,10 +8,10 @@ Exact whitespace narration word count: 232; planned 160 seconds (not measured).
 C6 FAIL / STOPPED; SocketCAN UNVERIFIED. Historical native and host-only frames remain separate.
 
 ## L01 — 0–25 seconds · host-only
-Claim: Native-first desk presents unchanged saved QNX v2 pack; native_rerun:false.
+Claim: HISTORICAL PRE-RECORDING DRY PACK (9 November 2026), not the completed screencast. See [15 November live run](../acceptance/recording-20261115d/RESULT.md) and [public narrated video](https://youtu.be/f0yBRgMJvfk). All no-recording/private gates in this script apply to that historical dry-pack checkpoint. Native-first desk presents unchanged saved QNX v2 pack; native_rerun:false.
 Planned frame: Local saved desk web/incident-pack/index.html plus original v2 pack and host-browser receipt. Label host-only rendering of recorded native evidence; no guest or live session.
 Narration: CANopy records a bounded QNX incident and makes the saved evidence inspectable. The local desk opens the original native pack. This screen is host software presenting a recorded capture, not live telemetry or a new QNX run.
-Frozen files: web/incident-pack/index.html SHA256 8cbb63fad54c41b0be5e3d08afafcc1843b91609bfb3b12cb4083683a14384bf [current file equals packaging snapshot], docs/acceptance/control-fix-20261108/incident.json SHA256 ced63c778d105bfa7a4a736e5d195fd6dcb65740201a7599d95edb8e9a47da93 [current file equals packaging snapshot], docs/acceptance/native-first-20261108/receipt.json SHA256 0a2b0b84c04698a21de66df37f7c4050ca79d44e1d50efde6012e596af1047ed [current file equals packaging snapshot]
+Frozen files: web/incident-pack/index.html SHA256 8cbb63fad54c41b0be5e3d08afafcc1843b91609bfb3b12cb4083683a14384bf [git-show-at-accepted-tip], docs/acceptance/control-fix-20261108/incident.json SHA256 ced63c778d105bfa7a4a736e5d195fd6dcb65740201a7599d95edb8e9a47da93 [current file equals packaging snapshot], docs/acceptance/native-first-20261108/receipt.json SHA256 0a2b0b84c04698a21de66df37f7c4050ca79d44e1d50efde6012e596af1047ed [current file equals packaging snapshot]
 REVIEW boundary: host-only native-first desk
 
 ## L02 — 25–65 seconds · recorded native QEMU observation

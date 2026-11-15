@@ -8,14 +8,15 @@
       "start": 0,
       "end": 25,
       "narration": "CANopy records a bounded QNX incident and makes the saved evidence inspectable. The local desk opens the original native pack. This screen is host software presenting a recorded capture, not live telemetry or a new QNX run.",
-      "claim": "Native-first desk presents unchanged saved QNX v2 pack; native_rerun:false.",
+      "claim": "HISTORICAL PRE-RECORDING DRY PACK (9 November 2026), not the completed screencast. See [15 November live run](../acceptance/recording-20261115d/RESULT.md) and [public narrated video](https://youtu.be/f0yBRgMJvfk). All no-recording/private gates in this script apply to that historical dry-pack checkpoint. Native-first desk presents unchanged saved QNX v2 pack; native_rerun:false.",
       "frame": "Local saved desk web/incident-pack/index.html plus original v2 pack and host-browser receipt. Label host-only rendering of recorded native evidence; no guest or live session.",
       "label": "host-only",
       "review_quote": "host-only native-first desk",
       "assets": [
         {
           "path": "web/incident-pack/index.html",
-          "sha256": "8cbb63fad54c41b0be5e3d08afafcc1843b91609bfb3b12cb4083683a14384bf"
+          "sha256": "8cbb63fad54c41b0be5e3d08afafcc1843b91609bfb3b12cb4083683a14384bf",
+          "view": "git-show-at-accepted-tip"
         },
         {
           "path": "docs/acceptance/control-fix-20261108/incident.json",

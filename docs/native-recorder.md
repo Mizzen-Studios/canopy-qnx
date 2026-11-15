@@ -1,11 +1,15 @@
 # Capture a new bounded QNX incident
 
-**Nov10 gate:** guest_query ELF qcc build PASS; new native query/recorder/SSH journey NOT_RUN, no fresh same-pack native acceptance. Stock mkifs procnto relink OOM at unchanged caps; [measured blocker](acceptance/query-retry-20261110/NOTES.md). The new guest-query/slog2 viewer is host-tested only. Original Nov8 example and bindings unchanged; SSH UNVERIFIED. No further run authorized by this guide.
+**15 November live run:** [accepted recording and evidence](acceptance/recording-20261115d/RESULT.md), with the [public narrated video](https://youtu.be/f0yBRgMJvfk). Frozen-guest SLM restart and exact100RX/100TX passed; the desk inspected the fresh pack. Demo in QEMU; not a safety or latency claim.
+
+**Separate guest_query gate (10 November, still NOT_RUN):** guest_query ELF qcc build PASS; new native query/recorder/SSH journey NOT_RUN, no fresh same-pack native acceptance. Stock mkifs procnto relink OOM at unchanged caps; [measured blocker](acceptance/query-retry-20261110/NOTES.md). The new guest-query/slog2 viewer is host-tested only. Original Nov8 example and bindings unchanged; SSH UNVERIFIED. This guide does not turn compile-only guest_query evidence into native runtime acceptance.
 
 
 This is an active collector, not the historical museum pack. It uses an existing
 licensed QNX8 x86_64 SDP/BSP and libcan fallback image. No SDK installation,
 licence activation, new credentials, server, upload, or target SocketCAN claim.
+
+The [dated supervision note](../config/supervision/README.md) explains the historical, hash-pinned XML comment and the later observed SLM start/restart.
 
 ## Build inside your licensed SDK host
 
