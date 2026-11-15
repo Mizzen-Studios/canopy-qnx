@@ -1,0 +1,92 @@
+{
+  "schema": "canopy-live-recording-1",
+  "status": "PASS_SCOPED_ORIGINAL_BUILD",
+  "packaging_tip": "95e28e0643c241682f674be8b696eafba1f5c5b6",
+  "scope": "ONE fresh Nov15 native execution of existing original Nov8 recorder+image; not a new build and NOT tip-native guest-query acceptance",
+  "native_rerun_original_build": true,
+  "native_rerun_tip_guest_query": false,
+  "native_observed": [
+    "SLM active driver278546 -> SIGKILL -> replacement331794",
+    "io-sock163853 before/after snapshots only",
+    "independent ordered byte-exact100RX/100TX",
+    "finite5slog2 events",
+    "co-located control"
+  ],
+  "host_only_observed": [
+    "actual browser import THIS new pack,4boundedqueries OBSERVED",
+    "actual corrupt-pack import UNKNOWN,queries disabled"
+  ],
+  "SSH": "UNVERIFIED",
+  "source_elf_image_disk_bindings": "lineage.json plus native-receipt.json; historical provenance retained, new run/disk/raw bind independently",
+  "recorded": true,
+  "recording_started_before_native_commands": true,
+  "raw_timed_events_sha256": "1c00bb4bcb6b6aee5dcde07d7728a12448b26477ebcee361dec366f36c838d90",
+  "video": {
+    "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/can-recording-20261115/canopy-live-demo-20261115-reviewed.mp4",
+    "sha256": "157646486273441d837ab250b52e9fcc33d1f901ae06cab79d09c5f2dccbf06f",
+    "bytes": 1937431,
+    "duration_seconds": 150,
+    "width": 1920,
+    "height": 1080,
+    "fps": 25,
+    "audio": false,
+    "full_decode_exit": 0
+  },
+  "stills": {
+    "unknown.png": {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/can-recording-20261115/stills/unknown.png",
+      "sha256": "a0729f30e7bf693d884467f96edc81de678004d472d1b6bffdc9aa8bd11b550b"
+    },
+    "traffic.png": {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/can-recording-20261115/stills/traffic.png",
+      "sha256": "73ed1885213acda0d93f35dec6980a367f724f06cbe7dd32be5a30bf8d51aac7"
+    },
+    "slm.png": {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/can-recording-20261115/stills/slm.png",
+      "sha256": "a3638ab25ea1f0b88075c8fecc5f8092217c564ca94a1c6f3da918c84d98ee03"
+    },
+    "kill.png": {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/can-recording-20261115/stills/kill.png",
+      "sha256": "822e94d5fc9dfdddb5f4c618a616d85e256bad0ba03cd825fa38f1ecee405da4"
+    },
+    "browser.png": {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/can-recording-20261115/stills/browser.png",
+      "sha256": "f86c79bd50f6406c0173fdb064459051f2b510d1c335f6e22beaa0217d603ef6"
+    },
+    "title.png": {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/can-recording-20261115/stills/title.png",
+      "sha256": "b6be5ec5f7288e04be95935a5187fa3226b0714f10c0efdf67d8a5395c67796c"
+    },
+    "end.png": {
+      "path": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/can-recording-20261115/stills/end.png",
+      "sha256": "75d4fec81f9f85fc753ccc227cb428622f9b4a7a5eb5ba5fd7fe1384006f02fc"
+    }
+  },
+  "helpers": {
+    "capture-live.py": "88d49526993bbdf5f7d028a9370a0bfe897cee2ee992a4afa90acf10b9bc6a20",
+    "native_can_three.py": "7824d7d056c87f4acbb83ec996b75f78105a57091660d42c6d5f3d438f3d5d11",
+    "browser.cjs": "f7bf6e1f58f799a0b9850033b6505519ab4e1fa5b244bf7266b0fe90079b2eb8",
+    "render.py": "8cac83f1010d2d659bbd08d888ec46318c408e1af2c8454a30a268afe5cb97b2"
+  },
+  "editing": "Faithful selected actual timed serial rows + actual browser frames; waits omitted, readable holds, explicit footer. Initial host-only edit boundary error fixed from existing capture, no guest/browser rerun. Intermediate renders retained outside repo; only reviewed final asset intended for upload. No old logs or fabricated expected terminal rows. Original byte offsets, event seq and browser frame hashes mapped in provenance.",
+  "verification": [
+    "ffprobe150s1920x1080H26425fps noaudio",
+    "ffmpeg full decode exit0",
+    "visually inspected SLM,kill,traffic,browserVALID,browserUNKNOWN,end stills",
+    "shown terminal rows automatically reject personal /home paths or email marker; actual browser shows local named upload, no credentials or personal paths",
+    "native cleanup caps and peak tracked in native-cleanup.json"
+  ],
+  "constraints": {
+    "project_code_changes": false,
+    "new_sdk": false,
+    "single_host": false,
+    "C6": "STOPPED",
+    "SocketCAN": "UNVERIFIED",
+    "public": false,
+    "spend": 0,
+    "safety_claim": false,
+    "latency_claim": false
+  },
+  "cleanup": "no QEMU, lease FREE; guest already reaped immediately after target run before browser/render",
+  "release": "PRIVATE DRAFT demo-video, only after final private checks; separate receipt follows"
+}

@@ -1,0 +1,512 @@
+{
+  "duration": 150,
+  "width": 1920,
+  "height": 1080,
+  "audio": false,
+  "raw_timed_events_sha256": "1c00bb4bcb6b6aee5dcde07d7728a12448b26477ebcee361dec366f36c838d90",
+  "raw_serial_sha256": "5a8d46b69542cd5c675c811bde0436db05d2dc0f642c5d3e4a6514942c8ec57e",
+  "browser_observation_sha256": "623fb8a1f8d4b4ad5d73a25aecf52078b2888a67a2bc8708641f9ecef167692b",
+  "chapters": [
+    {
+      "id": "title",
+      "duration": 8,
+      "title": "What happened when the CAN driver died?",
+      "caption": "CANopy | A bounded incident recorder on real QNX in QEMU",
+      "rows": [],
+      "video_start": 0,
+      "video_end": 8,
+      "raw_first_t": 0,
+      "raw_last_t": 0,
+      "editing": "Actual selected serial rows revealed in original order, waits removed and readability holds added; actual browser frames sampled by original file times normalized to first frame."
+    },
+    {
+      "id": "slm",
+      "duration": 22,
+      "title": "1 / Live capture: SLM and the driver PID",
+      "caption": "Fresh Nov15 run of the original Nov8 build. Not a new query-service build.",
+      "rows": [
+        {
+          "text": "# /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml > /tmp/slm.log 2>&1 & sleep 3; cat /tmp/slm.log; /proc/boot/slmctl -n /dev/slm-canopy 'listall -v'; pidin ar; echo SLM_START_DONE",
+          "start": 3220,
+          "end": 3444,
+          "seq": 95,
+          "t": 7.042592244921252
+        },
+        {
+          "text": "canopy-can  /proc/boot/dev-can-linux  ACTIVE    INITIALIZED  278546",
+          "start": 3458,
+          "end": 3527,
+          "seq": 99,
+          "t": 10.279120181920007
+        },
+        {
+          "text": "  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml ",
+          "start": 4182,
+          "end": 4285,
+          "seq": 134,
+          "t": 10.372074299957603
+        },
+        {
+          "text": "  278546 dev-can-linux -b id=0,freq=500k ",
+          "start": 4285,
+          "end": 4328,
+          "seq": 135,
+          "t": 10.373170389910229
+        },
+        {
+          "text": "[1] + Done                 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -",
+          "start": 4364,
+          "end": 4440,
+          "seq": 140,
+          "t": 10.40094366890844
+        },
+        {
+          "text": "  270338 /proc/boot/slm -V -n /dev/slm-canopy -R 5/min -s canopy-can /proc/boot/slm-can-fallback.xml ",
+          "start": 5123,
+          "end": 5226,
+          "seq": 171,
+          "t": 10.480469711939804
+        },
+        {
+          "text": "  278546 dev-can-linux -b id=0,freq=500k ",
+          "start": 5226,
+          "end": 5269,
+          "seq": 173,
+          "t": 10.481778922956437
+        }
+      ],
+      "video_start": 8,
+      "video_end": 30,
+      "raw_first_t": 7.042592244921252,
+      "raw_last_t": 10.481778922956437,
+      "editing": "Actual selected serial rows revealed in original order, waits removed and readability holds added; actual browser frames sampled by original file times normalized to first frame."
+    },
+    {
+      "id": "kill",
+      "duration": 34,
+      "title": "2 / Live kill: a different SLM-managed PID",
+      "caption": "Original driver278546 -> replacement331794. Recorded target output, not old logs.",
+      "rows": [
+        {
+          "text": "# /proc/boot/incident_recorder 278546; echo RECORDER_RC=$?; sleep 3; /proc/boot/slmctl -n /dev/slm-canopy 'active -v'; pidin ar; ls /dev/can0/rx0; echo RESTART_DONE",
+          "start": 5299,
+          "end": 5464,
+          "seq": 195,
+          "t": 10.538039686973207
+        },
+        {
+          "text": "{\"schema\":\"canopy-native-1\",\"seq\":0,\"ms\":6,\"recorder\":315408,\"phase\":\"before\",\"pid\":278546,\"result\":0}",
+          "start": 5466,
+          "end": 5570,
+          "seq": 213,
+          "t": 10.616204718942754
+        },
+        {
+          "text": "{\"schema\":\"canopy-native-1\",\"seq\":1,\"ms\":24,\"recorder\":315408,\"phase\":\"kill\",\"pid\":278546,\"result\":0}",
+          "start": 5570,
+          "end": 5673,
+          "seq": 236,
+          "t": 10.672646523918957
+        },
+        {
+          "text": "{\"schema\":\"canopy-native-1\",\"seq\":2,\"ms\":80,\"recorder\":315408,\"phase\":\"waitpid\",\"pid\":278546,\"result\":10}",
+          "start": 5673,
+          "end": 5780,
+          "seq": 253,
+          "t": 10.686944686924107
+        },
+        {
+          "text": "{\"schema\":\"canopy-native-1\",\"seq\":3,\"ms\":94,\"recorder\":315408,\"phase\":\"interruption\",\"pid\":278546,\"result\":1}",
+          "start": 5780,
+          "end": 5891,
+          "seq": 271,
+          "t": 10.7011305289343
+        },
+        {
+          "text": "{\"schema\":\"canopy-native-1\",\"seq\":4,\"ms\":109,\"recorder\":315408,\"phase\":\"after\",\"pid\":278546,\"result\":0}",
+          "start": 5891,
+          "end": 5996,
+          "seq": 288,
+          "t": 10.715174608980305
+        },
+        {
+          "text": "RECORDER_RC=0",
+          "start": 5996,
+          "end": 6011,
+          "seq": 290,
+          "t": 10.723167997901328
+        },
+        {
+          "text": "canopy-can  /proc/boot/dev-can-linux  ACTIVE    INITIALIZED  331794",
+          "start": 6011,
+          "end": 6080,
+          "seq": 292,
+          "t": 13.842844930011779
+        },
+        {
+          "text": "  331794 dev-can-linux -b id=0,freq=500k ",
+          "start": 6838,
+          "end": 6881,
+          "seq": 323,
+          "t": 13.920027473010123
+        }
+      ],
+      "video_start": 30,
+      "video_end": 64,
+      "raw_first_t": 10.538039686973207,
+      "raw_last_t": 13.920027473010123,
+      "editing": "Actual selected serial rows revealed in original order, waits removed and readability holds added; actual browser frames sampled by original file times normalized to first frame."
+    },
+    {
+      "id": "traffic",
+      "duration": 26,
+      "title": "3 / Independent host check: byte-exact100RX /100TX",
+      "caption": "100 frames each way: IDs, order and all eight payload bytes checked. Samples below.",
+      "rows": [
+        {
+          "text": "  /dev/can0/rx0 TS: 15408ms [SFF] 0 [8] 00 00 00 00 00 00 00 00",
+          "start": 7089,
+          "end": 7154,
+          "seq": 339,
+          "t": 18.826033758930862
+        },
+        {
+          "text": "  /dev/can0/rx0 TS: 15438ms [SFF] 1 [8] 01 00 00 00 00 00 00 00",
+          "start": 7154,
+          "end": 7219,
+          "seq": 339,
+          "t": 18.826033758930862
+        },
+        {
+          "text": "  /dev/can0/rx0 TS: 15468ms [SFF] 2 [8] 02 00 00 00 00 00 00 00",
+          "start": 7219,
+          "end": 7284,
+          "seq": 339,
+          "t": 18.826033758930862
+        },
+        {
+          "text": "  /dev/can0/rx0 TS: 15498ms [SFF] 3 [8] 03 00 00 00 00 00 00 00",
+          "start": 7284,
+          "end": 7349,
+          "seq": 340,
+          "t": 18.826812925981358
+        },
+        {
+          "text": "C3_TX_RC=0",
+          "start": 22285,
+          "end": 22297,
+          "seq": 8060,
+          "t": 43.305904806940816
+        },
+        {
+          "text": "POST_RESTART_RX100_TX100_EXACT 1",
+          "seq": 8062,
+          "t": 43.60950189700816,
+          "host_actual_stdout": true
+        }
+      ],
+      "video_start": 64,
+      "video_end": 90,
+      "raw_first_t": 18.826033758930862,
+      "raw_last_t": 43.60950189700816,
+      "editing": "Actual selected serial rows revealed in original order, waits removed and readability holds added; actual browser frames sampled by original file times normalized to first frame."
+    },
+    {
+      "id": "browser",
+      "duration": 30,
+      "title": "4 / HOST browser: ask THIS fresh incident pack",
+      "caption": "Actual desk interaction. Queries show bounded snapshots, not continuous availability.",
+      "browser": [
+        1.204,
+        15.447999999999999
+      ],
+      "render_sources": [
+        {
+          "video_second": 90,
+          "path": "0002.png",
+          "relative_first_frame_t": 1.0980093479156494
+        },
+        {
+          "video_second": 91,
+          "path": "0002.png",
+          "relative_first_frame_t": 1.0980093479156494
+        },
+        {
+          "video_second": 92,
+          "path": "0003.png",
+          "relative_first_frame_t": 1.6440141201019287
+        },
+        {
+          "video_second": 93,
+          "path": "0004.png",
+          "relative_first_frame_t": 2.195018768310547
+        },
+        {
+          "video_second": 94,
+          "path": "0005.png",
+          "relative_first_frame_t": 2.744023561477661
+        },
+        {
+          "video_second": 95,
+          "path": "0006.png",
+          "relative_first_frame_t": 3.2900283336639404
+        },
+        {
+          "video_second": 96,
+          "path": "0007.png",
+          "relative_first_frame_t": 3.8340330123901367
+        },
+        {
+          "video_second": 97,
+          "path": "0008.png",
+          "relative_first_frame_t": 4.371037483215332
+        },
+        {
+          "video_second": 98,
+          "path": "0009.png",
+          "relative_first_frame_t": 4.9000420570373535
+        },
+        {
+          "video_second": 99,
+          "path": "0010.png",
+          "relative_first_frame_t": 5.446046829223633
+        },
+        {
+          "video_second": 100,
+          "path": "0011.png",
+          "relative_first_frame_t": 5.985051393508911
+        },
+        {
+          "video_second": 101,
+          "path": "0012.png",
+          "relative_first_frame_t": 6.5240559577941895
+        },
+        {
+          "video_second": 102,
+          "path": "0013.png",
+          "relative_first_frame_t": 7.072060823440552
+        },
+        {
+          "video_second": 103,
+          "path": "0014.png",
+          "relative_first_frame_t": 7.624065399169922
+        },
+        {
+          "video_second": 104,
+          "path": "0015.png",
+          "relative_first_frame_t": 8.181070327758789
+        },
+        {
+          "video_second": 105,
+          "path": "0016.png",
+          "relative_first_frame_t": 8.724074840545654
+        },
+        {
+          "video_second": 106,
+          "path": "0017.png",
+          "relative_first_frame_t": 9.270079612731934
+        },
+        {
+          "video_second": 107,
+          "path": "0018.png",
+          "relative_first_frame_t": 9.801084280014038
+        },
+        {
+          "video_second": 108,
+          "path": "0019.png",
+          "relative_first_frame_t": 10.334088802337646
+        },
+        {
+          "video_second": 109,
+          "path": "0020.png",
+          "relative_first_frame_t": 10.891093492507935
+        },
+        {
+          "video_second": 110,
+          "path": "0021.png",
+          "relative_first_frame_t": 11.437098264694214
+        },
+        {
+          "video_second": 111,
+          "path": "0022.png",
+          "relative_first_frame_t": 11.971102952957153
+        },
+        {
+          "video_second": 112,
+          "path": "0023.png",
+          "relative_first_frame_t": 12.504107475280762
+        },
+        {
+          "video_second": 113,
+          "path": "0024.png",
+          "relative_first_frame_t": 13.03711199760437
+        },
+        {
+          "video_second": 114,
+          "path": "0025.png",
+          "relative_first_frame_t": 13.57111668586731
+        },
+        {
+          "video_second": 115,
+          "path": "0026.png",
+          "relative_first_frame_t": 14.121121406555176
+        },
+        {
+          "video_second": 116,
+          "path": "0027.png",
+          "relative_first_frame_t": 14.652125835418701
+        },
+        {
+          "video_second": 117,
+          "path": "0028.png",
+          "relative_first_frame_t": 15.187130451202393
+        },
+        {
+          "video_second": 118,
+          "path": "0028.png",
+          "relative_first_frame_t": 15.187130451202393
+        },
+        {
+          "video_second": 119,
+          "path": "0028.png",
+          "relative_first_frame_t": 15.187130451202393
+        }
+      ],
+      "video_start": 90,
+      "video_end": 120,
+      "raw_first_t": 0,
+      "raw_last_t": 0,
+      "editing": "Actual selected serial rows revealed in original order, waits removed and readability holds added; actual browser frames sampled by original file times normalized to first frame."
+    },
+    {
+      "id": "unknown",
+      "duration": 20,
+      "title": "5 / Corrupt pack: UNKNOWN, queries disabled",
+      "caption": "Actual corrupt import. Missing trust is not a PASS. Host-only browser capture.",
+      "browser": [
+        16.447999999999997,
+        21.585
+      ],
+      "render_sources": [
+        {
+          "video_second": 120,
+          "path": "0030.png",
+          "relative_first_frame_t": 16.255139589309692
+        },
+        {
+          "video_second": 121,
+          "path": "0030.png",
+          "relative_first_frame_t": 16.255139589309692
+        },
+        {
+          "video_second": 122,
+          "path": "0031.png",
+          "relative_first_frame_t": 16.808144330978394
+        },
+        {
+          "video_second": 123,
+          "path": "0031.png",
+          "relative_first_frame_t": 16.808144330978394
+        },
+        {
+          "video_second": 124,
+          "path": "0032.png",
+          "relative_first_frame_t": 17.356149196624756
+        },
+        {
+          "video_second": 125,
+          "path": "0033.png",
+          "relative_first_frame_t": 17.90415382385254
+        },
+        {
+          "video_second": 126,
+          "path": "0033.png",
+          "relative_first_frame_t": 17.90415382385254
+        },
+        {
+          "video_second": 127,
+          "path": "0034.png",
+          "relative_first_frame_t": 18.442158460617065
+        },
+        {
+          "video_second": 128,
+          "path": "0034.png",
+          "relative_first_frame_t": 18.442158460617065
+        },
+        {
+          "video_second": 129,
+          "path": "0035.png",
+          "relative_first_frame_t": 18.988163232803345
+        },
+        {
+          "video_second": 130,
+          "path": "0035.png",
+          "relative_first_frame_t": 18.988163232803345
+        },
+        {
+          "video_second": 131,
+          "path": "0036.png",
+          "relative_first_frame_t": 19.521167755126953
+        },
+        {
+          "video_second": 132,
+          "path": "0036.png",
+          "relative_first_frame_t": 19.521167755126953
+        },
+        {
+          "video_second": 133,
+          "path": "0037.png",
+          "relative_first_frame_t": 20.05417227745056
+        },
+        {
+          "video_second": 134,
+          "path": "0038.png",
+          "relative_first_frame_t": 20.590177059173584
+        },
+        {
+          "video_second": 135,
+          "path": "0038.png",
+          "relative_first_frame_t": 20.590177059173584
+        },
+        {
+          "video_second": 136,
+          "path": "0039.png",
+          "relative_first_frame_t": 21.138181686401367
+        },
+        {
+          "video_second": 137,
+          "path": "0039.png",
+          "relative_first_frame_t": 21.138181686401367
+        },
+        {
+          "video_second": 138,
+          "path": "0039.png",
+          "relative_first_frame_t": 21.138181686401367
+        },
+        {
+          "video_second": 139,
+          "path": "0039.png",
+          "relative_first_frame_t": 21.138181686401367
+        }
+      ],
+      "video_start": 120,
+      "video_end": 140,
+      "raw_first_t": 0,
+      "raw_last_t": 0,
+      "editing": "Actual selected serial rows revealed in original order, waits removed and readability holds added; actual browser frames sampled by original file times normalized to first frame."
+    },
+    {
+      "id": "end",
+      "duration": 10,
+      "title": "Settle time is not a latency figure.",
+      "caption": "No safety claim. SSH UNVERIFIED. Original-source run only; no new query-service PASS.",
+      "rows": [],
+      "video_start": 140,
+      "video_end": 150,
+      "raw_first_t": 0,
+      "raw_last_t": 0,
+      "editing": "Actual selected serial rows revealed in original order, waits removed and readability holds added; actual browser frames sampled by original file times normalized to first frame."
+    }
+  ],
+  "scope": "Fresh Nov15 execution of original Nov8 build; NOT tip guest query PASS. No old footage. Browser is host-only. Original terminal byte offsets and event sequences preserved. Browser actual saved frames; file-time alignment normalized to first capture frame, not an external timing benchmark."
+}
