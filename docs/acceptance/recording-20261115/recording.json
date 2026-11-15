@@ -30,7 +30,8 @@
     "height": 1080,
     "fps": 25,
     "audio": false,
-    "full_decode_exit": 0
+    "full_decode_exit": 0,
+    "private_review_asset_alias": "/home/ubuntu/.openclaw/workspace/.openclaw/tmp/can-recording-20261115/demo-video.mp4"
   },
   "stills": {
     "unknown.png": {
@@ -88,5 +89,15 @@
     "latency_claim": false
   },
   "cleanup": "no QEMU, lease FREE; guest already reaped immediately after target run before browser/render",
-  "release": "PRIVATE DRAFT demo-video, only after final private checks; separate receipt follows"
+  "release": {
+    "id": 446240848,
+    "url": "https://github.com/Mizzen-Studios/canopy-qnx/releases/tag/untagged-558df9e702a8c0297033",
+    "draft": true,
+    "repository_private_verified": true,
+    "asset_id": 751796962,
+    "asset_name": "demo-video.mp4",
+    "asset_sha256": "157646486273441d837ab250b52e9fcc33d1f901ae06cab79d09c5f2dccbf06f",
+    "remote_digest_matches_local": true,
+    "target_commit": "759428e770c21e64d9d9d85be95c12eeb5e69526"
+  }
 }
