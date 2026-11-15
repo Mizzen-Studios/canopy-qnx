@@ -1,0 +1,153 @@
+{
+  "schema": "canopy-failed-continuous-recording/1",
+  "status": "FAIL_STOPPED",
+  "cause": "UNVERIFIED",
+  "attempts": 1,
+  "retry": false,
+  "product_revision": "fc7a2276d6571c5737149f86896776a8740b78f7",
+  "run_id": "native-d957f9146de64fcc9a5bfb3022d021da",
+  "captured_at_epoch": 1794770316.5612273,
+  "error": "count/order/bytes mismatch: expected=100 actual=62",
+  "native_result": {
+    "uname": "QNX 8.0.0 (nodename retained only in private raw stream)",
+    "slm_restarts": [
+      {
+        "run": 1,
+        "killed_pid": 368658,
+        "new_pid": 421906,
+        "main_pid_unchanged": true,
+        "observed_seconds_including_fixed_3s_settle": 5.2916134390980005
+      }
+    ],
+    "io_sock_pid_before_after": 163853,
+    "rx_host_oracle_input_count": 100,
+    "rx_guest_count": 62,
+    "rx_ordered_byte_exact": "FAIL",
+    "tx100": "NOT_RUN",
+    "cofailure_control": "NOT_RUN",
+    "browser_journey": "NOT_RUN"
+  },
+  "caps": {
+    "cpu": "100000 100000",
+    "host_memory_bytes": 2147483648,
+    "nice": 15,
+    "guest_vcpus": 1,
+    "guest_mib": 512,
+    "tcg_mib": 256,
+    "swap_max": 0,
+    "reserve_bytes": 67108864,
+    "scope": "one scope includes Xvfb, xfce4-terminal, ffmpeg x11grab and native collector/QEMU"
+  },
+  "resources": {
+    "sample_count": 267,
+    "peak_bytes": 678785024,
+    "max_current_bytes": 678612992,
+    "max_swap_current_bytes": 0,
+    "pressure_breaches": [],
+    "first_memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+    "last_memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0"
+  },
+  "binding": {
+    "image_sha256": "764e7e9f3ffcb74e851dce896a513c85abe16589d918937f3ba5157891882a22",
+    "disk_sha256": "59269af3ae940d2e520271e8b2e989cc8de5918c8e6cf283bc88cfd734c30951",
+    "measured_frozen_executables": {
+      "incident_recorder": "725eb876fc700f72a62d8ba0344a7b30f3c0182d2036dfd361ed5e596918d513",
+      "prereq_containment": "787039ffedf1e57879ee37516a19cb8a19548d5c1e0facdc26b9e02febb971bf",
+      "incident.ifs": "764e7e9f3ffcb74e851dce896a513c85abe16589d918937f3ba5157891882a22"
+    },
+    "frozen_source_sha256": {
+      "native/incident_recorder.c": "e02a767b082d75501480591e50e89aa78ae64d0e2c81719aec16b4b9b4d4be71",
+      "native/prereq_containment.c": "074b043ba12e6e1125dd33491725019317eb886ada072020e8869f5695b1d6e4"
+    },
+    "scope": "Original Nov8 build; no source change, SDK build or claim of later current-tip native query acceptance"
+  },
+  "cleanup": {
+    "own_qemu_pid": 786010,
+    "own_guest_stopped_reaped": true,
+    "actual_qemu_exit": 0,
+    "runner_exit": 1,
+    "lease_free_checked_after_own_run": true,
+    "scope": "CAN cleanup instant only; not a claim about later EDU ownership"
+  },
+  "media": {
+    "source": "Continuous actual X11 pixels via ffmpeg x11grab; actual xfce4-terminal; no styled renderer, replay or simulated typing",
+    "raw": {
+      "sha256": "48f4f5b94b5aac897d2c1c269cd44ceee10b7244cf8c11f85524de3c7992b455",
+      "bytes": 4858721
+    },
+    "raw_duration_seconds": 73.24,
+    "width": 1920,
+    "height": 1080,
+    "audio_streams": 0,
+    "final_mp4": "NOT_CREATED",
+    "privacy": "Unredacted raw original remains private/external, including original uname nodename; no preview or final media uploaded"
+  },
+  "external_evidence": {
+    "native/receipt.json": {
+      "sha256": "d2beabbb92c3131c61fda04112e1a57b07a398003c21a6d16f2270ab65a8d0cc",
+      "bytes": 69436
+    },
+    "native/serial.txt": {
+      "sha256": "d65bddc706e233928b901a25b3bd53bd26a56287c2cb01296dfbfc785d1e7bf5",
+      "bytes": 9463
+    },
+    "native/timed-events.jsonl": {
+      "sha256": "1b41763bbcb020ceb72b94103c415ae1c4b14941ad5f82e0a11ee2ddeef1e944",
+      "bytes": 63837
+    },
+    "native/qtest.log": {
+      "sha256": "2f600c605d67d8a00ff5d4efed3b486b003af32584660626819d17f80c38b426",
+      "bytes": 1825
+    },
+    "native/uname.txt": {
+      "sha256": "0eb8d95824f0be9ca2f5cd42de497bb299092a8542fa8a6dbf3279f5fa06138a",
+      "bytes": 162
+    },
+    "native/startup.txt": {
+      "sha256": "fed352a3c5c870c7a724bf0706874d7fcb443351f7b24c92b1e1e9f5bc1ed7ac",
+      "bytes": 1144
+    },
+    "native/restart.txt": {
+      "sha256": "d2eefeb9fc1a6ee0fb35100a0e41b1ae74ed817700fa72fa515ec49ceccc76c3",
+      "bytes": 1634
+    },
+    "continuous-raw.mp4": {
+      "sha256": "48f4f5b94b5aac897d2c1c269cd44ceee10b7244cf8c11f85524de3c7992b455",
+      "bytes": 4858721
+    },
+    "capture-live-x11.py": {
+      "sha256": "fb98d7ebec1f19b3a7ab1876b76f99b0428c6d30e57403d66c773ed29b2f0d04",
+      "bytes": 10440
+    },
+    "native_can_three.py": {
+      "sha256": "7824d7d056c87f4acbb83ec996b75f78105a57091660d42c6d5f3d438f3d5d11",
+      "bytes": 9894
+    },
+    "record-screen.py": {
+      "sha256": "2314950c17602dc5cad5ba5334cf924695b008db578fa60d569cc6840c6a1468",
+      "bytes": 4429
+    },
+    "raw-ffprobe.json": {
+      "sha256": "013563eb1342c8daf5d5260713da0379a94f576555b4b8a521bd414d8edd3f00",
+      "bytes": 2643
+    }
+  },
+  "existing_draft": {
+    "id": 446240848,
+    "draft": true,
+    "published_at": null,
+    "asset_id": 751796962,
+    "name": "demo-video.mp4",
+    "bytes": 1937431,
+    "digest": "sha256:157646486273441d837ab250b52e9fcc33d1f901ae06cab79d09c5f2dccbf06f",
+    "action": "READ_ONLY_VERIFIED_UNCHANGED; NO REPLACEMENT"
+  },
+  "nonclaims": [
+    "No cause attribution",
+    "No100RX/100TX PASS",
+    "No completed browser journey",
+    "No safety, latency or continuous-availability claim",
+    "Host vcan transport is not target SocketCAN proof",
+    "C6/controller/heartbeat/safestop not executed"
+  ]
+}
