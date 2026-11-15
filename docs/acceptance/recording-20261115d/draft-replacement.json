@@ -1,0 +1,53 @@
+{
+  "schema": "canopy-private-draft-asset-replacement/1",
+  "status": "PASS",
+  "recording_evidence_tip": "57b9683787e00f029d3eb559371112ee09a0e73a",
+  "repository_private": true,
+  "release_id": 446240848,
+  "draft": true,
+  "published_at": null,
+  "asset": {
+    "id": 752550119,
+    "name": "demo-video.mp4",
+    "size": 12006708,
+    "digest": "sha256:c9e877cb1d28a640c0e5f44543eb86662049571b8cf70236b4da382c18588d9d",
+    "browser_download_url": "https://github.com/Mizzen-Studios/canopy-qnx/releases/download/untagged-03a5768dbc711445963d/demo-video.mp4"
+  },
+  "duration_seconds": 161,
+  "width": 1920,
+  "height": 1080,
+  "audio_streams": 0,
+  "download_roundtrip_sha256": "c9e877cb1d28a640c0e5f44543eb86662049571b8cf70236b4da382c18588d9d",
+  "previous_asset": {
+    "id": 751796962,
+    "sha256": "157646486273441d837ab250b52e9fcc33d1f901ae06cab79d09c5f2dccbf06f",
+    "bytes": 1937431,
+    "preserved_external_backup": true
+  },
+  "parent_review": {
+    "stills_inspected": [
+      "uname",
+      "slm-ready",
+      "restart-verified",
+      "host-byte-check",
+      "browser3",
+      "browser15",
+      "browser25",
+      "browser35",
+      "browser45",
+      "browser55"
+    ],
+    "continuous_source_interval_seconds": [
+      8.4,
+      169.4
+    ],
+    "internal_joins": 0,
+    "initial_omission_label": "Time skipped: 8.4s",
+    "native_rx": 100,
+    "native_tx": 100,
+    "host_viewer_label": true
+  },
+  "product_code_changed": false,
+  "c6_touched": false,
+  "new_native_run_by_parent": false
+}
