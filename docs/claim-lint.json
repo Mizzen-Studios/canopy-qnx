@@ -13,7 +13,7 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "cf1c00be7b8295b098d78557fb170db0771f601786e856cb06b1ba09dbc5fa22",
+      "sha256": "a541de5a0a7261eb21293c2ca2147c72d02b7c1cb6bd7609c116e3f4b18cfa92",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -60,7 +60,7 @@
   "local_links": [
     {
       "source": "README.md",
-      "target": "docs/acceptance/admission-20261112/receipt.json",
+      "target": "web/incident-pack/index.html",
       "exists": true
     },
     {
@@ -76,6 +76,11 @@
     {
       "source": "README.md",
       "target": "docs/proof-capture/SCRIPT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/admission-20261112/receipt.json",
       "exists": true
     },
     {

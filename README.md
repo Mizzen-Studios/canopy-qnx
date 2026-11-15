@@ -1,6 +1,6 @@
 # CANopy — reusable QNX incident recorder and workbench
 
-**Nov12 admission BLOCKED:** requested SDK768MiB was not admitted under unchanged1GiB host cap: full-RAM reserve plus measured overhead left52.71MiB, below64MiB safety reserve; later shutdown sample projected1363.03MiB before reserve (cache included, not an irreducible minimum). No build queued or new native run. [Measured receipt](docs/acceptance/admission-20261112/receipt.json). SSH UNVERIFIED; lease free, no guest. No cap raise/swap/media; stop pending review.
+**Start here: [native-first incident desk](web/incident-pack/index.html)** — inspect the recorded 8 November QNX capture at its original bindings; the desk is host-side, not a live connection or a current-tip native rerun.
 
 
 **What:** bounded QNX incident recorder plus a local evidence desk.
@@ -12,7 +12,11 @@
 **Barrier:** STOP/REAP SDK guest → sole capped HOST QEMU; split-host only, no concurrent guests.
 **Exact prerequisites:** [build guide](docs/native-recorder.md); no SDK/image shipped or new licence/login.
 **Inspect:** [local desk](web/incident-pack/index.html) opens original Nov8 capture, not a new native rerun.
-**Freeze:** private £0, C6 STOPPED; [dry script](docs/proof-capture/SCRIPT.md) only, recorded:false.
+**Scope:** recorded evidence; no safety or timing claim. [Dry script](docs/proof-capture/SCRIPT.md) only, recorded:false. C6 stays stopped.
+
+## History — November 12 admission gate
+
+**Nov12 admission BLOCKED:** requested SDK768MiB was not admitted under unchanged1GiB host cap: full-RAM reserve plus measured overhead left52.71MiB, below64MiB safety reserve; later shutdown sample projected1363.03MiB before reserve (cache included, not an irreducible minimum). No build queued or new native run. [Measured receipt](docs/acceptance/admission-20261112/receipt.json). SSH UNVERIFIED; lease free, no guest. No cap raise/swap/media; stop pending review.
 
 ## Nov10 features wave — native gate BLOCKED
 
