@@ -7,6 +7,7 @@ Open [the incident desk](../web/incident-pack/index.html) directly from a local 
 
 ## Run locally
 
+    mkdir -p .openclaw
     node tools/incident_pack/fixture.js > .openclaw/host-pack.json
     node tools/incident_pack/cli.js validate .openclaw/host-pack.json
     node tools/incident_pack/cli.js query .openclaw/host-pack.json recovery
@@ -53,7 +54,7 @@ The importer itself provides no SDK/QEMU operation. Native collection is a separ
 
 ## Design and verification scope
 
-Incident desk: paper #f2f6fa, ink #17324c, blue #1c537d, line #b5c6d6, warning #764100, white #fff. Local Trebuchet/Arial; two-column opening then import → question → cited observation. Rejected generic repeated-card dashboard/monospace telemetry wall: first-minute task is a decision, not monitoring. Single-column mobile, explicit labels, focus outlines, 48px controls, live validation feedback; no fonts/network/motion. Automated DOM checks are not human usability or accessibility certification.
+Incident desk: paper #f2f6fa, ink #17324c, blue #1c537d, line #b5c6d6, warning #764100, white #fff. Local Trebuchet/Arial; compact opening then question → cited observation → secondary import/provenance tools. Rejected generic repeated-card dashboard/monospace telemetry wall: first-minute task is a decision, not monitoring. Single-column mobile, explicit labels, focus outlines, 48px controls, live validation feedback; no fonts/network/motion. Automated DOM checks are not human usability or accessibility certification.
 
 ## v1 compatibility break
 

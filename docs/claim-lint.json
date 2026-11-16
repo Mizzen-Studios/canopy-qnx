@@ -13,7 +13,7 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "e7503b1a89a1e3428db23f5ccfaeac940902cf643382f6baad70ae05b36c9c72",
+      "sha256": "bd8b3048a24fcefd92ad9dcf54b984c5d1b21e67f272f1a5d7894863461e5d5e",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -38,12 +38,12 @@
     },
     {
       "path": "docs/incident-pack.md",
-      "sha256": "31e79f7ec60e9e81ce5b054bfbe16e4b9e94d55dd9bb929b8d5f8565696168e4",
+      "sha256": "25d32554830e69b75f7cd7006043fa906b23e287063f1ffd0fc76cb30b7415d4",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "web/incident-pack/index.html",
-      "sha256": "477a05e7e26194d4d46af95e230294b5743a3156de2f60e9661adcf32a9bdb97",
+      "sha256": "610269a026957bf8903d62ca48a3f39b649a81f121c0202e0b80a4c60e28cf59",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {

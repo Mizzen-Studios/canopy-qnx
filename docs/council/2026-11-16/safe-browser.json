@@ -1,0 +1,178 @@
+{
+  "environment": "HOST_BROWSER_ONLY",
+  "capture": "none",
+  "receipts": [
+    {
+      "width": 1280,
+      "height": 900,
+      "status": "PASS",
+      "positions": [
+        {
+          "q": "killed",
+          "top": 387.328125,
+          "bottom": 519.265625
+        },
+        {
+          "q": "recovery",
+          "top": 387.328125,
+          "bottom": 519.265625
+        },
+        {
+          "q": "survivors",
+          "top": 387.328125,
+          "bottom": 519.265625
+        },
+        {
+          "q": "isolation",
+          "top": 387.328125,
+          "bottom": 576.296875
+        }
+      ],
+      "checks": [
+        "keyboard sample and native query activation",
+        "four recorded queries: complete answer within900px",
+        "raw artifact keyboard expansion",
+        "export reimport",
+        "four host queries",
+        "evidence expansion",
+        "export download",
+        "reset",
+        "BYO file import",
+        "corrupt UNKNOWN",
+        "no overflow",
+        "reload opens explicitly recorded native example",
+        "no JS errors",
+        "no external requests"
+      ]
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "status": "PASS",
+      "positions": [
+        {
+          "q": "killed",
+          "top": 387.328125,
+          "bottom": 519.265625
+        },
+        {
+          "q": "recovery",
+          "top": 387.328125,
+          "bottom": 547.78125
+        },
+        {
+          "q": "survivors",
+          "top": 387.328125,
+          "bottom": 547.78125
+        },
+        {
+          "q": "isolation",
+          "top": 387.328125,
+          "bottom": 576.296875
+        }
+      ],
+      "checks": [
+        "keyboard sample and native query activation",
+        "four recorded queries: complete answer within900px",
+        "raw artifact keyboard expansion",
+        "export reimport",
+        "four host queries",
+        "evidence expansion",
+        "export download",
+        "reset",
+        "BYO file import",
+        "corrupt UNKNOWN",
+        "no overflow",
+        "reload opens explicitly recorded native example",
+        "no JS errors",
+        "no external requests"
+      ]
+    },
+    {
+      "width": 520,
+      "height": 900,
+      "status": "PASS",
+      "positions": [
+        {
+          "q": "killed",
+          "top": 433.5625,
+          "bottom": 576.75
+        },
+        {
+          "q": "recovery",
+          "top": 433.5625,
+          "bottom": 601.546875
+        },
+        {
+          "q": "survivors",
+          "top": 433.5625,
+          "bottom": 576.75
+        },
+        {
+          "q": "isolation",
+          "top": 433.5625,
+          "bottom": 651.140625
+        }
+      ],
+      "checks": [
+        "keyboard sample and native query activation",
+        "four recorded queries: complete answer within900px",
+        "raw artifact keyboard expansion",
+        "export reimport",
+        "four host queries",
+        "evidence expansion",
+        "export download",
+        "reset",
+        "BYO file import",
+        "corrupt UNKNOWN",
+        "no overflow",
+        "reload opens explicitly recorded native example",
+        "no JS errors",
+        "no external requests"
+      ]
+    },
+    {
+      "width": 360,
+      "height": 900,
+      "status": "PASS",
+      "positions": [
+        {
+          "q": "killed",
+          "top": 455.953125,
+          "bottom": 623.9375
+        },
+        {
+          "q": "recovery",
+          "top": 455.953125,
+          "bottom": 673.53125
+        },
+        {
+          "q": "survivors",
+          "top": 455.953125,
+          "bottom": 648.734375
+        },
+        {
+          "q": "isolation",
+          "top": 455.953125,
+          "bottom": 747.921875
+        }
+      ],
+      "checks": [
+        "keyboard sample and native query activation",
+        "four recorded queries: complete answer within900px",
+        "raw artifact keyboard expansion",
+        "export reimport",
+        "four host queries",
+        "evidence expansion",
+        "export download",
+        "reset",
+        "BYO file import",
+        "corrupt UNKNOWN",
+        "no overflow",
+        "reload opens explicitly recorded native example",
+        "no JS errors",
+        "no external requests"
+      ]
+    }
+  ]
+}

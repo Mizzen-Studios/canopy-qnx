@@ -90,7 +90,7 @@ Host simulation, doctor/preflight and stopped C6 material below is historical su
 
 ### Host regression commands
 
-Python 3.10+, Git, and Node.js 18+ for JavaScript replay contract tests;
+Python 3.10+, Git, and Node.js 22+ for JavaScript replay contract tests;
 no pip/npm packages, SDK, root or network needed:
 
 ~~~sh

@@ -20,18 +20,27 @@ slm, slmctl, dev-can-linux, candump, cansend, and slm-can-fallback.xml, and emit
 CANOPY_SLM_IMAGE_READY after startup. These are prerequisites, not shipped SDK
 assets. Run:
 
+    mkdir -p "$CAN_OUT"
     bash tools/build_native_recorder.sh > "$CAN_OUT/build.log" 2>&1
 
 Retain original sources and source revision/dirty-content digest, exact invocation,
 full build log and all source/ELF/buildfile/IFS/disk digests outside git. Do not
-reuse an old receipt for a new build. Stock SDK image construction may need the
-existing approved 1GiB swap; do not raise the caps or run SDK and target together.
+reuse an old receipt for a new build. Historical SDK construction notes mentioned
+an existing approved 1GiB swap; that is not authorization to enable swap now.
+The frozen 15 November recording used a 2GiB host cap and zero swap; it reused
+the bound guest image, not this newer build route. Do not change caps or run SDK
+and target together.
 
 ## Collect on your Linux QEMU host
 
 Requires existing can-utils, QEMU kvaser_pci and your preconfigured isolated vcan
 interface (host transport only). Use a single shared lease for SDK and target.
-Stop/reap the SDK VM first. Collector checks effective host CPU <=100%, memory
+Stop/reap the SDK VM first. The following is the older collector recipe, not a
+reproduction of the frozen 15 November recording. That recording observed
+CPU100%, nice15, host2GiB, swap0, guest512MiB/1vCPU and TCG256MiB under its
+separately bound capture wrapper; see its [result](acceptance/recording-20261115d/RESULT.md).
+No cap/controller changes or new native work are authorized here.
+The current collector source still checks effective host CPU <=100%, memory
 <=1GiB and nice>=15; target stays 1vCPU/512MiB. A user-scope example:
 
     systemd-run --user --scope -p CPUQuota=100% -p MemoryMax=1G nice -n 15 \
