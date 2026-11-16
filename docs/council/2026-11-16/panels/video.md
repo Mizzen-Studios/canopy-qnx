@@ -1,0 +1,82 @@
+# Video panel — independent review, 16 November 2026
+
+## Decision and access limits
+Recommend **EDU first for narrative strength, HostShare first for immediately intelligible utility, CANopy first for credibility repair**. These are editorial judgments, not official award scores. Official criteria, eligibility, categories, deadline, submission/video limits and Devpost descriptions remain **UNSCORED / UNVERIFIED**: official pages returned human-verification/403 in the supplied snapshot. Owner's categories and Tue 15 Dec 2026 19:00 UK deadline are planning inputs only. “Under three minutes” below is an editorial target, not a verified rule.
+
+Reviewed immutable manifest tips HS359501f, EDU76c513c, CAN1227c76. Other workers advanced checkout HEAD during review; pinned git show reads, original snapshot HTML and historical media are the authorities here. No other panels read. No repository edits, QEMU/SDK, media creation, posting, uploads or challenge bypass.
+
+### Public video access is BLOCKED, not a failed video verdict
+- HS https://www.youtube.com/watch?v=O0SA7W6gFyE
+- EDU https://www.youtube.com/watch?v=hI8-QtwMg8A
+- CAN https://www.youtube.com/watch?v=f0yBRgMJvfk
+- All three supplied raw HTML snapshots return HTTP200 but ytInitialPlayerResponse.playabilityStatus.status=LOGIN_REQUIRED, reason **“Sign in to confirm that you're not a bot”**; no videoDetails, captions or streamingData. Titles are blank (“ - YouTube”), descriptions generic. Fresh ordinary HTTPS requests independently reproduced this for all three; web_fetch extraction also failed. Browser automation is not exposed to this child. Stopped at challenge; no login workarounds, proxy, alternate player/downloader or security circumvention.
+- Therefore I did **not hear/watch the PUBLIC narrated versions**, verify their duration, delivery, mix, transcription, accessibility, visibility or frame identity. Local silent originals are NOT those narrated files. CAN's owner-supplied 2:42 publication is documented in docs/acceptance/recording-20261115d/PUBLICATION.md:3–5, not independently played here. Do not call local ffprobe results public-video verification.
+- Raw public page/player responses remain preserved without alteration in snapshot/{qnx-hostshare,qnx-edu-kit,canopy-qnx}-video.html, hashes in snapshot/manifest.json. Exact extracted raw player JSON and metadata findings are embedded in video.json below; source HTML remains the complete response authority.
+
+## Evidence-backed editorial scorecard (no invented official numeric criteria)
+
+### HostShare — utility strong; proof strong within scope; presentation dense; public narration unscored
+- At pinned README.md:9–19 and docs/acceptance/recording-20261115/RESULT.md:24–39: read-only mount, seven host/guest checksums, host-edit visibility, denied write, pending-read ESRCH and successful fresh remount. Not production, MSI-X or active-DMA crash-safety proof. Native runtime source71fa9a15 is distinct from docs tip359501f.
+- Independently ffprobed local .openclaw/tmp/hostshare-recording-20261115/final/demo-video.mp4:160s,1920×1080,H264,8fps,1280frames,no audio. Inspected still-077,102,149; both checksum columns are genuinely visible together, but most terminal glyphs and footer qualifications become small at normal embedded size. Persistent host column contains useful comparison but occupies half the proof area even after comparison is over. Yellow chapter captions legible; machine logs alone require expertise. This is later rendering of actual timed outputs with disclosed cuts/omissions, **not an original continuous desktop screencast** (RESULT.md:9–13; private frame-map.json).
+- Highest-upside substantive change: **one judge-sized developer workflow**—edit one recognisable host file, read its changed contents from mounted QNX without rebuild, then show process-failure/recovery in that same story. Existing result proves the pieces; future recording should make the user's avoided transfer/rebuild cycle the central benefit. New recording/native exercise **NEEDS OLLY APPROVAL**. No need to add write support or claim a production filesystem.
+- Safe after council: document a three-step public-video evidence map and source pin; add readable callouts/storyboard without changing machine outputs or historical pins. Actual new media/upload still separately authorized.
+
+### EDU — strongest narrative hook; learning impact remains unvalidated; pacing fix valuable; public narration unscored
+- Pinned docs/acceptance/recording-20261115b/retry-20261115c/RESULT.md:3–11 records source6822229b, wrong FAIL despite app0, one constant correction, corrected PASS, /dev/edu10→3628800, IRQack/private pulse/slog2,106-file verified export retaining failure. README.md:14–18,55 expressly distinguishes host checks and independent human learning. Do not substitute older Nov13 source769a4c9 for this recording's pin.
+- Local .openclaw/tmp/qnx-recording-20261115c/edu-live-demo-20261115-final.mp4 independently ffprobed165s,1080p,H264,30fps,4950frames,no audio. Actual capture was10fps, encoded30fps per pixel-frame-edit-map.json; 30fps output does not manufacture extra motion detail. Inspected wrong-oracle,one-constant-diff,finish-irq-slog. Main captions are readable and the FAIL/app0 contradiction is unusually good. Terminal lines wrap/crop at right; narrated explanation should prioritise the result, not read every line.
+- Existing timing: hook0–12; build12–30; boot/uname30–50; wrong50–63; correction/rebuild63–105; corrected105–118; finish118–131; export131–153; close153–165. **First actual oracle payoff arrives at50s**;42s correction/build and22s export eat attention. These facts come from private pixel-frame-edit-map.json, not assumptions about YouTube's edit.
+- Highest-upside substantive change: **one real first-time learner predict→wrong→diagnose→correct→explain session**, with recorded prediction and independent evaluation of their explanation, not another maintainer run. This strengthens actual tutorial impact, currently unverified; participant consent/privacy and authorized legal lab required. **NEEDS OLLY APPROVAL**, not a claim that two learners already passed.
+- Safe after council: reorder written/video storyboard around the oracle first; add a precise IRQ terminology note (attached IAT11 vs queried API10/config11); keep export a short credibility end-beat. Do not promise45-minute completion or full six-stage learner acceptance.
+
+### CANopy — visually clearest product surface; evidence honesty good; stale on-screen date hurts trust; public narration unscored
+- Pinned README.md:3–24, RESULT.md:9–13: fresh Nov15 QNX8, SLM PID368658→421906,100RX/100TX ordered byte-exact, fresh pack in HOST-SIDE VIEWER, corrupt→UNKNOWN. Frozen Nov8 binaries/image, not current guest_query runtime acceptance. C6 stopped; SSH/SocketCAN/safety/timing/continuous availability unproven.
+- Local .openclaw/tmp/can-recording-20261115d/demo-video.mp4 independently ffprobed161s,1080p,H264,5fps,805frames,no audio. editmap.json has one retained raw[8.4,169.4) interval at1x; no internal joins/freezes. Inspected restart-verified,browser3,browser25,browser55.5fps is adequate for slow console and static answers, but scroll/cursor sampling is inherently200ms and cannot evidence precise recovery timing. Do **not** interpolate to pretend a higher-rate capture. Strong plain-English lower caption and visible fresh run ID; answer body is small in an embed.
+- **Confirmed actual stale overlay:** still-browser3.png visibly says “This saved 8 November capture…” while the same screen imports fresh-qnx-capture.json and displays Nov15 run ID. At pinned1227c76 web/incident-pack/index.html:4 wording is already fixed to “Bundled example pack; import a fresh pack…”. git show1227c76 -- web/incident-pack/index.html confirms the exact replacement. A further source-text fix alone cannot repair embedded old pixels. Do not present the stale recording as current desk or invalidate the genuine fresh import because of stale static copy.
+- Highest-upside substantive change: **a case-led incident explanation with one clicked raw evidence link and one deliberately invalid pack**. Start with “Did the driver recover, and what cannot we conclude?”, show PID/restart+byte evidence, answer from this run, drill into one source record, corrupt→UNKNOWN. Existing product already supports the core story; a materially expanded native/control experiment or new recording **NEEDS OLLY APPROVAL**. No automotive safety/actuation pivot; no C6.
+- Safe after council: plain companion note explaining the embedded8Nov static helper copy vs actual imported Nov15 pack and current source fix; add exact source/video scope map. A visible non-destructive annotation/new edit needs separate media approval and must say it is an annotation, never silently repaint historical UI pixels.
+
+## Ranked backlog — upside / effort / risk / acceptance
+1. **All: obtain ordinary public playback and official rules access** — very high decision value / low active effort but access-dependent / low if no bypass. Acceptance: human/authorized ordinary session plays each URL with audio and readable captions, confirms duration/visibility; official rules fresh-read and source-cited; revise eligibility/category/video claims only then. BLOCKED here. Not an instruction to automate a challenge or contact anyone.
+2. **CAN: resolve filmed8Nov/new15Nov ambiguity in companion documentation** — high credibility upside /1–2h / low. Safe docs after council. Acceptance: link from video evidence page explains frozen binary date, fresh collection date, stale static text and already-fixed1227c76 UI; independent reader can identify which pack is being queried. Preserve recording/hash and old receipts. Any public page edit/posting outside repo separately authorized.
+3. **EDU: learner validation mini-study + shorter oracle-first story** — highest tutorial-impact upside /1–3days including participant/lab coordination / medium-high, consent and native access. **NEEDS OLLY APPROVAL.** Acceptance: genuine prior-unfamiliar learner prediction, source-bound own wrong/correct/finish run, retained failure, uncoached explanation assessed against a declared rubric; no extrapolation to all learners or all stages. Native run/new media separately gated.
+4. **HS: single concrete no-rebuild workflow and failure explanation** — high utility/low-level communication upside /0.5–2days if recorded / medium native/artifact access. **NEEDS OLLY APPROVAL for new recording**; storyboard/evidence map safe. Acceptance: cold viewer states what developer pain is removed, sees actual host change→guest contents, denied write, native ESRCH and new-server remount; no MSI-X/active-DMA claim; all evidence source-bound.
+5. **CAN: focused case walkthrough with source drilldown and fail-closed contrast** — high product comprehension upside /0.5–1day host-only edit, more if fresh native / medium stale-footage/confusion risk. **NEEDS OLLY APPROVAL for recording/media; new feature/control expansion also approval.** Acceptance: viewer distinguishes QNX capture from host viewer, names evidence record supporting answer, sees corrupt UNKNOWN with query disabled, hears explicit no-safety/no-continuity qualification. Avoid showing all four similar questions at the expense of one evidence drilldown.
+6. **All: embed-size legibility and accessibility pass** — medium-high /half day / low; safe docs/tests/storyboard after council, media changes gated. Acceptance: judge at720p can read key outcome without fullscreen; at most two short caption lines, sensible dwell; transcript/captions agree with narration and pinned claims; proof text not obscured; sampled frames plus complete audio listen of public version. Do not claim this test already passed.
+
+## Exact proposed under-three-minute narratives (future scripts, NOT executed)
+
+### HostShare —165s
+0–12: “Moving files into a QNX guest interrupts development. HostShare mounts a host folder read-only.” Show recognisable file/guest mount.
+12–30: “A QNX8 resource manager, virtio9p transport, default IRQ11. This is a prototype, not a production filesystem.” One architecture diagram, clearly explanatory not measured output.
+30–65: Actual mount/list/read; highlight one matching host/guest checksum, then briefly show all seven corpus results.
+65–95: Actual host edit→changed guest contents without rebuild; denied guest write. “Read-only is deliberate.” Any displayed timing scoped to this observation, not benchmark.
+95–130: Actual paused pending-read/SIGKILL/ESRCH. “The QNX client gets server-death ESRCH; we do not rewrite it as EIO.” Disclose paused before RPC/DMA.
+130–150: Fresh server remount/read1MiB checksum. “Recovery here means a fresh mount, not uninterrupted service.”
+150–165: Repo/current contract, source pin and build prerequisites. “MSI-X and active-DMA crash safety are not proven.”
+
+### EDU —170s
+0–12: Show actual FAIL next to application exit0. “Would you trust a driver because it exits zero?”
+12–30: “Predict first: what should this device return?” Show one chosen constant and expected relationship; real learner prediction if approved, otherwise explicitly maintainer demonstration.
+30–58: Actual wrong write/read and independent device_readback failure. Explain why local complement consistency is insufficient.
+58–82: One-constant diff, actual rebuild (time cuts explicitly labelled), corrected independent PASS.
+82–115: Actual learner-owned /dev/edu write10/read3628800. “Now shell I/O reaches your driver.”
+115–140: IRQ ack→private pulse→slog2 evidence; attached IRQ11 vs PCI query metadata stated precisely.
+140–155: Failed attempt retained in verified own export; ask learner to explain why exit0 misled them. Never fabricate answer/learning success.
+155–170: Canonical codelab/legal SDP prerequisites and limitations. “Advanced lab; independent learning effectiveness remains unvalidated” unless future study supports narrower finding.
+
+### CANopy —165s
+0–12: “After a CAN driver crash, what actually recovered—and what is still unknown?” Show incident question and case ID.
+12–32: Actual QNX8/SLM setup; identify original PID and frozen-runtime pin.
+32–65: Actual kill and new PID. “SLM replaced this process in this bounded QEMU run. This is not a restart-latency benchmark.”
+65–85:100RX/100TX ordered byte match; no continuous availability inference.
+85–115: Import this exact fresh pack in HOST-SIDE VIEWER; answer recovery question, show same run ID and click one raw evidence record. Distinguish old bundled example from imported pack.
+115–140: Corrupt pack→UNKNOWN/query disabled. “The desk refuses conclusions when its evidence doesn't match.”
+140–155: One explicit scope sentence: no safety, timing, real-vehicle, SocketCAN or current guest_query proof.
+155–165: Repo, recorder guide, source/receipt link. “Reusable incident evidence, not a safety controller.”
+
+## Ambitious option versus recommendation
+**Ambitious, NEEDS OLLY APPROVAL:** commission three new evidence-led recordings after independent learner validation (EDU), single developer workflow (HS), and case/drilldown presentation (CAN). Fresh native runs require their own legal prerequisites, exclusive lease and owner permission; host-only original editing cannot create missing native evidence. Broader material feature pivots (HS writes/production FS; EDU turnkey environment promises; CAN safety/control/vehicle claims) are not recommended and require explicit scope approval.
+**Recommendation:** do not blindly replace narrated videos we cannot hear. First unblock ordinary playback/rules review; fix CAN's companion explanation immediately after council; give substantive validation budget to EDU's independent learner; approve new recordings only where that audit finds the existing narration cannot solve the issue. Higher frame rate alone is not worth another native run. Keep all historical source/media hashes intact.
+
+## Verification performed
+Read-only file/git inspection; raw YouTube player parsing and ordinary HTTPS access; ffprobe on all three local silent originals;10 representative supplied stills visually inspected; private EDU edit map/CAN edit map read. This is sampled image/pacing review, **not full temporal playback, audio audit or a new decode/provenance certification**. Prior full-decode claims are attributable to cited receipts, not newly rerun here. No public narrated artifact hash is known. Report/JSON are the only writes.
