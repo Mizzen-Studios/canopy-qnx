@@ -1,0 +1,3 @@
+Owner review draft only — not submitted or externally edited.
+
+CANopy’s offline incident desk supports immutable historical analysis: original recorded packs remain inspectable after expiry with HISTORICAL / NOT CURRENT, capture time, age and provenance labels. Strict validation still rejects expired input; historical mode exempts age only, never corrupt or mixed evidence. Recorded observations stay OBSERVED or UNKNOWN, not safety, latency, continuous availability or current-tip native acceptance. Demo in QEMU; not a safety or latency claim. Guest-query native runtime NOT_RUN; C6 FAIL/STOPPED; SSH and SocketCAN UNVERIFIED for current recorder packs. No new native run or private pack publication accompanies this host-side feature.

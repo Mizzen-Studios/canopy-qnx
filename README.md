@@ -21,7 +21,7 @@ Supported build topology remains licensed SDK guest → STOP/REAP → sole cappe
 
 ## Capture → import → query → inspect evidence
 
-Use the [native recorder](docs/native-recorder.md) for a bounded QNX SLM/libcan incident, then import that exact pack in the [local incident desk](web/incident-pack/index.html). Query interruption/recovery and inspect raw evidence. No server, upload or browser command execution. Missing/corrupt/mixed/stale/incompatible packs fail closed to UNKNOWN.
+Use the [native recorder](docs/native-recorder.md) for a bounded QNX SLM/libcan incident, then import that exact pack in the [local incident desk](web/incident-pack/index.html). Query interruption/recovery and inspect raw evidence. No server, upload or browser command execution. Default strict validation rejects stale packs. Explicit historical analysis keeps expired, otherwise valid saved observations inspectable as HISTORICAL / NOT CURRENT; missing/corrupt/mixed/incompatible packs remain UNKNOWN in every mode. Original pack bytes, dates and seals are never refreshed. [Historical-analysis acceptance](docs/acceptance/historical-analysis-20261119/RESULT.md).
 
 The [8 November source-bound recorder capture](docs/acceptance/native-recorder-20261108/NOTES.md) retains its finite slog2 and co-located observer-control evidence. The [15 November live recording](docs/acceptance/recording-20261115d/RESULT.md) is the later restart/traffic/fresh-pack journey; neither receipt silently expands the other's scope. [Earlier dry script](docs/proof-capture/SCRIPT.md) is historical preparation, not the completed screencast.
 

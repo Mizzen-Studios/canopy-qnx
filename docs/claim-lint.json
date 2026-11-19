@@ -13,7 +13,7 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "bd8b3048a24fcefd92ad9dcf54b984c5d1b21e67f272f1a5d7894863461e5d5e",
+      "sha256": "1109d71061b97ed363062fe1d7b2d284ea2dd5c34e8bedd1227b2edad2cb857d",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -38,12 +38,12 @@
     },
     {
       "path": "docs/incident-pack.md",
-      "sha256": "25d32554830e69b75f7cd7006043fa906b23e287063f1ffd0fc76cb30b7415d4",
+      "sha256": "902bbf0c54b5c6e609a2623e392daafab832a1c58a75c8d2bf19cb8f93b64867",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "web/incident-pack/index.html",
-      "sha256": "610269a026957bf8903d62ca48a3f39b649a81f121c0202e0b80a4c60e28cf59",
+      "sha256": "0d651d8931d7f7218882f8cc0e9715634fa835f5b759189ec800a13ecde47482",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -111,6 +111,11 @@
     {
       "source": "README.md",
       "target": "web/incident-pack/index.html",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/acceptance/historical-analysis-20261119/RESULT.md",
       "exists": true
     },
     {
@@ -516,6 +521,11 @@
     {
       "source": "docs/incident-pack.md",
       "target": "../web/incident-pack/index.html",
+      "exists": true
+    },
+    {
+      "source": "docs/incident-pack.md",
+      "target": "acceptance/historical-analysis-20261119/RESULT.md",
       "exists": true
     },
     {
