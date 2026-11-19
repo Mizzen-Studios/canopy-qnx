@@ -1,0 +1,61 @@
+{
+  "kind": "canopy-items-1-2-recording-freeze-v1",
+  "source_commit": "e4d92fece0b7ec48ea4e01baaf9042d4bcee27d3",
+  "verified_utc": "2026-11-19T18:18:37.095899+00:00",
+  "scope": "historical analysis + comparative diagnostic v3; HOST reviewed, no new native result",
+  "product_files": {
+    "native/guest_query.c": "32fd31013c122caebb99ea2aa09d818a626898927cc13ade7b22ed5cde49ac42",
+    "native/incident_recorder.c": "e02a767b082d75501480591e50e89aa78ae64d0e2c81719aec16b4b9b4d4be71",
+    "native/prereq_containment.c": "074b043ba12e6e1125dd33491725019317eb886ada072020e8869f5695b1d6e4",
+    "native/prereq_slog.c": "8f685d7838bc5ede8b97d0ddda93c8e242a40ee0417b7c6319ee7cbd89b6c1d5",
+    "native/safestop_qnx.c": "ae205362614fb98af2e62e2f6fc09ca927946102a87f977373d3e7974af29708",
+    "native/socketcan_demo.c": "e187b5aa26c3980cf33893a3761034ac83ce30d189b77dd150d039ca4810cbcb",
+    "scripts/check-no-sdk.sh": "c304616dfe678872ead6a7603d0ab57c3d3541040b05706deeabe37e1454208f",
+    "scripts/check_no_sdk.py": "f092144ab17b81187175cf0b01fbef397f13ff43c2ada64c4e6f9c2af18621c4",
+    "scripts/qemu-capped.sh": "f2bb1555641d62a6ea074001fa378269b83a1b792c19e6a414e88992c5c243d2",
+    "scripts/qemu-native-capped.sh": "34690f2ca88821a8fa5e1b3b816f697687caf8471bbebef303e8a34068360f5d",
+    "scripts/qsc-auth.sh": "035d93bde59cd716613d029cb65323b4a40b83190169ac2b703eb6827baeaf54",
+    "scripts/setup-vcan.sh": "daed0ed019adda9dbccf1bd938b75e098493cdcc369cd9a712d8fd454881eaf9",
+    "scripts/slm-target-smoke.sh": "e010a150f70e0f9bedc1699c266972abfe715be9b172b251a8c37897c00326a6",
+    "tools/incident_pack/cli.js": "c9b357f685bf0791c4dd83c872c3d0badda52a2f799af102aff02939bf5a84f4",
+    "tools/incident_pack/compare.js": "1d74c8375e92783816d1ebe6139ab4c61c79d6e09d08e44ff428feddfdb0d7b1",
+    "tools/incident_pack/core.js": "38c686051d01b2d5e887fa29e6fa1da6cdbbb378bc2b224001e273a6069a22f7",
+    "tools/incident_pack/fixture.js": "a9542b174324fbcb582fa6b8da6045bd19c17832eeba71c566bf37967c60ca5d",
+    "tools/incident_pack/native.js": "2b1d8234bc9f1b866e181fa6637f2ecfffbd5cba57dd63212aff6be3b7e9131e",
+    "tools/incident_pack/recorded_example.js": "116676c0b653a2e2a4fd0c935b9b679b15d098e411c2bced0be84aa107a067c6",
+    "web/incident-pack/app.js": "923f69be7ca60def18564e036037e344ee0e08c52765b5b8ed636aed959dc1d2",
+    "web/incident-pack/comparison.js": "fab901a9d764b5487431e506ffed9da5b29c24ffb6fac39db7e8e177e2248942",
+    "web/incident-pack/index.html": "80402769f8704505cce04a63e754c57cccceb62b02f6ebda3df2f50b172ca7f8",
+    "web/incident-pack/recorded-example.js": "ce0e27a36a1b42d54672556133a242384ec87ed3cbde2ac3bba8c7164fa71b8e",
+    "web/incident-pack/style.css": "60a68638127f2fcde28d4756260fb0d9d3500acc8ad546d93b0793818bd434a7"
+  },
+  "original_public_packs": {
+    "docs/acceptance/control-fix-20261108/incident.json": "ced63c778d105bfa7a4a736e5d195fd6dcb65740201a7599d95edb8e9a47da93",
+    "docs/acceptance/recording-20261115/incident.json": "7ee353f74ee98314ccc65d5e3795e2268ba777500dc505ce573c7cb5d83b6959"
+  },
+  "independent_parent_checks": {
+    "node_pass": 178,
+    "diagnostic_browser_widths": [
+      360,
+      520,
+      768,
+      1280
+    ],
+    "historical_browser_widths": [
+      360,
+      520,
+      768,
+      1280
+    ],
+    "docs_and_dry_pack": "PASS",
+    "exact_source_ci": 44585486853
+  },
+  "limits": [
+    "No actual loss-positive QNX capture",
+    "Both actual originals100RX/100TX match; outside capture UNKNOWN",
+    "Diagnostic v3 native emission NOT native-verified",
+    "guest_query native NOT_RUN; C6 FAIL/STOPPED; SSH/SocketCAN UNVERIFIED",
+    "Demo in QEMU; not a safety or latency claim"
+  ],
+  "publication": "Nov15d private pack publication NOT approved; no upload authorized"
+}
