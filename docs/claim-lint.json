@@ -38,12 +38,12 @@
     },
     {
       "path": "docs/incident-pack.md",
-      "sha256": "e7e9a77e0c8dd84343ca700f9d47da7d987489c5d895a8ee7c9d973d58542acf",
+      "sha256": "7445adebd13aa0c42f1bb797ee979b5a818e7549c2d00043ece1a7af0cb55045",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "web/incident-pack/index.html",
-      "sha256": "1006a74da74d8f45a004df6dd682bb8d065b3025b4a187a0bd158e006f429f8f",
+      "sha256": "80402769f8704505cce04a63e754c57cccceb62b02f6ebda3df2f50b172ca7f8",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -556,6 +556,11 @@
     {
       "source": "docs/incident-pack.md",
       "target": "acceptance/comparative-analysis-20261119/RESULT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/incident-pack.md",
+      "target": "acceptance/diagnostic-v3-20261119/RESULT.md",
       "exists": true
     },
     {

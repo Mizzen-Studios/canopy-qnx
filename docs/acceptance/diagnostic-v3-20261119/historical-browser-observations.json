@@ -1,0 +1,85 @@
+{
+  "scope": "HOST Chromium only; native_rerun:false",
+  "rows": [
+    {
+      "width": 360,
+      "height": 900,
+      "packs": [
+        "docs/acceptance/control-fix-20261108/incident.json",
+        "docs/acceptance/recording-20261115/incident.json"
+      ],
+      "result": "PASS",
+      "journeys": [
+        "Nov16 / expiry±1ms / deadline / January",
+        "exact original byte export",
+        "strict-historical roundtrip",
+        "strict expiry while open",
+        "corrupt/mixed/order/window/control/origin/duplicate/future UNKNOWN, no evidence or export leak",
+        "keyboard/reset/reload",
+        "no overflow/outbound"
+      ],
+      "errors": [],
+      "outbound": []
+    },
+    {
+      "width": 520,
+      "height": 900,
+      "packs": [
+        "docs/acceptance/control-fix-20261108/incident.json",
+        "docs/acceptance/recording-20261115/incident.json"
+      ],
+      "result": "PASS",
+      "journeys": [
+        "Nov16 / expiry±1ms / deadline / January",
+        "exact original byte export",
+        "strict-historical roundtrip",
+        "strict expiry while open",
+        "corrupt/mixed/order/window/control/origin/duplicate/future UNKNOWN, no evidence or export leak",
+        "keyboard/reset/reload",
+        "no overflow/outbound"
+      ],
+      "errors": [],
+      "outbound": []
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "packs": [
+        "docs/acceptance/control-fix-20261108/incident.json",
+        "docs/acceptance/recording-20261115/incident.json"
+      ],
+      "result": "PASS",
+      "journeys": [
+        "Nov16 / expiry±1ms / deadline / January",
+        "exact original byte export",
+        "strict-historical roundtrip",
+        "strict expiry while open",
+        "corrupt/mixed/order/window/control/origin/duplicate/future UNKNOWN, no evidence or export leak",
+        "keyboard/reset/reload",
+        "no overflow/outbound"
+      ],
+      "errors": [],
+      "outbound": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "packs": [
+        "docs/acceptance/control-fix-20261108/incident.json",
+        "docs/acceptance/recording-20261115/incident.json"
+      ],
+      "result": "PASS",
+      "journeys": [
+        "Nov16 / expiry±1ms / deadline / January",
+        "exact original byte export",
+        "strict-historical roundtrip",
+        "strict expiry while open",
+        "corrupt/mixed/order/window/control/origin/duplicate/future UNKNOWN, no evidence or export leak",
+        "keyboard/reset/reload",
+        "no overflow/outbound"
+      ],
+      "errors": [],
+      "outbound": []
+    }
+  ]
+}

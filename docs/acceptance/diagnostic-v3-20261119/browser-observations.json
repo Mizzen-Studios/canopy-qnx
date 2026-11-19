@@ -1,0 +1,60 @@
+{
+  "rows": [
+    {
+      "width": 360,
+      "height": 900,
+      "result": "PASS",
+      "scope": "HOST/SYNTHETIC NOT QNX; native_rerun:false",
+      "checks": [
+        "v3 100expected/99observed missing1",
+        "v3 100expected/0observed missing100 with completion",
+        "exact original export",
+        "missing completion UNKNOWN",
+        "four query semantics; no false100 recovery",
+        "no overflow; reset; no requests/errors"
+      ]
+    },
+    {
+      "width": 520,
+      "height": 900,
+      "result": "PASS",
+      "scope": "HOST/SYNTHETIC NOT QNX; native_rerun:false",
+      "checks": [
+        "v3 100expected/99observed missing1",
+        "v3 100expected/0observed missing100 with completion",
+        "exact original export",
+        "missing completion UNKNOWN",
+        "four query semantics; no false100 recovery",
+        "no overflow; reset; no requests/errors"
+      ]
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "result": "PASS",
+      "scope": "HOST/SYNTHETIC NOT QNX; native_rerun:false",
+      "checks": [
+        "v3 100expected/99observed missing1",
+        "v3 100expected/0observed missing100 with completion",
+        "exact original export",
+        "missing completion UNKNOWN",
+        "four query semantics; no false100 recovery",
+        "no overflow; reset; no requests/errors"
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "result": "PASS",
+      "scope": "HOST/SYNTHETIC NOT QNX; native_rerun:false",
+      "checks": [
+        "v3 100expected/99observed missing1",
+        "v3 100expected/0observed missing100 with completion",
+        "exact original export",
+        "missing completion UNKNOWN",
+        "four query semantics; no false100 recovery",
+        "no overflow; reset; no requests/errors"
+      ]
+    }
+  ]
+}

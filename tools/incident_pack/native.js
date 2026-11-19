@@ -1,7 +1,9 @@
 /* Native capture ingestion; never runs commands or manufactures absent evidence. */
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),c=require('./core');
-async function adapt(dir,receiptFile){
+async function adapt(dir,receiptFile,options={}){
+ if(!options||typeof options!=='object'||Array.isArray(options)||Object.keys(options).some(k=>k!=='schema')||!['canopy.incident/2','canopy.incident/3'].includes(options.schema??'canopy.incident/2'))throw Error('invalid native serialization options');
+ const v3=options.schema==='canopy.incident/3';
  const read=n=>fs.readFileSync(path.join(dir,n),'utf8');
  const r=JSON.parse(read('receipt.json')), build=JSON.parse(fs.readFileSync(receiptFile,'utf8'));
  if(!r.guest_stopped_reaped)throw Error('unreaped capture');
@@ -43,13 +45,15 @@ async function adapt(dir,receiptFile){
     if(fs.existsSync(path.join(dir,'traffic1.json'))){
      const t=JSON.parse(read('traffic1.json'));
      for(const [direction,expected,actual] of [['RX',t.host_rx,t.qnx_rx],['TX',t.native_tx_expected,t.host_tx]]){
-      const valid=x=>Array.isArray(x)&&x.length===100&&x.every(f=>Array.isArray(f)&&f.length===2&&Number.isInteger(f[0])&&f[0]>=0&&f[0]<=2047&&/^[a-f0-9]{16}$/.test(f[1]));
-      if(!valid(expected)||!valid(actual))continue;
+      const valid=x=>Array.isArray(x)&&(v3?x.length<=512:x.length===100)&&x.every(f=>Array.isArray(f)&&f.length===2&&Number.isInteger(f[0])&&f[0]>=0&&f[0]<=2047&&/^[a-f0-9]{16}$/.test(f[1]));
+      if(!valid(expected)||!valid(actual)){if(v3)throw Error('malformed bounded recorded arrays');continue;}
       // Canonical encoding: decimal CAN-ID ':' lowercase 8-byte hex '\n', preserving order.
       const encode=x=>x.map(f=>f[0]+':'+f[1]+'\n').join('');
       const text=direction+' expected\n'+encode(expected)+direction+' actual\n'+encode(actual);
       const p=direction+'.txt';await artifact(p,'observation',text,await c.sha(text));
-      const e={id:'e'+events.length,seq:events.length,at:events.length,runId,kind:'traffic',process:replacement,observer:{name:'host-controller',generation:runId+'-host',independent:true},evidence:[{path:p,line:1}],data:{direction,count:100,bytes:800,expectedSha256:await c.sha(encode(expected)),observedSha256:await c.sha(encode(actual)),ordered:true}};events.push(e);
+      const e={id:'e'+events.length,seq:events.length,at:events.length,runId,kind:'traffic',process:replacement,observer:{name:'host-controller',generation:runId+'-host',independent:true},evidence:[{path:p,line:1}],data:{direction,count:actual.length,bytes:actual.length*8,expectedSha256:await c.sha(encode(expected)),observedSha256:await c.sha(encode(actual)),ordered:v3?c.canonical(expected)===c.canonical(actual):true}};
+      if(v3){const marker=['CANOPY_CAPTURE_COMPLETE',runId,direction,e.observer.generation,expected.length,actual.length,e.data.expectedSha256,e.data.observedSha256].join(' '),matches=lines.map((text,i)=>({text,i})).filter(x=>x.text===marker);if(matches.length!==1)throw Error('missing/ambiguous recorded finite capture completion');Object.assign(e.data,{expectedCount:expected.length,expectedBytes:expected.length*8,captureEnd:{path:'serial.txt',line:matches[0].i+1}});}
+      events.push(e);
      }
     }
    }
@@ -82,8 +86,8 @@ async function adapt(dir,receiptFile){
  }
  if(!events.length)throw Error('no actual incident events');
  const capturedAt=new Date(r.captured_at*1000).toISOString(),expiresAt=new Date(r.captured_at*1000+30*86400000).toISOString();
- const p=await c.seal({schema:'canopy.incident/2',collector:{id:guestQuery?'canopy-native-query':'canopy-native',version:'2',mechanism:guestQuery?'slog2-libcan-query':'slog2-serial-libcan'},run:{id:runId,environment:'FRESH_QNX',capturedAt,expiresAt},bindings,artifacts,events});
+ const p=await c.seal({schema:v3?'canopy.incident/3':'canopy.incident/2',collector:{id:guestQuery?'canopy-native-query':'canopy-native',version:v3?'3':'2',mechanism:guestQuery?'slog2-libcan-query':'slog2-serial-libcan'},run:{id:runId,environment:'FRESH_QNX',capturedAt,expiresAt},bindings,artifacts,events});
  const check=await c.validate(JSON.stringify(p));if(check.status!=='VALID')throw Error(check.issues.join(';'));return p;
 }
 module.exports=adapt;
-if(require.main===module)adapt(process.argv[2],process.argv[3]).then(p=>console.log(JSON.stringify(p,null,2))).catch(e=>{console.error('UNKNOWN: '+e.message);process.exitCode=2;});
+if(require.main===module)(async()=>{const args=process.argv.slice(2);if(args.length<2||args.length>3||args.length===3&&args[2]!=='--diagnostic-v3')throw Error('usage: native.js CAPTURE_DIR LINEAGE.json [--diagnostic-v3]');return adapt(args[0],args[1],args[2]?{schema:'canopy.incident/3'}:{});})().then(p=>console.log(JSON.stringify(p,null,2))).catch(e=>{console.error('UNKNOWN: '+e.message);process.exitCode=2;});

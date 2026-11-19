@@ -9,6 +9,10 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Host unit and artifact negative tests (no QNX)
         run: python3 -m unittest discover -s tests -v
+      - name: Shared Node schema, CLI and diagnostic regressions (HOST ONLY)
+        run: node --test tests/incident_pack/*.test.js
+      - name: Offline documentation links, claims and immutable dry-pack
+        run: python3 tools/claim_lint.py
       - name: Exclude SDK and binary artifacts
         run: sh scripts/check-no-sdk.sh
       - name: Host simulated fixtures only — CP101–104 (NOT QNX)

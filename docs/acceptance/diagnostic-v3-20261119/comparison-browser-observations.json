@@ -1,0 +1,66 @@
+{
+  "runtime": "v24.22.1",
+  "scope": "Actual HOST Chromium, native_rerun:false",
+  "rows": [
+    {
+      "width": 360,
+      "height": 900,
+      "result": "PASS",
+      "journeys": [
+        "two real originals; finite100RX100TX",
+        "both exact raw byte downloads",
+        "strict/current + open expiry + historical expired",
+        "missing/corrupt/raw-summary/ambiguous event/shared ID UNKNOWN",
+        "same-pack not independent; mixed HOST/native no shared native conclusion",
+        "four queries unaffected; keyboard Enter; reset; details; no overflow"
+      ],
+      "errors": [],
+      "outbound": []
+    },
+    {
+      "width": 520,
+      "height": 900,
+      "result": "PASS",
+      "journeys": [
+        "two real originals; finite100RX100TX",
+        "both exact raw byte downloads",
+        "strict/current + open expiry + historical expired",
+        "missing/corrupt/raw-summary/ambiguous event/shared ID UNKNOWN",
+        "same-pack not independent; mixed HOST/native no shared native conclusion",
+        "four queries unaffected; keyboard Enter; reset; details; no overflow"
+      ],
+      "errors": [],
+      "outbound": []
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "result": "PASS",
+      "journeys": [
+        "two real originals; finite100RX100TX",
+        "both exact raw byte downloads",
+        "strict/current + open expiry + historical expired",
+        "missing/corrupt/raw-summary/ambiguous event/shared ID UNKNOWN",
+        "same-pack not independent; mixed HOST/native no shared native conclusion",
+        "four queries unaffected; keyboard Enter; reset; details; no overflow"
+      ],
+      "errors": [],
+      "outbound": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "result": "PASS",
+      "journeys": [
+        "two real originals; finite100RX100TX",
+        "both exact raw byte downloads",
+        "strict/current + open expiry + historical expired",
+        "missing/corrupt/raw-summary/ambiguous event/shared ID UNKNOWN",
+        "same-pack not independent; mixed HOST/native no shared native conclusion",
+        "four queries unaffected; keyboard Enter; reset; details; no overflow"
+      ],
+      "errors": [],
+      "outbound": []
+    }
+  ]
+}
