@@ -10,5 +10,5 @@ class IncidentPackTests(unittest.TestCase):
         node = shutil.which("node")
         self.assertIsNotNone(node, "Node 22+ is required for the reusable incident-pack host core")
         root = pathlib.Path(__file__).resolve().parents[1]
-        result = subprocess.run([node, "--test", "tests/incident_pack/core.test.js", "tests/incident_pack/native.test.js", "tests/incident_pack/historical.test.js"], cwd=root, capture_output=True, text=True, timeout=30)
+        result = subprocess.run([node, "--test", "tests/incident_pack/core.test.js", "tests/incident_pack/native.test.js", "tests/incident_pack/historical.test.js", "tests/incident_pack/compare.test.js"], cwd=root, capture_output=True, text=True, timeout=30)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)

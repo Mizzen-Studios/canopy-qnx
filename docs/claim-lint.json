@@ -38,12 +38,12 @@
     },
     {
       "path": "docs/incident-pack.md",
-      "sha256": "902bbf0c54b5c6e609a2623e392daafab832a1c58a75c8d2bf19cb8f93b64867",
+      "sha256": "e7e9a77e0c8dd84343ca700f9d47da7d987489c5d895a8ee7c9d973d58542acf",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "web/incident-pack/index.html",
-      "sha256": "0d651d8931d7f7218882f8cc0e9715634fa835f5b759189ec800a13ecde47482",
+      "sha256": "1006a74da74d8f45a004df6dd682bb8d065b3025b4a187a0bd158e006f429f8f",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -554,6 +554,11 @@
       "exists": true
     },
     {
+      "source": "docs/incident-pack.md",
+      "target": "acceptance/comparative-analysis-20261119/RESULT.md",
+      "exists": true
+    },
+    {
       "source": "web/incident-pack/index.html",
       "target": "style.css",
       "exists": true
@@ -581,6 +586,16 @@
     {
       "source": "web/incident-pack/index.html",
       "target": "recorded-example.js",
+      "exists": true
+    },
+    {
+      "source": "web/incident-pack/index.html",
+      "target": "../../tools/incident_pack/compare.js",
+      "exists": true
+    },
+    {
+      "source": "web/incident-pack/index.html",
+      "target": "comparison.js",
       "exists": true
     },
     {

@@ -73,3 +73,21 @@ V2 rejects v1 as UNKNOWN (no silent upgrade or legacy acceptance). Historical pa
 ## Council browser boundary
 
 Council reported its browser connection attempt BLOCKED before any journey executed; that is not a product failure or a parent test result. New local host Chromium receipts are separately recorded, with desktop/narrow positive recorded-native and negative-pack journeys. native_rerun:false for this host-only change. No SSH continuity on the new recorder pack; historical SSH evidence is separate.
+
+
+## Comparative, loss-aware diagnosis (host software, 19 November)
+
+Open **Compare two captures**, choose both original JSON files and each expected origin, then Compare.
+
+CLI: `node tools/incident_pack/cli.js compare LEFT.json RIGHT.json [--historical]`.
+API: `require('./tools/incident_pack/compare').compare(leftRaw, rightRaw, {mode:'historical'})`; omitted mode is strict. API additionally accepts separate `left` / `right` validation options. No API takes prevalidated objects: each original is validated again independently.
+
+Each side retains its own run ID, capture/expiry/check time, mode, origin, seal, source/binary/image/disk bindings and process identities. No events or PIDs are pooled. The same pack is explicitly not independent incidents; a shared run ID with different seals is ambiguous UNKNOWN. Mixed HOST/native comparisons have no shared native conclusion. Historical exempts expiry only; strict expired input remains UNKNOWN.
+
+Diagnosis requires explicit RX/TX expected and actual arrays in embedded RX.txt/TX.txt, with canonical decimal SFF ID and eight lowercase-hex bytes per row. It verifies artifact/subject hashes, event digests, observed counts/bytes, exact-order summary, citation and recovery process. Recorded native input additionally requires the supported serial collector, recovery PID at its cited line, RX observed rows and TX expected command rows matching serial. Host-observed TX remains separately bound in TX.txt; serial commands do not establish TX reception. Missing, conflicting or ambiguous data is UNKNOWN, never a fabricated zero.
+
+Multiset differences respect expected multiplicity: excess known-frame occurrences are duplicates, unknown frames unexpected, deficits missing. Relative order compares shared occurrences; it does not assign causality or exact dropped transmission times. CAN IDs are not implicit sequence counters. Gaps in IDs, silence, snapshots and uncaptured intervals establish no loss. Resource bounds: two 2 MiB packs, at most512 frames per list and32 Ki characters per traffic artifact, linear-count analysis, existing event/artifact limits unchanged. Existing v2 event contract still requires100 observed frames; other counts remain UNKNOWN rather than weakening item1 or silently accepting a new schema.
+
+Both original public recorded incidents show100 expected/100 observed RX and TX, ordered exact: **no missing frames observed in these finite recorded lists; outside capture UNKNOWN**. No genuine loss-positive incident has been established in this scope. Positive algorithm tests are explicitly HOST/SYNTHETIC, NOT QNX; originals are never resealed. Future real differences are flagged only when the bound recorded evidence meets this contract. Export left/right returns each accepted original's exact UTF-8 bytes, not a regenerated/sealed JSON. Local only, no uploads.
+
+[Item2 acceptance and owner-review draft](acceptance/comparative-analysis-20261119/RESULT.md). Parent independent review required; recommend freezing1+2 for later separately authorized REAL recording. No native execution, private later pack publication, C6 or external edits.
