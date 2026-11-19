@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0 # Frozen dry-pack assets are verified at their original commits.
       - name: Host unit and artifact negative tests (no QNX)
         run: python3 -m unittest discover -s tests -v
       - name: Shared Node schema, CLI and diagnostic regressions (HOST ONLY)
