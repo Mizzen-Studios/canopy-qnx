@@ -8,7 +8,7 @@ No QNX hardware, SDK, guest image, QEMU, server or upload required. From this ch
 
 1. Open [the local incident desk](web/incident-pack/index.html).
 2. Import either public saved pack: [8 November](docs/acceptance/control-fix-20261108/incident.json) or [15 November](docs/acceptance/recording-20261115/incident.json).
-3. Select historical analysis and inspect recovery/raw evidence. These packs are expired: **HISTORICAL / NOT CURRENT**, never live health. Strict mode still rejects expired packs; corrupt, mixed or missing evidence remains UNKNOWN in either mode.
+3. Select historical analysis and inspect recovery/raw evidence. These saved observations are **HISTORICAL / NOT CURRENT**, never live health. Explicit historical mode also works after their capture windows expire (8 / 15 December 2026); strict mode rejects packs after expiresAt; corrupt, mixed or missing evidence remains UNKNOWN in either mode.
 4. Compare the two public captures from the repository root:
 
 ~~~sh

@@ -13,7 +13,7 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "76f73d28bdbb2ea810f5703ef5812d09c7fe29c37849aeb95aa824ae395d1295",
+      "sha256": "92756a4190c3dfcea7f2a4b3844f6cb47c2b2294033c3b7ec7b0f9a1ff25808d",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
