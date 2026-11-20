@@ -7,7 +7,7 @@ _module=importlib.util.module_from_spec(_spec);_spec.loader.exec_module(_module)
 class Transport(unittest.TestCase):
  def trial(self,payload,fault=None,delay=0):
   master,slave=pty.openpty();p=subprocess.Popen(['/bin/sh','-i'],stdin=slave,stdout=slave,stderr=slave,env={**os.environ,'PS1':'','PS2':''},start_new_session=True);os.close(slave)
-  dest='/tmp/rt-host-'+uuid.uuid4().hex;logs=[];count=0
+  dest='/tmp/rt-host-'+uuid.uuid4().hex[:16];logs=[];count=0
   def exchange(wire,marker,timeout):
    nonlocal count
    count+=1
