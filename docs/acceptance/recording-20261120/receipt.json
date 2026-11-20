@@ -1,0 +1,86 @@
+{
+  "kind": "canopy-recording-failure-sanitized-v1",
+  "frozen_source_commit": "4c9413e87095894c3a4567782ecf60c4afaf1794",
+  "freeze_manifest_sha256": "a42d163b8a8cbce5952a89a95fb8d8b3fb2b92e6bc14aea5cb306b513f06e0c1",
+  "original_elf_build_source_revision": "d913faffb3ebd83d11f65c44c50437154b3450ec",
+  "original_native_source_hashes": {
+    "native/incident_recorder.c": "e02a767b082d75501480591e50e89aa78ae64d0e2c81719aec16b4b9b4d4be71",
+    "native/prereq_containment.c": "074b043ba12e6e1125dd33491725019317eb886ada072020e8869f5695b1d6e4"
+  },
+  "original_build_log_sha256": "06953d387a386dce6786aa486903854f1a7383093b2f1532f5c3bf51507f69e7",
+  "existing_inputs": {
+    "binary": "725eb876fc700f72a62d8ba0344a7b30f3c0182d2036dfd361ed5e596918d513",
+    "image": "764e7e9f3ffcb74e851dce896a513c85abe16589d918937f3ba5157891882a22",
+    "disk": "59269af3ae940d2e520271e8b2e989cc8de5918c8e6cf283bc88cfd734c30951"
+  },
+  "rebuild": false,
+  "aggregate_caps": {
+    "memory_bytes": 2147483648,
+    "swap_bytes": 0,
+    "cpu_percent": 100,
+    "native_memory_bytes": 1073741824,
+    "guest_mib": 512,
+    "smp": 1,
+    "tcg_mib": 256,
+    "reserve_bytes": 67108864
+  },
+  "attempts": [
+    {
+      "run_id": "native-5ffc2b0e8d294c30a300175dcc3fd756",
+      "original_receipt_sha256": "2e65a959250e1b36064245a17c53b3baa2972e1329767b8c004f6de8b6f44490",
+      "serial_sha256": "5ca6b0668c8b2a61f5444ae1fb15664a7b76207b8c0f9a38e6f0f00c7f7250ab",
+      "collector_sha256": "7599d0440e46d0555d46af14cecebde4be5a0ce5b44f63ac892a5bb0fb85ddf3",
+      "original_status": {
+        "success": false,
+        "error": "guest died",
+        "guest_stopped_reaped": true
+      },
+      "caps": {
+        "cpu.max": "100000 100000",
+        "memory.max": "1073741824",
+        "nice": 15
+      },
+      "supervisor": {
+        "status": "COMPLETE",
+        "breach": null,
+        "returncode": 1,
+        "peak": 190509056,
+        "reserve": 67108864,
+        "retry": false,
+        "own_tree_reaped": true
+      }
+    },
+    {
+      "run_id": "native-6e183d5398ea4df8a85b258ce4426b2a",
+      "original_receipt_sha256": "0e0bfda2bd0619034dd408d1646f189cf10a5eb20676600e37341afe690d8652",
+      "serial_sha256": "563c061116d067c575f0175f67080281dc58c5f4fee269c8d15a2da25a49e2d7",
+      "collector_sha256": "5c230737de996272a262f1f1607fa7ad4f2e76fb86a3488b602787bcf1bc7753",
+      "original_status": {
+        "success": false,
+        "error": "TX_DONE",
+        "guest_stopped_reaped": true
+      },
+      "caps": {
+        "cpu.max": "100000 100000",
+        "memory.max": "1073741824",
+        "nice": 15
+      },
+      "supervisor": {
+        "status": "COMPLETE",
+        "breach": null,
+        "returncode": 1,
+        "peak": 518316032,
+        "reserve": 67108864,
+        "retry": false,
+        "own_tree_reaped": true
+      }
+    }
+  ],
+  "new_pack": "NOT_PRODUCED",
+  "finished_demo_video": "NOT_PRODUCED",
+  "publication": "NONE",
+  "native_query": "NOT_RUN",
+  "ssh_socketcan": "UNVERIFIED",
+  "c6": "STOPPED",
+  "next_native_authority": "NONE"
+}
