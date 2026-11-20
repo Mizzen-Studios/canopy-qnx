@@ -19,15 +19,14 @@ Both genuine originals record matching 100 RX / 100 TX. Loss-positive examples a
 
 The video's later Nov15d pack is **PRIVATE**, not bundled for this path; publication and access are NOT authorized. The two links above are the only public packs offered here. No private pack is needed for judging.
 
-## Status — 20 November 2026
+## Evidence at a glance
 
-| Area | Evidence-backed state |
+| Evidence route | State |
 |---|---|
-| Repository | PUBLIC; older private/visibility-pending wording is stale. No visibility change performed here. |
-| HOST regression | Python: 145 tests, 137 passed / 8 skipped; Node: 178 passed. Not native acceptance. |
-| Items 1+2 | Frozen at 4c9413e8; sole authorized exception: CLI usage text now lists compare. [Hash exception](docs/CLI-HELP-EXCEPTION.md). |
-| New recording | HOLD; latest attempts failed, no new success/video. Additive transfer helper at 9d3faf6 left unchanged. |
-| Native limits | C6 FAIL / STOPPED; guest_query native NOT_RUN; SSH / SocketCAN UNVERIFIED. |
+| Recorded journey | Bounded source-bound observations; not current live health. |
+| HOST checks | 145 Python tests (137 passed / 8 skipped), 178 Node passed; not native acceptance. |
+| Native / reproduction scope | [Complete current status and limits](STATUS.md); separate licensed setup required. |
+| Repository | PUBLIC; earlier private-state wording is stale. |
 
 **Demo in QEMU; not a safety or latency claim.** Saved source-bound observations are not current-tip native PASS, hardware validation, attestation or continuous availability.
 
@@ -43,3 +42,11 @@ sh scripts/check-no-sdk.sh
 ~~~
 
 Apache-2.0. No licensed SDK, image, secret or binary is distributed. Native reproduction needs an existing legal setup and separate authorization; this path starts no guest.
+
+## Why QNX
+
+QNX SLM supervises the CAN driver process; the recorded experiment binds its changed PID, libcan RX/TX bytes and finite slog2/control observations. The HOST desk makes those source-bound observations inspectable, not live monitoring.
+
+## How we used AI
+
+Developed with an AI coding agent under human direction: implementation, tests, documentation and evidence review were AI-assisted. HOST checks and recorded native receipts support only their stated scope; AI output is not independent human learner validation, attestation or QNX acceptance.

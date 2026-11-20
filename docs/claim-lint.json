@@ -13,12 +13,12 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "cc480a77de71a7475dea11a7ef2284ca2a70b6db6cbe66d74bd554af7dd56a1f",
+      "sha256": "76f73d28bdbb2ea810f5703ef5812d09c7fe29c37849aeb95aa824ae395d1295",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "STATUS.md",
-      "sha256": "650b141aa60a4dd51b769f5e24c33d56ce66a8fbb61984fb5a468b6fa1142a0d",
+      "sha256": "8c56bdeeba1b7a5ca7b99d0b494d0d0a8e93d72cb16f35ff77060e395c6e92cb",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "source": "README.md",
-      "target": "docs/CLI-HELP-EXCEPTION.md",
+      "target": "STATUS.md",
       "exists": true
     },
     {
@@ -96,6 +96,11 @@
     {
       "source": "README.md",
       "target": "docs/PATHS.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/CLI-HELP-EXCEPTION.md",
       "exists": true
     },
     {

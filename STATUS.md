@@ -1,3 +1,18 @@
+# Current evidence and limits — 20 November 2026
+
+## Status — 20 November 2026
+
+| Area | Evidence-backed state |
+|---|---|
+| Repository | PUBLIC; older private/visibility-pending wording is stale. No visibility change performed here. |
+| HOST regression | Python: 145 tests, 137 passed / 8 skipped; Node: 178 passed. Not native acceptance. |
+| Items 1+2 | Frozen at 4c9413e8; sole authorized exception: CLI usage text now lists compare. [Hash exception](docs/CLI-HELP-EXCEPTION.md). |
+| New recording | HOLD; latest attempts failed, no new success/video. Additive transfer helper at 9d3faf6 left unchanged. |
+| Native limits | C6 FAIL / STOPPED; guest_query native NOT_RUN; SSH / SocketCAN UNVERIFIED. |
+
+
+Earlier status narrative follows; dated receipts retain their original scope.
+
 # Current status — 15 November 2026
 
 **Live recording complete and accepted. [Narrated video public](https://youtu.be/f0yBRgMJvfk) (2:42).** [15 November evidence](docs/acceptance/recording-20261115d/RESULT.md): QNX uname, SLM start and driver restart368658→421906, independent ordered byte-exact100RX/100TX PASS, fresh-pack host Incident desk with four OBSERVED answers and corrupt-pack UNKNOWN. The silent 161-second source video was verified and replaced on the draft release; [unchanged replacement record](docs/acceptance/recording-20261115d/draft-replacement.json) and [publication note](docs/acceptance/recording-20261115d/PUBLICATION.md).
