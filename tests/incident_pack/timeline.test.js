@@ -1,0 +1,4 @@
+'use strict';const {test}=require('node:test'),a=require('node:assert/strict'),t=require('../../web/incident-pack/timeline');
+const event=(id,at)=>({id,at,kind:'process',process:{name:'<img src=x onerror=alert(1)>',pid:1},evidence:[{path:'<script>',line:2}]});
+test('accepted only, empty and rejection clear projection',()=>{for(const x of [null,{}, {status:'UNKNOWN'}, {status:'VALID',pack:{events:[]},scope:{}}])a.deepEqual(t.project(x),[]);});
+test('relative order, stable ties, IDs and malicious text preserved as data',()=>{const events=[event('z',9),event('b',2),event('a',2)];const x=t.project({status:'VALID',scope:{},pack:{events}});a.deepEqual(x.map(x=>x.id),['b','a','z']);a.equal(x[0].at,2);a.equal(x[0].process,'<img src=x onerror=alert(1)>');a.equal(x[0].refs[0].path,'<script>');a.deepEqual(events.map(x=>x.id),['z','b','a']);});
