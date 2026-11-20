@@ -1,7 +1,9 @@
 import unittest,os,pty,subprocess,select,time,uuid,sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tools'))
-from recording_transport import transfer
+import importlib.util
+_spec=importlib.util.spec_from_file_location('canopy_recording_transport',Path(__file__).resolve().parents[2]/'tools/recording_transport/__init__.py')
+_module=importlib.util.module_from_spec(_spec);_spec.loader.exec_module(_module);transfer=_module.transfer
 class Transport(unittest.TestCase):
  def trial(self,payload,fault=None,delay=0):
   master,slave=pty.openpty();p=subprocess.Popen(['/bin/sh','-i'],stdin=slave,stdout=slave,stderr=slave,env={**os.environ,'PS1':'','PS2':''},start_new_session=True);os.close(slave)
