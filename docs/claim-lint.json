@@ -13,7 +13,7 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "1109d71061b97ed363062fe1d7b2d284ea2dd5c34e8bedd1227b2edad2cb857d",
+      "sha256": "cc480a77de71a7475dea11a7ef2284ca2a70b6db6cbe66d74bd554af7dd56a1f",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -60,32 +60,22 @@
   "local_links": [
     {
       "source": "README.md",
-      "target": "docs/acceptance/recording-20261115d/RESULT.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/recording-20261115d/PUBLICATION.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
       "target": "web/incident-pack/index.html",
       "exists": true
     },
     {
       "source": "README.md",
-      "target": "docs/acceptance/recording-20261115d/RESULT.md",
+      "target": "docs/acceptance/control-fix-20261108/incident.json",
       "exists": true
     },
     {
       "source": "README.md",
-      "target": "docs/acceptance/recording-20261115d/draft-replacement.json",
+      "target": "docs/acceptance/recording-20261115/incident.json",
       "exists": true
     },
     {
       "source": "README.md",
-      "target": "docs/native-recorder.md",
+      "target": "docs/CLI-HELP-EXCEPTION.md",
       "exists": true
     },
     {
@@ -95,182 +85,17 @@
     },
     {
       "source": "README.md",
-      "target": "docs/acceptance/query-retry-20261110/NOTES.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/recording-20261115d/RESULT.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/native-recorder.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "web/incident-pack/index.html",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/historical-analysis-20261119/RESULT.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/native-recorder-20261108/NOTES.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/recording-20261115d/RESULT.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/proof-capture/SCRIPT.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/admission-20261112/receipt.json",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/query-retry-20261110/receipt.json",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/query-retry-20261110/NOTES.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/query-20261110/receipt.json",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "web/incident-pack/index.html",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/native-recorder-20261108/NOTES.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/native-first-20261108/receipt.json",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "REVIEW.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/browser-20261107/NOTES.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
       "target": "docs/capabilities.md",
       "exists": true
     },
     {
       "source": "README.md",
-      "target": "docs/acceptance/slm-continuity-20261107/receipt.json",
+      "target": "docs/HISTORY.md",
       "exists": true
     },
     {
       "source": "README.md",
-      "target": "docs/acceptance/safestop-focused-failure-20261107/README.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "web/incident-pack/index.html",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/incident-pack.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/acceptance/slm-continuity-20261107/receipt.json",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/workbench/index.html",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "tools/incident_workbench.py",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/incident-workbench.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/replay/index.html",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/socketcan-demo.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/replay/workflow.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/host-runtime.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/host-vcan-setup.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/host-runtime.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/vss-mapping.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/vss-qpp-integration.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/pilot.md",
-      "exists": true
-    },
-    {
-      "source": "README.md",
-      "target": "docs/capabilities.md",
+      "target": "docs/PATHS.md",
       "exists": true
     },
     {

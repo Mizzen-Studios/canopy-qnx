@@ -1,0 +1,266 @@
+{
+  "date": "2026-11-20",
+  "scope": "Tracked residual historical host/guest home prefixes; generated site projections excluded; values intentionally not repeated. No raw receipt or log bytes changed.",
+  "files": [
+    {
+      "path": "docs/PUBLISH_AUDIT.md",
+      "sha256": "737f3cdf783784cba057873fb9bcc5c8bbab631b57839550eb8343ed6564ef85",
+      "classification": "historical lab record or native implementation constraint; not HOST quickstart"
+    },
+    {
+      "path": "docs/acceptance/admission-20261112/NOTES.md",
+      "sha256": "c6d89448fb722bdf7f172f945d7121c30aa330b8d525da59ee2ed27e7463cc9b",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/admission-20261112/admission-monitor.py",
+      "sha256": "80de051ea95009a66a9990dfb8d50b033c5ee7520b02378ddabbf4938d049d2c",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/admission-20261112/controller.diff",
+      "sha256": "4962bd5d36c5911b725c2041f0a7e8c2ee17026dc51f3147438768444aab4134",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/admission-20261112/final-measurement.json",
+      "sha256": "3a46f9c20935cd051127d961e855d0c33e61b1c4c2b1c8fec4de1443cab94c2b",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/admission-20261112/receipt.json",
+      "sha256": "63c9abac90e88087bd2f9b75addb8aabd498cff516fc57e28a60fd8f206e0abd",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/browser-20261107/receipt.json",
+      "sha256": "8d6392815e0c3855d2efefd4a1cf0eda7f564a50d03bd254ca08e5489d6901c5",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/control-fix-20261108/first-tests.log",
+      "sha256": "65d64a5a45bf5fc53cda2d7de3ade650a2872ac893edbda1e5c6fa882baa8e37",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/control-fix-20261108/incident.json",
+      "sha256": "ced63c778d105bfa7a4a736e5d195fd6dcb65740201a7599d95edb8e9a47da93",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/control-fix-20261108/second-tests.log",
+      "sha256": "c75a98b231aa3ce9086b450d6ca952c5393c7928f05b41ae9df685a5a2a5af99",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/final-upgrade-20261108/initial-clean-failure.log",
+      "sha256": "742be75abfbbb5405e2340e1a60870d2e945af4344515057160b730fa44c2da0",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/final-upgrade-20261108/initial-parallel-failure.log",
+      "sha256": "edf85baacfeeed83b368627ba983a87ccb50dc021fc02ba8bd156835de1dbb58",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/native-can-three.md",
+      "sha256": "346890cf88bda1d01c8b22d3ad5b51d43f0b038d353d1673c97fd82bf4896136",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/native-first-20261108/browser-runner.sh",
+      "sha256": "8c6c1cb8f91051a50e6624b5d5e5bdc4d50a1f0909597b4270b658941776e1d8",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/native-first-20261108/independent-initial-runner.log",
+      "sha256": "c54fcb93465e68a4b96277c1134de36089cb688d5fb4a9f2a023d8d671c7e491",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/native-recorder-20261108/incident.json",
+      "sha256": "d70ff89cbf76d2330a2c97bf63a6043e4fd635f74dc8e6a4c7e55e1bd7e03788",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/native-recorder-20261108/receipt.json",
+      "sha256": "014961af46955d7ba0517d176f7532f7de019f9d21f01164d60aa01deb04305c",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/packaging-20261107/initial-host-failed.log",
+      "sha256": "4032abdef02c6f70dc6cd49c2e4184403c55e29bf6dc14d23776a572e68b2bd5",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/prereq-20261108/NOTES.md",
+      "sha256": "c9c5416dc5506cc8dd51a802986174dbc1992402e0f3e416dbdca41db46d3571",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/prereq-20261108/native.py",
+      "sha256": "5f7259d985a8a5146568451fe4ee33f31a75320c86df3b8b013f6c18ac00bf39",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/prereq-20261108/sdk-build-final.log",
+      "sha256": "cbd9cc1d3933fb1c7238f344f2e93834b8a747e25129bc0bae9d315a19d52b08",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/query-20261110/NOTES.md",
+      "sha256": "0d1e6d3677c2b4c2c8581876802b932a5f9fc30ec2582396ac4ba53267eb0955",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/query-20261110/build-artifact-hashes.txt",
+      "sha256": "44d4196ed9824d4e95fdec6a1a45f5f6a031a7e789caa1c3a575aec2085744ab",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/query-20261110/build.sh",
+      "sha256": "57763734d0ff3c5c60bdeb0cab3d654c56d20dd5093a393b2a03c5ceeb41dcc6",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/query-20261110/launch-build.sh",
+      "sha256": "874d6e0c4712da88ef016f1d571004263072dd925bb49fdf6049f525ee1a3271",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/query-retry-20261110/NOTES.md",
+      "sha256": "a0e973efdcc4fb0f0205c1a14bef321991138a2aeb1ac1d1c738114a67fdd773",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/query-retry-20261110/effective-caps.json",
+      "sha256": "49b1e8b68ccfa28bcb3c85f3da2c8d86ec9cbdc9adaebd37fdd1f3908470ad20",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/query-retry-20261110/launch.sh",
+      "sha256": "a38efa199811eb175d018d881a964eb516d0b360a87d96aee324ccb437f8f222",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/query-retry-20261110/memory-samples.log",
+      "sha256": "40814de6c7fb43f39b82cc2f5ca159b6615a1f5683e2ded6cae66f788f0c3bac",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/query-retry-20261110/receipt.json",
+      "sha256": "af6986cf176a2a88d93a4a9c5510814675751596035d7996f9abb7d81a7e2a33",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/recording-20261115/RESULT.md",
+      "sha256": "098b49baa00a9a4326a4eec098ba8f65762c209c9b1f726032d4fb15a2c291a0",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/recording-20261115/incident.json",
+      "sha256": "7ee353f74ee98314ccc65d5e3795e2268ba777500dc505ce573c7cb5d83b6959",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/recording-20261115/lineage.json",
+      "sha256": "23b089e236d1f6ce90636ff6928800d54a335b8edd78ceafae8bd8096c865cdf",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/recording-20261115/native-receipt.json",
+      "sha256": "58b118691bbb10893b9f78c891b4d0cd966f67748046e0dc05e2a063930e9fef",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/recording-20261115/recording.json",
+      "sha256": "b58bf653041a5bd32fd0800ab8723bede23f5d4e88cd2e89dc8e564f19b0ee36",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/recording-20261115b/DIAGNOSIS.md",
+      "sha256": "f2487a1f493e91fb78215012141c643ebccc79fa69598f684c0b76c8e09531d0",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/recording-20261115d/RESULT.md",
+      "sha256": "8513fc35f49e979f5ba7f06e92633ce1f9915309b2ca41a3185813f3919bafd9",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/recording-20261115d/ffprobe.json",
+      "sha256": "9daef2deccd77fbb8d3cdfa18291abad89c07c5ddc10d19303c9d2d42ae2cffc",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/recording-20261115d/helper-path-fix.diff",
+      "sha256": "ec006a567a018725e1586bc534bbbbaff5d898b1cfe9379a29559bbdd9c169cf",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/recording-20261115d/receipt.json",
+      "sha256": "f46ed4b664bcf39cb27a8f6c58ef4e81fe1029fcfaa4f398b79098bf5f444fbf",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/safestop-failure-20261107/controller.py",
+      "sha256": "eb392b8632c708048e87caf0831a6745127c070562b82b7929044e40e3973dbb",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/safestop-focused-failure-20261107/controller.py",
+      "sha256": "07f57bc708e9bce175235be42e82a67ab9c16dc0af30be2335c34ba35a4ce15a",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/slm-20261107/controller.py",
+      "sha256": "257995a424de0d9d18bb14957f9f7b522d4f5fd485ebce04dfca59a5e952f99b",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/slm-continuity-20261107/controller.py",
+      "sha256": "acc1a56d3b4f5d62fad8a4064985ae44940c5f1bdcb202a60bb53d6d34f5ef41",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/slm-continuity-20261107/ssh-debug.txt",
+      "sha256": "7d8f7672b526229cd0019b00518d2ee5a366115c89c7ff04d196ef37f39e0304",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/acceptance/slm-traffic-20261107/controller.py",
+      "sha256": "35edafe139f0ae1cb5334b81ac9c4e5dd675e613ca1786f36985e554c0681d76",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/restart.md",
+      "sha256": "64caa34ca96d23048f46453e8c120882ca7fbf72ae4aaa0fc2629e78ce0f61e7",
+      "classification": "historical lab record or native implementation constraint; not HOST quickstart"
+    },
+    {
+      "path": "docs/sdk-host-preparation.md",
+      "sha256": "1b4823e9d3c3c4e483c348d8143b37d43a386a4f78fe37a7411b9825d8a9797f",
+      "classification": "historical lab record or native implementation constraint; not HOST quickstart"
+    },
+    {
+      "path": "docs/sdk-install-result-20261104.md",
+      "sha256": "dcbe33048b717aaf6358e0fdb42ffed84a1773b1cc8d8f019f391286bdfd34bc",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "docs/socketcan-x86-gate-20261104.md",
+      "sha256": "5c67d7f8fb452088c55ee60e643497929dba65d31e829cb2730972d12b92357e",
+      "classification": "preserved historical evidence / pinned diagnostic"
+    },
+    {
+      "path": "sdk-host/Dockerfile",
+      "sha256": "51c24c2e34e7d91ed7a52a5e03a43ac147627ba53d982203584c489b70553ff0",
+      "classification": "historical lab record or native implementation constraint; not HOST quickstart"
+    },
+    {
+      "path": "web/incident-pack/recorded-example.js",
+      "sha256": "ce0e27a36a1b42d54672556133a242384ec87ed3cbde2ac3bba8c7164fa71b8e",
+      "classification": "historical lab record or native implementation constraint; not HOST quickstart"
+    }
+  ]
+}

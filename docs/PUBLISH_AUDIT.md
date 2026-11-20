@@ -1,6 +1,6 @@
 # Publication audit — 15 November 2026
 
-**HOLD for owner privacy review; no history rewrite performed. Repository remains PRIVATE.**
+**HOLD for owner privacy review; no history rewrite performed. Historical PRIVATE status — STALE: repository is now PUBLIC.**
 
 Audited content tip: cf1365034aedea9a81c5ddeea03944ae26812c4e. All local branch, fetched remote-branch and tag refs: 23; 139 reachable commits, 1272 objects, 627 blobs, 12687532 uncompressed blob bytes. Every reachable blob was inspected, not merely the checkout. This report commit is a reporting delta, not an assertion that its own hash was known in advance.
 
