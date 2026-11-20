@@ -43,7 +43,7 @@
     },
     {
       "path": "web/incident-pack/index.html",
-      "sha256": "80402769f8704505cce04a63e754c57cccceb62b02f6ebda3df2f50b172ca7f8",
+      "sha256": "f5bd8fd54166561e46cb2290bf0bbf87b4a9faf81e456ea11da63fa0be80866d",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -431,6 +431,11 @@
     {
       "source": "web/incident-pack/index.html",
       "target": "comparison.js",
+      "exists": true
+    },
+    {
+      "source": "web/incident-pack/index.html",
+      "target": "timeline.js",
       "exists": true
     },
     {
