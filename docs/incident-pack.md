@@ -17,10 +17,10 @@ API: `validate(raw, {mode:'historical'})`; omitted mode stays strict. CLI: appen
 
 ## Run locally
 
-    mkdir -p .openclaw
-    node tools/incident_pack/fixture.js > .openclaw/host-pack.json
-    node tools/incident_pack/cli.js validate .openclaw/host-pack.json
-    node tools/incident_pack/cli.js query .openclaw/host-pack.json recovery
+    CAN_SCRATCH=$(mktemp -d) # external OS scratch, not inside the checkout
+    node tools/incident_pack/fixture.js > "$CAN_SCRATCH/host-pack.json"
+    node tools/incident_pack/cli.js validate "$CAN_SCRATCH/host-pack.json" --historical
+    node tools/incident_pack/cli.js query "$CAN_SCRATCH/host-pack.json" recovery --historical
     node --test tests/incident_pack/core.test.js
 
 Node 22+, no npm dependencies. CLI exits 0 for VALID structure/bindings, 2 for UNKNOWN. Answers can remain UNKNOWN on a VALID pack. Optional browser checks with already available Playwright/Chromium: node tests/incident_pack/browser.cjs. No downloads, screenshots/audio/video, server or external requests.
@@ -79,7 +79,7 @@ Council reported its browser connection attempt BLOCKED before any journey execu
 
 Open **Compare two captures**, choose both original JSON files and each expected origin, then Compare.
 
-CLI: `node tools/incident_pack/cli.js compare LEFT.json RIGHT.json [--historical]`.
+CLI: `node tools/incident_pack/cli.js compare LEFT.json RIGHT.json --historical [--json]`.
 API: `require('./tools/incident_pack/compare').compare(leftRaw, rightRaw, {mode:'historical'})`; omitted mode is strict. API additionally accepts separate `left` / `right` validation options. No API takes prevalidated objects: each original is validated again independently.
 
 Each side retains its own run ID, capture/expiry/check time, mode, origin, seal, source/binary/image/disk bindings and process identities. No events or PIDs are pooled. The same pack is explicitly not independent incidents; a shared run ID with different seals is ambiguous UNKNOWN. Mixed HOST/native comparisons have no shared native conclusion. Historical exempts expiry only; strict expired input remains UNKNOWN.
@@ -107,3 +107,5 @@ The completion artifact itself must be an embedded observation with subjectSha25
 The shared validate API, CLI validate/query/compare and browser import/comparison all accept v3 through the same full validation. V3 is checked against raw lists and serial provenance **before** query answers are constructed; there is no raw-only or unknown-options bypass. Recovery/isolation100-frame wording still requires actual ordered100 expected and100 observed **in each direction**, plus the original interruption, replacement-generation, independent-observer and control requirements. A one-frame match,99/100 or0/100 cannot earn that verdict. Killed and survivor questions retain their original snapshot semantics.
 
 Default strict expiry and historical-only expiry exemption are unchanged. Future/corrupt/mixed-run/invalid options remain UNKNOWN. Existing2 MiB input, artifact/event limits,512 frames/list and32 Ki characters/traffic bounds stay in force. Full historical and comparative original-pack browser regressions accompany four-width v3 HOST/SYNTHETIC journeys. [Follow-up acceptance and owner draft](acceptance/diagnostic-v3-20261119/RESULT.md); the earlier comparative receipt remains historical and unchanged.
+
+Saved-pack CLI examples select --historical explicitly so they remain usable after expiry. Omit that flag for strict age enforcement; historical mode never repairs bad hashes, mixed origins or missing evidence. Compare prints a table by default; --json retains the machine-readable comparison API.

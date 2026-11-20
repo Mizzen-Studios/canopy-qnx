@@ -66,8 +66,8 @@ checks image/disk against capture and embeds these text receipts, not licensed f
 This is cooperative provenance, not attestation.
 
     node tools/incident_pack/native.js "$CAN_CAPTURE" "$CAN_LINEAGE" > "$CAN_PACK"
-    node tools/incident_pack/cli.js validate "$CAN_PACK"
-    node tools/incident_pack/cli.js query "$CAN_PACK" recovery
+    node tools/incident_pack/cli.js validate "$CAN_PACK" --historical
+    node tools/incident_pack/cli.js query "$CAN_PACK" recovery --historical
 
 Open web/incident-pack/index.html and choose that exact CAN_PACK. No separate UI
 schema. Review evidence links and export. Missing traffic/control/generations
@@ -80,3 +80,5 @@ preserving order; both complete streams are embedded and independently hashed.
 No SSH continuity is emitted. Before/after io-sock snapshots are not uninterrupted
 availability, adversarial isolation, platform health, security policy or safety.
 Historical receipts are unchanged. Repeated runs create new IDs and new packs.
+
+Saved-pack CLI examples select --historical explicitly so they remain usable after expiry. Omit that flag for strict age enforcement; historical mode never repairs bad hashes, mixed origins or missing evidence. Compare prints a table by default; --json retains the machine-readable comparison API.

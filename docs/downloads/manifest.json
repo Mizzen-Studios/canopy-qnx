@@ -1,0 +1,48 @@
+{
+  "kind": "canopy-offline-desk-v1",
+  "scope": "HOST offline viewer; no SDK, native execution, private pack, upload or live connection",
+  "bundle": "canopy-incident-desk.html",
+  "sha256": "c8b68963d1fb89f7795ca52000d3511e2b034d7b426f47537f12296caa611cde",
+  "pack_files": [
+    {
+      "name": "canopy-2026-11-08-original.json",
+      "source": "docs/acceptance/control-fix-20261108/incident.json",
+      "sha256": "ced63c778d105bfa7a4a736e5d195fd6dcb65740201a7599d95edb8e9a47da93"
+    },
+    {
+      "name": "canopy-2026-11-15-original.json",
+      "source": "docs/acceptance/recording-20261115/incident.json",
+      "sha256": "7ee353f74ee98314ccc65d5e3795e2268ba777500dc505ce573c7cb5d83b6959"
+    }
+  ],
+  "script_sources": [
+    {
+      "path": "tools/incident_pack/core.js",
+      "sha256": "38c686051d01b2d5e887fa29e6fa1da6cdbbb378bc2b224001e273a6069a22f7"
+    },
+    {
+      "path": "tools/incident_pack/fixture.js",
+      "sha256": "a9542b174324fbcb582fa6b8da6045bd19c17832eeba71c566bf37967c60ca5d"
+    },
+    {
+      "path": "web/incident-pack/recorded-example.js",
+      "sha256": "ce0e27a36a1b42d54672556133a242384ec87ed3cbde2ac3bba8c7164fa71b8e"
+    },
+    {
+      "path": "tools/incident_pack/compare.js",
+      "sha256": "1d74c8375e92783816d1ebe6139ab4c61c79d6e09d08e44ff428feddfdb0d7b1"
+    },
+    {
+      "path": "web/incident-pack/comparison.js",
+      "sha256": "fab901a9d764b5487431e506ffed9da5b29c24ffb6fac39db7e8e177e2248942"
+    },
+    {
+      "path": "web/incident-pack/timeline.js",
+      "sha256": "94e021ebfcc33f6cee4f446e8584d106f44d268e67a75b170c5904ca3e1720a6"
+    },
+    {
+      "path": "web/incident-pack/app.js",
+      "sha256": "5da3d4614ce5964571a6935c47a1f62b22fc23e280a160c4a7d5ccb11e7ccd90"
+    }
+  ]
+}

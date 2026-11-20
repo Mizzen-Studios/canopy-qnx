@@ -13,12 +13,12 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "92756a4190c3dfcea7f2a4b3844f6cb47c2b2294033c3b7ec7b0f9a1ff25808d",
+      "sha256": "29fd52d69517ece1a6a1f6b9f984c4fb716e324f2b2c700528e912be6809b94d",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "STATUS.md",
-      "sha256": "8c56bdeeba1b7a5ca7b99d0b494d0d0a8e93d72cb16f35ff77060e395c6e92cb",
+      "sha256": "48b623f07bebba47ce44784336331f483a3498065155e7734bf21d06809f7540",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -38,7 +38,7 @@
     },
     {
       "path": "docs/incident-pack.md",
-      "sha256": "7445adebd13aa0c42f1bb797ee979b5a818e7549c2d00043ece1a7af0cb55045",
+      "sha256": "dfcc555405d798ea83677d773e85fe3f3bff1b6ed59e8edfcf770505a7029068",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -58,6 +58,11 @@
     }
   ],
   "local_links": [
+    {
+      "source": "README.md",
+      "target": "docs/downloads/manifest.json",
+      "exists": true
+    },
     {
       "source": "README.md",
       "target": "web/incident-pack/index.html",
@@ -96,6 +101,11 @@
     {
       "source": "README.md",
       "target": "docs/PATHS.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/timeline-20261120/RESULT.md",
       "exists": true
     },
     {

@@ -5,9 +5,9 @@
 | Area | Evidence-backed state |
 |---|---|
 | Repository | PUBLIC; older private/visibility-pending wording is stale. No visibility change performed here. |
-| HOST regression | Python: 145 tests, 137 passed / 8 skipped; Node: 178 passed. Not native acceptance. |
-| Items 1+2 | Frozen at 4c9413e8; sole authorized exception: CLI usage text now lists compare. [Hash exception](docs/CLI-HELP-EXCEPTION.md). |
-| New recording | HOLD; latest attempts failed, no new success/video. Additive transfer helper at 9d3faf6 left unchanged. |
+| HOST regression | Python: 166 tests, 158 passed / 8 skipped; Node: 182 passed. Not native acceptance. |
+| Items 1+2 | Original freeze 4c9413e8 retained; later explicitly authorized shared transport, [timeline/viewer](docs/acceptance/timeline-20261120/RESULT.md) and [CLI display exceptions](docs/CLI-HELP-EXCEPTION.md) are separate HOST changes, not a native reacceptance. |
+| New recording | HOLD; latest attempts failed, no new success/video. Later shared transport work is HOST-only; append2 does not change that helper or authorize another recording. |
 | Native limits | C6 FAIL / STOPPED; guest_query native NOT_RUN; SSH / SocketCAN UNVERIFIED. |
 
 
