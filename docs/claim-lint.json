@@ -13,7 +13,7 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "29fd52d69517ece1a6a1f6b9f984c4fb716e324f2b2c700528e912be6809b94d",
+      "sha256": "6c14fc93f25a7aca66688eb2600eaeeada7396c90662eafb821f299e02d784b7",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "path": "web/incident-pack/index.html",
-      "sha256": "f5bd8fd54166561e46cb2290bf0bbf87b4a9faf81e456ea11da63fa0be80866d",
+      "sha256": "55fe3407b9fe38c963050ea0d48017f824c21a346c0f08ed1f55646ce22f37ba",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -76,6 +76,11 @@
     {
       "source": "README.md",
       "target": "docs/acceptance/recording-20261115/incident.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/vehicle-signals.md",
       "exists": true
     },
     {
@@ -446,6 +451,16 @@
     {
       "source": "web/incident-pack/index.html",
       "target": "timeline.js",
+      "exists": true
+    },
+    {
+      "source": "web/incident-pack/index.html",
+      "target": "../../tools/incident_pack/signals.js",
+      "exists": true
+    },
+    {
+      "source": "web/incident-pack/index.html",
+      "target": "signals.js",
       "exists": true
     },
     {

@@ -1,0 +1,37 @@
+{
+  "scope": "HOST Chromium portable desk, no native execution",
+  "rows": [
+    {
+      "width": 360,
+      "height": 900,
+      "status": "PASS",
+      "questionBottom": 773.3125,
+      "errors": [],
+      "externalRequests": []
+    },
+    {
+      "width": 520,
+      "height": 900,
+      "status": "PASS",
+      "questionBottom": 712.046875,
+      "errors": [],
+      "externalRequests": []
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "status": "PASS",
+      "questionBottom": 752.875,
+      "errors": [],
+      "externalRequests": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "status": "PASS",
+      "questionBottom": 724.984375,
+      "errors": [],
+      "externalRequests": []
+    }
+  ]
+}

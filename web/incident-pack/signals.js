@@ -1,0 +1,21 @@
+/* All untrusted labels and citations use textContent; no requests or HTML imports. */
+'use strict';
+const SignalView=(()=>{
+ const el=id=>document.getElementById(id);let raw=null,mode='strict',epoch=0;
+ function clear(){epoch++;raw=null;el('signal-summary').textContent='UNKNOWN — no accepted capture.';el('signal-results').replaceChildren();}
+ function accept(original,analysisMode){raw=original;mode=analysisMode;el('signal-summary').textContent='Recorded bytes available. Apply an explicit mapping; vehicle meaning UNKNOWN.';el('signal-results').replaceChildren();epoch++;}
+ async function run(){const token=++epoch;el('signal-results').replaceChildren();el('signal-summary').textContent='Validating recorded bytes and mapping…';const result=await IncidentSignals.analyze(raw,el('signal-mapping').value,{mode});if(token!==epoch)return;
+ if(result.status==='UNKNOWN'){el('signal-summary').textContent='UNKNOWN — '+result.issues.join('; ');return;}
+ el('signal-summary').textContent=(result.scope.historical?'HISTORICAL':'STRICT')+' / NOT CURRENT. '+result.meaning+' '+result.axis+' '+result.outside;
+ for(const signal of result.signals){const s=signal.mapping,article=document.createElement('article'),h=document.createElement('h3'),meta=document.createElement('p');h.textContent=s.label+' / '+signal.status;meta.textContent=s.direction+' ID 0x'+s.id.toString(16)+' / bytes '+s.byteOffset+'..'+(s.byteOffset+s.byteLength-1)+' / '+s.endian+' endian / '+(s.signed?'signed two’s complement':'unsigned')+' / raw × '+s.scale+' + '+s.offset+' '+s.unit+' / allowed '+s.min+'..'+s.max;article.append(h,meta);
+ const chart=document.createElement('div');chart.className='signal-chart';chart.setAttribute('role','img');chart.setAttribute('aria-label','Sample positions by observed frame ordinal; value listed in accessible table. No connecting lines or inferred values.');
+ const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 600 160');svg.setAttribute('aria-hidden','true');
+ for(const p of signal.points){if(p.value===null)continue;const dot=document.createElementNS(ns,'circle');dot.setAttribute('cx',String(12+576*p.index/Math.max(1,signal.totalObserved-1)));dot.setAttribute('cy',String(148-136*(p.value-s.min)/(s.max-s.min||1)));dot.setAttribute('r','5');svg.append(dot);}chart.append(svg);article.append(chart);
+ const axes=document.createElement('p');axes.textContent='X: '+s.direction+' observed ordinal 0..'+Math.max(0,signal.totalObserved-1)+'; Y: '+s.min+'..'+s.max+' '+s.unit+'. Unplotted / absent frames UNKNOWN.';article.append(axes);
+ if(!signal.points.length){const p=document.createElement('p');p.textContent='UNKNOWN — no matching observed frames; absence is not zero.';article.append(p);}
+ else{const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Inspect '+signal.points.length+' source-cited samples';details.append(summary);const table=document.createElement('table'),head=document.createElement('thead'),body=document.createElement('tbody'),tr=document.createElement('tr');for(const text of ['Ordinal / frame','Raw / value','Source']){const th=document.createElement('th');th.scope='col';th.textContent=text;tr.append(th);}head.append(tr);table.append(head,body);
+ for(const p of signal.points){const row=document.createElement('tr');for(const text of [p.index+' / '+p.frame,p.raw+' / '+(p.value===null?'UNKNOWN — outside mapping bounds':p.value+' '+s.unit)]){const td=document.createElement('td');td.textContent=text;row.append(td);}const td=document.createElement('td'),a=document.createElement('a');a.href='#event-'+p.citation.event;a.textContent=p.citation.path+':'+p.citation.line;a.addEventListener('click',()=>{const d=document.getElementById('event-'+p.citation.event);if(d)d.open=true;});td.append(a);const hash=document.createElement('small');hash.textContent=' SHA256 '+p.citation.sha256;td.append(hash);row.append(td);body.append(row);}details.append(table);article.append(details);}el('signal-results').append(article);
+ }}
+ el('signal-mapping').value=IncidentSignals.example();el('signal-apply').addEventListener('click',run);el('signal-example').addEventListener('click',()=>{el('signal-mapping').value=IncidentSignals.example();});
+ return {clear,accept};
+})();

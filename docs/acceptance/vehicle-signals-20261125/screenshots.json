@@ -1,0 +1,65 @@
+{
+  "scope": "Private actual host Chromium screenshots; visually inspected four widths; retained reversibly as local base64 text, not distributed",
+  "screenshots": [
+    {
+      "name": "first-1280.png",
+      "sha256": "0dd90f1271252ff58c69ad2e96ac7e03bb3ffeba7224bba93102cf3cc1fd0633",
+      "bytes": 138228
+    },
+    {
+      "name": "first-360.png",
+      "sha256": "51c5b6ce65c5b336ad00c5b91225e6f77a006df8de02ea5ec300696f5ac7cdf6",
+      "bytes": 77473
+    },
+    {
+      "name": "first-520.png",
+      "sha256": "df1cc6042b3256a9ced7f287baa32521d4dabad320cfa7ab82aa4feb815e3683",
+      "bytes": 98715
+    },
+    {
+      "name": "first-768.png",
+      "sha256": "08059dfde2abec33d69fab01f6080ec363a73b47ecd32818110df1a8688f2687",
+      "bytes": 122086
+    },
+    {
+      "name": "samples-1280.png",
+      "sha256": "4e44af5019b84bf15ab776c6f4145b3950f5cfd6662496693203839104945efb",
+      "bytes": 56599
+    },
+    {
+      "name": "samples-360.png",
+      "sha256": "bfd5e070a95351568d17daa8219c448b81d6e84da8f8fb7bc5a9be2b35a6800d",
+      "bytes": 50780
+    },
+    {
+      "name": "samples-520.png",
+      "sha256": "bd03b95bdba60fd16bba66fe86ec23fa479eb7f391c5da25a6f37033be1b9239",
+      "bytes": 52736
+    },
+    {
+      "name": "samples-768.png",
+      "sha256": "e033eead08aaf862ac3cbe21c12b1a37d37ac70631491dea8e0e521052fbcc24",
+      "bytes": 56884
+    },
+    {
+      "name": "signals-1280.png",
+      "sha256": "1e5d858a07a57fcac38924a03275bf16c419c60e6c1f5fcaac7f86679deef11e",
+      "bytes": 160029
+    },
+    {
+      "name": "signals-360.png",
+      "sha256": "391bf25f517449d8de061c96964013117e5ec741e216ede1ed8d27d7d112f0c4",
+      "bytes": 84452
+    },
+    {
+      "name": "signals-520.png",
+      "sha256": "a3ff383a30623ba68532dc7f230eaa1f5b0af4daea6e43d9aee8c25079b17486",
+      "bytes": 110261
+    },
+    {
+      "name": "signals-768.png",
+      "sha256": "cfa021b47483c6aad0bb3738ee5269e19f88f65fdc594dc4d16f080ad6af09d2",
+      "bytes": 148338
+    }
+  ]
+}

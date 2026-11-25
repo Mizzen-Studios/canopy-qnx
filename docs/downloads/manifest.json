@@ -2,7 +2,7 @@
   "kind": "canopy-offline-desk-v1",
   "scope": "HOST offline viewer; no SDK, native execution, private pack, upload or live connection",
   "bundle": "canopy-incident-desk.html",
-  "sha256": "c8b68963d1fb89f7795ca52000d3511e2b034d7b426f47537f12296caa611cde",
+  "sha256": "e35a0f951064ff8f525081954895d0247428dc35543944da708dc44661d6ad59",
   "pack_files": [
     {
       "name": "canopy-2026-11-08-original.json",
@@ -41,8 +41,16 @@
       "sha256": "94e021ebfcc33f6cee4f446e8584d106f44d268e67a75b170c5904ca3e1720a6"
     },
     {
+      "path": "tools/incident_pack/signals.js",
+      "sha256": "2966f6ca161c1b0fc539931b095f1d145d638f1964eb0dd241cbc3c937f9dc1d"
+    },
+    {
+      "path": "web/incident-pack/signals.js",
+      "sha256": "ae49ab7957aa93a0625aee421f22444318618fc6656a9a5c33ae51e7fc16eeff"
+    },
+    {
       "path": "web/incident-pack/app.js",
-      "sha256": "5da3d4614ce5964571a6935c47a1f62b22fc23e280a160c4a7d5ccb11e7ccd90"
+      "sha256": "6685cbb4e728d8f0497a421d5b4e266755bc8da188535f60e63fa2bebe432085"
     }
   ]
 }
