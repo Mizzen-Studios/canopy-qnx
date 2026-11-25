@@ -13,12 +13,12 @@
   "surfaces": [
     {
       "path": "README.md",
-      "sha256": "6c14fc93f25a7aca66688eb2600eaeeada7396c90662eafb821f299e02d784b7",
+      "sha256": "f6424c589bc3d5bd62a2725e213517c5cd78ddd4bc9166801eb215edd790f888",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
       "path": "STATUS.md",
-      "sha256": "48b623f07bebba47ce44784336331f483a3498065155e7734bf21d06809f7540",
+      "sha256": "ce04d56165320194d2abca141e7fe543ac04317ebc505f2b47e7da3569bf1b34",
       "claim_authority": "REVIEW.md; occurrence inventory and manual bounded claim review, not automatic semantic proof"
     },
     {
@@ -261,6 +261,16 @@
     {
       "source": "STATUS.md",
       "target": "docs/acceptance/safestop-build-20261107/receipt.json",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/vehicle-signals.md",
+      "exists": true
+    },
+    {
+      "source": "STATUS.md",
+      "target": "docs/acceptance/vehicle-signals-20261125/RESULT.md",
       "exists": true
     },
     {

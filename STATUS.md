@@ -156,3 +156,8 @@ Actual source-bound host full-suite logs and pinned receipt: docs/acceptance/hos
 ## Historical 9 November packaging source — 21:05 UTC
 
 Current packaging/review source: 22ffcaca1269ec0402099fc06b4876a4e8d51748 (owner remote-verified at 21:05 UTC). Conditional native-completion acceptance remains at 88b1bcf5fcc1f97da03321d35b03e89c85090227, receipt-inspected, not re-run. No CANopy native rerun. Historical native labels mean observed in this QEMU run, not benchmarks. recorded:false. C6 FAIL / STOPPED; SocketCAN UNVERIFIED. No capture, audio, publication, deployment, submission or outside contact. Historical frozen assets and source/build/image pins remain unchanged; packet_source_commit is separate from frozen_commit.
+
+
+## 25 November — D host recorded signal interpretation
+
+Separate sample timeline shipped in incident desk + reproducible portable download; [contract](docs/vehicle-signals.md), [dated host acceptance](docs/acceptance/vehicle-signals-20261125/RESULT.md). Explicit local mappings only; recorded public bytes have no vehicle meaning. Frame ordinal, not invented elapsed time. No native speed/RPM/DBC proof, no current-tip native acceptance. Full HOST166 Python (158 passed/8 skipped),189 Node passed; actual Chromium360/520/768/1280, keyboard/unsafe labels/expiry/corruption/no outbound. Core/native/packs/pins unchanged, C6 STOPPED, recording HOLD until features plus after8 December and separate owner release. No SDK/guest/lease/queue execution or private Nov15d access.

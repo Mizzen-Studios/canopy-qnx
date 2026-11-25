@@ -35,7 +35,7 @@ The video's later Nov15d pack is **PRIVATE**, not bundled for this path; publica
 | Evidence route | State |
 |---|---|
 | Recorded journey | Bounded source-bound observations; not current live health. |
-| HOST checks | 166 Python tests (158 passed / 8 skipped), 182 Node passed; not native acceptance. |
+| HOST checks | 166 Python tests (158 passed / 8 skipped), 189 Node passed; not native acceptance. |
 | Native / reproduction scope | [Complete current status and limits](STATUS.md); separate licensed setup required. |
 | Repository | PUBLIC; earlier private-state wording is stale. |
 
